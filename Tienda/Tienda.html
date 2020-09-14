@@ -4,8 +4,9 @@
     <link rel="shortcut icon" href="../Icons/iconViewer.png"/>
     <link rel="stylesheet" href="estilos.css">
     <script src="../jquery-3.4.1.min.js"></script>
+    <script src="carrousel.js"></script>
     <meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
-	<title>BayArt! - Explorar</title>
+	<title>BayArt! - Tienda</title>
 </head>
 <body>
 	<div id="Lmorada" class="linea"></div>
@@ -16,9 +17,9 @@
 				<img src="../Icons/casa.png" class="iconosB">
 			</button>
 			<button id="Bexplorar" class="opciones">
-				<img src="../Icons/red.png" class="iconosB">
+				<img src="../Icons/red.png" class="iconosB" onclick="location.href='../Explorar/Explorar.html'">
 			</button>
-			<button id="Btienda" class="opciones" onclick="location.href='../Tienda/Tienda.html'">
+			<button id="Btienda" class="opciones">
 				<img src="../Icons/tienda.png" class="iconosB">
 			</button>
 		</div>
@@ -29,22 +30,50 @@
 			</button>
 		</div>
 		<div id="contenedor-perfil">
-			<div id="contenedor-fotoPerfil">	
+			<div id="contenedor-fotoPerfil">
 			</div>
 		</div>
 	</header>
 	<nav>
-		<h2>EXPLORAR</h2>
+		<h2>TIENDA</h2>
 		<button id="Bflecha">
 			<img id="flecha" src="../Icons/flecha.png" class="iconosB" style="margin-top: 10px">
 			<h3>FILTRAR</h3> 
 		</button>
+		<button id="BlistaDeseados">
+			<img id="listaDeseados" src="../Icons/listaDeseados.png" class="iconosB">
+		</button>
 	</nav>
+	<div id="carrouselTematicas">
+		<button id="carrouselIzq" class="Bcarrousel"> < </button>
+		<button id="carrouselDer" class="Bcarrousel"> > </button>
+		<div id="carrousel">
+			<img src="../Icons/1.jpg">
+	        <img src="../Icons/2.jpg">
+	        <img src="../Icons/3.jpg">
+	        <img src="../Icons/4.jpg">
+	        <img src="../Icons/1.jpg">
+	        <img src="../Icons/2.jpg">
+	        <img src="../Icons/3.jpg">
+	        <img src="../Icons/4.jpg">
+	        <img src="../Icons/1.jpg">
+	        <img src="../Icons/2.jpg">
+	        <img src="../Icons/3.jpg">
+	        <img src="../Icons/4.jpg">
+	        <img src="../Icons/1.jpg">
+	        <img src="../Icons/2.jpg">
+	        <img src="../Icons/3.jpg">
+	        <img src="../Icons/4.jpg">
+		</div>
+		
+	</div>
 	<main>
 		<section></section>
 	</main>
 </body>
 <script>
+	startCarrousel();
+
 	var estadoFlecha = false;
 	var imgFlecha    = document.getElementById('flecha');
 	function cambiarFlecha() {

@@ -67,18 +67,9 @@ body{
     font-size: 15px;
     border: none;
     background: none;
-    width: 85%;
     color: white;
-    border-bottom: 1px solid white;
+    width: 370px;
 }
-
-/*.campoDate{
-    font-size: 15px;
-    border: none;
-    background: none;
-    width: 30%;
-    color: white;
-}*/
 
 input:focus{
     outline: none;
@@ -87,69 +78,72 @@ input:focus{
 #username{
     /*padding: 15px 10px 10px 5px;*/
     display: block;
+    border-bottom: 1px solid white;
     margin: 30px 30px;
-    width: 400px;
+
     /*border: 2px solid violet;*/
 }
 
 #email{
     /*padding: 15px 10px 10px 5px;*/
     display: block;
+    border-bottom: 1px solid white;
     margin: 30px 30px;
-    width: 400px;
     /*border: 2px solid violet;*/
 }
 
 #confirmEmail{
     /*padding: 15px 10px 10px 5px;*/
     display: block;
+    border-bottom: 1px solid white;
     margin: 30px 30px;
-    width: 400px;
     /*border: 2px solid violet;*/
 }
 
 #password{
     /*padding: 15px 10px 10px 5px;*/
     display: block;
+    border-bottom: 1px solid white;
     margin: 30px 30px;
-    width: 400px;
+    
     /*border: 2px solid violet;*/
+}
+
+#img-eye{
+    float: right;
+    width: 30px;
+    height: 20px;
 }
 
 #confirmPassword{
     /*padding: 15px 10px 10px 5px;*/
     display: block;
+    border-bottom: 1px solid white;
     margin: 30px 30px;
-    width: 400px;
     /*border: 2px solid violet;*/
-}
-
-#img-eye{
-    width: 30px;
-    height: 20px;
 }
 
 #date{
     /*padding: 15px 10px 10px 5px;*/
     display: block;
-    margin: 30px 30px;
-    width: 400px;
+    margin: 0px 30px;
     /*border: 2px solid violet;*/
+}
+
+#day{
+    border-bottom: 1px solid white;
+    margin: auto 0px;
+    width: 32%;
 }
 #month{
     border-bottom: 1px solid white;
-    margin: auto 5px;
-    width: 30%;
-}
-#day{
-    border-bottom: 1px solid white;
-    margin: auto 5px;
-    width: 30%;
+    margin: auto 2.5px;
+    width: 32%;
 }
 #year{
     border-bottom: 1px solid white;
-    margin: auto 4px;
-    width: 30%;
+    margin: auto 0px;
+    width: 32%;
 }
 
 #buttonRegister{

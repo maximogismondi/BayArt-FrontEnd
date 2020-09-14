@@ -1,13 +1,13 @@
 <html>
     <head>
         <title>BayArt! - Register</title>
-        <link rel="shortcut icon" href="C:/Users/Franco/Desktop/BayArt/Icons/register4.png"/>
+        <link rel="shortcut icon" href="../Icons/iconRegister.png"/>
         <link rel="stylesheet" href="estilos.css">
-        <script src="C:/Users/Franco/Desktop/BayArt/jquery-3.4.1.min.js"></script>
+        <script src="../jquery-3.4.1.min.js"></script>
         <meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
     </head>
     <body>
-        <a href="C:/Users/Franco/Desktop/BayArt/Login/Login.html" id="volver"><</a>
+        <a href="../Login/Login.html" id="volver"><</a>
         <div id="contenedor-general">
             <div id="botonesEleccion">
                 <button class="campoEleccionA" type="submit" id="artista">
@@ -38,20 +38,19 @@
                 </div>
                 <div id="password">
                     <input id="inPassword" type="password" placeholder="Choose a password" class="campo" required>
-                    <img id="img-eye" src="C:/Users/Franco/Desktop/BayArt/Icons/ojoC.png">
+                    <img id="img-eye" src="../Icons/ojoC.png">
                 </div>
                 <div id="confirmPassword">
                     <input type="password" placeholder="Confirm password" class="campo" required>
                 </div>
                 
                 <div id="date">
-                    <!--tipo date: preguntarle-->
                     <input type="text" placeholder="Day" class="campo" id="day" required>
                     <input type="text" placeholder="Month" class="campo" id="month" required>
                     <input type="text" placeholder="Year" class="campo" id="year" required>
                 </div>
                 <div id="buttonRegister">
-                    <button class="button" type="submit">REGISTER</button>
+                    <button class="button" type="submit" onclick="location.href='../Explorar/Explorar.html'">REGISTER</button>
                 </div>
             </form>
         </div>
@@ -64,10 +63,10 @@
         function mostrarContrasena(){
             if(visibilidad == false){
                 password.type = "text";
-                eye.src = "C:/Users/Franco/Desktop/BayArt/Icons/ojoA.png"; 
+                eye.src = "../Icons/ojoA.png"; 
             }else{
                 password.type = "password";
-                eye.src = "C:/Users/Franco/Desktop/BayArt/Icons/ojoC.png";
+                eye.src = "../Icons/ojoC.png";
             }
             visibilidad = !visibilidad;
         }
