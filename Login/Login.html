@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>BayArt! - Login</title>
+        <link rel="shortcut icon" href="C:/Users/Franco/Desktop/BayArt/Icons/iconlogin.png"/>
+        <link rel="stylesheet" href="estilos.css">
+        <script src="C:/Users/Franco/Desktop/BayArt/jquery-3.4.1.min.js"></script>
+        <meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+    </head>
+    <body>
+        <div id="contenedor-login">
+            <div id="logo">
+                <img src="C:/Users/Franco/Desktop/BayArt/Icons/logo.png">
+            </div>
+            <form action="" method="POST" id="login">
+                <div id="username">
+                    <input type="text" placeholder="Username" class="campo" required>
+                </div>
+                <div id="password">
+                    <input  id="inPassword" type="password" placeholder="Password" class="campo" required>
+                    <img id="img-eye" src="C:/Users/Franco/Desktop/BayArt/Icons/ojoC.png">
+                </div>
+                <div id="checkbox">
+                    <input type="checkbox" name="" class="classCheck" id="idCheckLogin"> Keep me logged in
+                </div>
+                <div id="button-register">
+                    <button class="button" type="submit">LOG IN</button>
+                    <a href="C:/Users/Franco/Desktop/BayArt/Register/Register.html">Register into BayArt!</a>
+                </div>
+            </form>
+        </div>
+        <div id="onda">
+            <video src="C:/Users/Franco/Desktop/BayArt/Icons/ondaA.mp4" loop autoplay muted></video>
+        </div>
+    </body>
+    <script>
+        var visibilidad = false;
+        password = document.getElementById("inPassword");
+        eye      = document.getElementById("img-eye");
+        function mostrarContrasena(){
+            if(visibilidad == false){
+                password.type = "text";
+                eye.src = "C:/Users/Franco/Desktop/BayArt/Icons/ojoA.png"; 
+            }
+            else{
+                password.type = "password";
+                eye.src = "C:/Users/Franco/Desktop/BayArt/Icons/ojoC.png"; 
+            }
+            visibilidad = !visibilidad;
+        }
+
+        var estadoBox = false;
+        function cambiarColorBox(){
+            estadoBox = !estadoBox;
+            if(estadoBox==false){
+                $("#checkbox").css( "color" , "#7c7c7c");
+            }
+            else{
+                $("#checkbox").css( "color" , "#00a797");
+            }
+            
+        }
+    
+        $("#img-eye").click(mostrarContrasena);
+        $("#idCheckLogin").click(cambiarColorBox);
+    </script>
+</html>
+
+

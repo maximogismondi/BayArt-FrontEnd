@@ -1,0 +1,118 @@
+body{
+    background-color: #242424;  
+    /*background:url(C:/Users/Franco/Desktop/BayArt/Icons/onda.png);
+    background-repeat: no-repeat;
+    background-size: 750px;*/
+    font-family: Verdana;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#contenedor-login{
+    /*border: 2px solid green;*/
+    margin-top: 50px;
+    margin-right: 70px;
+    float: right;
+    position: relative;
+    z-index: 100;
+}
+
+#onda video{
+    position: absolute;
+    width: 100%;
+}
+
+#logo{
+    /*border: 2px solid green;*/
+    margin: 0px auto; 
+    /*background: rgb(244, 244, 248);*/
+}
+#logo img{
+    width: 470px;
+    height: auto;
+}
+
+#login{
+    /*border: 2px solid green;*/
+    height: 245px;
+    background: #3d3d3d;
+    margin-top: 80px;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.campo{
+    font-size: 15px;
+    border: none;
+    background: none;
+    width: 88%;
+    color: white;
+}
+.classCheck {
+    font-size: 15px;
+    border: none;
+    background: none;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+}
+
+#username{
+    /*padding: 15px 10px 10px 5px;*/
+    display: block;
+    border-bottom: 1px solid white;
+    margin: 30px 30px;
+    width: 400px;
+    /*border: 2px solid violet;*/
+}
+
+#password{
+    /*padding: 15px 10px 10px 5px;*/
+    display: block;
+    border-bottom: 1px solid white;
+    margin: 30px 30px;
+    width: 400px;
+    /*border: 2px solid violet;*/
+}
+
+#img-eye{
+    width: 30px;
+    height: 20px;
+}
+
+#checkbox{
+    margin: 40px 30px;
+    color: #7c7c7c;
+    /*border: 2px solid violet;*/
+}
+
+
+#button-register{
+    font-size: 15px;
+    margin: 10px 30px;
+    /*border: 2px solid violet;*/
+}
+
+.button{
+    font-size: 15px;
+    font-weight: bold;
+    background: #00a797;
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: #242424;
+}
+
+a{
+    margin: 10px 10px;
+    float: right;
+    text-decoration:none;
+    color: #7c7c7c;
+}
+a:hover{
+    color: #674ea7;
+}
+
+

@@ -1,0 +1,180 @@
+body{
+    background-color: #242424;
+    font-family: Verdana;
+    margin: 0px;
+}
+
+header{
+    margin: 10px 50px 50px;
+}
+
+h2{
+    margin-top: 10px;
+    color: white;
+}
+
+nav{
+    margin: -40px 50px 0px;
+    background-color: #6e6e6e;
+    border-radius: 5px;
+    height: 60px;
+    margin-top: -10px;
+}
+
+.opciones{
+    height: 40px;
+    width: 100px;
+    background-color: #6e6e6e;
+    border-radius: 5px;
+    border: none;
+    margin: 0px 5px;
+}
+
+.iconosB{
+    height: 25px
+}
+
+#Blupa{
+    background: none;
+    border:none;
+}
+
+#Bexplorar{
+    background-color: #674ea7;
+}
+
+#busqueda{
+    display: block;
+    width: 400px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    width: 500px;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#contenedor-busqueda{
+    display: inline-block;
+}
+
+#contenedor-botones{
+    width:350px;
+    display: inline-block;
+}
+
+#contenedor-perfil{
+    background-color: #6e6e6e;
+    border-radius: 25px;
+    width: 200px;
+    height:40px;
+    margin: 0px auto 0px 110px;
+    float: right;
+    display: inline-block;
+}
+
+/*----------------------------*/
+#contenedor-login{
+    /*border: 2px solid green;*/
+    margin-top: 50px;
+    margin-right: 80px;
+    float: right;
+}
+
+#onda{
+    float: left;
+}
+#onda img{
+    height: 665px;
+    width: auto;
+}
+
+#logo{
+    /*border: 2px solid green;*/
+    margin: 0px auto; 
+    /*background: rgb(244, 244, 248);*/
+}
+#logo img{
+    width: 470px;
+    height: auto;
+}
+
+#login{
+    /*border: 2px solid green;*/
+    height: 245px;
+    background: #3d3d3d;
+    margin-top: 80px;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.campo{
+    font-size: 15px;
+    border: none;
+    background: none;
+    width: 100%;
+    color: white;
+}
+.classCheck {
+    font-size: 15px;
+    border: none;
+    background: none;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+}
+
+#username{
+    /*padding: 15px 10px 10px 5px;*/
+    display: block;
+    border-bottom: 1px solid white;
+    margin: 30px 30px;
+    width: 400px;
+    /*border: 2px solid violet;*/
+}
+
+#password{
+    /*padding: 15px 10px 10px 5px;*/
+    display: block;
+    border-bottom: 1px solid white;
+    margin: 30px 30px;
+    width: 400px;
+    /*border: 2px solid violet;*/
+}
+
+#checkbox{
+    margin: 40px 30px;
+    color: #7c7c7c;
+    /*border: 2px solid violet;*/
+}
+
+
+#button-register{
+    font-size: 15px;
+    margin: 10px 30px;
+    /*border: 2px solid violet;*/
+}
+
+.button{
+    font-size: 15px;
+    font-weight: bold;
+    background: #00a797;
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: #242423;
+}
+
+a{
+    margin: 10px 10px;
+    float: right;
+    text-decoration:none;
+    color: #7c7c7c;
+}
+a:hover{
+    color: #674ea7;
+}
+
+
