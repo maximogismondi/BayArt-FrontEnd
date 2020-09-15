@@ -2,19 +2,20 @@
 <html>
 <head>
     <link rel="shortcut icon" href="../Icons/iconViewer.png"/>
-    <link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="estilos.css">
+	<script src="../funcionesBasicas.js"></script>
     <script src="../jquery-3.4.1.min.js"></script>
     <script src="carrousel.js"></script>
     <meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
-	<title>BayArt! - Tienda</title>
+	<title>BayArt! - Feed</title>
 </head>
 <body>
 	<div id="Lmorada" class="linea"></div>
 	<div id="Lverde"  class="linea"></div>
 	<header>
 		<div id="contenedor-botones">
-			<button id="Bfeed" class="opciones">
-				<img src="../Icons/casa.png" class="iconosB">
+			<button id="BhomePage" class="opciones">
+				<img src="../Icons/casa.png" class="iconosB" onclick="location.href='../Feed/Feed.html'">
 			</button>
 			<button id="Bexplorar" class="opciones">
 				<img src="../Icons/red.png" class="iconosB" onclick="location.href='../Explorar/Explorar.html'">
@@ -73,30 +74,7 @@
 </body>
 <script>
 	startCarrousel();
-
-	var estadoFlecha = false;
-	var imgFlecha    = document.getElementById('flecha');
-	function cambiarFlecha() {
-		estadoFlecha = !estadoFlecha;
-		if(estadoFlecha == true){
-			imgFlecha.style.transform = "rotate(90deg)";
-		}
-		else{
-			imgFlecha.style.transform = "rotate(0deg)";
-		}
-	}
 	$("#Bflecha").click(cambiarFlecha);
-
-
-	var estadoPerfil = true;
-	var contenedorPerfil = document.getElementById('contenedor-perfil');
-
-	function comprobarPerfil(){
-		estadoPerfil = !estadoPerfil;
-		if(estadoPerfil == true) contenedorPerfil.style.width = "200px";
-		else 					 contenedorPerfil.style.width = "50px";
-	}	
-
 	$("#contenedor-fotoPerfil").click(comprobarPerfil);
 </script>
 </html>

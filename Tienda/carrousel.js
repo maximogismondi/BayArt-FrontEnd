@@ -10,7 +10,6 @@ function conseguirCantidadImagenes(){
 }
 
 function rotarCarrousel(){
-	console.log(indiceCentral)
 	$("#carrousel").find('img').each(function (index){
         if(index >= indiceCentral-2 && indiceCentral+2 >= index){
     		if(index == indiceCentral-2 || index == indiceCentral+2){

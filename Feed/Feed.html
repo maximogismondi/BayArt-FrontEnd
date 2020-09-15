@@ -2,8 +2,9 @@
 <html>
 <head>
     <link rel="shortcut icon" href="../Icons/iconViewer.png"/>
-	<link rel="stylesheet" href="estilos.css">
-	<script src="../funcionesBasicas.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="carroucelPerfiles.js"></script>
+    <script src="../funcionesBasicas.js"></script>
     <script src="../jquery-3.4.1.min.js"></script>
     <meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 	<title>BayArt! - Explorar</title>
@@ -13,10 +14,10 @@
 	<div id="Lverde"  class="linea"></div>
 	<header>
 		<div id="contenedor-botones">
-			<button id="BhomePage" class="opciones" onclick="location.href='../Feed/Feed.html'">
+			<button id="BhomePage" class="opciones">
 				<img src="../Icons/casa.png" class="iconosB">
 			</button>
-			<button id="Bexplorar" class="opciones">
+			<button id="Bexplorar" class="opciones" onclick="location.href='../Explorar/Explorar.html'">
 				<img src="../Icons/red.png" class="iconosB">
 			</button>
 			<button id="Btienda" class="opciones" onclick="location.href='../Tienda/Tienda.html'">
@@ -34,19 +35,13 @@
 			</div>
 		</div>
 	</header>
-	<nav class="contenedor">
-		<h2>EXPLORAR</h2>
-		<button id="Bflecha">
-			<img id="flecha" src="../Icons/flecha.png" class="iconosB" style="margin-top: 10px">
-			<h3>FILTRAR</h3>
-		</button>
-	</nav>
+	<nav class="carroucel-Perfiles-Artistas"></nav>
 	<main>
 		<section></section>
 	</main>
 </body>
 <script>
+    startCarroucelPerfiles("carroucel-Perfiles-Artistas");
 	$("#contenedor-fotoPerfil").click(comprobarPerfil);
-	$("#Bflecha").click(cambiarFlecha);
 </script>
 </html>

@@ -21,6 +21,12 @@ body{
     display: absolute;
 }
 
+.circulo{
+    height: 20px;
+    width: auto;
+    background-color: red;
+}
+
 header{
     margin: 0px 5% 50px;
 }
@@ -40,7 +46,7 @@ header{
     margin: 0px 5px;
 }
 
-#Bexplorar{
+#BhomePage{
     background-color: #674ea7;
 }
 
