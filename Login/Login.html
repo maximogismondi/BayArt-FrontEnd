@@ -1,67 +1,75 @@
 <html>
     <head>
         <title>BayArt! - Login</title>
-        <link rel="shortcut icon" href="../Icons/iconlogin.png"/>
-        <link rel="stylesheet" href="estilos.css">
-        <script src="../jquery-3.4.1.min.js"></script>
+        <link rel="shortcut icon" href="../icons/icon-login.png"/>
+        <link rel="stylesheet" href="styles-login.css">
+        <link rel="stylesheet" href="../styles-general.css">
+        <script src="../jquery.js"></script>
+        <script src="../basic-functions.js"></script>
         <meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
     </head>
-    <body>
-        <div id="contenedor-login">
-            <div id="logo">
-                <img src="../Icons/logo.png">
-            </div>
-            <form action="" method="POST" id="login">
-                <div id="username">
-                    <input type="text" placeholder="Username" class="campo" required>
-                </div>
-                <div id="password">
-                    <input  id="inPassword" type="password" placeholder="Password" class="campo" required>
-                    <img id="img-eye" src="../Icons/ojoC.png">
-                </div>
-                <div id="checkbox">
-                    <input type="checkbox" class="classCheck" id="idCheckLogin"> Keep me logged in
-                </div>
-                <div id="button-register">
-                    <button class="button" type="submit"  onclick="location.href='../Explorar/Explorar.html'">LOG IN</button>
-                    <a href="../Register/Register.html">Register into BayArt!</a>
-                </div>
-            </form>
-        </div>
-        <div id="onda">
-            <video src="../Icons/ondaA.mp4" loop autoplay muted></video>
-        </div>
-    </body>
-    <script>
-        var visibilidad = false;
-        password = document.getElementById("inPassword");
-        eye      = document.getElementById("img-eye");
-        function mostrarContrasena(){
-            if(visibilidad == false){
-                password.type = "text";
-                eye.src = "../Icons/ojoA.png"; 
-            }
-            else{
-                password.type = "password";
-                eye.src = "../Icons/ojoC.png"; 
-            }
-            visibilidad = !visibilidad;
-        }
 
-        var estadoBox = false;
-        function cambiarColorBox(){
-            estadoBox = !estadoBox;
-            if(estadoBox==false){
-                $("#checkbox").css( "color" , "#7c7c7c");
-            }
-            else{
-                $("#checkbox").css( "color" , "#00a797");
-            }
-            
-        }
-    
-        $("#img-eye").click(mostrarContrasena);
-        $("#idCheckLogin").click(cambiarColorBox);
+    <body>
+
+        <!--Div que engloba tanto el logo como el formulario-->
+
+        <div id="div-login">
+
+            <!--Logo-->
+
+            <div id="div-logo">
+                <img id="img-logo" src="../icons/logo.png">
+            </div>
+
+            <!--Formulario-->
+
+            <form action="" method="POST" id="form-login">
+
+                <div id="div-username">
+                    <input type="text" placeholder="Username" class="input-login" required>
+                </div>
+
+                <div id="div-password">
+                    <input  id="input-password" type="password" placeholder="Password" class="input-login" required>
+                    <img id="img-eye" src="../icons/open-eye.png">
+                </div>
+                
+                <div id="div-keep-me">
+                    <input type="checkbox" id="input-checkBox-keep-me"> <label id="label-keep-me">Keep me logged in</label>
+                </div>
+
+                <div id="div-log-in-register">
+                    <button id="button-submit" type="submit"  onclick = "location.href=' ../homepage/homepage.html'" >LOG IN</button>
+                    
+                    <a id="a-register" href="../register/register.html">Register into BayArt!</a>
+                </div>
+
+            </form>
+
+        <!--Onda de fondo-->
+
+        </div>
+        <div id="div-wave">
+            <video id="video-wave" src="../icons/wave.mp4" loop autoplay muted></video>
+        </div>
+
+    </body>
+
+    <script>
+
+        /*Funcion ocultar contraseña*/
+        
+        $("#img-eye").click(showPassword);
+
+        /*Funcion cambiar de color checkbox*/
+        
+        $("#input-checkBox-keep-me").click(function (){
+		
+		var idCheckBox = $(this).attr("id");
+		checkBoxState(idCheckBox, "white", "#7c7c7c");
+
+	    }); 
+        
     </script>
 </html>
 

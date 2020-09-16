@@ -1,0 +1,117 @@
+/*Type*/
+
+    body{
+        overflow: hidden;
+    }
+
+/*ID*/
+
+    #div-login{
+        margin-top: 50px;
+        margin-right: 70px;
+        z-index: 100;
+        float: right;
+        position: relative;
+    }
+
+    #video-wave{
+        position: absolute;
+        width: 100%;
+    }
+
+    #div-logo{
+        margin: 0px auto; 
+    }
+
+    #img-logo{
+        width: 470px;
+        height: auto;
+    }
+
+    #form-login{
+        background: #3d3d3d;
+        height: 245px;
+        border-radius: 10px;
+        margin-top: 80px;
+        padding: 20px 0;
+    }
+
+    #div-username{
+        border-bottom: 1px solid white;
+        margin: 30px 30px;
+        width: 400px;
+        display: block;
+    }
+
+    #div-password{
+        border-bottom: 1px solid white;
+        margin: 30px 30px;
+        width: 400px;
+        display: block;
+    }
+
+    #img-eye{
+        margin-left: 10px;
+        width: 30px;
+        height: 20px;
+    }
+
+    #div-keep-me{
+        color: #7c7c7c;
+        margin: 40px 30px;
+    }
+
+    #input-checkBox-keep-me{
+        color: white;
+        background-color:#7c7c7c;
+        border-radius: 3px;
+        margin-bottom: 0;
+        margin-right:0 ;
+        width: 12px;
+        height: 12px;
+        font-size: 15px;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    #input-checkBox-keep-me:checked {
+        background-color: #674ea7;
+    }
+
+    #div-log-in-register{
+        font-size: 15px;
+        margin: 10px 30px;
+    }
+
+    #button-submit{
+        background: #00a797;
+        color: #242424;   
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+    }
+
+    #a-register{
+        color: #7c7c7c;
+        margin: 10px 10px;
+        float: right;
+        text-decoration:none;
+    }
+
+    #a-register:hover{
+        color: #674ea7;
+    }
+
+/*Class*/
+
+    .input-login{
+        color: white;
+        font-size: 15px;
+        width: 88%;
+        border: none;
+        background: none;
+    }

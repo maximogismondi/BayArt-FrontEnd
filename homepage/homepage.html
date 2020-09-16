@@ -1,0 +1,88 @@
+<html>
+
+	<head>
+		<link rel="shortcut icon" href="../icons/icon-viewer.png"/>
+		<link rel="stylesheet" href="styles-homepage.css">
+		<link rel="stylesheet" href="../styles-general.css">
+		<script src="../basic-functions.js"></script>
+		<script src="../jquery.js"></script>
+		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+		<title>BayArt! - Homepage</title>
+	</head>
+
+	<body>
+
+		<div id="purple-line" class="line"></div>
+		<div id="green-line" class="line"></div>
+
+		<header>
+
+			<!--Header Principal-->
+
+			<div id="div-buttons">
+
+				<button id="button-homepage" class="options">
+					<img src="../icons/house.png" class="img-buttons">
+				</button>
+
+				<button id="button-browse" class="options" onclick="location.href='../browse/browse.html'">
+					<img src="../icons/browse.png" class="img-buttons">
+				</button>
+
+				<button id="button-store" class="options" onclick="location.href='../store/store.html'">
+					<img src="../icons/store.png" class="img-buttons">
+				</button>
+
+			</div>
+
+			<div id="div-search-bar">
+				<input id="input-search-bar" type="text">
+
+				<button id="button-magnifier">
+					<img id="img-magnifier" src="../icons/magnifier.png" class="img-buttons">
+				</button>
+			</div>
+
+			<div id="div-profile">
+				<div id="div-profile-picture">
+				</div>
+			</div>
+
+		</header>
+
+		<!--Header Secundario-->
+
+		<nav id="nav-subtitle">
+			<h2 id="h2-subtitle">HOMEPAGE</h2>
+		</nav>
+
+		<main>
+			<section></section>
+		</main>
+		
+	</body>
+
+	<script>
+
+		/*Ensanchar perfil*/
+
+		$("#div-profile-picture").click(changeProfileWidth);
+
+
+		/*Girar Flecha*/
+
+		$("#button-arrow").click(changeArrow);
+
+
+		/*Cambiar Color Texto*/
+
+		$(".input-checkbox").click(function (){
+			
+			var idCheckBox = $(this).attr("id");
+			checkBoxState(idCheckBox, "white", "#7c7c7c");
+
+		}); 
+
+
+	</script>
+</html>

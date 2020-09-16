@@ -1,0 +1,105 @@
+/*ID*/
+#div-all{
+    background: #00a797;
+    width: 530px;
+    height: 520px;
+    margin: 20px auto;
+    display: absolute;
+}
+
+#a-back{
+    color: #7c7c7c;
+    font-size: 40px;
+    margin: 0px 20px;
+    transition: 0.4s;
+    text-decoration:none;
+}
+#a-back:hover{
+    color: #674ea7;
+}
+
+
+#div-buttons-choice{
+    background: #242424;
+}
+
+#buttom-viewer{
+    background: #674ea7;
+    height: 30px;
+}
+
+#buttom-artist{
+    background: #00a797;
+    height: 40px;
+}
+
+
+#form-register{
+    background: #3d3d3d;
+    border: 2px solid #3d3d3d;
+    height: 420px;
+    margin: 30px;
+}
+
+#div-inputs{
+    border-bottom: 1px solid white;
+    margin: 30px 30px;
+    display: block;
+}
+
+#img-eye{
+    width: 30px;
+    height: 20px;
+    margin-top: -5px;
+    float: right;
+}
+
+#div-date{
+    margin: 0px 30px;
+    display: block;
+}
+
+#input-day-year{
+    border-bottom: 1px solid white;
+    width: 32%;
+    margin: auto 0px;
+}
+#input-month{
+    border-bottom: 1px solid white;
+    width: 32%;
+    margin: auto 2.5px;
+}
+
+/*Class*/
+
+.button-users{
+    color: #242424;
+    margin: 0px;
+    width: 100px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    
+}
+
+.input-register{
+    color: white;
+    width: 370px;
+    font-size: 15px;
+    border: none;
+    background: none;
+    
+}
+
+.button-register{
+    color: #242424;
+    background: #00a797;
+    margin: 50px 335px;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    border: none;
+}
