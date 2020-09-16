@@ -35,16 +35,33 @@
 			</div>
 		</div>
 	</header>
-	<nav>
+	<nav class="contenedor">
 		<h2>TIENDA</h2>
 		<button id="Bflecha">
 			<img id="flecha" src="../Icons/flecha.png" class="iconosB" style="margin-top: 10px">
-			<h3>FILTRAR</h3> 
-		</button>
-		<button id="BlistaDeseados">
-			<img id="listaDeseados" src="../Icons/listaDeseados.png" class="iconosB">
+			<h3>FILTRAR</h3>
 		</button>
 	</nav>
+	<div id="filtrar">
+		<div id="colum1">
+			<input type="checkbox" id="checkBox1" class="classCheck" > <label id="label1">3D</label> <br>
+			<input type="checkbox" id="checkBox2" class="classCheck" > <label id="label2">Animation</label> <br>
+			<input type="checkbox" id="checkBox3" class="classCheck" > <label id="label3">Anime</label> <br>
+			<input type="checkbox" id="checkBox4" class="classCheck" > <label id="label4">Comics</label> <br>
+			<input type="checkbox" id="checkBox5" class="classCheck" > <label id="label5">Emoji</label>  <br>
+			<input type="checkbox" id="checkBox6" class="classCheck" > <label id="label6">Horror</label> <br>
+			<input type="checkbox" id="checkBox7" class="classCheck" > <label id="label7">Digital Art</label>  <br>
+		</div>
+		<div id="colum2">
+			<input type="checkbox" id="checkBox8" class="classCheck" > <label id="label8">Fractal</label> <br>
+			<input type="checkbox" id="checkBox9" class="classCheck" > <label id="label9">PixelArt</label> <br>
+			<input type="checkbox" id="checkBox10" class="classCheck" > <label id="label10">Photograpy</label>  <br>
+			<input type="checkbox" id="checkBox11" class="classCheck" > <label id="label11">Street Art</label>  <br>
+			<input type="checkbox" id="checkBox12" class="classCheck" > <label id="label12">Fantasy</label>  <br>
+			<input type="checkbox" id="checkBox13" class="classCheck" > <label id="label13">Science Fiction</label>  <br>
+			<input type="checkbox" id="checkBox14" class="classCheck" > <label id="label14">Wallpaper</label>  <br>
+		</div>		
+	</div>
 	<div id="carrouselTematicas">
 		<button id="carrouselIzq" class="Bcarrousel"> < </button>
 		<button id="carrouselDer" class="Bcarrousel"> > </button>
@@ -74,7 +91,11 @@
 </body>
 <script>
 	startCarrousel();
-	$("#Bflecha").click(cambiarFlecha);
 	$("#contenedor-fotoPerfil").click(comprobarPerfil);
+	$("#Bflecha").click(cambiarFlecha);
+	$(".classCheck").click(function (){
+		var idCheck = $(this).attr("id");
+		estadoCheckBoxFiltrar(idCheck);
+	}); 
 </script>
 </html>
