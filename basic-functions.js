@@ -90,3 +90,27 @@ function showPassword(){
     visibility = !visibility;
 }
 
+/*Setear alto y ancho de imagen*/
+
+function setWidthHeight(idImage, idDiv, maxWidth, maxHeight){
+
+    var height = $("#"+idImage).height();
+    var width = $("#"+idImage).width();
+
+    var relationHeightMaxHeight = height/maxHeight;
+    var relationWidhtMaxWidth = width/maxWidth;
+
+    if(relationHeightMaxHeight > relationWidhtMaxWidth){
+        $("#"+idImage).css('height',maxHeight);
+        $("#"+idDiv).css('height',(maxHeight+40));
+        $("#"+idImage).css('width',"auto");
+        $("#"+idDiv).css('width',(width/relationHeightMaxHeight+40));
+    }
+    else{
+        $("#"+idImage).css('width',maxWidth);
+        $("#"+idDiv).css('width',(maxWidth+40));
+        $("#"+idImage).css('height',"auto");
+        $("#"+idDiv).css('height',(height/relationWidhtMaxWidth+40));
+    }
+
+}

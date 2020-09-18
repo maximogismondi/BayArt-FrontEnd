@@ -5,12 +5,11 @@
         width: 1250px;
         background-color: #3d3d3d;
         border-radius: 15px;
-        height: 2000px;
+        height: 2000px; /*poner en auto*/
         left: 0px;
         right: 0px;
         margin-top:200px;
         position:absolute;
-
     }
 
     body{
@@ -35,17 +34,10 @@
 
 /*ID*/
 
-#purple-line{
- background-color: #674ea7;
- right: 0;
- width: 0.5%;
- z-index: 2;
-}
-
 #green-line{
  background-color: #00a797;
  left: 0;
- width: 0.5%;
+ width: 7px;
  z-index: 2;
 }
 
@@ -142,7 +134,7 @@
 }
 
 #div-profile-picture{
- background-color: red;
+ background-color: #674ea7;
  height: 40px;
  width: 40px;
  border-radius: 25px;
@@ -253,4 +245,17 @@
 
 .input-checkbox:checked{
  background-color: #674ea7;
+}
+
+.scrollbar::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+.scrollbar::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #674ea7;
 }
