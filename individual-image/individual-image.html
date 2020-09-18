@@ -2,16 +2,15 @@
 
 	<head>
 		<link rel="shortcut icon" href="../icons/icon-viewer.png"/>
-		<link rel="stylesheet" href="styles-homepage.css">
+		<link rel="stylesheet" href="styles-individual-image.css">
 		<link rel="stylesheet" href="../styles-general.css">
 		<script src="../basic-functions.js"></script>
 		<script src="../jquery.js"></script>
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
-		<title>BayArt! - Homepage</title>
+		<title>BayArt! - Yoda Boliviano</title>
 	</head>
 
 	<body>
-
 		<div id="purple-line" class="line"></div>
 		<div id="green-line" class="line"></div>
 
@@ -21,7 +20,7 @@
 
 			<div id="div-buttons">
 
-				<button id="button-homepage" class="options">
+				<button id="button-homepage" class="options" onclick="location.href='../homepage/homepage.html'">
 					<img src="../icons/house.png" class="img-buttons">
 				</button>
 
@@ -57,41 +56,35 @@
 				<div id="div-profile-picture"></div>
 			</div>
 
-			<!--Header Secundario-->
+            <!--Header Secundario-->
 
-			<nav id="nav-subtitle">
-				<h2 id="h2-subtitle">HOMEPAGE</h2>
-			</nav>
+            <nav id="nav-subtitle">
+                <h2 id="h2-subtitle">Yoda Boliviano</h2>
+            </nav>
 
 		</header>
 
+        
+
 		<main>
-			<section></section>
+            <div id="div-url-image">
+                <h4>All images > Star wars > Bolivia > Yoda > Bolivianos</h4>
+            </div>
+			<section id="section-all">
+                <div id="div-image">
+                    <img src="../icons/xd2.jpg">
+                </div>
+                <div id="div-description">
+
+                </div>
+            </section>
 		</main>
 		
 	</body>
 
 	<script>
-
 		/*Ensanchar perfil*/
 
 		$("#div-profile-picture").click(changeProfileWidth);
-
-
-		/*Girar Flecha*/
-
-		$("#button-arrow").click(changeArrow);
-
-
-		/*Cambiar Color Texto*/
-
-		$(".input-checkbox").click(function (){
-			
-			var idCheckBox = $(this).attr("id");
-			checkBoxState(idCheckBox, "white", "#7c7c7c");
-
-		}); 
-
-
 	</script>
 </html>

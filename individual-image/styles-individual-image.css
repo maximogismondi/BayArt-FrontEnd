@@ -1,0 +1,19 @@
+/*ID*/
+
+#button-browse{
+	background-color: #674ea7;
+}
+
+#div-url-image{
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+#section-all{
+    border: 2px solid green;
+    margin-left: 20px;
+    width: 96.5%;
+    height: 600px;
+    
+}

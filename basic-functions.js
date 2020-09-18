@@ -8,16 +8,61 @@ function changeArrow() {
     }
     else{
         $('#img-arrow').css({transform: "rotate(0deg)"});
-        $('#div-filter').css({visibility: "hidden", opacity: "0"});
+        $('#div-filter').css({opacity: "0"});
+        setTimeout( function(){
+            $('#div-filter').css({visibility: "hidden"});
+        },100);
     }
 }
 
 /*Estirar Perfil*/
 var profileState = true;
+var changing = false;
 function changeProfileWidth(){
-    profileState = !profileState;
-    if(profileState == true) $('#div-profile').css({width: "275px"});
-    else 					 $('#div-profile').css({width: "50px"});
+    if(!changing){
+        profileState = !profileState;
+    if(profileState) {
+        changing = true;
+        console.log(changing);
+        $('#div-profile').css({width: "350px"});
+        setTimeout( function(){
+            $('#div-bpoints').css({display: "inline-block"});
+            $('#div-name-type').css({display: "inline-block"});
+            $('#div-name-type').css({opacity: "1"});
+        },550);
+        setTimeout( function(){
+            $('#label-bpoints').css({opacity: "1"});
+        },650);
+        setTimeout( function(){
+            $('#img-bpoints').css({opacity: "1"});
+        },750);
+        setTimeout( function(){
+            changing=false;
+            console.log(changing);
+        },850);
+        
+    }
+    else{
+        changing = true;
+        console.log(changing);
+        $('#img-bpoints').css({opacity: "0"});
+        setTimeout( function(){
+            $('#label-bpoints').css({opacity: "0"});
+        },100);
+        setTimeout( function(){
+            $('#div-name-type').css({opacity: "0"});
+        },200);
+        setTimeout( function(){
+            $('#div-bpoints').css({display: "none"});
+            $('#div-name-type').css({display: "none"});
+            $('#div-profile').css({width: "50px"});
+        },300);
+        setTimeout( function(){
+            changing=false;
+            console.log(changing);
+        },1050);
+    }
+    }
 }
 
 /*Cambiar texto label checkBox*/

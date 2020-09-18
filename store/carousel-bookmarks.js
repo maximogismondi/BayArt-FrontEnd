@@ -45,10 +45,10 @@ function startCarousel(){
 	rotateCarousel();
 
 	$("#button-carousel-right").click(decreseIndex);
-	$("#button-carousel-left").click(decreseIndex);
+	$("#button-carousel-left").click(incrementIndex);
 }
 
-function decreseIndex(){
+function incrementIndex(){
 	if(actualImage > 0){
 		actualImage--;
 		rotateCarousel();

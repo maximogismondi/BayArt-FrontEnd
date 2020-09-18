@@ -23,14 +23,14 @@
 
             <!--Formulario-->
 
-            <form action="" method="POST" id="form-login">
+            <form action="C:/xampp/htdocs/BayArt/loginPHP/login.php" method="POST" id="form-login">
 
                 <div id="div-username">
-                    <input type="text" placeholder="Username" class="input-login" required>
+                    <input type="text" name="nombre" placeholder="Username" class="input-login" required>
                 </div>
 
                 <div id="div-password">
-                    <input  id="input-password" type="password" placeholder="Password" class="input-login" required>
+                    <input type="password" name="contrasena" placeholder="Password" class="input-login" id="input-password" required>
                     <img id="img-eye" src="../icons/open-eye.png">
                 </div>
                 
@@ -39,12 +39,13 @@
                 </div>
 
                 <div id="div-log-in-register">
-                    <button id="button-submit" type="submit"  onclick = "location.href=' ../homepage/homepage.html'" >LOG IN</button>
+                    <button id="button-submit" type="submit" onclick="location.href='../homepage/homepage.html'">LOG IN</button>
                     
                     <a id="a-register" href="../register/register.html">Register into BayArt!</a>
                 </div>
 
             </form>
+            
 
         <!--Onda de fondo-->
 

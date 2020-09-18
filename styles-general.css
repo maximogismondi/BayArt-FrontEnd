@@ -1,10 +1,16 @@
 /*Type*/
 
     main{
-        margin: 40px 5% 0px;
+        margin: 0px auto;
+        width: 1250px;
         background-color: #3d3d3d;
         border-radius: 15px;
-        height: 1000px;
+        height: 2000px;
+        left: 0px;
+        right: 0px;
+        margin-top:200px;
+        position:absolute;
+
     }
 
     body{
@@ -18,19 +24,29 @@
     }
 
     header{
-        margin: 0px 5% 50px;
+        margin: 0px auto;
+        background-color: #242424;
+        position: fixed;
+        width: 1250px;
+        left: 0px;
+        right: 0px;
+        z-index: 1;
     }
 
 /*ID*/
 
 #purple-line{
-    background-color: #674ea7;
+ background-color: #674ea7;
  right: 0;
+ width: 0.5%;
+ z-index: 2;
 }
 
 #green-line{
  background-color: #00a797;
  left: 0;
+ width: 0.5%;
+ z-index: 2;
 }
 
 #div-buttons{
@@ -40,13 +56,14 @@
 }
 
 #div-search-bar{
+ width: 40%;
  height: 30px;
  display: inline-block;
 }
 
 #input-search-bar{
  color: white;
- width: 400px;
+ width: 85%;
  height: 30px;
  font-size: 15px;
  float: right;
@@ -71,32 +88,79 @@
 #div-profile{
  background-color: #3d3d3d;
  border-radius: 25px;
- margin-top:15px;
- width: 275px;
+ margin-top: 15px;
+ width: 350px;
  height:50px;
- transition: width 1s;	    
+ transition: width 0.75s cubic-bezier(0.25,0.25,0.25,1);
  float: right;
 }
 
+#div-bpoints{
+ margin-left:7px;
+ margin-top: 8px;
+ float: left;
+ height: auto;
+ width: auto;
+}
+
+#img-bpoints{
+ height: 35px;
+ width: 35px;
+ transition: opacity 0.1s;
+}
+
+#label-bpoints{
+ color: #00a797;
+ margin-left: 6px;
+ margin-top: 2px;
+ font-size: 25px;
+ transition: opacity 0.1s;
+ font-weight: bold;    
+ float: right;
+}
+
+#div-name-type{
+ height: 30px;
+ width: 160px;
+ margin-top: 9px;
+ margin-left: 15px;
+ transition: opacity 0.1s;
+ display: inline-block;
+ text-align:center;
+}
+
+#label-name{
+ color: white;
+ font-size: 15px;
+ font-weight: bold;
+}
+
+#label-type{
+ color: #00a797;
+ font-size: 10px;
+ font-weight: bold;
+}
+
 #div-profile-picture{
- background-color: rgb(172, 16, 16);
+ background-color: red;
  height: 40px;
- width:40px;
+ width: 40px;
  border-radius: 25px;
- margin-right:5px;
- margin-top:5px;
- margin-left:auto;	    
+ margin-right: 4px;
+ margin-top: 5px;
+ float:right;
 }
 
 #nav-subtitle{
  background-color: #3d3d3d;
  border-radius: 15px;
  height: 70px;
- margin: 15px 5%;
+ margin: 30px auto;
+ width: 1250;
 }
 
 #h2-subtitle{
- color: white;		
+ color: white;      
  margin-left: 20px;
  display: inline-block;
 }
@@ -129,10 +193,9 @@
  border-right: 3px solid #674ea7;
  width: 400px;
  height: 300px;
- z-index: 100;
- margin-top: -30px;
- margin-right: 3%;
- right: 100px;
+ margin-top: -50px;
+ margin-right: 2%;
+ right: 50px;
  border-radius: 15px;
  opacity: 0;
  transition: opacity 0.1s;
