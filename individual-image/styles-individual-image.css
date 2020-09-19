@@ -30,7 +30,7 @@ main{
 }
 
 #div-image{
-    background: #474747;
+    background: #383838;
     border-radius: 15px;
     display: inline-block;
 }
@@ -41,13 +41,14 @@ main{
 }
 
 #div-title-description{
-    background: #474747;
+    background: #383838;
     border-radius: 15px;
     height: 100%;
     float: right;
 }
 
 #div-description{
+    border-top: 3px solid white;
     width: 95%;
     height: 70%;
     margin-left: 20px;
@@ -55,14 +56,14 @@ main{
 }
 
 #p-description{
-    color: white;
+    color: #7c7c7c;
     width: 95%;
     font-size: 15px;
 }
 
 #div-artist{
-    border: 1px solid #474747;
-    background: #474747;
+    border: 1px solid #383838;
+    background: #383838;
     border-radius: 15px;
     margin-top: 50px;
 }
@@ -83,7 +84,7 @@ main{
 }
 
 #div-title-comments{
-    background: #474747;
+    background: #383838;
     border-radius: 15px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -93,6 +94,7 @@ main{
 }
 
 #div-comments{
+    border-top: 3px solid #ffffff;
     width: 95%;
     height: 300px;
     margin-left: 20px;
@@ -137,7 +139,6 @@ main{
 .comment{
     margin-left: 70px;
     color: #7c7c7c;
-
 }
 
 .h4-username-comments{
@@ -149,6 +150,7 @@ main{
     color: white;
     font-size: 30px;
     margin: 25px;
+    width: 90%;
 }
 
 .scrollbar-description::-webkit-scrollbar {
