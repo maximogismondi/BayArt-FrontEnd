@@ -1,21 +1,28 @@
+h4{
+    color: #7c7c7c;
+}
+
 /*ID*/
 
 #button-store{
-	background-color: #674ea7;
+    background-color: #674ea7;
 }
 
 #div-carousel-bookmarkers{
     position: relative;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    width:1100px;
+    height: 500px;
+    margin-left:auto;
+    margin-right:auto;
+    width:1000px;
     z-index: 0;
+    margin-top:50px;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 #button-carousel-left{
     float:left;
-    margin-top: 180px;
+    margin-top: 220px;
 }
 
 #button-carousel-left:focus, #button-carousel-right:focus{
@@ -28,20 +35,51 @@
 
 #button-carousel-right{
     float:right;
-    margin-top: 180px;
+    margin-top: 220px;
 }
 
 #button-carousel-right:hover{
     color:#00a797;
 }
 
+#div-confirmRemoveBookmaker-panel{
+    text-align: center;
+    width: 450px;
+    height: 110px;
+    background-color: #2b2b2b;
+    position: absolute;
+    margin-left: 272px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-radius: 15px;
+    border-left: 3px solid #00a797;
+    border-right: 3px solid #674ea7; 
+}
+
 #div-carousel-images{
     display:flex;
-    height:100%;
-    width: 990px;
+    height:500px;
+    width: 900px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+#imgBuy,#imgRemoveBookmark{
+    height: 60%;
+    width: auto;
+}
+#imgBuy:hover,#imgRemoveBookmark:hover{
+    height: 80%;
+    width: auto;
+    transition: height 0.1s, width 0.1s;
+}
+
+#imgButtonExpand{
+    height: 20px;
+    width: 20px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
 }
 
 /*Class*/
@@ -50,7 +88,73 @@
     background: none;
     color: #7c7c7c;
     border:none;
-    font-size: 40px;
-    transition: color 1s;
-    margin-top: 225px;   
+    font-size: 50px;
+    transition: color 1s;  
+}
+
+.div-container{
+    pointer-events:none;
+    background-color: #4e4e4e;
+    transition: width 0.5s, height 0.5s, opacity 0.5s, margin 0.5s;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.div-panel{
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    height: 0px;
+    background-color: #2b2b2b;
+    transition:height 0.5s;
+    border-radius: 90px: 
+}
+
+.buttonPanel{
+    height: 100%;
+    width: 10%;
+    float: right;
+    border: none;
+    background: none;
+    transition: opacity 0.5s;
+
+}
+
+.buttonExpand{
+    margin-top: -30px;
+    background: none;
+    border: none;
+    position: absolute;
+    left: 46%;
+    transition: transform 0.5s, margin 0.5s, opacity 1s;
+}
+
+.button-confirm-panel{
+    margin-top:-10px;
+    width: 60px;
+    height: 50px;
+    background: none;
+    border: none;
+
+}
+
+.img-button-confirm-panel{
+    height: 80%;
+    width: auto;
+    transition: width 0.2s, height 0.2s;
+}
+
+.img-button-confirm-panel:hover{
+    height: 100%;
+    width: auto;
+}
+
+.buttonExpand,.buttonPanel,.button-confirm-panel:focus{
+    outline: none;
+}
+
+#imgButtonExpand:hover{
+    opacity: 1;
 }

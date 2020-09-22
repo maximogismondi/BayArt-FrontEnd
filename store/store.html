@@ -12,6 +12,7 @@
 
 	<body class="scrollbar">
 
+		<div id="purple-line" class="line"></div>
 		<div id="green-line" class="line"></div>
 
 		<header>
@@ -101,31 +102,35 @@
 				<button id="button-carousel-left" class="button-carousel"> < </button>
 				<button id="button-carousel-right" class="button-carousel"> > </button>
 				<div id="div-carousel-images">
-					<img src="../Icons/1.jpg">
-			        <img src="../Icons/2.jpg">
-			        <img src="../Icons/3.jpg">
-			        <img src="../Icons/4.jpg">
-			        <img src="../Icons/1.jpg">
-			        <img src="../Icons/2.jpg">
-			        <img src="../Icons/3.jpg">
-			        <img src="../Icons/4.jpg">
-			        <img src="../Icons/1.jpg">
-			        <img src="../Icons/2.jpg">
-			        <img src="../Icons/3.jpg">
-			        <img src="../Icons/4.jpg">
-			        <img src="../Icons/1.jpg">
-			        <img src="../Icons/2.jpg">
-			        <img src="../Icons/3.jpg">
-			        <img src="../Icons/4.jpg">
+					<img src="../icons/xd2.jpg">
+					<img src="../icons/1.jpg">
+					<img src="../icons/2.jpg">
+					<img src="../icons/xd2.jpg">
+					<img src="../icons/3.jpg">
+					<img src="../icons/4.jpg">
+				</div>
+				<div id="div-confirmRemoveBookmaker-panel">
+					<h4>Remove this Post from yours Bookmarks?</h4>
+					<button id="confirm" class="button-confirm-panel">
+						<img src="../icons/confirm.png" class="img-button-confirm-panel">
+					</button>
+					<button id="cancel" class="button-confirm-panel">
+						<img src="../icons/cancel.png" class="img-button-confirm-panel">
+					</button>
 				</div>
 			</div>
-			<section></section>
+			<section>
+
+			</section>
 		</main>
 	
 		
-
 	</body>
 	<script>
+
+		$( document ).ready(function() {
+		    $("#div-carousel-bookmarkers").css({opacity: "1"});
+		});
 
 		/*Crear carrousel*/
 

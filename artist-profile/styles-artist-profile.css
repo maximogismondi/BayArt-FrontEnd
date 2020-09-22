@@ -1,0 +1,110 @@
+main{
+    margin-top: 85px !important;
+}
+
+#main-top{
+    height: 500px;
+}
+
+#main-bottom{
+    margin-top: 625px !important;
+}
+
+#div-banner-picture{
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+}
+
+#img-banner{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+#div-artist-picture{
+    height: 200px;
+    width: 100%;
+    margin-top: 190px;
+    text-align: center;
+    position: absolute;
+}
+
+#img-artist-picture{
+    border: 10px solid #3d3d3d;
+    height: 100%;
+    width: 200px;
+    border-radius: 100%;
+}
+
+#div-buttons-artist-profile{
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#button-subscribers{
+    background: #00a797;
+    position: absolute;
+    transition: border 100ms;
+}
+
+#button-img-subs{
+    width: 30px;
+    transition: opacity 100ms;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#div-subscribers-number{
+    color: white;
+    font-size: 25px;
+    transition: opacity 100ms;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#button-sponsors{
+    background: #674ea7;
+    right: 10%;
+    position: absolute;
+    transition: border 100ms;
+}
+
+#button-img-bpoints{
+    width: 30px;
+    transition: opacity 100ms;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#div-sponsors-number{
+    color: white;
+    margin-left: 5px;
+    font-size: 25px;
+    transition: opacity 100ms;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#div-images{
+    width: 100%;
+    height: 700px;
+}
+
+.buttons-profile-artist{
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    border: none;
+}
+
+.buttons-profile-artist:focus{
+    outline: none;
+}

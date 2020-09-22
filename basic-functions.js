@@ -15,6 +15,21 @@ function changeArrow() {
     }
 }
 
+/*Ocultar/Mostrar nav*/
+var firstUbication = window.pageYOffset;
+window.onscroll = function(){
+    var actualUbication = window.pageYOffset;
+    if (firstUbication < actualUbication){
+        document.getElementById("nav-subtitle").style.opacity = "0";
+        document.getElementById("nav-subtitle").style.marginTop = "-200px";
+    } 
+    else {
+        document.getElementById("nav-subtitle").style.opacity = "1";
+        document.getElementById("nav-subtitle").style.marginTop = "30px";
+    }
+    firstUbication = actualUbication;
+}
+
 /*Estirar Perfil*/
 var profileState = true;
 var changing = false;
@@ -113,4 +128,103 @@ function setWidthHeight(idImage, idDiv, maxWidth, maxHeight){
         $("#"+idDiv).css('height',(height/relationWidhtMaxWidth+40));
     }
 
+}
+
+/*------------------------------------------------------------------------*/
+function getWidth(element){
+    return parseFloat((window.getComputedStyle(element).width).slice(0,-2));
+}
+
+
+/*Ordenar fotos menu principal*/
+
+function orderImages(id, minHeight, margin){
+
+    var numImages = 0;
+    var actualImage = 0;
+    var totalHeight = margin;
+
+    //Agregar id a las imagenes y obtener la cantidad
+
+    $("#"+id).find('img').each(function (index){
+
+        $(this).attr('id','img-main-'+index);
+        numImages++;
+
+    }); 
+
+    //Insertar x imagenes en un sub div y ajustarlas
+
+    for (var actualRow = 0; actualImage < numImages; actualRow++) {
+
+        var changeRow = false;
+        var rowWidth = 0;
+        var numImagesRow = 0;
+
+        var newRow = document.createElement('div');
+        newRow.id = "image-row-"+actualRow;
+        newRow.style.marginTop = margin;
+
+        //Agregar Imagenes a fila
+
+        while(!changeRow  && actualImage < numImages){
+
+            var idWidth = getWidth(document.getElementById(id)) - margin;
+            var insertImage = document.getElementById("img-main-"+actualImage);
+
+            insertImage.style.height = minHeight;
+            insertImage.style.width = "auto";
+            insertImage.style.marginLeft = margin;
+            insertImage.style.borderRadius = "10px";
+
+            if (getWidth(insertImage) + margin > idWidth) {
+                insertImage.style.width = idWidth-margin;
+                insertImage.style.height = "auto";
+            }
+
+            //Agrega Imagenes
+            
+            if((idWidth - rowWidth ) >= getWidth(insertImage) + margin){       
+
+                rowWidth += getWidth(insertImage);
+                newRow.appendChild(insertImage);
+                actualImage++;
+                numImagesRow++;
+
+            }
+
+            //Cambiar de fila
+
+            else{
+                changeRow = true;
+            }
+        }
+
+        //Inserta fila al id enviado
+
+        document.getElementById(id).appendChild(newRow);
+
+        //Ajusta el width de las fotos para un encastre perfecto
+
+        var multiplierToGrow = (idWidth - numImagesRow*margin) / rowWidth;
+
+        $("#image-row-"+actualRow).find('img').each(function (index){
+
+            if ($(this).height()*multiplierToGrow <= minHeight*2) {
+                $(this).css("width", $(this).width()*multiplierToGrow);
+                $(this).css("height", $(this).height()*multiplierToGrow);
+            }
+
+            else {
+                $(this).css("height",minHeight*2);
+                $(this).css("width","auto");
+            }
+        });
+        
+        totalHeight += ($("#image-row-"+actualRow).height() + margin);
+
+    }
+
+    $("#"+id).css("height",totalHeight);
+    console.log(totalHeight);
 }
