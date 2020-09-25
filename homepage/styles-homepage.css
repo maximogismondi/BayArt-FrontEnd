@@ -3,3 +3,50 @@
 #button-homepage{
 	background-color: #674ea7;
 }
+
+#button-carousel-left{
+    float:left;
+}
+
+#button-carousel-left:focus, #button-carousel-right:focus{
+    outline: none;
+}
+
+#button-carousel-left:hover{
+    color:white;
+}
+
+#button-carousel-right{
+    float:right;
+}
+
+#button-carousel-right:hover{
+    color:white;
+}
+
+#carousel-images-profiles{
+    position: relative;
+    height: 100%;
+    margin-left:auto;
+    margin-right:auto;
+    width:1050px;
+    opacity: 0;
+    transition: opacity 1s;
+    padding: 6px;
+    padding-left: 105px;
+}
+.button-carousel{
+    background: none;
+    color: #7c7c7c;
+    border:none;
+    font-size: 50px;
+    transition: color 0.2s;  
+    margin: 7px  10px;
+}
+
+.img-profile{
+	height: 50px;
+	border-radius: 100%;
+	margin: 5px 4px;
+	transition: width 0.3s, margin 0.3s, opacity 0.3s;
+}

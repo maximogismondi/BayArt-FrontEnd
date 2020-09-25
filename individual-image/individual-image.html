@@ -41,6 +41,24 @@
 				</button>
 			</div>
 
+			<div id="div-secondary-buttons">
+				<a href="../library/library.html" class="a-secondary-buttons"  id="a-secondary-button-library">
+					<div class="div-img-secondary-buttons" id="div-secondary-button-library">
+						<img src="../icons/icon-library-white.png" class="img-secondary-buttons" id="img-secondary-button-library-white">
+						<img src="../icons/icon-library-green.png" class="img-secondary-buttons" id="img-secondary-button-library-green">
+					</div>
+					<div class="div-secondary-buttons-text" id="div-secondary-button-library-text">library</div>
+				</a>
+
+				<a href="../settings/settings.html" class="a-secondary-buttons" style="margin-left: 30px;" id="a-secondary-button-settings">
+					<div class="div-img-secondary-buttons" id="div-secondary-button-settings">
+						<img src="../icons/icon-settings-white.png" class="img-secondary-buttons" id="img-secondary-button-settings-white">
+						<img src="../icons/icon-settings-green.png" class="img-secondary-buttons" id="img-secondary-button-settings-green">
+					</div>
+					<div class="div-secondary-buttons-text" id="div-secondary-button-settings-text">settings</div>
+				</a>
+			</div>
+
 			<div id="div-profile">
 				
 				<div id="div-bpoints">
@@ -84,11 +102,15 @@
 						</div>
 					</div>
 				</div>
+				<a href="../artist-profile/artist-profile.html">
+					<div id="div-artist">
+						<div id="div-circle">
+							<img src="../ImgPrueba/3.jpg" id="img-circle">
+						</div>
+						<h4 id="h4-username-artist">Valentin_tin</h4>
+					</div>
+				</a>
 				
-				<div id="div-artist">
-					<div id="div-circle"></div>
-					<h4 id="h4-username-artist">Valentin_tin</h4>
-				</div>
 				
 				<div id="div-title-comments">
 					<h4 class="h4-subtitle">Comments</h4>
@@ -167,5 +189,23 @@
 		$("#div-title-description").css("width",($("#div-image-description").width()-$("#div-image").width()-50));
 		$("#div-artist").css("width",($("#div-image-description").width()));
 
+		/*Hover Botones secundarios (settings, library)*/
+
+		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
+		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
+		
+		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
+		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
+		
+		$("#a-secondary-button-settings").mouseenter(function(){
+			secondaryButtonsHover("settings",true)
+			$("#img-secondary-button-settings-green").css("transition","transform 0.5s");
+			$("#img-secondary-button-settings-green").css("transform","rotate(90deg)");	
+		});
+		$("#a-secondary-button-settings").mouseleave(function(){
+			secondaryButtonsHover("settings",false)
+			$("#img-secondary-button-settings-green").css("transition","transform 0.5s");
+			$("#img-secondary-button-settings-green").css("transform","rotate(0deg)");
+		});
 	</script>
 </html>

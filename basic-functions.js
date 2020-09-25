@@ -15,17 +15,19 @@ function changeArrow() {
     }
 }
 
-/*Ocultar/Mostrar nav*/
 var firstUbication = window.pageYOffset;
 window.onscroll = function(){
     var actualUbication = window.pageYOffset;
     if (firstUbication < actualUbication){
         document.getElementById("nav-subtitle").style.opacity = "0";
         document.getElementById("nav-subtitle").style.marginTop = "-200px";
+        if(arrowState == true){
+            changeArrow();
+        }
     } 
     else {
         document.getElementById("nav-subtitle").style.opacity = "1";
-        document.getElementById("nav-subtitle").style.marginTop = "30px";
+        document.getElementById("nav-subtitle").style.marginTop = "20px";
     }
     firstUbication = actualUbication;
 }
@@ -39,7 +41,11 @@ function changeProfileWidth(){
     if(profileState) {
         changing = true;
         console.log(changing);
+        $("#div-secondary-buttons").css({opacity: "0"});
         $('#div-profile').css({width: "350px"});
+        setTimeout( function(){
+            $("#div-secondary-buttons").css({visibility: "hidden"});
+        },100);
         setTimeout( function(){
             $('#div-bpoints').css({display: "inline-block"});
             $('#div-name-type').css({display: "inline-block"});
@@ -53,13 +59,11 @@ function changeProfileWidth(){
         },750);
         setTimeout( function(){
             changing=false;
-            console.log(changing);
         },850);
         
     }
     else{
         changing = true;
-        console.log(changing);
         $('#img-bpoints').css({opacity: "0"});
         setTimeout( function(){
             $('#label-bpoints').css({opacity: "0"});
@@ -72,12 +76,47 @@ function changeProfileWidth(){
             $('#div-name-type').css({display: "none"});
             $('#div-profile').css({width: "50px"});
         },300);
+        setTimeout(function(){
+            $("#div-secondary-buttons").css({visibility: "visible"});
+            $("#div-secondary-buttons").css({opacity: "1"});
+        },800)
         setTimeout( function(){
             changing=false;
-            console.log(changing);
         },1050);
     }
     }
+}
+
+/*Animacion botones secundarios*/
+
+function secondaryButtonsHover(buttonName, shown){
+    if(shown){
+        $("#div-secondary-button-"+buttonName+"-text").css("color", "#00a797");
+        $("#img-secondary-button-"+buttonName+"-white").css("opacity",0);
+        $("#img-secondary-button-"+buttonName+"-green").css("opacity",1);
+        if(buttonName == "settings"){
+            $("#img-secondary-button-settings-green").css("transform","rotate(90deg)");	
+            $("#img-secondary-button-settings-white").css("transform","rotate(90deg)");	    
+        }
+        else{
+            $("#img-secondary-button-library-green").css("transform","translateY(-6px)"); 
+            $("#img-secondary-button-library-white").css("transform","translateY(-6px)");     
+        }
+    }
+    else{
+        $("#div-secondary-button-"+buttonName+"-text").css("color", "white");
+        $("#img-secondary-button-"+buttonName+"-white").css("opacity",1);
+        $("#img-secondary-button-"+buttonName+"-green").css("opacity",0);
+        if(buttonName == "settings"){    
+            $("#img-secondary-button-settings-green").css("transform","rotate(0deg)");	
+            $("#img-secondary-button-settings-white").css("transform","rotate(0deg)");	    
+        }
+        else{
+            $("#img-secondary-button-library-green").css("transform","translateY(0)"); 
+            $("#img-secondary-button-library-white").css("transform","translateY(0)");
+        }
+    }
+        
 }
 
 /*Cambiar texto label checkBox*/

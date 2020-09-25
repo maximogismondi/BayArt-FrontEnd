@@ -42,6 +42,24 @@
 				</button>
 			</div>
 
+			<div id="div-secondary-buttons">
+				<a href="../library/library.html" class="a-secondary-buttons"  id="a-secondary-button-library">
+					<div class="div-img-secondary-buttons" id="div-secondary-button-library">
+						<img src="../icons/icon-library-white.png" class="img-secondary-buttons" id="img-secondary-button-library-white">
+						<img src="../icons/icon-library-green.png" class="img-secondary-buttons" id="img-secondary-button-library-green">
+					</div>
+					<div class="div-secondary-buttons-text" id="div-secondary-button-library-text">library</div>
+				</a>
+
+				<a href="../settings/settings.html" class="a-secondary-buttons" style="margin-left: 30px;" id="a-secondary-button-settings">
+					<div class="div-img-secondary-buttons" id="div-secondary-button-settings">
+						<img src="../icons/icon-settings-white.png" class="img-secondary-buttons" id="img-secondary-button-settings-white">
+						<img src="../icons/icon-settings-green.png" class="img-secondary-buttons" id="img-secondary-button-settings-green">
+					</div>
+					<div class="div-secondary-buttons-text" id="div-secondary-button-settings-text">settings</div>
+				</a>
+			</div>
+
 			<div id="div-profile">
 				
 				<div id="div-bpoints">
@@ -154,6 +172,14 @@
 
 		}); 
 
+				
+		/*Hover Botones secundarios (settings, library)*/
+
+		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
+		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
+		
+		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
+		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
 
 	</script>
 </html>

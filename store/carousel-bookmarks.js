@@ -7,7 +7,6 @@ function getNumberImages(){
         $(this).attr("id","img"+index);
         numberImages++;
     });
-    console.log(numberImages);
 }
 
 function createContainerImg(){
@@ -110,7 +109,6 @@ function show_Or_Hidden_ConfirmRemoveBookmaker_Panel(o,pe,mt){
 function rotateCarousel(){
     $("#div-confirmRemoveBookmaker-panel").css("opacity", "0");
     $("#div-carousel-images").find('div').each(function (index){
-        console.log($(this));
         if(index >= actualImage-1 && actualImage+1 >= index){
             if(index == actualImage-1 || index == actualImage+1){
                 $(this).css("height", "200px");

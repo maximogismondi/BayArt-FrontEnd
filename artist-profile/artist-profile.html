@@ -42,6 +42,24 @@
 				</button>
 			</div>
 
+			<div id="div-secondary-buttons">
+				<a href="../library/library.html" class="a-secondary-buttons"  id="a-secondary-button-library">
+					<div class="div-img-secondary-buttons" id="div-secondary-button-library">
+						<img src="../icons/icon-library-white.png" class="img-secondary-buttons" id="img-secondary-button-library-white">
+						<img src="../icons/icon-library-green.png" class="img-secondary-buttons" id="img-secondary-button-library-green">
+					</div>
+					<div class="div-secondary-buttons-text" id="div-secondary-button-library-text">library</div>
+				</a>
+
+				<a href="../settings/settings.html" class="a-secondary-buttons" style="margin-left: 30px;" id="a-secondary-button-settings">
+					<div class="div-img-secondary-buttons" id="div-secondary-button-settings">
+						<img src="../icons/icon-settings-white.png" class="img-secondary-buttons" id="img-secondary-button-settings-white">
+						<img src="../icons/icon-settings-green.png" class="img-secondary-buttons" id="img-secondary-button-settings-green">
+					</div>
+					<div class="div-secondary-buttons-text" id="div-secondary-button-settings-text">settings</div>
+				</a>
+			</div>
+
 			<div id="div-profile">
 				
 				<div id="div-bpoints">
@@ -63,7 +81,7 @@
 				<img src="../ImgPrueba/17.jpg" id="img-banner">
 				<div id="div-artist-picture">
 					<img src="../ImgPrueba/3.jpg" id="img-artist-picture">
-					<h2 style="color: white">JUAN</h2>
+					<h2 style="color: white">Valentin_tin</h2>
 				</div>
 			</div>
 			<div id="div-buttons-artist-profile">
@@ -174,6 +192,31 @@
 		/*Order Main Images*/
 
 		orderImages("main-bottom",150, 20);
+
+		/*Hover Botones secundarios (settings, library)*/
+
+		var settingAnimation = false;
+		var libraryAnimation = false;
+
+		if(!libraryAnimation){
+			libraryAnimation = true;
+			$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
+			setTimeout( function(){
+				libraryAnimation = false;
+        	},500);
+		}
+		
+		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
+
+		if(!settingAnimation){
+			settingAnimation = true;
+			$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
+			setTimeout( function(){
+				settingAnimation = false;
+        	},500);
+		}
+
+		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
 
 	</script>
 </html>
