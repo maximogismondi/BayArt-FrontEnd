@@ -74,16 +74,35 @@
 				<div id="div-profile-picture"></div>
 			</div>
 
+			<!--Header Secundario-->
+
+			<nav id="nav-subtitle">
+				<h2 id="h2-subtitle">LIBRARY</h2>
+				<img src="../icons/raspberry-enable.png" id="img-raspberry-enable">
+				<img src="../icons/raspberry-disable.png" id="img-raspberry-disable">
+			</nav>
+
 		</header>
 
-		<main>
-			<div id="div-images-bought-reciently">
-				<div id="div-">
-					<h2>Images bought reciently</h2>
-				</div>
-
-			</div>
-				
+		<main id="main">
+			<img src="../icons/xd2.jpg">
+			<img src="../imgPrueba/1.jpg">
+			<img src="../imgPrueba/2.jpg">
+			<img src="../imgPrueba/3.jpg">
+			<img src="../imgPrueba/4.jpg">
+			<img src="../imgPrueba/5.jpg">
+			<img src="../imgPrueba/6.jpg">
+			<img src="../imgPrueba/7.jpg">
+			<img src="../imgPrueba/8.jpg">
+			<img src="../imgPrueba/9.jpg">
+			<img src="../imgPrueba/10.jpg">
+			<img src="../imgPrueba/11.jpg">
+			<img src="../imgPrueba/12.jpg">
+			<img src="../imgPrueba/13.jpg">
+			<img src="../imgPrueba/14.jpg">
+			<img src="../imgPrueba/15.jpg">
+			<img src="../imgPrueba/16.jpg">
+			<img src="../imgPrueba/17.jpg">
 		</main>
 		
 	</body>
@@ -94,6 +113,9 @@
 
 		$("#div-profile-picture").click(changeProfileWidth);
 
+		/*Order Main Images*/
+
+		orderImages("main",150, 20);
 
 		/*Hover Botones secundarios (settings, library)*/
 
@@ -103,15 +125,32 @@
 		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
 		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
 
-		$("#a-secondary-button-settings").mouseenter(function(){
-			secondaryButtonsHover("settings",true)
-			$("#img-secondary-button-settings-green").css("transition","transform 0.5s");
-			$("#img-secondary-button-settings-green").css("transform","rotate(90deg)");	
+		/*Cambiar opacidad botones raspberry*/
+
+		$("#img-raspberry-enable").click(function(){
+			if($("#img-raspberry-enable").css("opacity") == 1 && $("#img-raspberry-disable").css("opacity") == 0.3){
+				$("#img-raspberry-enable").css("opacity", 0.3);
+				$("#img-raspberry-disable").css("opacity", 1);
+			}
+			else if($("#img-raspberry-enable").css("opacity") == 1){
+				$("#img-raspberry-enable").css("opacity", 0.3);
+			}
+			else{
+				$("#img-raspberry-enable").css("opacity", 1);
+			}
+			
 		});
-		$("#a-secondary-button-settings").mouseleave(function(){
-			secondaryButtonsHover("settings",false)
-			$("#img-secondary-button-settings-green").css("transition","transform 0.5s");
-			$("#img-secondary-button-settings-green").css("transform","rotate(0deg)");
+		$("#img-raspberry-disable").click(function(){
+			if($("#img-raspberry-disable").css("opacity") == 1 && $("#img-raspberry-enable").css("opacity") == 0.3){
+				$("#img-raspberry-disable").css("opacity", 0.3);
+				$("#img-raspberry-enable").css("opacity", 1);
+			}
+			else if($("#img-raspberry-disable").css("opacity") == 1){
+				$("#img-raspberry-disable").css("opacity", 0.3);
+			}
+			else{
+				$("#img-raspberry-disable").css("opacity", 1);
+			}
 		});
 	</script>
 </html>

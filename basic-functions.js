@@ -213,7 +213,6 @@ function orderImages(id, minHeight, margin){
 
             insertImage.style.height = minHeight;
             insertImage.style.width = "auto";
-            insertImage.style.marginLeft = margin;
             insertImage.style.borderRadius = "10px";
 
             if (getWidth(insertImage) + margin > idWidth) {
@@ -226,7 +225,14 @@ function orderImages(id, minHeight, margin){
             if((idWidth - rowWidth ) >= getWidth(insertImage) + margin){       
 
                 rowWidth += getWidth(insertImage);
-                newRow.appendChild(insertImage);
+                
+                newDivImage = document.createElement("div");
+                newDivImage.id = "div-img-main-"+actualImage;
+                newDivImage.style.display = "inline-block";
+                newDivImage.style.marginLeft = margin;
+                newDivImage.appendChild(insertImage);
+
+                newRow.appendChild(newDivImage);
                 actualImage++;
                 numImagesRow++;
 

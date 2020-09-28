@@ -192,31 +192,16 @@
 		/*Order Main Images*/
 
 		orderImages("main-bottom",150, 20);
-
+		
 		/*Hover Botones secundarios (settings, library)*/
 
-		var settingAnimation = false;
-		var libraryAnimation = false;
-
-		if(!libraryAnimation){
-			libraryAnimation = true;
-			$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
-			setTimeout( function(){
-				libraryAnimation = false;
-        	},500);
-		}
-		
+		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
 		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
-
-		if(!settingAnimation){
-			settingAnimation = true;
-			$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
-			setTimeout( function(){
-				settingAnimation = false;
-        	},500);
-		}
-
+		
+		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
 		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
+
+		
 
 	</script>
 </html>

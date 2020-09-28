@@ -1,9 +1,5 @@
 /*ID*/
 
-#button-homepage{
-	background-color: #674ea7;
-}
-
 #button-carousel-left{
     float:left;
 }
@@ -13,7 +9,7 @@
 }
 
 #button-carousel-left:hover{
-    color:white;
+    color:#674ea7;
 }
 
 #button-carousel-right{
@@ -21,20 +17,28 @@
 }
 
 #button-carousel-right:hover{
-    color:white;
+    color:#00a797;
 }
 
-#carousel-images-profiles{
+#button-homepage{
+	background-color: #674ea7;
+}
+
+#carousel-images-profiles {
     position: relative;
     height: 100%;
-    margin-left:auto;
-    margin-right:auto;
-    width:1050px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
     opacity: 0;
     transition: opacity 1s;
-    padding: 6px;
-    padding-left: 105px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    display: flex;
+    /* border: 2px solid red;*/
 }
+
+
 .button-carousel{
     background: none;
     color: #7c7c7c;
@@ -45,8 +49,10 @@
 }
 
 .img-profile{
-	height: 50px;
+    white-space: nowrap;
+    display: inline-block;
+	height: 60px;
+    width: 60px;
 	border-radius: 100%;
 	margin: 5px 4px;
-	transition: width 0.3s, margin 0.3s, opacity 0.3s;
 }
