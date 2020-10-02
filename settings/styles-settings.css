@@ -1,0 +1,123 @@
+main{
+    height: auto !important;
+}
+#div-all-settings{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-bottom: 20px !important;
+    float: left;
+}
+
+#div-all-profile{
+    margin-top: 50px;
+}
+
+#img-bpoints-settings{
+    width: 20px;
+    margin-left: -25px;
+    margin-top: -3px;
+    position: absolute;
+    height:auto;
+}
+
+#button-change{
+    color: #7c7c7c;
+    background: none;
+    border:none;
+    outline: none;
+}
+
+#h2-name-user{
+    color: white;
+    text-align: center;
+}
+
+h4{
+    color: #7c7c7c;
+    margin-left: 5%;
+    display: inline-block;
+}
+h3{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 3%;
+}
+
+.things-settings{
+    background-color: #383838;
+    margin-bottom: 60px;
+    margin-top: -20px;
+    border-radius: 15px;
+    height: auto;
+}
+
+.button-change-setting{
+    margin-right: 5%;
+    margin-top: 25px;
+    float: right;
+}
+
+/* Formateamos el label que servirá de contenedor */
+.switch {
+    margin-right: 7%;
+    margin-top: 30px;
+    width: 27px;
+    height: 14px;
+    float: right;
+    position: relative;
+  }
+   
+  /* Ocultamos el checkbox html */
+  .switch input {
+    display:none;
+  }
+   
+  /* Formateamos la caja del interruptor sobre la cual se deslizará la perilla de control o slider */
+  .slider {
+    background-color: #ccc;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .1s;
+    transition: .1s;
+    position: absolute;
+    cursor: pointer;
+  }
+   
+  /* Pintamos la perilla de control o slider usando el selector before */
+  .slider:before {
+    background-color: white;
+    height: 14px;
+    width: 14px;
+    -webkit-transition: .1s;
+    transition: .1s;
+    position: absolute;
+    content: "";
+  }
+   
+  /* Cambiamos el color de fondo cuando el checkbox esta activado */
+  input:checked + .slider {
+    background-color: #00a797;
+  }
+   
+  /* Deslizamos el slider a la derecha cuando el checkbox esta activado */ 
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+   
+  /* Aplicamos efecto de bordes redondeados en slider y en el fondo del slider */
+  .slider.round {
+    border-radius: 34px;
+  }
+   
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/*POPS UPS*/
+

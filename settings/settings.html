@@ -7,7 +7,7 @@
 		<script src="../basic-functions.js"></script>
 		<script src="../jquery.js"></script>
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
-		<title>BayArt! - Library</title>
+		<title>BayArt! - Settings</title>
 	</head>
 
 	<body class="scrollbar">
@@ -74,11 +74,81 @@
 				<div id="div-profile-picture"></div>
 			</div>
 
+			<!--Header Secundario-->
+
+			<nav id="nav-subtitle">
+				<h2 id="h2-subtitle">SETTINGS</h2>
+			</nav>
+
 		</header>
 
 		<main>
-				
+			<div id="div-all-settings">
+				<div id="div-h2-settings">
+					<h2 id="h2-name-user">Hi! Soledad1</h2>
+				</div>
+				<div id="div-all-profile">
+					<h3 id="h3-profile">Profile</h3>
+					<div id="div-profile-settings" class="things-settings">
+						<div id="div-options-settings"><h4>Profile picture</h4><button id="button-change" class="button-change-setting"> <img src="../icons/bpoints.png" id="img-bpoints-settings">change</button></div>
+						<div id="div-options-settings"><h4>Username</h4><button id="button-change" class="button-change-setting"> <img src="../icons/bpoints.png" id="img-bpoints-settings">change</button></div>
+						<div id="div-options-settings"><h4>Email</h4><button id="button-change" class="button-change-setting">change</button></div>
+						<div id="div-options-settings"><h4>Password</h4><button id="button-change" class="button-change-setting">change</button></div>
+					</div>
+				</div>
+				<div id="div-all-privacy">
+					<h3 id="h3-privacy">Privacy</h3>
+					<div id="div-privacy-settings" class="things-settings">
+						<div id="div-options-settings"><h4>Delete history</h4><button id="button-change" class="button-change-setting">delete</button></div>
+						<div id="div-options-settings"><h4>Save history</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+						<div id="div-options-settings"><h4>Public library</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					</div>
+				</div>
+				<div id="div-all-appearance">
+					<h3 id="h3-appearance">Appearance</h3>
+					<div id="div-appearance-settings" class="things-settings">
+						<div id="div-options-settings"><h4>Theme</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+						<div id="div-options-settings"><h4>Language</h4><button id="button-change" class="button-change-setting">change</button></div>
+					</div>
+				</div>
+				<div id="div-all-notifications">
+					<h3 id="h3-notifications">Notifications</h3>
+					<div id="div-notifications-settings" class="things-settings">
+						<div id="div-options-settings"><h4>Artist publication</h4><button id="button-change" class="button-change-setting">change</button></div>
+						<div id="div-options-settings"><h4>Purchase notice</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+						<div id="div-options-settings"><h4>Investment report</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+						<div id="div-options-settings"><h4>Subscription exhaustion</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					</div>
+				</div>
+				<div id="div-all-activity">
+					<h3 id="h3-activity">Activity</h3>
+					<div id="div-activity-settings" class="things-settings">
+						<div id="div-options-settings"><h4>Subscription</h4><button id="button-change" class="button-change-setting">view</button></div>
+						<div id="div-options-settings"><h4>Purchases in the month</h4><button id="button-change" class="button-change-setting">view</button></div>
+					</div>
+				</div>
+				<div id="div-all-account">
+					<h3 id="h3-account">Account</h3>
+					<div id="div-account-settings" class="things-settings">
+						<div id="div-options-settings"><h4>Sign off</h4><button id="button-change" class="button-change-setting">get out</button></div>
+					</div>
+				</div>
+			</div>
 		</main>
+		
+		<!--POPS UPS-->
+		<div id="div-username-settings">
+			<form action="" method="POST" id="form-username-settings">
+                <h2>Soledad1</h2>
+				<div id="div-change-username">
+                    <input type="text" name="nombre" placeholder="New Username" class="input-write" required>
+                </div>
+
+                <div id="div-change-username-button">
+                    <button id="button-submit" type="submit"> Change Username</button>
+                </div>
+            </form>
+		</div>
 		
 	</body>
 
@@ -88,7 +158,6 @@
 
 		$("#div-profile-picture").click(changeProfileWidth);
 
-
 		/*Hover Botones secundarios (settings, library)*/
 
 		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
@@ -97,15 +166,6 @@
 		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
 		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
 
-		$("#a-secondary-button-settings").mouseenter(function(){
-			secondaryButtonsHover("settings",true)
-			$("#img-secondary-button-settings-green").css("transition","transform 0.5s");
-			$("#img-secondary-button-settings-green").css("transform","rotate(90deg)");	
-		});
-		$("#a-secondary-button-settings").mouseleave(function(){
-			secondaryButtonsHover("settings",false)
-			$("#img-secondary-button-settings-green").css("transition","transform 0.5s");
-			$("#img-secondary-button-settings-green").css("transform","rotate(0deg)");
-		});
+		
 	</script>
 </html>

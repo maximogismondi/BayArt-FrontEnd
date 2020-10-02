@@ -284,6 +284,43 @@
     text-decoration: none;
 }
 
+.div-img-profile{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;	
+	border-radius: 35px;
+	height: 35px;
+	width: 35px;
+	background: red 
+}
+
+.h3-img-name{
+	position: absolute;
+	color: white;
+	bottom: 5px;
+	left: 50px
+}
+
+.h6-img-name{
+	position: absolute;
+	color: white;
+	bottom: -12px;
+	left: 50px
+}
+
+.div-gradient-main{
+	display: inline-block;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.2s;
+    position: absolute;
+    background-image:-webkit-linear-gradient(top,rgba(0,0,0,0.1) 0,#242424 90%)
+}
+
+.div-gradient-main:hover{
+	opacity: 1;
+}
+
 .options:hover{
     border: 2px solid #674ea7;
 }
