@@ -32,6 +32,21 @@ window.onscroll = function(){
     firstUbication = actualUbication;
 }
 
+function displayCheckbox(opacityCheckbox, status){
+    var indexLabel = 1;
+    for (let i = 1; i <= 2; i++) {
+        $("#div-column" + i).find('input').each(function (index){
+            if(opacityCheckbox==0.3 && !$(this).prop('checked') || opacityCheckbox==1){
+                $(this).css("opacity",opacityCheckbox);
+                $(this).css("pointer-events",status);
+                $("#label" + indexLabel).css("opacity",opacityCheckbox);
+            }
+            indexLabel++;
+        });
+        
+    }
+}
+
 /*Estirar Perfil*/
 var profileState = true;
 var changing = false;
@@ -174,9 +189,7 @@ function getWidth(element){
     return parseFloat((window.getComputedStyle(element).width).slice(0,-2));
 }
 
-
 /*Ordenar fotos menu principal*/
-
 function orderImages(id, minHeight, margin){
 
     var numImages = 0;
@@ -313,7 +326,7 @@ function charcountupdate(str) {
 
 //Borrar imagen Upload Image
 function borrarImagen(){
-    $("#img-uploaded").remove();
+    $("#img-uploaded").css("display","none");
     $("#div-drag-drop").css("display","block");
     $("#div-cancel-image").css("display","none");
     $("#div-image-description").css("height", "500px");

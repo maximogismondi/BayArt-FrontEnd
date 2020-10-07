@@ -1,15 +1,12 @@
-form div{
+/*ID*/
+#div-title{
+    width:1210px;
+    height:60;
+    margin: 20px auto;
+    border-radius: 50px;
+    background: #242424;
+
 }
-    
-    /*ID*/
-    #div-title{
-        width:1210px;
-        height:60;
-        margin: 20px auto;
-        border-radius: 50px;
-        background: #242424;
-    
-    }
     #input-title-image{
         color: white;
         height: 100%;
@@ -20,144 +17,226 @@ form div{
         border: none;
         background:none;
     }
-    
-    #div-image-description{
-        margin:0 auto;
-        width: 96%;
-        height: 500px;
-        border-radius: 15px
-    }
-        #div-image{
-            background: #242424;
-            height:100%;
-            width: calc(50% - 10px);
-            border-radius: 15px;
-            display: inline-block;
-            position: relative
-        }
 
-            #img-uploaded{
-                margin-top: 20px;
-                margin-left: 20px;
-            }   
-
-            #div-cancel-image{
-                position: absolute;
-                right: 0;
-                height: 50px;
-                width: 50px;
-                border-radius: 60px;
-                display: none;
-                background: #242424;
-            }
-
-                #img-cancel-image{
-                    height: 30px;
-                    display: block;
-                    margin: calc(50% - 15px) auto;
-                }
-
-            #div-drag-drop{
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-                margin-top: 20px;
-                margin-left: 20px;
-                border-radius: 15px;
-                text-align: center;
-                background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='15' ry='15' stroke='white' stroke-width='5' stroke-dasharray='20' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-            }
-
-                #div-upload-image{
-                    display: inline-block;
-                    margin-top: 100px;
-                }
-
-                    #img-icon-upload{
-                        height:150px;
-                        display:block;
-                        margin: 0 auto 50px auto;
-                    }
-
-                    #h2-input-image{
-                        color:white;
-                        text-align: center;
-                    }
-
-                    #h2-input-image:hover{
-                        color: #00a797;
-                    }
-    
-        #div-description{
-            background: #242424;
-            width: calc(50% - 10px);
-            height: 100%;
-            border-radius: 15px;
-            float: right
-        }
-
-            #h3-descrption-title{
-                color: white;
-                margin: 30px 0px 15px 25px;
-                font-size: 25px;
-                font-size: bold;
-                display: inline-block;
-            }
-
-            #h4-character-counter{
-                float: right;
-                color: grey;
-                margin-right: 20px;
-                margin-top: 40px;
-            }
-
-            #div-description-text{
-                height: calc(100% - 105px);
-                width: calc(100% - 40px);
-                border-radius: 15px;
-                margin: 0 auto;
-                background: #3c3c3c;
-                padding-top: 10px
-            }
-
-                #textarea-description{
-                    color: white;
-                    height: calc(100% - 20px);
-                    width: calc(100% - 20px);
-                    margin: 0 auto;
-                    font-size: 20px;
-                    border-radius: 15px;
-                    display: block;
-                    border:none;
-                    background: none;
-                    resize:none
-                }
-
-            #textarea-description:focus {
-                outline: none;
-            }
-
-    #div-tags{
-        width:1210px;
-        height:60;
-        margin: 20px auto;
-        border-radius: 50px;
+#div-image-description{
+    margin:0 auto;
+    width: 96%;
+    height: 500px;
+    border-radius: 15px
+}
+    #div-image{
         background: #242424;
-    
+        height:100%;
+        width: calc(50% - 10px);
+        border-radius: 15px;
+        display: inline-block;
+        position: relative
     }
-    #input-tags-image{
-        color: white;
+
+        #img-uploaded{
+            display: none;
+            margin-top: 20px;
+            margin-left: 20px;
+        }   
+
+        #div-cancel-image{
+            position: absolute;
+            right: 0;
+            height: 50px;
+            width: 50px;
+            border-radius: 60px;
+            display: none;
+            background: #242424;
+        }
+
+            #img-cancel-image{
+                height: 30px;
+                display: block;
+                margin: calc(50% - 15px) auto;
+            }
+
+        #div-drag-drop{
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            margin-top: 20px;
+            margin-left: 20px;
+            border-radius: 15px;
+            text-align: center;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='15' ry='15' stroke='white' stroke-width='5' stroke-dasharray='20' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        }
+
+            #div-upload-image{
+                display: inline-block;
+                margin-top: 100px;
+            }
+
+                #img-icon-upload{
+                    height:150px;
+                    display:block;
+                    margin: 0 auto 50px auto;
+                }
+
+                #h2-input-image{
+                    color:white;
+                    text-align: center;
+                }
+
+                #h2-input-image:hover{
+                    color: #00a797;
+                }
+
+    #div-description{
+        background: #242424;
+        width: calc(50% - 10px);
         height: 100%;
-        width: calc(100% - 40px);
-        font-size:25px;
-        margin-left:20px;
-        font-size: bold;
-        border: none;
-        background:none;
+        border-radius: 15px;
+        float: right
     }
+
+        #h3-descrption-title{
+            color: white;
+            margin: 30px 0px 15px 25px;
+            font-size: 25px;
+            font-size: bold;
+            display: inline-block;
+        }
+
+        #h4-character-counter{
+            float: right;
+            color: grey;
+            margin-right: 20px;
+            margin-top: 40px;
+        }
+
+        #div-description-text{
+            height: calc(100% - 105px);
+            width: calc(100% - 40px);
+            border-radius: 15px;
+            margin: 0 auto;
+            background: #3c3c3c;
+            padding-top: 10px
+        }
+
+            #textarea-description{
+                color: white;
+                height: calc(100% - 20px);
+                width: calc(100% - 20px);
+                margin: 0 auto;
+                font-size: 20px;
+                border-radius: 15px;
+                display: block;
+                border:none;
+                background: none;
+                resize:none
+            }
+
+        #textarea-description:focus {
+            outline: none;
+        }
+
+    #div-tags-price-button-post{
+
+        display: flex;
+    }
+
+        #div-tags-price{
+            display: inline-block;
+        }
+
+            #div-tags, #div-price{
+                background: #242424;
+                width:595px;
+                height:60;
+                margin: 20px 20px;
+                border-radius: 50px;
+                display: flex;
+                position: relative;
+            }
+
+                #h3-filter{
+                    margin-top: 11px;
+                }
+
+                #h3-number-filter{
+                    color: #7c7c7c;
+                    margin-top: 11px;
+                    margin-left: 10px;
+                    float: right;
+                }
+
+                #div-filter{
+                    left: 190px;
+                    top: 20px;
+                    z-index: 100;
+                    position: absolute;
+                    font-weight: bold;
+                }
+
+                #h3-price{
+                    color: #7c7c7c;
+                    margin-left: 10px;
+                    margin-top: 20px;
+                }
+
+                #input-checkBox-price{
+                    background-color:  #3d3d3d;
+                    border-radius: 3px;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                    margin-left: 20px;
+                    margin-right:0 ;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 20px;;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    cursor:pointer; 
+                }
+
+                #div-input-price{
+                    opacity: 0.5;
+                    display: flex;
+                    pointer-events: none;
+                }
+
+                    #img-bpoints-price{
+                        height: 40px;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+
+                    #input-price{
+                        background:  #3d3d3d;
+                        color:  white;
+                        font-size:25px;
+                        margin-left: 170px;
+                        margin-top: 10px;
+                        border-radius: 20px;
+                        height: 40px;
+                        padding-left: 15px;
+                        width: 200px;
+                        font-size: bold;
+                        border: none;
+                        
+                    }
+
+        #div-button-post{
+            height: 80px;
+            width: 200px;
+            margin: 50px auto;
+            display: inline-block;
+        }
+
+            #button-post{
+                background: #00a797;
+                height: 100px;
+                width: 200px;
+            }
 
 #textarea-description::-webkit-scrollbar {
-    -webkit-appearance: none;
     width: 10px;
+    -webkit-appearance: none;
 }
 
 #textarea-description::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
@@ -167,4 +246,40 @@ form div{
 #textarea-description::-webkit-scrollbar-thumb {
     background-color: #00a797;
     border-radius: 20px;
+}
+
+#input-checkBox-price:checked{
+    background-color: #00a797;
+}
+
+#button-post{
+    color: white;
+    background: #674ea7;
+    border-radius: 15px;
+    width: 200px;
+    height: 80px;
+    border:none;
+    outline: none;
+}
+
+#div-price-number{
+  color: white;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: opacity 100ms;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#button-img-bpoints{
+  width: 30px;
+  transition: opacity 100ms;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

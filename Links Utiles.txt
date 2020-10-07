@@ -4,3 +4,6 @@ https://css-tricks.com/examples/DragAndDropFileUploading/
 
 Keep Me log in
 https://www.w3schools.com/php/php_file_upload.asp
+
+Translate
+https://stackoverflow.com/questions/36515089/how-to-load-google-translate-widget-on-click

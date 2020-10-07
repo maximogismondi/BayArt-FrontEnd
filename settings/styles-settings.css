@@ -1,66 +1,347 @@
 main{
-    height: auto !important;
-}
-#div-all-settings{
-    width: 50%;
-    margin-top: 20px;
-    margin-left: 25%;
-    margin-bottom: 20px !important;
-    float: left;
+  height: auto !important;
 }
 
-#div-all-profile{
-    margin-top: 50px;
+  #div-all-settings{
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 25%;
+  margin-bottom: 20px ;
+  }
+
+    #h2-name-user{
+      color: white;
+      text-align: center;
+    }
+
+    #div-all-profile{
+      margin-top: 50px;
+    }
+
+    #img-bpoints-settings{
+      width: 20px;
+      margin-left: -25px;
+      margin-top: -3px;
+      position: absolute;
+      height:auto;
+    }
+ 
+  
+
+/*POPS UPS*/
+
+#div-pop-up-background{
+background: black;
+height: 100vh;
+width: 100vw;
+z-index: 500;
+opacity: 0.5;
+position: fixed;
+display: none;
 }
 
-#img-bpoints-settings{
-    width: 20px;
-    margin-left: -25px;
-    margin-top: -3px;
-    position: absolute;
-    height:auto;
+#div-pop-up{
+  border: 5px solid #7c7c7c;
+  background: #242424;
+  color: white;
+  width: 500px;
+  height: 300px;
+  margin-left: calc(50vw - 250px);
+  margin-top: calc(50vh - 150px);
+  z-index: 1000;
+  border-radius: 15px;
+  position: fixed;
+  display: none;
+  }
+
+  #div-cancel-image{
+  right: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 60px;
+  position: absolute;
+  }
+
+    #img-cancel-image{
+        height: 30px;
+        display: block;
+        margin: calc(50% - 15px) auto;
+    }
+
+/*--------------------------------------------------------------*/
+  #div-change-profile-img{
+    margin-top: 30px;
+    margin-left: 20px;
+    display: flex;
+  }
+
+    #div-img-actual{
+      display: inline-block;
+    }
+
+      #img-actual{
+        border-radius: 100%;
+        height: 100px;
+        width: 100px;
+        margin-top: 50px;
+      }
+
+    #img-uploaded{
+      display: none;
+      margin-left: 30px;
+      height: 200px;
+      width: 200px;
+      border-radius: 200px;
+      object-fit: cover;
+    }
+
+      #div-drag-drop{
+        width: 200px;
+        height: 200px;
+        margin-left: 30px;
+        border-radius: 100px;
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='5' stroke-dasharray='15' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
+        text-align: center;
+        display: inline-block
+      }
+
+        #div-upload-image{
+          margin-top: calc(50% - 44px);
+          display: inline-block;
+        }
+
+          #img-icon-upload{
+            height:50px;
+            display:block;
+            margin-left: 22px;
+          }
+
+            #h5-input-image{
+              margin-bottom: 0;
+            }
+            
+            #h5-input-image:hover{
+                color: #00a797;
+            }
+
+  #button-submit-image{
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+
+    .button-img-bpoints{
+      width: 30px;
+      transition: opacity 100ms;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+      .div-price-number{
+        color: white;
+        margin-left: 5px;
+        font-size: 13px;
+        transition: opacity 100ms;
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+/*--------------------------------------------------------------*/
+
+#h3-username{
+  margin-left: 10px;
+  display: inline-block;
 }
 
-#button-change{
-    color: #7c7c7c;
-    background: none;
-    border:none;
-    outline: none;
+#div-change-username-input{
+  border-bottom: 1px solid white;
+  margin-left: 10px;
+  display: inline-block;
 }
 
-#h2-name-user{
-    color: white;
-    text-align: center;
+#button-submit-username{
+  margin-top: 65px;
+  margin-right: 20px;
 }
 
-h4{
-    color: #7c7c7c;
-    margin-left: 5%;
-    display: inline-block;
+/*--------------------------------------------------------------*/
+
+#h3-email{
+  margin-left: 10px;
+  display: inline-block;
 }
-h3{
-    color: white;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    margin-left: 3%;
+
+#div-change-email-input{
+  border-bottom: 1px solid white;
+  margin-left: 10px;
+  display: inline-block;
 }
+
+#button-submit-email{
+  margin-top: 65px;
+  margin-right: 20px;
+}
+
+/*--------------------------------------------------------------*/
+
+#h3-password{
+  margin-left: 10px;
+  display: inline-block;
+}
+
+#div-change-password-input{
+  border-bottom: 1px solid white;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+#img-eye{
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+}
+
+#button-submit-password{
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+/*--------------------------------------------------------------*/
+
+#button-submit-delete-history{
+  margin-top: 130px;
+  margin-right: 20px;
+}
+
+/*--------------------------------------------------------------*/
+
+#select-language{
+  margin-right: 5%;
+  margin-top: 25px;
+  float: right;
+}
+
+#select-language select{
+  color: #7c7c7c;
+  background: none;
+  border:none;
+  outline: none;
+}
+
+/*--------------------------------------------------------------*/
+
+#div-artist-publish{
+  border-bottom: 1px solid white;
+  margin-top: 10%;
+  width: 100%;
+  height: 58%;
+  overflow-y: auto;
+}
+
+.h4-artist-publish{
+  margin-left: 10px;
+  display: inline-block;
+}
+
+#button-submit-artist-publish{
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-top: 5%;
+}
+
+/*--------------------------------------------------------------*/
+
+#div-view-subs{
+  border-top: 1px solid white;
+  width: 100%;
+  height: 65%;
+  overflow-y: auto;
+}
+
+#h3-view-subs{
+  margin-left: 30px;
+}
+
+/*--------------------------------------------------------------*/
+
+#div-view-mounthly-purchases{
+  border-top: 1px solid white;
+  width: 100%;
+  height: 65%;
+  overflow-y: auto;
+}
+
+#h3-view-mounthly-purchases{
+  margin-left: 30px;
+}
+
+/*--------------------------------------------------------------*/
+
+#button-submit-get-out{
+  margin-top: 150px;
+  margin-right: 20px;
+}
+
+/*--------------------------------------------------------------*/
 
 .things-settings{
-    background-color: #383838;
-    margin-bottom: 60px;
-    margin-top: -20px;
-    border-radius: 15px;
-    height: auto;
+  background-color: #242424;
+  margin-bottom: 60px;
+  margin-top: -20px;
+  border-radius: 15px;
+  height: auto;
 }
 
 .button-change-setting{
-    margin-right: 5%;
-    margin-top: 25px;
-    float: right;
+  color: #7c7c7c;
+  margin-right: 5%;
+  margin-top: 25px;
+  background: none;
+  border:none;
+  outline: none;
+  float: right;
 }
 
-/* Formateamos el label que servirá de contenedor */
-.switch {
+.form-settings{
+  display: none;
+  margin-top: 30px;
+}
+
+.button-submit{
+  color: white;
+  background: #674ea7;
+  border:none;
+  outline: none;
+  float: right;
+  border-radius: 15px;
+  width: 150px;
+  height: 40px;
+  transition: all 0.1s;
+}
+
+.input-write{
+  color: white;
+  font-size: 20px;
+  border: none;
+  background: none;
+}
+
+h4{
+  color: #7c7c7c;
+  margin-left: 5%;
+  display: inline-block;
+}
+h3{
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 3%;
+}
+
+/*botones on/off*/
+
+  /* Formateamos el label que servirá de contenedor */
+  .switch {
     margin-right: 7%;
     margin-top: 30px;
     width: 27px;
@@ -68,12 +349,12 @@ h3{
     float: right;
     position: relative;
   }
-   
+
   /* Ocultamos el checkbox html */
   .switch input {
     display:none;
   }
-   
+  
   /* Formateamos la caja del interruptor sobre la cual se deslizará la perilla de control o slider */
   .slider {
     background-color: #ccc;
@@ -86,7 +367,7 @@ h3{
     position: absolute;
     cursor: pointer;
   }
-   
+  
   /* Pintamos la perilla de control o slider usando el selector before */
   .slider:before {
     background-color: white;
@@ -97,27 +378,61 @@ h3{
     position: absolute;
     content: "";
   }
-   
+  
   /* Cambiamos el color de fondo cuando el checkbox esta activado */
   input:checked + .slider {
     background-color: #00a797;
   }
-   
+  
   /* Deslizamos el slider a la derecha cuando el checkbox esta activado */ 
   input:checked + .slider:before {
     -webkit-transform: translateX(13px);
     -ms-transform: translateX(13px);
     transform: translateX(13px);
   }
-   
+  
   /* Aplicamos efecto de bordes redondeados en slider y en el fondo del slider */
   .slider.round {
     border-radius: 34px;
   }
-   
+  
   .slider.round:before {
     border-radius: 50%;
   }
 
-/*POPS UPS*/
+/*scrollbar*/
 
+.scrollbar-description::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+.scrollbar-description::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.scrollbar-description::-webkit-scrollbar-thumb {
+  background-color: #00a797;
+  border-radius: 20px;
+}
+
+/*eliminar
+#div-change-username-button{
+position: absolute;
+bottom: 20px;
+right: 20px;
+}
+
+#div-change-email-button{
+position: absolute;
+bottom: 20px;
+right: 20px;
+}
+
+#div-change-password-button{
+bottom: 20px;
+right: 20px;
+position: absolute;
+}
+
+*/

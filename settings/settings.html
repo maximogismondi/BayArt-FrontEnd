@@ -84,70 +84,246 @@
 
 		<main>
 			<div id="div-all-settings">
-				<div id="div-h2-settings">
+				<div>
 					<h2 id="h2-name-user">Hi! Soledad1</h2>
 				</div>
 				<div id="div-all-profile">
-					<h3 id="h3-profile">Profile</h3>
-					<div id="div-profile-settings" class="things-settings">
-						<div id="div-options-settings"><h4>Profile picture</h4><button id="button-change" class="button-change-setting"> <img src="../icons/bpoints.png" id="img-bpoints-settings">change</button></div>
-						<div id="div-options-settings"><h4>Username</h4><button id="button-change" class="button-change-setting"> <img src="../icons/bpoints.png" id="img-bpoints-settings">change</button></div>
-						<div id="div-options-settings"><h4>Email</h4><button id="button-change" class="button-change-setting">change</button></div>
-						<div id="div-options-settings"><h4>Password</h4><button id="button-change" class="button-change-setting">change</button></div>
+					<h3>Profile</h3>
+					<div class="things-settings">
+						<div ><h4>Profile image</h4><button id="button-change-image" class="button-change-setting"> <img src="../icons/bpoints.png" id="img-bpoints-settings">change</button></div>
+						<div ><h4>Username</h4><button id="button-change-username" class="button-change-setting"> <img src="../icons/bpoints.png" id="img-bpoints-settings">change</button></div>
+						<div ><h4>Email</h4><button id="button-change-email" class="button-change-setting">change</button></div>
+						<div ><h4>Password</h4><button id="button-change-password" class="button-change-setting">change</button></div>
 					</div>
 				</div>
-				<div id="div-all-privacy">
-					<h3 id="h3-privacy">Privacy</h3>
-					<div id="div-privacy-settings" class="things-settings">
-						<div id="div-options-settings"><h4>Delete history</h4><button id="button-change" class="button-change-setting">delete</button></div>
-						<div id="div-options-settings"><h4>Save history</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-						<div id="div-options-settings"><h4>Public library</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+				<div>
+					<h3>Privacy</h3>
+					<div class="things-settings">
+						<div ><h4>Delete history</h4><button id="button-delete-history" class="button-change-setting">delete</button></div>
+						<div ><h4>Save history</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+						<div ><h4>Public library</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 					</div>
 				</div>
-				<div id="div-all-appearance">
-					<h3 id="h3-appearance">Appearance</h3>
-					<div id="div-appearance-settings" class="things-settings">
-						<div id="div-options-settings"><h4>Theme</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-						<div id="div-options-settings"><h4>Language</h4><button id="button-change" class="button-change-setting">change</button></div>
+				<div>
+					<h3>Appearance</h3>
+					<div class="things-settings">
+						<div ><h4>Theme</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+						<div><h4>Language</h4><div id="select-language"><select><option value="0">English</option><option value="value2">Spanish</option></select></div></div>
 					</div>
 				</div>
-				<div id="div-all-notifications">
-					<h3 id="h3-notifications">Notifications</h3>
-					<div id="div-notifications-settings" class="things-settings">
-						<div id="div-options-settings"><h4>Artist publication</h4><button id="button-change" class="button-change-setting">change</button></div>
-						<div id="div-options-settings"><h4>Purchase notice</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-						<div id="div-options-settings"><h4>Investment report</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-						<div id="div-options-settings"><h4>Subscription exhaustion</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+				<div>
+					<h3>Notifications</h3>
+					<div class="things-settings">
+						<div ><h4>Artist publication</h4><button id="button-change-artist-publish" class="button-change-setting">change</button></div>
+						<div ><h4>Purchase notice</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+						<div ><h4>Sponsor report</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+						<div ><h4>Subscription exhaustion</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 					</div>
 				</div>
-				<div id="div-all-activity">
-					<h3 id="h3-activity">Activity</h3>
-					<div id="div-activity-settings" class="things-settings">
-						<div id="div-options-settings"><h4>Subscription</h4><button id="button-change" class="button-change-setting">view</button></div>
-						<div id="div-options-settings"><h4>Purchases in the month</h4><button id="button-change" class="button-change-setting">view</button></div>
+				<div>
+					<h3>Activity</h3>
+					<div class="things-settings">
+						<div ><h4>Subscriptions</h4><button id="button-view-subs" class="button-change-setting">view</button></div>
+						<div ><h4>Monthly purchases</h4><button id="button-view-mounthly-purchases" class="button-change-setting">view</button></div>
 					</div>
 				</div>
-				<div id="div-all-account">
-					<h3 id="h3-account">Account</h3>
-					<div id="div-account-settings" class="things-settings">
-						<div id="div-options-settings"><h4>Sign off</h4><button id="button-change" class="button-change-setting">get out</button></div>
+				<div>
+					<h3>Account</h3>
+					<div class="things-settings">
+						<div ><h4>Sign off</h4><button id="button-get-out" class="button-change-setting">get out</button></div>
 					</div>
 				</div>
 			</div>
 		</main>
 		
+		<div id="div-pop-up-background"></div>
+		
 		<!--POPS UPS-->
-		<div id="div-username-settings">
-			<form action="" method="POST" id="form-username-settings">
-                <h2>Soledad1</h2>
-				<div id="div-change-username">
-                    <input type="text" name="nombre" placeholder="New Username" class="input-write" required>
-                </div>
+		<div id="div-pop-up">
+			<div id="div-cancel-image">
+				<img src="../icons/cancel.png" id="img-cancel-image">
+			</div>
+			
+			<form action="" method="POST" id="form-settings-image" class="form-settings">
 
-                <div id="div-change-username-button">
-                    <button id="button-submit" type="submit"> Change Username</button>
-                </div>
-            </form>
+				<!--change profile img-->
+				<div id="div-change-profile-img">
+					<div id="div-img-actual">
+						<img src="../ImgPrueba/3.jpg" id="img-actual">
+					</div>
+					<img id="img-uploaded">
+					<div id="div-drag-drop">
+						<div id="div-upload-image">
+							<img id="img-icon-upload" src="../Icons/upload.png">
+							<label id="label-input-image" for="input-image">
+								<h5 id="h5-input-image">Upload Image</h5>
+							</label>
+						</div>
+						<input type="file" id="input-image" accept="image/*" style="display:none">
+					</div>
+				</div>
+				<button id="button-submit-image" type="submit" class="button-submit">
+					<img src="../icons/bpoints.png" id="button-img-bpoints-image" class="button-img-bpoints">
+					<div id="div-price-number-image" class="div-price-number">1000</div>
+				</button>
+			</form>
+
+			<form action="" method="POST" id="form-settings-username" class="form-settings">
+
+				<!--change username-->
+				<div>
+					<h4>Username:</h4>
+					<h3 id="h3-username">Soledad1</h3>
+					<div>
+						<h4>Change username:</h4>
+						<div id="div-change-username-input">
+							<input type="text" class="input-write" required>
+						</div>
+					</div>
+				</div>
+				
+				<button id="button-submit-username" type="submit" class="button-submit">
+					<img src="../icons/bpoints.png" id="button-img-bpoints-username" class="button-img-bpoints">
+					<div id="div-price-number-username" class="div-price-number">1000</div>
+				</button>
+				
+			</form>
+			
+			<form action="" method="POST" id="form-settings-email" class="form-settings">
+
+				<!--change email-->
+				<div>
+					<h4>Email:</h4>
+					<h3 id="h3-email">soledadgonzales@gmail.com</h3>
+					<div>
+						<h4>Change email:</h4>
+						<div id="div-change-email-input">
+							<input type="text" class="input-write" required>
+						</div>
+					</div>
+					<button id="button-submit-email" type="submit" class="button-submit">
+						<div>CHANGE</div>
+					</button>
+				</div>
+				
+			</form>
+
+			<form action="" method="POST" id="form-settings-password" class="form-settings">
+
+				<!--change password-->
+				<div>
+					<h4>Password:</h4>
+					<h3 id="h3-password">********</h3>
+					<div style="margin-top: -18px;"></div>
+					<h4>Change password:</h4>
+					<div id="div-change-password-input">
+						<input type="password" class="input-write" id="input-password" required>
+					</div>
+					<img id="img-eye" src="../icons/open-eye.png">
+					<h4>Confirm password:</h4>
+					<div id="div-change-password-input">
+						<input type="password" class="input-write" required>
+					</div>
+					<button id="button-submit-password" type="submit" class="button-submit">
+						<div>CHANGE</div>
+					</button>
+				</div>
+			</form>
+			
+			<form action="" method="POST" id="form-settings-delete-history" class="form-settings">
+
+				<!--delete history-->
+				<div>
+					<h4>Are you sure you want to delete your whole </br> history?</h4>
+					<button id="button-submit-delete-history" type="submit" class="button-submit">
+						<div>DELETE</div>
+					</button>
+				</div>
+				
+			</form>
+
+			<form action="" method="POST" id="form-settings-artist-publish" class="form-settings">
+
+				<!--change artist publish-->
+				<div id="div-artist-publish" class="scrollbar-description">
+					<div><h4 class="h4-artist-publish">Valentin_Tin </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					<div><h4 class="h4-artist-publish">JUAN </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					<div><h4 class="h4-artist-publish">LoboDelCalla </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					<div><h4 class="h4-artist-publish">Gianpa_dibujos </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					<div><h4 class="h4-artist-publish">Isabela341 </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+				</div>
+
+				<button id="button-submit-artist-publish" type="submit" class="button-submit">
+					<div>FINISH</div>
+				</button>
+				
+			</form>
+
+			<form action="" method="POST" id="form-settings-subs" class="form-settings">
+
+				<!--view subscriptions-->
+				<h4>Subscriptions</h4>
+				<div id="div-view-subs" class="scrollbar-description">
+					<h3 id="h3-view-subs">Isabela341 </h3>
+					<h3 id="h3-view-subs">LoboDelCalla </h3>
+					<h3 id="h3-view-subs">Gianpa_dibujos </h3>
+					<h3 id="h3-view-subs">JUAN </h3>
+					<h3 id="h3-view-subs">Valentin_Tin </h3>
+					<h3 id="h3-view-subs">XAIO </h3>
+					<h3 id="h3-view-subs">Maradona10 </h3>
+					<h3 id="h3-view-subs">BEN10 </h3>
+					<h3 id="h3-view-subs">LoboSolitario </h3>
+					<h3 id="h3-view-subs">EL_PIBE_10 </h3>
+					<h3 id="h3-view-subs">Gianaig_dibujos_xD </h3>
+					<h3 id="h3-view-subs">JUAN_JOSE </h3>
+					<h3 id="h3-view-subs">XD </h3>
+					<h3 id="h3-view-subs">Pintor123 </h3>
+				</div>
+				
+			</form>
+
+			<form action="" method="POST" id="form-settings-view-mounthly-purchases" class="form-settings">
+
+				<!--view mounthly purchases-->
+				<h4>Mounthly purchases</h4>
+				<div id="div-view-mounthly-purchases" class="scrollbar-description">
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Profile image </h3>
+					<h3 id="h3-view-mounthly-purchases">Username </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Picture </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Picture </h3>
+					<h3 id="h3-view-mounthly-purchases">Picture </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Picture </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Picture </h3>
+					<h3 id="h3-view-mounthly-purchases">Picture </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Picture </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Picture </h3>
+					<h3 id="h3-view-mounthly-purchases">Picture </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+				</div>
+				
+			</form>
+
+			<form action="" method="POST" id="form-settings-get-out" class="form-settings">
+
+				<!--get out-->
+				<div>
+					<h4>Are you sure you want to get out?</h4>
+					<button id="button-submit-get-out" type="submit" class="button-submit">
+						<div>GET OUT</div>
+					</button>
+				</div>
+				
+			</form>
+
 		</div>
 		
 	</body>
@@ -156,7 +332,11 @@
 
 		/*Ensanchar perfil*/
 
-		$("#div-profile-picture").click(changeProfileWidth);
+		$("#div-profile").click(changeProfileWidth);
+
+        /*Funcion ocultar contraseña*/
+        
+        $("#img-eye").click(showPassword);
 
 		/*Hover Botones secundarios (settings, library)*/
 
@@ -166,6 +346,100 @@
 		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
 		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
 
+		/*Efecto boton bpoints pop-up*/
+
+		function changeButtonBpoints(shown, name){
+			if(shown){
+				$("#button-img-bpoints-"+name).css("opacity","0");
+				$("#div-price-number-"+name).css("opacity","0");
+				setTimeout( function(){
+					$("#button-submit-"+name).css("border", "5px solid white");
+					$("#div-price-number-"+name).html("CHANGE");
+					$("#button-img-bpoints-"+name).css("display","none");
+					$("#div-price-number-"+name).css("opacity","1");
+       			}, 100);
+				setTimeout( function(){
+					$("#button-submit-"+name).css("border", "2px solid white")
+       			}, 300);
+			}
+			else{
+				$("#div-price-number-"+name).css("opacity","0");
+				$("#button-submit-"+name).css("border", "none");
+				setTimeout( function(){
+					$("#div-price-number-"+name).html("1000");
+					$("#button-img-bpoints-"+name).css("opacity","1");
+					$("#button-img-bpoints-"+name).css("display","inline-block");
+					$("#div-price-number-"+name).css("opacity","1");
+					
+       			}, 100);
+			}
+		}
+
+		$("#button-submit-image").mouseenter(function(){changeButtonBpoints(true,"image")});
+		$("#button-submit-image").mouseleave(function(){changeButtonBpoints(false,"image")});
+
+		$("#button-submit-username").mouseenter(function(){changeButtonBpoints(true,"username")});
+		$("#button-submit-username").mouseleave(function(){changeButtonBpoints(false,"username")});
+
+		/*Abrir popup*/
+
+		$(".button-change-setting").click(function(){
+			$("#div-pop-up-background").css("display","block");
+			$("#div-pop-up").css("display","block");
+		})
+
+		/*Contenido Pop-up*/
+
+		$("#button-change-image").click(function(){
+			$("#form-settings-image").css("display","block");
+		});
+
+		$("#button-change-username").click(function(){
+			$("#form-settings-username").css("display","block");
+		});
+
+		$("#button-change-email").click(function(){
+			$("#form-settings-email").css("display","block");
+		});
+
+		$("#button-change-password").click(function(){
+			$("#form-settings-password").css("display","block");
+		});
+
+		$("#button-delete-history").click(function(){
+			$("#form-settings-delete-history").css("display","block");
+		});
+
+		$("#button-change-artist-publish").click(function(){
+			$("#form-settings-artist-publish").css("display","block");
+		});
+
+		$("#button-view-subs").click(function(){
+			$("#form-settings-subs").css("display","block");
+		});
+
+		$("#button-view-mounthly-purchases").click(function(){
+			$("#form-settings-view-mounthly-purchases").css("display","block");
+		});
+
+		$("#button-get-out").click(function(){
+			$("#form-settings-get-out").css("display","block");
+		});
+
+		/*salir popup*/
 		
+		$("#div-cancel-image").click(function(){
+			$("#div-pop-up-background").css("display","none");
+			$("#div-pop-up").css("display","none");
+			$(".form-settings").css("display","none");
+			
+			//Resetear IMG-UPLOADED
+			$("#div-drag-drop").css("display","inline-block");
+        	$("#img-uploaded").css("display","none")
+		});
+		
+
 	</script>
+	<script src="select-image.js"></script>
+	<script src="drag-drop-image.js"></script>
 </html>

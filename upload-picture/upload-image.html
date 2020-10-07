@@ -5,7 +5,6 @@
 		<link rel="stylesheet" href="../styles-general.css">
 		<script src="../basic-functions.js"></script>
 		<script src="../jquery.js"></script>
-		<script src="drag-drop-image.js"></script>
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 		<title>BayArt! - Upload Image</title>
 	</head>
@@ -91,6 +90,8 @@
 						<div id="div-cancel-image" onclick="borrarImagen()">
 							<img src="../icons/cancel.png" id="img-cancel-image">
 						</div>
+						<img id="img-uploaded">
+						</img>
 						<div id="div-drag-drop">
 							<div id="div-upload-image">
 								<img id="img-icon-upload" src="../Icons/upload.png">
@@ -99,9 +100,7 @@
 								</label>
 							</div>
 						</div>
-						
-						
-    					<input type="file" id="input-image" accept="images/*" style="display:none">
+    					<input type="file" id="input-image" accept="image/*" style="display:none">
 					</div>
 					<div id="div-description">
 						<h3 id="h3-descrption-title">Description</h3>
@@ -111,8 +110,58 @@
 						</div>
 					</div>
 				</div>
-				<div id="div-tags">
-					<input type="text" id="input-tags-image" placeholder="Add tags">
+				<div id="div-tags-price-button-post">
+					<div id="div-tags-price">
+						<div id="div-tags">
+							<label id="button-arrow">
+
+								<img id="img-arrow" src="../icons/arrow.png" class="img-buttons" >
+								<h3 id="h3-number-filter">0</h3>
+								<h3 id="h3-filter">FILTERS</h3>
+			
+							</label>
+
+							<div id="div-filter">
+								<div id="div-column1">
+								
+									<input type="checkbox" id="input-checkBox1" class="input-checkbox" > <label id="label1">3D</label> <br>
+									<input type="checkbox" id="input-checkBox2" class="input-checkbox" > <label id="label2">Animation</label> <br>
+									<input type="checkbox" id="input-checkBox3" class="input-checkbox" > <label id="label3">Anime</label> <br>
+									<input type="checkbox" id="input-checkBox4" class="input-checkbox" > <label id="label4">Comics</label> <br>
+									<input type="checkbox" id="input-checkBox5" class="input-checkbox" > <label id="label5">Emoji</label>  <br>
+									<input type="checkbox" id="input-checkBox6" class="input-checkbox" > <label id="label6">Horror</label> <br>
+									<input type="checkbox" id="input-checkBox7" class="input-checkbox" > <label id="label7">Digital Art</label>
+								
+								</div>
+				
+								<div id="div-column2">
+				
+									<input type="checkbox" id="input-checkBox8" class="input-checkbox" > <label id="label8">Fractal</label> <br>
+									<input type="checkbox" id="input-checkBox9" class="input-checkbox" > <label id="label9">PixelArt</label> <br>
+									<input type="checkbox" id="input-checkBox10" class="input-checkbox" > <label id="label10">Photograpy</label>  <br>
+									<input type="checkbox" id="input-checkBox11" class="input-checkbox" > <label id="label11">Street Art</label>  <br>
+									<input type="checkbox" id="input-checkBox12" class="input-checkbox" > <label id="label12">Fantasy</label>  <br>
+									<input type="checkbox" id="input-checkBox13" class="input-checkbox" > <label id="label13">Science Fiction</label>  <br>
+									<input type="checkbox" id="input-checkBox14" class="input-checkbox" > <label id="label14">Wallpaper</label>
+								
+								</div>		
+							</div>
+						</div>
+						<div id="div-price">
+							<input type="checkbox" id="input-checkBox-price">
+							<h3 id="h3-price">SET PRICE</h3>
+							<div id="div-input-price">
+								<input id="input-price" type="number" min="1">
+								<img src="../icons/bpoints.png" id="img-bpoints-price">
+							</div>
+						</div>
+					</div>
+					<div id="div-button-post">
+						<button id="button-post">
+							<img src="../icons/bpoints.png" id="button-img-bpoints">
+							<div id="div-price-number">1000</div>
+						</button>
+					</div>
 				</div>
 			</form>
 		</main>
@@ -120,8 +169,43 @@
 
 	</body>
 	<script>
+
+		/*Girar Flecha*/
+
+		$("#button-arrow").click(changeArrow);
+
 		/*Ensanchar perfil*/
 		$("#div-profile-picture").click(changeProfileWidth);
+
+		/*Cambiar Color Texto*/
+		$("#input-checkBox-price").click(function (){
+			if($(this).prop('checked')){
+				$("#h3-price").css( "color" , "white");
+				$("#div-input-price").css( "opacity" , "1");
+				$("#div-input-price").css( "pointer-events" , "auto");
+			}
+			else{
+				$("#h3-price").css( "color" , "#7c7c7c");
+				$("#div-input-price").css( "opacity" , "0.5");
+				$("#div-input-price").css( "pointer-events" , "none");
+			}
+		});
+
+		var numberTags = 0;
+
+		$(".input-checkbox").click(function (){
+			if(!$(this).prop('checked')){
+				numberTags--;
+				if(numberTags == 2) displayCheckbox(1,"auto");
+			}
+			else if(numberTags < 3){
+				numberTags++;
+				if(numberTags == 3) displayCheckbox(0.3,"none");
+			}
+			var idCheckBox = $(this).attr("id");
+			checkBoxState(idCheckBox, "white", "#7c7c7c");
+			document.getElementById("h3-number-filter").innerHTML = numberTags;
+		}); 
 		
 		/*Hover Botones secundarios (settings, library)*/
 		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
@@ -130,5 +214,39 @@
 		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
 		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
 
+		/*cambiar boton*/
+		function changeButtonBpoints(shown){
+			if(shown){
+				$("#button-img-bpoints").css("opacity","0");
+				$("#div-price-number").css("opacity","0");
+				setTimeout( function(){
+					$("#button-post").css("border", "5px solid white")
+					$("#div-price-number").html("UPLOAD");
+					$("#button-img-bpoints").css("display","none");
+					$("#div-price-number").css("opacity","1");
+       			}, 100);
+				setTimeout( function(){
+					$("#button-post").css("border", "2px solid white")
+       			}, 300);
+			}
+			else{
+				$("#div-price-number").css("opacity","0");
+				$("#button-post").css("border", "none")
+				setTimeout( function(){
+					$("#div-price-number").html("1000");
+					$("#button-img-bpoints").css("opacity","1");
+					$("#button-img-bpoints").css("display","inline-block");
+					$("#div-price-number").css("opacity","1");
+					
+       			}, 100);
+			}
+		}
+
+		$("#button-post").mouseenter(function(){changeButtonBpoints(true)});
+		$("#button-post").mouseleave(function(){changeButtonBpoints(false)});
+
 	</script>
-</html>
+	<script src="select-image.js"></script>
+	<script src="drag-drop-image.js"></script>
+
+</html>z

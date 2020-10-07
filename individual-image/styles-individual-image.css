@@ -1,12 +1,8 @@
 /*ID*/
 
 main{
-    margin-top: 240px !important; 
-    height: auto !important; 
-}
-
-#button-browse{
-	background-color: #674ea7;
+    margin-top: 240px !important;
+    height: auto !important;
 }
 
 #div-url-image{
@@ -30,7 +26,7 @@ main{
 }
 
 #div-image{
-    background: #383838;
+    background: #242424;
     border-radius: 15px;
     display: inline-block;
 }
@@ -41,7 +37,7 @@ main{
 }
 
 #div-title-description{
-    background: #383838;
+    background: #242424;
     border-radius: 15px;
     height: 100%;
     float: right;
@@ -62,7 +58,7 @@ main{
 }
 
 #div-artist{
-    background: #383838;
+    background: #242424;
     border-radius: 80px;
     margin-top: 50px;
     height: 60px;
@@ -87,7 +83,7 @@ main{
 }
 
 #div-title-comments{
-    background: #383838;
+    background: #242424;
     border-radius: 15px;
     margin-top: 50px;
     margin-bottom: 50px;
