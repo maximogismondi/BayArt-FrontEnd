@@ -4,8 +4,6 @@
 		<link rel="shortcut icon" href="../icons/icon-viewer.png"/>
 		<link rel="stylesheet" href="styles-individual-image.css">
 		<link rel="stylesheet" href="../styles-general.css">
-		<script src="../basic-functions.js"></script>
-		<script src="../jquery.js"></script>
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 		<title>BayArt! - Bolivian Yoda</title>
 	</head>
@@ -87,7 +85,7 @@
 				</div>
 				<div id= "div-image-description">
 					<div id="div-image">
-						<img src="../icons/xd2.jpg" id="img-image">
+						<img src="../ImgPrueba/15.jpg" id="img-image">
 					</div>
 					<div id="div-title-description">
 						<h4 class="h4-subtitle">Description</h4>
@@ -109,12 +107,11 @@
 					<a href="../artist-profile/artist-profile.html" style="text-decoration: none;">
 						<h4 id="h4-username-artist">Valentin_tin</h4>
 					</a>
-					<button id="button-submit-image" type="submit" class="button-submit">
-						<img src="../icons/bpoints.png" id="button-img-bpoints-image" class="button-img-bpoints">
-						<div id="div-price-number-image" class="div-price-number">1300</div>
-					</button>
 				</div>
-				
+				<button id="button-buy-image" type="submit">
+						<img src="../icons/bpoints.png" id="button-img-bpoints-image">
+						<div id="div-price-number-image">1300</div>
+				</button>
 				
 				<div id="div-title-comments">
 					<h4 class="h4-subtitle">Comments</h4>
@@ -181,58 +178,50 @@
 		
 	</body>
 
+	<script src="../jquery.js"></script>
+	<script src="../basic-functions.js"></script>
+		
 	<script>
-		/*Ensanchar perfil*/
-
-		$("#div-profile-picture").click(changeProfileWidth);
-
 		/*Setear alto y ancho de imagen*/
 
 		setWidthHeight("img-image", "div-image", 500, 500);
 		$("#div-image-description").css("height",($("#div-image").height()));
 		$("#div-title-description").css("width",($("#div-image-description").width()-$("#div-image").width()-50));
-		$("#div-artist").css("width",($("#div-image-description").width()));
-
-		/*Hover Botones secundarios (settings, library)*/
-
-		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
-		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
-		
-		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
-		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
-
+		$("#div-artist").css("width",($("#div-image").width()));
+		$("#button-buy-image").css("margin-right",($("#div-title-description").width()/2)-75);
 
 		/*Efecto boton bpoints comprar*/
 
-		function changeButtonBpoints(shown, name){
+		function changeButtonBpoints(shown){
 			if(shown){
-				$("#button-img-bpoints-"+name).css("opacity","0");
-				$("#div-price-number-"+name).css("opacity","0");
+				$("#button-img-bpoints-image").css("opacity","0");
+				$("#div-price-number-image").css("opacity","0");
 				setTimeout( function(){
-					$("#button-submit-"+name).css("border", "5px solid white");
-					$("#div-price-number-"+name).html("BUY");
-					$("#button-img-bpoints-"+name).css("display","none");
-					$("#div-price-number-"+name).css("opacity","1");
+					$("#button-buy-image").css("border", "5px solid white");
+					$("#div-price-number-image").html("BUY");
+					$("#button-img-bpoints-image").css("display","none");
+					$("#div-price-number-image").css("opacity","1");
 				}, 100);
 				setTimeout( function(){
-					$("#button-submit-"+name).css("border", "2px solid white")
+					$("#button-buy-image").css("border", "2px solid white")
 				}, 300);
 			}
 			else{
-				$("#div-price-number-"+name).css("opacity","0");
-				$("#button-submit-"+name).css("border", "none");
+				$("#div-price-number-image").css("opacity","0");
+				$("#button-buy-image").css("border", "none");
 				setTimeout( function(){
-					$("#div-price-number-"+name).html("1000");
-					$("#button-img-bpoints-"+name).css("opacity","1");
-					$("#button-img-bpoints-"+name).css("display","inline-block");
-					$("#div-price-number-"+name).css("opacity","1");
+					$("#div-price-number-image").html("1000");
+					$("#button-img-bpoints-image").css("opacity","1");
+					$("#button-img-bpoints-image").css("display","inline-block");
+					$("#div-price-number-image").css("opacity","1");
 					
 				}, 100);
 			}
 		}
 
-		$("#button-submit-image").mouseenter(function(){changeButtonBpoints(true,"image")});
-		$("#button-submit-image").mouseleave(function(){changeButtonBpoints(false,"image")});
+		$("#button-buy-image").mouseenter(function(){changeButtonBpoints(true)});
+		$("#button-buy-image").mouseleave(function(){changeButtonBpoints(false)});
 		
 	</script>
+	
 </html>

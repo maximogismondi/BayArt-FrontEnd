@@ -4,9 +4,6 @@
 		<link rel="shortcut icon" href="../icons/icon-viewer.png"/>
 		<link rel="stylesheet" href="styles-homepage.css">
 		<link rel="stylesheet" href="../styles-general.css">
-		<script src="caroucel-profiles.js"></script>
-		<script src="../basic-functions.js"></script>
-		<script src="../jquery.js"></script>
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 		<title>BayArt! - Homepage</title>
 	</head>
@@ -134,35 +131,35 @@
 
 		</header>
 
-		<main>
-			<section></section>
-		</main>
+		<main id="main-images">
+			<img src="../icons/xd2.jpg" onclick="location.href='../individual-image/individual-image.html'">
+			<img src="../imgPrueba/1.jpg">
+			<img src="../imgPrueba/2.jpg">
+			<img src="../imgPrueba/3.jpg">
+			<img src="../imgPrueba/4.jpg">
+			<img src="../imgPrueba/5.jpg">
+			<img src="../imgPrueba/6.jpg">
+			<img src="../imgPrueba/7.jpg">
+			<img src="../imgPrueba/8.jpg">
+			<img src="../imgPrueba/9.jpg">
+			<img src="../imgPrueba/10.jpg">
+			<img src="../imgPrueba/11.jpg">
+			<img src="../imgPrueba/12.jpg">
+			<img src="../imgPrueba/13.jpg">
+			<img src="../imgPrueba/14.jpg">
+			<img src="../imgPrueba/15.jpg">
+			<img src="../imgPrueba/16.jpg">
+			<img src="../imgPrueba/17.jpg">
+	</main>
 		
 	</body>
+	<script src="../jquery.js"></script>
+	<script src="caroucel-profiles.js"></script>
+	<script src="../basic-functions.js"></script>
 
 	<script>
+		/*Order Main Images*/
 
-		$( document ).ready(function() {
-		    $("#carousel-images-profiles").css({opacity: "1"});
-		});
-
-		startCarroucelProfiles();	
-
-		/*Ensanchar perfil*/
-
-		$("#div-profile-picture").click(changeProfileWidth);
-
-
-		/*Hover Botones secundarios (settings, library)*/
-
-		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
-		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
-		
-		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
-		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
-
-		
-
-
+		orderImages("main-images",200, 20);
 	</script>
 </html>

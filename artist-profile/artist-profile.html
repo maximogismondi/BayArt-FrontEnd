@@ -4,8 +4,6 @@
 		<link rel="shortcut icon" href="../icons/icon-viewer.png"/>
 		<link rel="stylesheet" href="styles-artist-profile.css">
 		<link rel="stylesheet" href="../styles-general.css">
-		<script src="../basic-functions.js"></script>
-		<script src="../jquery.js"></script>
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 		<title>BayArt! - Profile Artist</title>
 	</head>
@@ -86,12 +84,12 @@
 			</div>
 			<div id="div-buttons-artist-profile">
 				<button class="buttons-profile-artist" id="button-subscribers">
-					<img src="../icons/icon-subs.png" id="button-img-subs">
+					<img src="../icons/icon-subs.png" id="button-img-subscribers">
 					<div id="div-subscribers-number">100</div>
 					
 				</button>
 				<button class="buttons-profile-artist" id="button-sponsors">
-					<img src="../icons/bpoints.png" id="button-img-bpoints">
+					<img src="../icons/bpoints.png" id="button-img-sponsors">
 					<div id="div-sponsors-number">2500</div>
 				</button>
 			</div>
@@ -118,90 +116,168 @@
 			
 		</main>
 		
+		<div id="div-pop-up-background"></div>
+		
+		<!--POPS UPS-->
+		<div id="div-pop-up">
+			<div id="div-cancel-image">
+				<img src="../icons/cancel.png" id="img-cancel-image">
+			</div>
+
+
+			<form action="" method="POST" id="form-artist-profile-subscribe" class="form-settings">
+
+				<!--subs-->
+				<div>
+					<h4>Are you sure you want to subscribe?</h4>
+					<div ><h4>Renew subscription automatically</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					<div ><h4>Enable notifications</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					<button id="button-artist-profile-subscribe" type="submit" class="button-submit">
+							<img src="../icons/bpoints.png" id="button-img-bpoints">
+							<div id="div-price-number">1000</div>
+					</button>
+				</div>
+				
+			</form>
+
+			<form action="" method="POST" id="form-artist-profile-sponsor" class="form-settings">
+
+				<!--sponsor-->
+				<div>
+					<h4>Are you sure you want to invest in this artist?</h4>
+					<div id="div-price">
+						<h4>To invest</h4>
+						<div>
+							<input id="input-price" type="number" min="1">
+							<img src="../icons/bpoints.png" id="img-bpoints-price">
+						</div>
+						<h4>0%</h4>
+					</div>
+					<div ><h4>Renew invest automatically</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					<button id="button-artist-profile-sponsor" type="submit" class="button-submit">
+						<div>SPONSOR</div>
+					</button>
+				</div>
+				
+			</form>
+
 	</body>
+
+	<script src="../jquery.js"></script>
+	<script src="../basic-functions.js"></script>
 
 	<script>
 
-		/*Ensanchar perfil*/
-
-		$("#div-profile-picture").click(changeProfileWidth);
-
 		/*cambiar botones*/
 
-		function changeButtonSubs(shown){
+		function changeButtonArtistProfile(shown, name){
 			if(shown){
-				$("#button-img-subs").css("opacity","0");
-				$("#div-subscribers-number").css("opacity","0");
+				$("#button-img-"+name).css("opacity","0");
+				$("#div-"+name+"-number").css("opacity","0");
 				setTimeout( function(){
-					$("#button-subscribers").css("border", "10px solid white")
-					$("#div-subscribers-number").html("SUBSCRIBE");
-					$("#button-img-subs").css("display","none");
-					$("#div-subscribers-number").css("opacity","1");
+					$("#button-"+name).css("border", "10px solid white")
+					if(name == "subscribers"){
+						$("#div-"+name+"-number").html("SUBSCRIBE");
+					}
+					else{
+						$("#div-"+name+"-number").html("SPONSOR");
+					}
+					$("#button-img-"+name).css("display","none");
+					$("#div-"+name+"-number").css("opacity","1");
 				}, 100);
 				setTimeout( function(){
-					$("#button-subscribers").css("border", "2px solid white")
+					$("#button-"+name).css("border", "2px solid white")
 				}, 300);
 			}
 			else{
-				$("#div-subscribers-number").css("opacity","0");
-				$("#button-subscribers").css("border", "none")
+				$("#div-"+name+"-number").css("opacity","0");
+				$("#button-"+name).css("border", "none")
 				setTimeout( function(){
-					$("#div-subscribers-number").html("100");
-					$("#button-img-subs").css("opacity","1");
-					$("#button-img-subs").css("display","inline-block");
-					$("#div-subscribers-number").css("opacity","1");
+					if(name == "subscribers"){
+						$("#div-"+name+"-number").html("100");
+					}
+					else{
+						$("#div-"+name+"-number").html("2500");
+					}
+					$("#button-img-"+name).css("opacity","1");
+					$("#button-img-"+name).css("display","inline-block");
+					$("#div-"+name+"-number").css("opacity","1");
 					
        			}, 100);
 				
 			}
 		}
+		
+		$("#button-subscribers").mouseenter(function(){changeButtonArtistProfile(true, "subscribers")});
+		$("#button-subscribers").mouseleave(function(){changeButtonArtistProfile(false, "subscribers")});
 
-		function changeButtonSponsor(shown){
+		$("#button-sponsors").mouseenter(function(){changeButtonArtistProfile(true, "sponsors")});
+		$("#button-sponsors").mouseleave(function(){changeButtonArtistProfile(false, "sponsors")});
+		
+		/*Order Main Images*/
+
+		orderImages("main-bottom",150, 15);
+
+		/*Abrir popup*/
+
+		$(".buttons-profile-artist").click(function(){
+			$("#div-pop-up-background").css("display","block");
+			$("#div-pop-up").css("display","block");
+		})
+
+		/*Contenido Pop-up*/
+		$("#button-subscribers").click(function(){
+			$("#form-artist-profile-subscribe").css("display","block");
+		});
+
+		$("#button-sponsors").click(function(){
+			$("#form-artist-profile-sponsor").css("display","block");
+		});
+
+		/*salir popup*/
+		
+		$("#div-cancel-image").click(function(){
+			$("#div-pop-up-background").css("display","none");
+			$("#div-pop-up").css("display","none");
+			$(".form-settings").css("display","none");
+			
+			//Resetear IMG-UPLOADED
+			$("#div-drag-drop").css("display","inline-block");
+			$("#img-uploaded").css("display","none");
+			$("#input-image").val(null);
+		});
+
+		/*cambiar botones pops ups*/
+
+		function changeButtonBpoints(shown){
 			if(shown){
 				$("#button-img-bpoints").css("opacity","0");
-				$("#div-sponsors-number").css("opacity","0");
+				$("#div-price-number").css("opacity","0");
 				setTimeout( function(){
-					$("#button-sponsors").css("border", "10px solid white")
-					$("#div-sponsors-number").html("SPONSOR");
+					$("#button-artist-profile-subscribe").css("border", "5px solid white")
+					$("#div-price-number").html("TO SUBSCRIBE");
 					$("#button-img-bpoints").css("display","none");
-					$("#div-sponsors-number").css("opacity","1");
+					$("#div-price-number").css("opacity","1");
        			}, 100);
 				setTimeout( function(){
-					$("#button-sponsors").css("border", "2px solid white")
+					$("#button-artist-profile-subscribe").css("border", "2px solid white")
        			}, 300);
 			}
 			else{
-				$("#div-sponsors-number").css("opacity","0");
-				$("#button-sponsors").css("border", "none")
+				$("#div-price-number").css("opacity","0");
+				$("#button-artist-profile-subscribe").css("border", "none")
 				setTimeout( function(){
-					$("#div-sponsors-number").html("2500");
+					$("#div-price-number").html("1000");
 					$("#button-img-bpoints").css("opacity","1");
 					$("#button-img-bpoints").css("display","inline-block");
-					$("#div-sponsors-number").css("opacity","1");
+					$("#div-price-number").css("opacity","1");
 					
        			}, 100);
 			}
 		}
-		
-		$("#button-subscribers").mouseenter(function(){changeButtonSubs(true)});
-		$("#button-subscribers").mouseleave(function(){changeButtonSubs(false)});
 
-		$("#button-sponsors").mouseenter(function(){changeButtonSponsor(true)});
-		$("#button-sponsors").mouseleave(function(){changeButtonSponsor(false)});
-		
-		/*Order Main Images*/
-
-		orderImages("main-bottom",150, 20);
-		
-		/*Hover Botones secundarios (settings, library)*/
-
-		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
-		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
-		
-		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
-		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
-
-		
+		$("#button-artist-profile-subscribe").mouseenter(function(){changeButtonBpoints(true)});
+		$("#button-artist-profile-subscribe").mouseleave(function(){changeButtonBpoints(false)});
 
 	</script>
 </html>

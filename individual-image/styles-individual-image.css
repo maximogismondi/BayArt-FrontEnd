@@ -61,12 +61,14 @@ main{
     background: #242424;
     border-radius: 80px;
     margin-top: 50px;
+    width: 50%;
     height: 60px;
+    display: inline-block;
 }
 
 #div-circle{
     margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-top: 10px;
     float:left;
 }
@@ -82,28 +84,9 @@ main{
     color: white;
 }
 
-.button-submit{
+#button-img-bpoints-image{
     color: white;
-    background: #674ea7;
-    border-radius: 15px;
-    width: 150px;
-    height: 40px;
-    transition: all 0.1s;
-    border:none;
-    outline: none;
-    float: right;
-    /*display: none;*/
-}
-
-.button-img-bpoints{
     width: 30px;
-    transition: opacity 100ms;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.div-price-number{
-    color: white;
     margin-left: 5px;
     font-size: 13px;
     transition: opacity 100ms;
@@ -112,10 +95,27 @@ main{
     vertical-align: middle;
 }
 
-#button-submit-image{
-    margin-top: 10px;
-    margin-right: 30px;
+#button-buy-image{
+    color: white;
+    background: #674ea7;
+    border-radius: 50px;
+    width: 150px;
+    height: 60px;
+    margin-top: 50px;
+    transition: border 0.1s;
+    border:none;
+    outline: none;
     float: right;
+}
+
+#div-price-number-image{
+    color: white;
+    margin-left: 5px;
+    font-size: 15px;
+    transition: opacity 100ms;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #div-title-comments{

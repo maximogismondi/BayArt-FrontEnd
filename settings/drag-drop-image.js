@@ -34,10 +34,11 @@ if (window.FileReader) {
           var bin = this.result;
           var img = document.getElementById('img-uploaded');
           img.src = bin;
-          img.style.display = "block";
+         
           document.getElementById("img-uploaded").onload = function(){
-            $("#div-drag-drop").css("display","none");
-            $("#img-uploaded").css("display","inline-block")
+             img.style.display = "block";
+             $("#div-drag-drop").css("display","none");
+            $("#img-uploaded").css("display","inline-block");
           }
           
         }.bindToEventHandler(file));

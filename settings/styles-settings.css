@@ -231,27 +231,6 @@ display: none;
 
 /*--------------------------------------------------------------*/
 
-#div-artist-publish{
-  border-bottom: 1px solid white;
-  margin-top: 10%;
-  width: 100%;
-  height: 58%;
-  overflow-y: auto;
-}
-
-.h4-artist-publish{
-  margin-left: 10px;
-  display: inline-block;
-}
-
-#button-submit-artist-publish{
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-top: 5%;
-}
-
-/*--------------------------------------------------------------*/
-
 #div-view-subs{
   border-top: 1px solid white;
   width: 100%;
@@ -274,6 +253,11 @@ display: none;
 
 #h3-view-mounthly-purchases{
   margin-left: 30px;
+}
+
+#img-bpoints-bought{
+  width: 20px !important;
+  height: 20px !important;
 }
 
 /*--------------------------------------------------------------*/

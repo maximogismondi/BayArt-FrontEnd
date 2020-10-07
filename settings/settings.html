@@ -4,8 +4,6 @@
 		<link rel="shortcut icon" href="../icons/icon-viewer.png"/>
 		<link rel="stylesheet" href="styles-settings.css">
 		<link rel="stylesheet" href="../styles-general.css">
-		<script src="../basic-functions.js"></script>
-		<script src="../jquery.js"></script>
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 		<title>BayArt! - Settings</title>
 	</head>
@@ -114,7 +112,7 @@
 				<div>
 					<h3>Notifications</h3>
 					<div class="things-settings">
-						<div ><h4>Artist publication</h4><button id="button-change-artist-publish" class="button-change-setting">change</button></div>
+						<div ><h4>Artist publication</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 						<div ><h4>Purchase notice</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 						<div ><h4>Sponsor report</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 						<div ><h4>Subscription exhaustion</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
@@ -159,7 +157,7 @@
 								<h5 id="h5-input-image">Upload Image</h5>
 							</label>
 						</div>
-						<input type="file" id="input-image" accept="image/*" style="display:none">
+						<input type="file" id="input-image" accept="image/*" style="display:none" required>
 					</div>
 				</div>
 				<button id="button-submit-image" type="submit" class="button-submit">
@@ -212,9 +210,10 @@
 
 				<!--change password-->
 				<div>
-					<h4>Password:</h4>
-					<h3 id="h3-password">********</h3>
-					<div style="margin-top: -18px;"></div>
+					<h4>Actual password:</h4>
+					<div id="div-change-password-input">
+						<input type="password" class="input-write" id="input-actual-password" required>
+					</div>
 					<h4>Change password:</h4>
 					<div id="div-change-password-input">
 						<input type="password" class="input-write" id="input-password" required>
@@ -222,7 +221,7 @@
 					<img id="img-eye" src="../icons/open-eye.png">
 					<h4>Confirm password:</h4>
 					<div id="div-change-password-input">
-						<input type="password" class="input-write" required>
+						<input type="password" class="input-write" id="input-confirm-password" required>
 					</div>
 					<button id="button-submit-password" type="submit" class="button-submit">
 						<div>CHANGE</div>
@@ -242,42 +241,25 @@
 				
 			</form>
 
-			<form action="" method="POST" id="form-settings-artist-publish" class="form-settings">
-
-				<!--change artist publish-->
-				<div id="div-artist-publish" class="scrollbar-description">
-					<div><h4 class="h4-artist-publish">Valentin_Tin </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-					<div><h4 class="h4-artist-publish">JUAN </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-					<div><h4 class="h4-artist-publish">LoboDelCalla </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-					<div><h4 class="h4-artist-publish">Gianpa_dibujos </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-					<div><h4 class="h4-artist-publish">Isabela341 </h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-				</div>
-
-				<button id="button-submit-artist-publish" type="submit" class="button-submit">
-					<div>FINISH</div>
-				</button>
-				
-			</form>
-
 			<form action="" method="POST" id="form-settings-subs" class="form-settings">
 
 				<!--view subscriptions-->
 				<h4>Subscriptions</h4>
 				<div id="div-view-subs" class="scrollbar-description">
-					<h3 id="h3-view-subs">Isabela341 </h3>
-					<h3 id="h3-view-subs">LoboDelCalla </h3>
-					<h3 id="h3-view-subs">Gianpa_dibujos </h3>
-					<h3 id="h3-view-subs">JUAN </h3>
-					<h3 id="h3-view-subs">Valentin_Tin </h3>
-					<h3 id="h3-view-subs">XAIO </h3>
-					<h3 id="h3-view-subs">Maradona10 </h3>
-					<h3 id="h3-view-subs">BEN10 </h3>
-					<h3 id="h3-view-subs">LoboSolitario </h3>
-					<h3 id="h3-view-subs">EL_PIBE_10 </h3>
-					<h3 id="h3-view-subs">Gianaig_dibujos_xD </h3>
-					<h3 id="h3-view-subs">JUAN_JOSE </h3>
-					<h3 id="h3-view-subs">XD </h3>
-					<h3 id="h3-view-subs">Pintor123 </h3>
+					<h3 id="h3-view-subs">Isabela341 - 12 days</h3>
+					<h3 id="h3-view-subs">LoboDelCalla - 9 days</h3>
+					<h3 id="h3-view-subs">Gianpa_dibujos - 19 days</h3>
+					<h3 id="h3-view-subs">JUAN - 22 days</h3>
+					<h3 id="h3-view-subs">Valentin_Tin - 3 days</h3>
+					<h3 id="h3-view-subs">XAIO - 30 days</h3>
+					<h3 id="h3-view-subs">Maradona10 - 9 days</h3>
+					<h3 id="h3-view-subs">BEN10 - 5 days</h3>
+					<h3 id="h3-view-subs">LoboSolitario - 29 days</h3>
+					<h3 id="h3-view-subs">EL_PIBE_10 - 11 days</h3>
+					<h3 id="h3-view-subs">Gianaig_dibujos_xD - 22 days</h3>
+					<h3 id="h3-view-subs">JUAN_JOSE - 1 days</h3>
+					<h3 id="h3-view-subs">XD - 9 days</h3>
+					<h3 id="h3-view-subs">Pintor123 - 10 days</h3>
 				</div>
 				
 			</form>
@@ -287,27 +269,27 @@
 				<!--view mounthly purchases-->
 				<h4>Mounthly purchases</h4>
 				<div id="div-view-mounthly-purchases" class="scrollbar-description">
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
-					<h3 id="h3-view-mounthly-purchases">Profile image </h3>
-					<h3 id="h3-view-mounthly-purchases">Username </h3>
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
-					<h3 id="h3-view-mounthly-purchases">Picture </h3>
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
-					<h3 id="h3-view-mounthly-purchases">Picture </h3>
-					<h3 id="h3-view-mounthly-purchases">Picture </h3>
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
-					<h3 id="h3-view-mounthly-purchases">Picture </h3>
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
-					<h3 id="h3-view-mounthly-purchases">Picture </h3>
-					<h3 id="h3-view-mounthly-purchases">Picture </h3>
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
-					<h3 id="h3-view-mounthly-purchases">Picture </h3>
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
-					<h3 id="h3-view-mounthly-purchases">Picture </h3>
-					<h3 id="h3-view-mounthly-purchases">Picture </h3>
-					<h3 id="h3-view-mounthly-purchases">Subscription </h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
+					<h3 id="h3-view-mounthly-purchases">Profile image - <img src="../icons/bpoints.png" id="img-bpoints-bought" class="button-img-bpoints">2000</h3>
+					<h3 id="h3-view-mounthly-purchases">Username - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">3000</h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
+					<h3 id="h3-view-mounthly-purchases">Picture - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">500</h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
+					<h3 id="h3-view-mounthly-purchases">Picture - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">600</h3>
+					<h3 id="h3-view-mounthly-purchases">Picture - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">900</h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
+					<h3 id="h3-view-mounthly-purchases">Picture - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">800</h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
+					<h3 id="h3-view-mounthly-purchases">Picture - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">100</h3>
+					<h3 id="h3-view-mounthly-purchases">Picture - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">200</h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
+					<h3 id="h3-view-mounthly-purchases">Picture - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">300</h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
+					<h3 id="h3-view-mounthly-purchases">Picture - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">900</h3>
+					<h3 id="h3-view-mounthly-purchases">Picture - <img src="../icons/bpoints.png" 		id="img-bpoints-bought" class="button-img-bpoints">800</h3>
+					<h3 id="h3-view-mounthly-purchases">Subscription - <img src="../icons/bpoints.png" 	id="img-bpoints-bought" class="button-img-bpoints">1000</h3>
 				</div>
 				
 			</form>
@@ -328,24 +310,12 @@
 		
 	</body>
 
+	<script src="../jquery.js"></script>
+	<script src="../basic-functions.js"></script>
+	<script src="select-image.js"></script>
+	<script src="drag-drop-image.js"></script>
+	
 	<script>
-
-		/*Ensanchar perfil*/
-
-		$("#div-profile").click(changeProfileWidth);
-
-        /*Funcion ocultar contraseña*/
-        
-        $("#img-eye").click(showPassword);
-
-		/*Hover Botones secundarios (settings, library)*/
-
-		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
-		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
-		
-		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
-		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
-
 		/*Efecto boton bpoints pop-up*/
 
 		function changeButtonBpoints(shown, name){
@@ -410,10 +380,6 @@
 			$("#form-settings-delete-history").css("display","block");
 		});
 
-		$("#button-change-artist-publish").click(function(){
-			$("#form-settings-artist-publish").css("display","block");
-		});
-
 		$("#button-view-subs").click(function(){
 			$("#form-settings-subs").css("display","block");
 		});
@@ -435,11 +401,9 @@
 			
 			//Resetear IMG-UPLOADED
 			$("#div-drag-drop").css("display","inline-block");
-        	$("#img-uploaded").css("display","none")
-		});
-		
+			$("#img-uploaded").css("display","none");
+			$("#input-image").val(null);
 
+		});
 	</script>
-	<script src="select-image.js"></script>
-	<script src="drag-drop-image.js"></script>
 </html>

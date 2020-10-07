@@ -4,8 +4,6 @@
         <link rel="shortcut icon" href="../icons/icon-login.png"/>
         <link rel="stylesheet" href="styles-login.css">
         <link rel="stylesheet" href="../styles-general.css">
-        <script src="../jquery.js"></script>
-        <script src="../basic-functions.js"></script>
         <meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
     </head>
 
@@ -40,7 +38,6 @@
 
                 <div id="div-log-in-register">
                     <button id="button-submit" type="submit" onclick = "location.href=' ../homepage/homepage.html'" >LOG IN</button>
-                    
                     <a id="a-register" href="../register/register.html">Register into BayArt!</a>
                 </div>
 
@@ -67,22 +64,9 @@
 
     </body>
 
-    <script>
+    <script src="../jquery.js"></script>
+    <script src="../basic-functions.js"></script>
 
-        /*Funcion ocultar contraseña*/
-        
-        $("#img-eye").click(showPassword);
-
-        /*Funcion cambiar de color checkbox*/
-        
-        $("#input-checkBox-keep-me").click(function (){
-		
-		var idCheckBox = $(this).attr("id");
-		checkBoxState(idCheckBox, "white", "#7c7c7c");
-
-	    }); 
-        
-    </script>
 </html>
 
 

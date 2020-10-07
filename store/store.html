@@ -3,9 +3,7 @@
 		<link rel="shortcut icon" href="../icons/icon-viewer.png"/>
 		<link rel="stylesheet" href="styles-store.css">
 		<link rel="stylesheet" href="../styles-general.css">
-		<script src="carousel-bookmarks.js"></script>
-		<script src="../basic-functions.js"></script>
-		<script src="../jquery.js"></script>
+		
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 		<title>BayArt! - Store</title>
 	</head>
@@ -137,49 +135,11 @@
 					</button>
 				</div>
 			</div>
-			<section>
-
-			</section>
 		</main>
 	
 		
 	</body>
-	<script>
-
-		$( document ).ready(function() {
-		    $("#div-carousel-bookmarkers").css({opacity: "1"});
-		});
-
-		/*Crear carrousel*/
-
-		startCarousel();
-		
-		/*Ensanchar perfil*/
-
-		$("#div-profile-picture").click(changeProfileWidth);
-
-		/*Girar Flecha*/
-
-		$("#button-arrow").click(changeArrow);
-
-		/*Cambiar Color Texto*/
-
-		$(".input-checkbox").click(function (){
-			
-			var idCheckBox = $(this).attr("id");
-			checkBoxState(idCheckBox, "white", "#7c7c7c");
-
-		}); 
-
-				
-		/*Hover Botones secundarios (settings, library)*/
-
-		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
-		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
-		
-		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
-		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
-
-		
-	</script>
+	<script src="../jquery.js"></script>
+	<script src="carousel-bookmarks.js"></script>
+	<script src="../basic-functions.js"></script>
 </html>

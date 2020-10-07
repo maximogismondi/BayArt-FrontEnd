@@ -15,6 +15,11 @@ function changeArrow() {
     }
 }
 
+$("#button-arrow").click(changeArrow);
+
+
+/*Header scroll*/
+
 var firstUbication = window.pageYOffset;
 window.onscroll = function(){
     var actualUbication = window.pageYOffset;
@@ -31,6 +36,8 @@ window.onscroll = function(){
     }
     firstUbication = actualUbication;
 }
+
+/*Bloquear filtro upload*/
 
 function displayCheckbox(opacityCheckbox, status){
     var indexLabel = 1;
@@ -102,6 +109,8 @@ function changeProfileWidth(){
     }
 }
 
+$("#div-profile-picture").click(changeProfileWidth);
+
 /*Animacion botones secundarios*/
 
 function secondaryButtonsHover(buttonName, shown){
@@ -130,9 +139,15 @@ function secondaryButtonsHover(buttonName, shown){
             $("#img-secondary-button-library-green").css("transform","translateY(0)"); 
             $("#img-secondary-button-library-white").css("transform","translateY(0)");
         }
-    }
-        
+    }        
 }
+
+$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
+$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
+		
+$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
+$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
+
 
 /*Cambiar texto label checkBox*/
 function checkBoxState(idCheck, color1, color2){
@@ -144,6 +159,17 @@ function checkBoxState(idCheck, color1, color2){
         $("#"+idLabel).css( "color" , color2);
     }
 };
+
+$(".input-checkbox").click(function (){
+    var idCheckBox = $(this).attr("id");
+    checkBoxState(idCheckBox, "white", "#7c7c7c");
+}); 
+
+$("#input-checkBox-keep-me").click(function (){
+    var idCheckBox = $(this).attr("id");
+    checkBoxState(idCheckBox, "white", "#7c7c7c");
+}); 
+
 
 /*Ocultar/Mostrar contraseña*/
 var visibility = false;
@@ -158,6 +184,8 @@ function showPassword(){
     }
     visibility = !visibility;
 }
+
+$("#img-eye").click(showPassword);
 
 /*Setear alto y ancho de imagen*/
 
@@ -325,7 +353,7 @@ function charcountupdate(str) {
 }
 
 //Borrar imagen Upload Image
-function borrarImagen(){
+function deleteImage(){
     $("#img-uploaded").css("display","none");
     $("#div-drag-drop").css("display","block");
     $("#div-cancel-image").css("display","none");
@@ -334,4 +362,5 @@ function borrarImagen(){
     $("#div-image").css("height", "100%");
     $("#div-description").css("width", "calc(50% - 10px)");
     $("#div-description").css("height", "100%");
+    $("#input-image").val(null);
 }

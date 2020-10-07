@@ -185,4 +185,8 @@ function decreseIndex(){
     rotateCarousel();
 }
 
+startCarousel();
 
+$( document ).ready(function() {
+    $("#div-carousel-bookmarkers").css({opacity: "1"});
+});

@@ -9,11 +9,11 @@ function startCarroucelProfiles(){
     });
 
     $("#button-carousel-right").on('click', function() {
-        $('#carousel-images-profiles').animate( { scrollLeft: '+=400' }, 200);    
+        $('#carousel-images-profiles').animate( { scrollLeft: '+=450' }, 200);    
     });
 
     $("#button-carousel-left").on('click', function() {
-        $('#carousel-images-profiles').animate( { scrollLeft: '-=400' }, 200);
+        $('#carousel-images-profiles').animate( { scrollLeft: '-=450' }, 200);
     });
 
     document.addEventListener('DOMContentLoaded', function () {   
@@ -25,5 +25,8 @@ function startCarroucelProfiles(){
 
 }
 
+startCarroucelProfiles();
 
-/*$('#carousel-images-profiles').animate({scrollRight:200},150);*/
+$( document ).ready(function() {
+    $("#carousel-images-profiles").css({opacity: "1"});
+});

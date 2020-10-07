@@ -4,8 +4,6 @@
 		<link rel="shortcut icon" href="../icons/icon-viewer.png"/>
 		<link rel="stylesheet" href="styles-library.css">
 		<link rel="stylesheet" href="../styles-general.css">
-		<script src="../basic-functions.js"></script>
-		<script src="../jquery.js"></script>
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 		<title>BayArt! - Library</title>
 	</head>
@@ -107,23 +105,14 @@
 		
 	</body>
 
+	<script src="../jquery.js"></script>
+	<script src="../basic-functions.js"></script>
+	
 	<script>
-
-		/*Ensanchar perfil*/
-
-		$("#div-profile-picture").click(changeProfileWidth);
 
 		/*Order Main Images*/
 
 		orderImages("main",150, 20);
-
-		/*Hover Botones secundarios (settings, library)*/
-
-		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
-		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
-		
-		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
-		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
 
 		/*Cambiar opacidad botones raspberry*/
 
