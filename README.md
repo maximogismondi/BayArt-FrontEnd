@@ -18,6 +18,10 @@ _Ingredientes: Callipo Franco, Gismondi Maximo, Moggia Gian Franco, Palavecino S
 ####Perfil artista como lo ve un espectador
 
 ####Configuraciones
+<<<<<<< HEAD:README.md
+=======
+*Pop up
+>>>>>>> 43196a14607f7408d625c21570da7335bd1eefb4:ReadME
 
 ####Biblioteca
 
