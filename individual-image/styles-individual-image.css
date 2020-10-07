@@ -82,6 +82,42 @@ main{
     color: white;
 }
 
+.button-submit{
+    color: white;
+    background: #674ea7;
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    transition: all 0.1s;
+    border:none;
+    outline: none;
+    float: right;
+    /*display: none;*/
+}
+
+.button-img-bpoints{
+    width: 30px;
+    transition: opacity 100ms;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.div-price-number{
+    color: white;
+    margin-left: 5px;
+    font-size: 13px;
+    transition: opacity 100ms;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#button-submit-image{
+    margin-top: 10px;
+    margin-right: 30px;
+    float: right;
+}
+
 #div-title-comments{
     background: #242424;
     border-radius: 15px;

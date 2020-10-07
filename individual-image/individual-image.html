@@ -102,14 +102,18 @@
 						</div>
 					</div>
 				</div>
-				<a href="../artist-profile/artist-profile.html">
-					<div id="div-artist">
-						<div id="div-circle">
-							<img src="../ImgPrueba/3.jpg" id="img-circle">
-						</div>
-						<h4 id="h4-username-artist">Valentin_tin</h4>
+				<div id="div-artist">
+					<div id="div-circle">
+						<img src="../ImgPrueba/3.jpg" id="img-circle">
 					</div>
-				</a>
+					<a href="../artist-profile/artist-profile.html" style="text-decoration: none;">
+						<h4 id="h4-username-artist">Valentin_tin</h4>
+					</a>
+					<button id="button-submit-image" type="submit" class="button-submit">
+						<img src="../icons/bpoints.png" id="button-img-bpoints-image" class="button-img-bpoints">
+						<div id="div-price-number-image" class="div-price-number">1300</div>
+					</button>
+				</div>
 				
 				
 				<div id="div-title-comments">
@@ -197,6 +201,38 @@
 		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
 		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
 
+
+		/*Efecto boton bpoints comprar*/
+
+		function changeButtonBpoints(shown, name){
+			if(shown){
+				$("#button-img-bpoints-"+name).css("opacity","0");
+				$("#div-price-number-"+name).css("opacity","0");
+				setTimeout( function(){
+					$("#button-submit-"+name).css("border", "5px solid white");
+					$("#div-price-number-"+name).html("BUY");
+					$("#button-img-bpoints-"+name).css("display","none");
+					$("#div-price-number-"+name).css("opacity","1");
+				}, 100);
+				setTimeout( function(){
+					$("#button-submit-"+name).css("border", "2px solid white")
+				}, 300);
+			}
+			else{
+				$("#div-price-number-"+name).css("opacity","0");
+				$("#button-submit-"+name).css("border", "none");
+				setTimeout( function(){
+					$("#div-price-number-"+name).html("1000");
+					$("#button-img-bpoints-"+name).css("opacity","1");
+					$("#button-img-bpoints-"+name).css("display","inline-block");
+					$("#div-price-number-"+name).css("opacity","1");
+					
+				}, 100);
+			}
+		}
+
+		$("#button-submit-image").mouseenter(function(){changeButtonBpoints(true,"image")});
+		$("#button-submit-image").mouseleave(function(){changeButtonBpoints(false,"image")});
 		
 	</script>
 </html>

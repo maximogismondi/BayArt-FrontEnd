@@ -87,11 +87,11 @@ display: none;
       }
 
     #img-uploaded{
-      display: none;
       margin-left: 30px;
       height: 200px;
       width: 200px;
       border-radius: 200px;
+      display: none;
       object-fit: cover;
     }
 
@@ -112,8 +112,9 @@ display: none;
 
           #img-icon-upload{
             height:50px;
-            display:block;
             margin-left: 22px;
+            display:block;
+            
           }
 
             #h5-input-image{
@@ -310,13 +311,13 @@ display: none;
 .button-submit{
   color: white;
   background: #674ea7;
-  border:none;
-  outline: none;
-  float: right;
   border-radius: 15px;
   width: 150px;
   height: 40px;
   transition: all 0.1s;
+  border:none;
+  outline: none;
+  float: right;
 }
 
 .input-write{
@@ -415,24 +416,3 @@ h3{
   background-color: #00a797;
   border-radius: 20px;
 }
-
-/*eliminar
-#div-change-username-button{
-position: absolute;
-bottom: 20px;
-right: 20px;
-}
-
-#div-change-email-button{
-position: absolute;
-bottom: 20px;
-right: 20px;
-}
-
-#div-change-password-button{
-bottom: 20px;
-right: 20px;
-position: absolute;
-}
-
-*/
