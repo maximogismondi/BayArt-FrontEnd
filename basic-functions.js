@@ -20,8 +20,10 @@ $("#button-arrow").click(changeArrow);
 
 /*Header scroll*/
 
+
 var firstUbication = window.pageYOffset;
 window.onscroll = function(){
+    if(document.getElementById("nav-subtitle") != null){
     var actualUbication = window.pageYOffset;
     if (firstUbication < actualUbication){
         document.getElementById("nav-subtitle").style.opacity = "0";
@@ -34,7 +36,7 @@ window.onscroll = function(){
         document.getElementById("nav-subtitle").style.opacity = "1";
         document.getElementById("nav-subtitle").style.marginTop = "20px";
     }
-    firstUbication = actualUbication;
+    firstUbication = actualUbication;}
 }
 
 /*Bloquear filtro upload*/
@@ -311,6 +313,7 @@ function orderImages(id, minHeight, margin){
             else{
                 changeRow = true;
             }
+
         }
 
         //Inserta fila al id enviado
@@ -320,6 +323,7 @@ function orderImages(id, minHeight, margin){
         //Ajusta el width de las fotos para un encastre perfecto
 
         var multiplierToGrow = (idWidth - numImagesRow*margin) / rowWidth;
+
 
         $("#image-row-"+actualRow).find('img').each(function (){
 
@@ -340,11 +344,15 @@ function orderImages(id, minHeight, margin){
             document.getElementById("div-gradient-main-"+idDivImgMain).style.width  = $(this).width();
         });
         
+
         totalHeight += ($("#image-row-"+actualRow).height() + margin);
     }
 
+
     $("#"+id).css("height",totalHeight);
 }
+
+
 
 //Contador de caracteres Descripcion
 function charcountupdate(str) {

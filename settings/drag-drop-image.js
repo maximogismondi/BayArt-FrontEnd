@@ -2,7 +2,6 @@ if (window.FileReader) {
   var drop;
   addEventHandler(window, 'load', function() {
     drop = document.getElementById('div-drag-drop');
-    var list = document.getElementById('div-image');
 
     function cancel(e) {
       if (e.preventDefault) {

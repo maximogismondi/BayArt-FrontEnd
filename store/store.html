@@ -41,21 +41,8 @@
 			</div>
 
 			<div id="div-secondary-buttons">
-				<a href="../library/library.html" class="a-secondary-buttons"  id="a-secondary-button-library">
-					<div class="div-img-secondary-buttons" id="div-secondary-button-library">
-						<img src="../icons/icon-library-white.png" class="img-secondary-buttons" id="img-secondary-button-library-white">
-						<img src="../icons/icon-library-green.png" class="img-secondary-buttons" id="img-secondary-button-library-green">
-					</div>
-					<div class="div-secondary-buttons-text" id="div-secondary-button-library-text">library</div>
-				</a>
-
-				<a href="../settings/settings.html" class="a-secondary-buttons" style="margin-left: 30px;" id="a-secondary-button-settings">
-					<div class="div-img-secondary-buttons" id="div-secondary-button-settings">
-						<img src="../icons/icon-settings-white.png" class="img-secondary-buttons" id="img-secondary-button-settings-white">
-						<img src="../icons/icon-settings-green.png" class="img-secondary-buttons" id="img-secondary-button-settings-green">
-					</div>
-					<div class="div-secondary-buttons-text" id="div-secondary-button-settings-text">settings</div>
-				</a>
+				<a href="../library/library.html" class="a-secondary-buttons"  id="a-secondary-button-library"> <div class="div-img-secondary-buttons" id="div-secondary-button-library"><img src="../icons/icon-library-white.png" class="img-secondary-buttons" id="img-secondary-button-library-white"><img src="../icons/icon-library-green.png" class="img-secondary-buttons" id="img-secondary-button-library-green"></div><div class="div-secondary-buttons-text" id="div-secondary-button-library-text">library</div></a>
+				<a href="../settings/settings.html" class="a-secondary-buttons" style="margin-left: 30px;" id="a-secondary-button-settings"> <div class="div-img-secondary-buttons" id="div-secondary-button-settings"><img src="../icons/icon-settings-white.png" class="img-secondary-buttons" id="img-secondary-button-settings-white"><img src="../icons/icon-settings-green.png" class="img-secondary-buttons" id="img-secondary-button-settings-green"></div><div class="div-secondary-buttons-text" id="div-secondary-button-settings-text">settings</div></a>
 			</div>
 
 			<div id="div-profile">
@@ -118,23 +105,23 @@
 				<button id="button-carousel-left" class="button-carousel"> < </button>
 				<button id="button-carousel-right" class="button-carousel"> > </button>
 				<div id="div-carousel-images">
-					<img src="../icons/xd2.jpg">
-					<img src="../icons/1.jpg">
 					<img src="../icons/2.jpg">
-					<img src="../icons/xd2.jpg">
+					<img src="../icons/1.jpg">
 					<img src="../icons/3.jpg">
-					<img src="../icons/4.jpg">
-				</div>
-				<div id="div-confirmRemoveBookmaker-panel">
-					<h4>Remove this Post from yours Bookmarks?</h4>
-					<button id="confirm" class="button-confirm-panel">
-						<img src="../icons/confirm.png" class="img-button-confirm-panel">
-					</button>
-					<button id="cancel" class="button-confirm-panel">
-						<img src="../icons/cancel.png" class="img-button-confirm-panel">
-					</button>
+					<img src="../icons/xd2.jpg">
+					<img src="../icons/2.jpg">
+					<img src="../icons/1.jpg">
+					<img src="../icons/3.jpg">
+					<img src="../icons/xd2.jpg">
+					<img src="../icons/2.jpg">
+					<img src="../icons/1.jpg">
+					<img src="../icons/3.jpg">
+					<img src="../icons/xd2.jpg">
 				</div>
 			</div>
+			<section>
+
+			</section>
 		</main>
 	
 		
@@ -142,4 +129,44 @@
 	<script src="../jquery.js"></script>
 	<script src="carousel-bookmarks.js"></script>
 	<script src="../basic-functions.js"></script>
+	<script>
+
+
+
+		$( document ).ready(function() {
+		    $("#div-carousel-bookmarkers").css({opacity: "1"});
+		});
+
+		/*Crear carrousel*/
+
+		startCarousel();
+		
+		/*Ensanchar perfil*/
+
+		$("#div-profile-picture").click(changeProfileWidth);
+
+
+		/*Girar Flecha*/
+
+		$("#button-arrow").click(changeArrow);
+
+		/*Cambiar Color Texto*/
+
+		$(".input-checkbox").click(function (){
+			
+			var idCheckBox = $(this).attr("id");
+			checkBoxState(idCheckBox, "white", "#7c7c7c");
+
+		}); 
+
+				
+		/*Hover Botones secundarios (settings, library)*/
+
+		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
+		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
+		
+		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
+		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
+
+	</script>
 </html>

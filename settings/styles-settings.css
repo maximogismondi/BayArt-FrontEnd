@@ -69,6 +69,76 @@ display: none;
     }
 
 /*--------------------------------------------------------------*/
+#div-change-banner-img{
+  width: 100%;
+  height: auto;
+}
+
+#img-actual-banner{
+  margin-left: calc(50% - 150px);
+  border-radius: 15px;
+  width: 300px;
+  height: 80px;
+}
+
+#img-uploaded-banner{
+  margin-top: 20px;
+  margin-left: 100px;
+  width: 300px;
+  height: 80px;
+  border-radius: 15px;
+  display: none;
+  object-fit: cover;
+}
+
+  #div-drag-drop-banner{
+    margin-top: 20px;
+    margin-left: calc(50% - 150px);
+    width: 300px;
+    height: 80px;
+    border-radius: 15px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='15' ry='15' stroke='white' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='14' stroke-linecap='square'/%3e%3c/svg%3e");
+    text-align: center;
+  }
+
+    #div-upload-banner{
+      margin-top: 5px;
+    }
+
+        #h5-input-banner{
+          margin-top: 31px;
+          margin-right: 95px;
+          float: right;
+        }
+        
+        #h5-input-banner:hover{
+            color: #00a797;
+        }
+
+#button-submit-banner{
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+  .button-img-bpoints{
+    width: 30px;
+    transition: opacity 100ms;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+    .div-price-number{
+      color: white;
+      margin-left: 5px;
+      font-size: 13px;
+      transition: opacity 100ms;
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle;
+    }
+        
+
+/*--------------------------------------------------------------*/
   #div-change-profile-img{
     margin-top: 30px;
     margin-left: 20px;
@@ -129,23 +199,6 @@ display: none;
     margin-top: 10px;
     margin-right: 20px;
   }
-
-    .button-img-bpoints{
-      width: 30px;
-      transition: opacity 100ms;
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-      .div-price-number{
-        color: white;
-        margin-left: 5px;
-        font-size: 13px;
-        transition: opacity 100ms;
-        font-weight: bold;
-        display: inline-block;
-        vertical-align: middle;
-      }
 
 /*--------------------------------------------------------------*/
 
