@@ -37,6 +37,29 @@
         cursor:pointer;
     }
 
+    #footer{
+        width: 100%;
+        height: 15px;
+        left: 0px;
+        right: 0px; 
+        bottom: 0px;
+        z-index:0;
+        position: fixed;
+    }
+    
+    #div-footer{
+        background-color: #00a797;
+        width: 100%;
+        height: 15px;
+        text-align: center;
+    }
+    
+    #label-footer{
+        color: #242424;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
 /*ID*/
 
 #green-line{
@@ -159,6 +182,10 @@
     display: inline-block;
 }
 
+#img-secondary-button-profile-green{
+    opacity: 0;
+}
+
 #img-secondary-button-library-green{
     opacity: 0;
 }
@@ -200,7 +227,9 @@
 }
 
 #img-arrow{
- margin-top: 10px;
+height: 20px !important;
+margin-right: 13px;
+ margin-top: 13px;
  transition: transform 0.1s;
 }
 

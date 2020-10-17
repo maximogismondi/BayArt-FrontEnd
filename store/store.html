@@ -6,6 +6,7 @@
 		
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 		<title>BayArt! - Store</title>
+		
 	</head>
 
 	<body class="scrollbar">
@@ -35,7 +36,7 @@
 			<div id="div-search-bar">
 				<input id="input-search-bar" type="text">
 
-				<button id="button-magnifier">
+				<button id="button-magnifier" onclick="location.href='../search/search.html'">
 					<img id="img-magnifier" src="../icons/magnifier.png" class="img-buttons">
 				</button>
 			</div>
@@ -53,7 +54,7 @@
 				</div>
 				<div id="div-name-type">
 					<label id="label-name">Soledad1</label><br>
-					<label id="label-type">Espectador</label>
+					<label id="label-type">Viewer</label>
 				</div>
 
 				<div id="div-profile-picture"></div>
@@ -73,30 +74,43 @@
 			</nav>
 
 			<div id="div-filter">
-				<div id="div-column1">
-				
-					<input type="checkbox" id="input-checkBox1" class="input-checkbox" > <label id="label1">3D</label> <br>
-					<input type="checkbox" id="input-checkBox2" class="input-checkbox" > <label id="label2">Animation</label> <br>
-					<input type="checkbox" id="input-checkBox3" class="input-checkbox" > <label id="label3">Anime</label> <br>
-					<input type="checkbox" id="input-checkBox4" class="input-checkbox" > <label id="label4">Comics</label> <br>
-					<input type="checkbox" id="input-checkBox5" class="input-checkbox" > <label id="label5">Emoji</label>  <br>
-					<input type="checkbox" id="input-checkBox6" class="input-checkbox" > <label id="label6">Horror</label> <br>
-					<input type="checkbox" id="input-checkBox7" class="input-checkbox" > <label id="label7">Digital Art</label>
-				
-				</div>
+                <div id="tags">
+                    <h4 id="h4-tags">Filter by tags</h4>
+                    <div id="div-column1">
+                        <input type="checkbox" id="input-checkBox1" class="input-checkbox" > <label id="label1">3D</label> <br>
+                        <input type="checkbox" id="input-checkBox2" class="input-checkbox" > <label id="label2">Animation</label> <br>
+                        <input type="checkbox" id="input-checkBox3" class="input-checkbox" > <label id="label3">Anime</label> <br>
+                        <input type="checkbox" id="input-checkBox4" class="input-checkbox" > <label id="label4">Comics</label> <br>
+                        <input type="checkbox" id="input-checkBox5" class="input-checkbox" > <label id="label5">Emoji</label>  <br>
+                        <input type="checkbox" id="input-checkBox6" class="input-checkbox" > <label id="label6">Horror</label> <br>
+                        <input type="checkbox" id="input-checkBox7" class="input-checkbox" > <label id="label7">Digital Art</label>
+                    </div>
 
-				<div id="div-column2">
-
-					<input type="checkbox" id="input-checkBox8" class="input-checkbox" > <label id="label8">Fractal</label> <br>
-					<input type="checkbox" id="input-checkBox9" class="input-checkbox" > <label id="label9">PixelArt</label> <br>
-					<input type="checkbox" id="input-checkBox10" class="input-checkbox" > <label id="label10">Photograpy</label>  <br>
-					<input type="checkbox" id="input-checkBox11" class="input-checkbox" > <label id="label11">Street Art</label>  <br>
-					<input type="checkbox" id="input-checkBox12" class="input-checkbox" > <label id="label12">Fantasy</label>  <br>
-					<input type="checkbox" id="input-checkBox13" class="input-checkbox" > <label id="label13">Science Fiction</label>  <br>
-					<input type="checkbox" id="input-checkBox14" class="input-checkbox" > <label id="label14">Wallpaper</label>
-				
-				</div>		
-			</div>
+                    <div id="div-column2">
+                        <input type="checkbox" id="input-checkBox8" class="input-checkbox" > <label id="label8">Fractal</label> <br>
+                        <input type="checkbox" id="input-checkBox9" class="input-checkbox" > <label id="label9">PixelArt</label> <br>
+                        <input type="checkbox" id="input-checkBox10" class="input-checkbox" > <label id="label10">Photograpy</label>  <br>
+                        <input type="checkbox" id="input-checkBox11" class="input-checkbox" > <label id="label11">Street Art</label>  <br>
+                        <input type="checkbox" id="input-checkBox12" class="input-checkbox" > <label id="label12">Fantasy</label>  <br>
+                        <input type="checkbox" id="input-checkBox13" class="input-checkbox" > <label id="label13">Science Fiction</label>  <br>
+                        <input type="checkbox" id="input-checkBox14" class="input-checkbox" > <label id="label14">Wallpaper</label>
+                    </div>	
+                </div>
+                <div id="price-preferences">
+                    <div id="price">
+                        <h4 id="h4-price">Filter by price</h4>
+                        <h6 id="h6-price">$</h6>
+                        <input type="range" min="1" max="10000" value="5000" id="input-range" class="slider"><br>
+                        <input type="checkbox" id="input-checkBox15" class="input-checkbox" > <label id="label15">order by higher price</label> <br>
+                        <input type="checkbox" id="input-checkBox16" class="input-checkbox" > <label id="label16">order by lowest price</label> <br>
+                    </div>
+                    <div id="preferences">
+                        <h4 id="h4-preferences">Filter by preferences</h4>
+                        <input type="checkbox" id="input-checkBox17" class="input-checkbox" > <label id="label17">hide those from my library</label> <br>
+                        <input type="checkbox" id="input-checkBox18" class="input-checkbox" > <label id="label18">hide my bookmarks</label> <br>
+                    </div>
+                </div>
+            </div>
 		</header>
 
 
@@ -115,23 +129,61 @@
 					<img src="../icons/xd2.jpg">
 					<img src="../icons/2.jpg">
 					<img src="../icons/1.jpg">
-					<img src="../icons/3.jpg">
-					<img src="../icons/xd2.jpg">
+					<img src="../imgPrueba/17.jpg">
 				</div>
 			</div>
-			<section>
-
-			</section>
+			<div id="div-button-arrow">
+				<img id="img-button-arrow" src="../icons/arrow.png">
+			</div>
+			<main id="main-images">
+				<img src="../icons/xd2.jpg" onclick="location.href='../individual-image/individual-image.html'">
+				<img src="../imgPrueba/1.jpg">
+				<img src="../imgPrueba/2.jpg">
+				<img src="../imgPrueba/3.jpg">
+				<img src="../imgPrueba/4.jpg">
+				<img src="../imgPrueba/5.jpg">
+				<img src="../imgPrueba/6.jpg">
+				<img src="../imgPrueba/7.jpg">
+				<img src="../imgPrueba/8.jpg">
+				<img src="../imgPrueba/9.jpg">
+				<img src="../imgPrueba/10.jpg">
+				<img src="../imgPrueba/11.jpg">
+				<img src="../imgPrueba/12.jpg">
+				<img src="../imgPrueba/13.jpg">
+				<img src="../imgPrueba/14.jpg">
+				<img src="../imgPrueba/15.jpg">
+				<img src="../imgPrueba/16.jpg">
+				<img src="../imgPrueba/17.jpg">
+			</main>
 		</main>
 	
-		
+		<div id="div-pop-up-background"></div>
+
+		<div id="div-pop-up">
+			<div id="div-cancel-image">
+				<img src="../icons/cancel.png" id="img-cancel-image">
+			</div>
+			
+			<form action="" method="POST" class="form-bookmarks">
+				<h4 class="h4-bookmark-delete">Are you sure you want to remove this painting from your bookmark?</h4>
+				<h4 id="id-image-to-delete" class="h4-bookmark-delete"></h4>
+				<button id="button-submit-bookmarks" type="submit" class="button-submit">
+					<div>REMOVE</div>
+				</button>
+			</form>
+		</div>
+
 	</body>
 	<script src="../jquery.js"></script>
 	<script src="carousel-bookmarks.js"></script>
 	<script src="../basic-functions.js"></script>
 	<script>
 
+		
 
+		/*Order Main Images*/
+
+		orderImages("main-images",200, 20);
 
 		$( document ).ready(function() {
 		    $("#div-carousel-bookmarkers").css({opacity: "1"});
@@ -140,33 +192,46 @@
 		/*Crear carrousel*/
 
 		startCarousel();
+
+		/*consigue el id del div que contiene la imagen que se desea eliminar */
+
+		/*Abrir popup*/
+
+		$(".div-cancel-image").click(function(){
+			var idimageToDelete = "div-image-" + ($(this).attr("id")).slice(17);
+			$("#div-pop-up-background").css("display","block");
+			$("#div-pop-up").css("display","block");
+			$(".form-bookmarks").css("display","block");
+			$("#id-image-to-delete").html(idimageToDelete);
+		});
 		
-		/*Ensanchar perfil*/
 
-		$("#div-profile-picture").click(changeProfileWidth);
-
-
-		/*Girar Flecha*/
-
-		$("#button-arrow").click(changeArrow);
-
-		/*Cambiar Color Texto*/
-
-		$(".input-checkbox").click(function (){
-			
-			var idCheckBox = $(this).attr("id");
-			checkBoxState(idCheckBox, "white", "#7c7c7c");
-
-		}); 
-
-				
-		/*Hover Botones secundarios (settings, library)*/
-
-		$("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
-		$("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
+		/*salir popup*/
 		
-		$("#a-secondary-button-settings").mouseenter(function(){secondaryButtonsHover("settings",true)});
-		$("#a-secondary-button-settings").mouseleave(function(){secondaryButtonsHover("settings",false)});
+		$("#div-cancel-image").click(function(){
+			$("#div-pop-up-background").css("display","none");
+			$("#div-pop-up").css("display","none");
+			$(".form-settings").css("display","none");
+		});
+
+		var elInput = document.querySelector('#input-range');
+        if (elInput) {
+        var etiqueta = document.querySelector('#h6-price');
+        if (etiqueta) {
+				etiqueta.innerHTML = elInput.value;
+
+				elInput.addEventListener('input', function() {
+				etiqueta.innerHTML = elInput.value;
+				}, false);
+        	}
+		}
+
+		/*scroll flecha*/
+
+		$("#img-button-arrow").on('click', function() {
+			console.log("xd");
+			$(".scrollbar").animate( { scrollTop: '640' }, 500);
+		});
 
 	</script>
 </html>

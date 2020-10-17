@@ -124,9 +124,13 @@ function secondaryButtonsHover(buttonName, shown){
             $("#img-secondary-button-settings-green").css("transform","rotate(90deg)"); 
             $("#img-secondary-button-settings-white").css("transform","rotate(90deg)");     
         }
+        else if(buttonName == "profile"){
+            $("#img-secondary-button-profile-green").css("transform","translateY(-6px)"); 
+            $("#img-secondary-button-profile-white").css("transform","translateY(-6px)");     
+        }
         else{
-            $("#img-secondary-button-library-green").css("transform","translateY(-6px)"); 
-            $("#img-secondary-button-library-white").css("transform","translateY(-6px)");     
+            $("#img-secondary-button-library-green").css("transform","translateY(-6px)");
+            $("#img-secondary-button-library-white").css("transform","translateY(-6px)");  
         }
     }
     else{
@@ -137,12 +141,19 @@ function secondaryButtonsHover(buttonName, shown){
             $("#img-secondary-button-settings-green").css("transform","rotate(0deg)");  
             $("#img-secondary-button-settings-white").css("transform","rotate(0deg)");      
         }
+        else if(buttonName == "profile"){
+            $("#img-secondary-button-profile-green").css("transform","translateY(0)"); 
+            $("#img-secondary-button-profile-white").css("transform","translateY(0)");
+        }
         else{
             $("#img-secondary-button-library-green").css("transform","translateY(0)"); 
             $("#img-secondary-button-library-white").css("transform","translateY(0)");
         }
     }        
 }
+
+$("#a-secondary-button-profile").mouseenter(function(){secondaryButtonsHover("profile",true)});
+$("#a-secondary-button-profile").mouseleave(function(){secondaryButtonsHover("profile",false)});
 
 $("#a-secondary-button-library").mouseenter(function(){secondaryButtonsHover("library",true)});
 $("#a-secondary-button-library").mouseleave(function(){secondaryButtonsHover("library",false)});
@@ -351,8 +362,6 @@ function orderImages(id, minHeight, margin){
 
     $("#"+id).css("height",totalHeight);
 }
-
-
 
 //Contador de caracteres Descripcion
 function charcountupdate(str) {

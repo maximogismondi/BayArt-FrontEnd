@@ -1,5 +1,119 @@
-h4{
+#div-filter{
     color: #7c7c7c;
+    background-color: #242424 !important;
+    border-left: 3px solid #00a797;
+    border-right: 3px solid #674ea7;
+    width: 750px !important;
+    height: 330px !important;
+    margin-top: -20px;
+    margin-right: 3%;
+    right: 50px;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    position: absolute;
+    visibility: hidden;
+    font-weight: bold;
+}
+
+.scrollbar{
+    scroll-behavior: smooth;
+}
+
+h4{
+    color: white;
+}
+
+#h4-tags{
+    margin-top: 30px;
+    position: absolute;
+    margin-left: 30px;
+}
+
+#input-range{
+    margin-left: 20px;
+    width: 200px;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    background: #674ea7; /* Grey background */
+    outline: none; /* Remove outline */
+    height: 5px;
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+    .slider:hover {
+        opacity: 1; /* Fully shown on mouse-over */
+    }
+
+        /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 15px; /* Set a specific slider handle width */
+        height: 15px; /* Slider handle height */
+        border-radius: 100%;
+        background: white; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+    }
+  
+    .slider::-moz-range-thumb {
+        width: 25px; /* Set a specific slider handle width */
+        height: 25px; /* Slider handle height */
+        background: #7c7c7c; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+    }
+
+    #h6-price{
+        position: absolute;
+        left: 238px;
+        top: 42;
+    }
+
+#h4-price{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#h4-preferences{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+#price-preferences{
+    border-right: 2px solid #7c7c7c;
+    width: 330px;
+    height: 90%;
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+    
+}
+
+#price{
+    margin-right: 20px;
+}
+#preferences{
+    margin-right: 20px;
+}
+
+#tags{
+    float: right;
+}
+
+#div-column1{
+    width: 180px !important;
+    margin: 55px 10px !important;
+    display: inline-block;
+}
+   
+#div-column2{
+    width: 180px !important;
+    display: inline-block;
 }
 
 /*ID*/
@@ -11,6 +125,7 @@ h4{
 #div-carousel-bookmarkers{
     opacity: 0;
     transition: opacity 2s;
+    margin-top: 45px;
 }
     #div-carousel-images{
         height: 300px;
@@ -23,21 +138,39 @@ h4{
 
         .button-carousel{
             font-size: 50px;
+            margin-top: 50px;
             top: 120px;
+            z-index: 45px;
             position: absolute;
             background: none;
             border: none;
             color: white;
-            z-index: 100
         }
 
             #button-carousel-right{
                 right: 50px;
             }
 
+            #button-carousel-right:hover{
+                color: #00a797;
+                transition: all 0.4s;
+            }
+
             #button-carousel-left{
                 left: 50px;
             }
+
+            #button-carousel-left:hover{
+                color: #674ea7;
+                transition: all 0.4s;
+            }
+
+        .vertical-align{
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            left: 0;
+        }
 
         .div-image{
             background: #121212;
@@ -63,4 +196,81 @@ h4{
                 width: 80%;
                 margin-top:3;
             }
-         
+
+/*POPS UPS*/
+
+.h4-bookmark-delete{
+    margin-top: 60px;
+    margin-left: 16px;
+}
+
+#div-pop-up-background{
+    background: black;
+    height: 100vh;
+    width: 100vw;
+    z-index: 500;
+    opacity: 0.5;
+    position: fixed;
+    display: none;
+}
+
+#div-pop-up{
+    border: 5px solid #7c7c7c;
+    background: #242424;
+    color: white;
+    width: 500px;
+    height: 300px;
+    margin-left: calc(50vw - 250px);
+    margin-top: calc(50vh - 150px);
+    z-index: 1000;
+    border-radius: 15px;
+    position: fixed;
+    display: none;
+}
+
+#button-submit-bookmarks{
+    margin-top: 45px;
+    margin-right: 20px;
+}
+
+.button-submit{
+    color: white;
+    background: #674ea7;
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    transition: all 0.1s;
+    border:none;
+    outline: none;
+    float: right;
+}
+
+#div-cancel-image{
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 60px;
+    position: absolute;
+    }
+  
+      #img-cancel-image{
+          height: 30px;
+          display: block;
+          margin: calc(50% - 15px) auto;
+      }
+
+#div-button-arrow{
+    margin-top: 20px;
+    width: 60px;
+    margin-left: calc(50% - 30px);
+}
+
+#img-button-arrow{
+    transform: rotate(90deg);
+    height: 60px;
+    margin-left: 11px;
+} 
+
+#main-images{
+    margin-top: 85px
+}

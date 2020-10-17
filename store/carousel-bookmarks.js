@@ -16,6 +16,7 @@ function rotateCarousel(){
             $("#div-image-" + index).css("margin-left","0");
         }
         else if(index == imageIndex-1 || index == imageIndex+1){
+            $("#div-image-" + index).css("pointer-events","auto");
             $("#div-image-" + index).css("opacity","1");
             $("#div-image-" + index).css("height","200px");
             $("#div-image-" + index).css("width","200px");
@@ -25,7 +26,7 @@ function rotateCarousel(){
             $("#div-image-" + index).css("height","0");
             $("#div-image-" + index).css("width","0");
             $("#div-image-" + index).css("opacity","0");
-            $("#div-image-" + index).css("pointer-event","none");
+            $("#div-image-" + index).css("pointer-events","none");
             $("#div-image-" + index).css("margin-left","-115px");
         }
     });
@@ -47,22 +48,12 @@ function startCarousel(){
     $("#div-carousel-images").find('img').each(function (){ numberImages++ });
 
     /* set image index */
-    imageIndex = numberImages/2;
+    imageIndex = parseInt(numberImages/2);
 
-    console.log(imageIndex);
     /* create all the containers for the images */
     $("#div-carousel-images").find('img').each(function (index){
 
         $(this).attr("id","image-" + index); 
-
-        if (document.getElementById($(this).attr("id")).naturalHeight > document.getElementById($(this).attr("id")).naturalWidth){
-            $(this).css("height","100%");
-            $(this).css("width","auto");
-        } 
-        else {
-            $(this).css("width","100%");
-            $(this).css("height","auto");
-        }
 
         var divCancelImage = document.createElement('div');
             divCancelImage.id        = "div-cancel-image-" + index;
@@ -80,12 +71,28 @@ function startCarousel(){
         divImage.appendChild(document.getElementById($(this).attr("id")));
         divImage.appendChild(divCancelImage);
         $("#div-carousel-images").append(divImage); 
+
+        if (document.getElementById($(this).attr("id")).naturalHeight > document.getElementById($(this).attr("id")).naturalWidth){
+            $(this).css("height","100%");
+            $(this).css("width","auto");
+        } 
+        else {
+            $(this).css("width","100%");
+            $(this).css("height","auto");
+            $(this).attr("class","vertical-align"); 
+        }
     });
 
     rotateCarousel();
 
     $("#button-carousel-right").click(incrementIndex);
     $("#button-carousel-left").click(decreseIndex);
+
 }
 
-
+/*
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+    */
