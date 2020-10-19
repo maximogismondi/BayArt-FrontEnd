@@ -227,10 +227,10 @@
 }
 
 #img-arrow{
-height: 20px !important;
-margin-right: 13px;
- margin-top: 13px;
- transition: transform 0.1s;
+    height: 20px !important;
+    margin-right: 13px;
+    margin-top: 13px;
+    transition: transform 0.1s;
 }
 
 #h3-filter{

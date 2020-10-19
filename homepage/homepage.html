@@ -153,6 +153,41 @@
 			<img src="../imgPrueba/17.jpg">
 	</main>
 		
+		<div id="div-pop-up-background"></div>
+		<!--POPS UPS-->
+		<div id="div-pop-up">
+
+			<form action="" method="POST" id="form-reward-claim" class="form-reward">
+
+				<!--daily reward-->
+				<div>
+					<h3 id="h3-reward">Daily reward</h3>
+					<div id="div-cancel-image">
+						<h4 id="h4-bpoints">+50 <img src="../icons/bpoints.png" id="img-bpoints-reward"></h4>
+						<img src="../icons/bpoints.png" id="img-cancel-image">
+					</div>
+					<div id="div-days-bpoints">
+						<img src="../icons/bpoints.png" class="img-bpoints-daily-reward">
+						<img src="../icons/bpoints-unclaimed.png" class="img-bpoints-daily-reward">
+						<img src="../icons/bpoints.png" class="img-bpoints-daily-reward">
+						<img src="../icons/bpoints.png" class="img-bpoints-daily-reward">
+						<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
+						<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
+						<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
+					</div>
+					<div id="div-name-days">
+						<h3 class="h3-name-days" id="monday">M</h3>
+						<h3 class="h3-name-days" id="tuesday">T</h3>
+						<h3 class="h3-name-days" id="wednesday">W</h3>
+						<h3 class="h3-name-days" id="thursday">T</h3>
+						<h3 class="h3-name-days" id="friday">F</h3>
+						<h3 class="h3-name-days" id="saturday">S</h3>
+						<h3 class="h3-name-days" id="sunday">S</h3>
+					</div>
+				</div>
+				
+			</form>
+		</div>
 	</body>
 	<script src="../jquery.js"></script>
 	<script src="caroucel-profiles.js"></script>
@@ -162,5 +197,46 @@
 		/*Order Main Images*/
 
 		orderImages("main-images",200, 20);
+
+		function changeButtonBpoints(shown){
+			if(shown){
+				$("#img-cancel-image").attr("src","../icons/icon-viewer.png");
+			}
+			else{
+				$("#img-cancel-image").attr("src","../icons/bpoints.png");
+			}
+		} 
+
+		$("#img-cancel-image").mouseenter(function(){changeButtonBpoints(true)});
+		$("#img-cancel-image").mouseleave(function(){changeButtonBpoints(false)});
+		
+		function transformDailyReward(){
+			
+			setTimeout(function(){
+				$("#img-cancel-image").css("height","60px");
+				$("#img-cancel-image").css("transform","translate(81px,105px)");
+				setTimeout(function(){
+					$("#friday").css("color","#00a797");
+					$("#h4-bpoints").css("display","block");
+				},600); 
+			},500);
+
+			setTimeout(function(){
+				leavePopUp();
+			},1900);
+
+		}
+
+		$("#img-cancel-image").click(transformDailyReward);
+
+		/*salir popup*/
+		function leavePopUp(){
+			$("#div-pop-up-background").css("display","none");
+			$("#div-pop-up").css("display","none");
+			$(".form-reward").css("display","none");
+		};
+		
+		
+
 	</script>
 </html>

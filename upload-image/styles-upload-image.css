@@ -153,6 +153,11 @@
                 position: relative;
             }
 
+                #img-arrow{
+                    margin-top: 12px !important;
+                    margin-left: 12px !important;
+                }
+
                 #h3-filter{
                     margin-top: 11px;
                 }

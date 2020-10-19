@@ -108,6 +108,19 @@ main{
     float: right;
 }
 
+#button-bookmark{
+    margin-top: 5px;
+    margin-right: 20px;
+    background: none;
+    border:none;
+    outline: none;
+    float: right;
+}
+
+#img-bookmark{
+    height: 50px;
+}
+
 #div-price-number-image{
     color: white;
     margin-left: 5px;

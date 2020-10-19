@@ -55,3 +55,151 @@
 	border-radius: 100%;
 	margin: 5px 4px;
 }
+
+/*POP UP*/
+
+#div-pop-up-background{
+    background: black;
+    height: 100vh;
+    width: 100vw;
+    z-index: 500;
+    opacity: 0.5;
+    position: fixed;
+    display: block;
+    }
+    
+    #div-pop-up{
+      border: 5px solid #7c7c7c;
+      background: #242424;
+      color: white;
+      width: 500px;
+      height: 300px;
+      margin-left: calc(50vw - 250px);
+      margin-top: calc(50vh - 150px);
+      z-index: 1000;
+      border-radius: 15px;
+      position: fixed;
+      display: block;
+      }
+    
+      #div-cancel-image{
+        height: 100px;
+        width: 100px;
+        margin: 10px 200px;
+        position: absolute;
+      }
+
+        #h4-bpoints{
+            margin-top: 40px;
+            margin-left: 20px;
+            width: 100px;
+            position: absolute;
+            display: none;
+        }
+
+        #img-bpoints-reward{
+            height: 30px !important;
+            width: 30px !important;
+            transition: opacity 0.1s;
+            margin-left: 5px;
+            margin-top: -6px;
+            position: absolute;
+            display: inline-block !important;
+        }
+    
+        #img-cancel-image{
+            height: 80px;
+            display: block;
+            margin: 10px 10px;
+            transition: all 0.5s;
+        }
+
+.form-reward{
+    display: none;
+    margin-top: 30px;
+}
+
+.input-write{
+    color: white;
+    font-size: 20px;
+    border: none;
+    background: none;
+}
+
+.button-submit{
+    color: white;
+    background: #674ea7;
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    transition: all 0.1s;
+    border:none;
+    outline: none;
+    float: right;
+}
+
+/*--------------------------------------------------------------*/
+
+#h3-reward{
+    margin-top: -5px;
+    margin-left: 182px;
+    display: inline-block;
+}
+
+#div-days-bpoints{
+    margin-top: 25%;
+    height: 60px;
+}
+
+.img-bpoints-daily-reward{
+    height: 60px;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+#div-name-days{
+    margin-top: -10px;
+    margin-left: -22px;
+}
+
+.h3-name-days{
+    display: inline-block;
+    margin-left: 50px;
+    
+}
+
+#monday{
+    color: #00a797;
+}
+
+#tuesday{
+    color: #c02925;
+}
+
+#wednesday{
+    color: #00a797;
+}
+
+#thursday{
+    color: #00a797;
+}
+
+#friday{
+    color: #7c7c7c;
+}
+
+#saturday{
+    margin-left: 52px;
+    color: #7c7c7c;
+}
+
+#sunday{
+    margin-left: 52px;
+    color: #7c7c7c;
+}
+
+#form-reward-claim{
+    display: block;
+}
+  
+  /*--------------------------------------------------------------*/
