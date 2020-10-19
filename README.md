@@ -22,6 +22,7 @@ _Ingredientes: Callipo Franco, Gismondi Maximo, Moggia Gian Franco, Palavecino S
 ####Homepage
 
 ####Busqueda
+*Como se muestran los artistas
 
 ####Subir foto
 
