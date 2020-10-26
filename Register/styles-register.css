@@ -46,7 +46,7 @@ body{
     margin: 30px;
 }
 
-#div-inputs{
+.div-inputs{
     border-bottom: 1px solid white;
     margin: 30px 30px;
     display: block;
@@ -95,7 +95,6 @@ body{
     font-size: 15px;
     border: none;
     background: none;
-    
 }
 
 .button-register{
@@ -166,3 +165,125 @@ body{
       min-height:40px;
     }
   }
+
+/*celu*/
+/*mientras este debajo de 700px de ancho pasa esto // mientras este por encima de 500px de ancho pasa esto*/
+@media (max-width: 750px){
+  #div-all{
+    width: 450px;
+    height: 520px;
+  }
+
+  #form-register{
+    height: 438px;
+    margin: 20px;
+  }
+
+  .input-register{
+    width: 315px;
+  }
+
+  #input-month{
+      margin: auto 0.5px;
+  }
+
+  .button-register{
+    margin: 60px 250px;
+  }
+
+}
+
+@media (max-width: 500px){
+  #div-all{
+    width: 400px;
+    height: 510px;
+  }
+
+  #form-register{
+    height: 435px;
+    margin: 15px;
+  }
+
+  .input-register{
+    width: 305px;
+  }
+
+  #img-eye{
+    margin-top: -22px;
+  }
+
+  #input-month{
+      margin: auto 0.5px;
+  }
+
+  .button-register{
+    margin: 60px 235px;
+  }
+
+}
+
+@media (max-width: 450px){
+  #div-all{
+    width: 350px;
+    height: 500px;
+  }
+
+  #form-register{
+    height: 435px;
+    margin: 10px;
+  }
+
+  .input-register{
+    width: 300px;
+  }
+
+  #img-eye{
+    margin-top: -22px;
+  }
+
+  #input-month{
+      margin: auto 0px;
+  }
+
+  #input-day-year{
+    width: 31.5%;
+  } 
+
+  .button-register{
+    margin: 60px 200px;
+  }
+
+}
+
+@media (max-width: 400px){
+  #div-all{
+    width: 330px;
+    height: 500px;
+  }
+
+  #form-register{
+    height: 435px;
+    margin: 10px;
+  }
+
+  .input-register{
+    width: 300px;
+  }
+
+  #img-eye{
+    margin-top: -22px;
+  }
+
+  #input-month{
+      margin: auto 0px;
+  }
+
+  #input-day-year{
+    width: 31.5%;
+  } 
+
+  .button-register{
+    margin: 60px 180px;
+  }
+
+}

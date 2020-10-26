@@ -43,7 +43,7 @@ window.onscroll = function(){
 
 function displayCheckbox(opacityCheckbox, status){
     var indexLabel = 1;
-    for (let i = 1; i <= 2; i++) {
+    for (let i = 1; i <= 2; i++){
         $("#div-column" + i).find('input').each(function (index){
             if(opacityCheckbox==0.3 && !$(this).prop('checked') || opacityCheckbox==1){
                 $(this).css("opacity",opacityCheckbox);
@@ -59,29 +59,26 @@ function displayCheckbox(opacityCheckbox, status){
 /*Estirar Perfil*/
 var profileState = true;
 var changing = false;
+var widthProfileBar = $("#div-profile").width();
+var displayName = $("#div-name-type").css("display");
 function changeProfileWidth(){
     if(!changing){
         profileState = !profileState;
-    if(profileState) {
+    if(profileState){
         changing = true;
-        console.log(changing);
         $("#div-secondary-buttons").css({opacity: "0"});
-        $('#div-profile').css({width: "350px"});
+        $('#div-profile').css({width: widthProfileBar});
         setTimeout( function(){
             $("#div-secondary-buttons").css({visibility: "hidden"});
         },100);
+    
         setTimeout( function(){
+            console.log(widthProfileBar);
             $('#div-bpoints').css({display: "inline-block"});
-            $('#div-name-type').css({display: "inline-block"});
+            $('#div-name-type').css({display: displayName});
             $('#div-name-type').css({opacity: "1"});
-        },550);
-        setTimeout( function(){
             $('#label-bpoints').css({opacity: "1"});
-        },650);
-        setTimeout( function(){
             $('#img-bpoints').css({opacity: "1"});
-        },750);
-        setTimeout( function(){
             changing=false;
         },850);
         
@@ -89,12 +86,8 @@ function changeProfileWidth(){
     else{
         changing = true;
         $('#img-bpoints').css({opacity: "0"});
-        setTimeout( function(){
-            $('#label-bpoints').css({opacity: "0"});
-        },100);
-        setTimeout( function(){
-            $('#div-name-type').css({opacity: "0"});
-        },200);
+        $('#label-bpoints').css({opacity: "0"});
+        $('#div-name-type').css({opacity: "0"});
         setTimeout( function(){
             $('#div-bpoints').css({display: "none"});
             $('#div-name-type').css({display: "none"});
