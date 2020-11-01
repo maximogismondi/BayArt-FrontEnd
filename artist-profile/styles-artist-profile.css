@@ -23,6 +23,7 @@ main{
     border-top-right-radius: 15px;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 #div-artist-picture{
@@ -291,3 +292,253 @@ h4{
   .slider.round:before {
     border-radius: 50%;
   }
+
+/*__________________________HEADER SECUNDARIO ARTIST PROFILE______________________________*/
+
+@media (max-width: 1250px){
+    main{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1000px){
+    #div-buttons-artist-profile{
+        margin-left: 5%;
+    }
+
+    #button-sponsors{
+        right: 5%;
+    }
+}
+
+@media (max-width: 800px){
+
+    .buttons-profile-artist{
+        width: 180px;
+    }
+
+}
+
+@media (max-width: 710px){
+    
+    .buttons-profile-artist{
+        width: 150px;
+    }
+
+}
+
+@media (max-width: 620px){
+    #div-buttons-artist-profile{
+        margin-left: 3%;
+    }
+
+    .buttons-profile-artist{
+        width: 130px;
+    }
+
+    #button-sponsors{
+        right: 3%;
+    }
+
+    #img-artist-picture{
+        margin-top: 30px;
+        height: 90%;
+        width: 180px;
+    }
+}
+
+@media(max-width: 545px){
+    #nav-subtitle{
+        margin-top: 60px !important;
+    }
+
+    main{
+        margin-top:150px !important;
+    }
+
+    #main-bottom{
+        margin-top: 700px !important;
+    }
+    /*-----------------------------*/
+
+    #div-buttons-artist-profile{
+        width: 80%;
+        margin-left: 3%;
+        margin-right: 10%;
+    }
+
+    .buttons-profile-artist{
+        border-radius: 15px;
+        width: 130px;
+        height: 50px;
+        border: none;
+    }
+
+    #button-subscribers{
+        background: #00a797;
+        position: absolute;
+        transition: border 100ms;
+    }
+
+    #button-sponsors{
+        background: #674ea7;
+        right: 3%;
+        position: absolute;
+        transition: border 100ms;
+    }
+
+    #button-img-subscribers{
+        width: 20px;
+    }
+    
+    #div-subscribers-number{
+        font-size: 18px;
+    }
+
+    #button-img-sponsors{
+        width: 20px;
+    }
+    
+    #div-sponsors-number{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px){
+    #div-buttons-artist-profile{
+        margin-left: 2%;
+    }
+
+    .buttons-profile-artist{
+        width: 100px;
+        height: 45px;
+    }
+
+    #button-sponsors{
+        right: 2%;
+    }
+
+    #button-img-subscribers{
+        width: 17px;
+    }
+    
+    #div-subscribers-number{
+        font-size: 17px;
+    }
+
+    #button-img-sponsors{
+        width: 17px;
+    }
+    
+    #div-sponsors-number{
+        font-size: 17px;
+    }
+
+    #img-artist-picture{
+        margin-top: 40px;
+        height: 80%;
+        width: 160px;
+    }
+}
+
+
+@media (max-width: 430px){
+    #div-buttons-artist-profile{
+        margin-left: 1%;
+    }
+
+    .buttons-profile-artist{
+        width: 80px;
+        height: 40px;
+    }
+
+    #button-sponsors{
+        right: 1%;
+    }
+
+    #button-img-subscribers{
+        width: 16px;
+    }
+    
+    #div-subscribers-number{
+        font-size: 16px;
+    }
+
+    #button-img-sponsors{
+        width: 16px;
+    }
+    
+    #div-sponsors-number{
+        font-size: 16px;
+    }
+
+    #img-artist-picture{
+        margin-top: 60px;
+        height: 70%;
+        width: 140px;
+    }
+}
+
+/*
+@media (max-width: 430px){
+    #div-buttons-artist-profile{
+        width: 80%;
+        margin-left: 1%;
+        margin-right: 10%;
+    }
+
+    .buttons-profile-artist{
+        border-radius: 15px;
+        width: 80px;
+        height: 40px;
+        border: none;
+    }
+
+    #button-subscribers{
+        background: #00a797;
+        position: absolute;
+        transition: border 100ms;
+    }
+
+    #button-sponsors{
+        background: #674ea7;
+        right: 1%;
+        position: absolute;
+        transition: border 100ms;
+    }
+
+    #button-img-subscribers{
+        width: 16px;
+        transition: opacity 100ms;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    #div-subscribers-number{
+        color: white;
+        font-size: 16px;
+        transition: opacity 100ms;
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #button-img-sponsors{
+        width: 16px;
+        transition: opacity 100ms;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    #div-sponsors-number{
+        color: white;
+        margin-left: 5px;
+        font-size: 16px;
+        transition: opacity 100ms;
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+*/

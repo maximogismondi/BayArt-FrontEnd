@@ -3,8 +3,8 @@
 		<link rel="shortcut icon" href="../icons/icon-viewer.png"/>
 		<link rel="stylesheet" href="styles-store.css">
 		<link rel="stylesheet" href="../styles-general.css">
-		
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>BayArt! - Store</title>
 		
 	</head>
@@ -115,23 +115,23 @@
 
 
 		<main>
+
 			<div id="div-carousel-bookmarkers">
-				<button id="button-carousel-left" class="button-carousel"> < </button>
-				<button id="button-carousel-right" class="button-carousel"> > </button>
-				<div id="div-carousel-images">
-					<img src="../icons/2.jpg">
-					<img src="../icons/1.jpg">
-					<img src="../icons/3.jpg">
-					<img src="../icons/xd2.jpg">
-					<img src="../icons/2.jpg">
-					<img src="../icons/1.jpg">
-					<img src="../icons/3.jpg">
-					<img src="../icons/xd2.jpg">
-					<img src="../icons/2.jpg">
-					<img src="../icons/1.jpg">
-					<img src="../imgPrueba/17.jpg">
-				</div>
-			</div>
+                <button id="button-carousel-left" class="button-carousel"> < </button>
+                <button id="button-carousel-right" class="button-carousel"> > </button>
+                <div id="div-carousel-images">
+                    <img src="../icons/2.jpg">
+                    <img src="../icons/1.jpg">
+                    <img src="../icons/3.jpg">
+                    <img src="../icons/xd2.jpg">
+                    <img src="../icons/2.jpg">
+                    <img src="../icons/1.jpg">
+                    <img src="../icons/3.jpg">
+                    <img src="../icons/xd2.jpg">
+                    <img src="../icons/2.jpg">
+                    <img src="../icons/1.jpg">
+                </div>
+            </div>
 
 			<div id="div-button-arrow">
 				<img id="img-button-arrow" src="../icons/arrow.png">
@@ -154,8 +154,6 @@
 				<img src="../imgPrueba/13.jpg">
 				<img src="../imgPrueba/14.jpg">
 				<img src="../imgPrueba/15.jpg">
-				<img src="../imgPrueba/16.jpg">
-				<img src="../imgPrueba/17.jpg">
 			</main>
 		</main>
 	
@@ -181,11 +179,22 @@
 	<script src="../basic-functions.js"></script>
 	<script>
 
-		
-
 		/*Order Main Images*/
 
-		orderImages("main-images",200, 20);
+		$( document ).ready(function() {
+			if(window.screen.width > 1000){
+				orderImages("main-images", 200, 20);
+			}
+
+			else if(window.screen.width > 500){
+				orderImages("main-images", 150, 15);
+			}
+
+			else{
+				orderImages("main-images", 100, 10);
+			}
+
+		});
 
 		$( document ).ready(function() {
 		    $("#div-carousel-bookmarkers").css({opacity: "1"});
@@ -231,9 +240,26 @@
 		/*scroll flecha*/
 
 		$("#img-button-arrow").on('click', function() {
-			console.log("xd");
-			$(".scrollbar").animate( { scrollTop: '640' }, 500);
+			$(".scrollbar").animate( { scrollTop: '600' }, 500);
 		});
+
+		/*animar flecha*/
+		
+		function goUp(){
+			setTimeout( function(){
+				$('#img-button-arrow').css({top: "350px"});
+				goDown();
+			},700);
+		}
+
+		function goDown(){
+			setTimeout( function(){
+				$('#img-button-arrow').css({top: "380px"});
+				goUp();
+			},400);
+		}
+		
+		goDown();
 
 	</script>
 </html>

@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="styles-own-profile.css">
 		<link rel="stylesheet" href="../styles-general.css">
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>BayArt! - My Profile</title>
 	</head>
 
@@ -114,7 +115,11 @@
 					
 					<div id="div-background-library"></div>
                 </button>
-            </div>
+			</div>
+			<div id="div-imgs-raspberry">
+				<img src="../icons/raspberry-enable.png" id="img-raspberry-enable">
+				<img src="../icons/raspberry-disable.png" id="img-raspberry-disable">
+			</div>
             <div id="div-uploaded-images">
                 <img src="../icons/xd2.jpg" onclick="location.href='../individual-image/individual-image.html'">
                 <img src="../imgPrueba/1.jpg">
@@ -132,17 +137,12 @@
                 <img src="../imgPrueba/13.jpg">
                 <img src="../imgPrueba/14.jpg">
                 <img src="../imgPrueba/15.jpg">
-                <img src="../imgPrueba/16.jpg">
-                <img src="../imgPrueba/17.jpg">
             </div>
             <div id="div-uploaded-images-copy" style="display: none;"></div>
 			<div id="div-library-images">
                
 			</div>
-			<div id="div-imgs-raspberry">
-				<img src="../icons/raspberry-enable.png" id="img-raspberry-enable">
-				<img src="../icons/raspberry-disable.png" id="img-raspberry-disable">
-			</div>
+			
 			<div id="div-library-images-copy" style="display: none;">
                 <img src="../imgPrueba/7.jpg">
                 <img src="../imgPrueba/8.jpg">
@@ -262,10 +262,23 @@
 				$("#div-imgs-raspberry").css("opacity", "1");
 			},400);
         })
-        
-		/*Order Main Images*/
-        orderImages("div-uploaded-images",150, 15);
 
+		/*Order Main Images*/
+
+		$( document ).ready(function() {
+			if(window.screen.width > 1000){
+				orderImages("div-uploaded-images", 200, 20);
+			}
+
+			else if(window.screen.width > 500){
+				orderImages("div-uploaded-images", 150, 15);
+			}
+
+			else{
+				orderImages("div-uploaded-images", 100, 10);
+			}
+
+		});
 
 		/*Abrir popup*/
 

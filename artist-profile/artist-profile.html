@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="styles-artist-profile.css">
 		<link rel="stylesheet" href="../styles-general.css">
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>BayArt! - Profile Artist</title>
 	</head>
 
@@ -111,8 +112,6 @@
 			<img src="../imgPrueba/13.jpg">
 			<img src="../imgPrueba/14.jpg">
 			<img src="../imgPrueba/15.jpg">
-			<img src="../imgPrueba/16.jpg">
-			<img src="../imgPrueba/17.jpg">
 			
 		</main>
 		
@@ -213,10 +212,23 @@
 
 		$("#button-sponsors").mouseenter(function(){changeButtonArtistProfile(true, "sponsors")});
 		$("#button-sponsors").mouseleave(function(){changeButtonArtistProfile(false, "sponsors")});
-		
-		/*Order Main Images*/
 
-		orderImages("main-bottom",150, 15);
+		/*Order Main Images*/
+		
+		$( document ).ready(function() {
+				if(window.screen.width > 1000){
+					orderImages("main-bottom", 200, 20);
+				}
+
+				else if(window.screen.width > 500){
+					orderImages("main-bottom", 150, 15);
+				}
+
+				else{
+					orderImages("main-bottom", 100, 10);
+				}
+
+			});
 
 		/*Abrir popup*/
 

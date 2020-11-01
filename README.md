@@ -22,14 +22,20 @@ _Ingredientes: Callipo Franco, Gismondi Maximo, Moggia Gian Franco, Palavecino S
 ####Homepage
 
 ####Busqueda
-*Como se muestran los artistas
 
 ####Subir foto
 
 ####Click en foto
 
 ####Calendario con Recompensas
-*Pop-up
 
 ####Maquetado Celular
-*cry
+
+*pops ups
+*recompensa diaria hacer todos los casos
+*ver el body que sea auto
+*buscar artista (que se vea como la bandera de japon)
+*upload image subida imagen
+*store carrousel y filter (al final)
+
+

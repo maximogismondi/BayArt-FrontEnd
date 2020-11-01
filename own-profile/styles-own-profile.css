@@ -8,6 +8,7 @@ main{
 
 #main-bottom{
     margin-top: 625px !important;
+    height: auto !important;
 }
 
 #div-banner-picture{
@@ -23,6 +24,7 @@ main{
     border-top-right-radius: 15px;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 #div-artist-picture{
@@ -159,8 +161,8 @@ main{
 
 #div-imgs-raspberry{
     height: 70px;
-    margin-top: -46%;
-    position: relative;
+    width: 100%;
+    position: absolute;
     opacity: 0;
 }
 
@@ -178,4 +180,102 @@ main{
     height: 45px;
     transition: opacity 0.1s;
     float: right;
+}
+
+/*__________________________HEADER SECUNDARIO OWN PROFILE______________________________*/
+
+@media (max-width: 1250px){
+    header{
+        width: 100%;
+    }
+    main{
+        width: 100% !important;
+    }
+
+}
+
+@media (max-width: 1170px){
+    #button-submit-upload-image{
+        margin-left: 20%;
+    }
+    
+    #button-submit-edit-profile{
+        margin-right: 20%;
+        float: right;
+    }
+}
+
+@media (max-width: 920px){
+    #button-submit-upload-image{
+        margin-left: 10%;
+    }
+    
+    #button-submit-edit-profile{
+        margin-right: 10%;
+        float: right;
+    }
+}
+
+@media (max-width: 680px){
+
+    #img-artist-picture{
+        margin-top: 30px;
+        height: 90% !important;
+        width: 180px !important;
+    }
+
+    .button-submit{
+        width: 100px;
+        height: 60px;
+    }
+
+    #button-submit-upload-image{
+        margin-left: 5%;
+    }
+    
+    #button-submit-edit-profile{
+        margin-right: 5%;
+        float: right;
+    }
+}
+
+@media (max-width: 545px){
+    main{
+        margin-top:150px !important;
+    }
+
+    #main-bottom{
+        margin-top: 700px !important;
+    }
+}
+
+@media (max-width: 440px){
+
+    #img-artist-picture{
+        margin-top: 60px;
+        height: 70% !important;
+        width: 140px !important;
+    }
+
+    .button-submit{
+        color: white;
+        background: #242424;
+        margin-top: 70px;
+        border-radius: 15px;
+        width: 80px;
+        height: 50px;
+        position: relative;
+        transition: all 0.1s;
+        border:none;
+        outline: none;
+    }
+
+    #button-submit-upload-image{
+        margin-left: 5%;
+    }
+    
+    #button-submit-edit-profile{
+        margin-right: 5%;
+        float: right;
+    }
 }

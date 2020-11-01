@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="styles-library.css">
 		<link rel="stylesheet" href="../styles-general.css">
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>BayArt! - Library</title>
 	</head>
 
@@ -99,8 +100,6 @@
 			<img src="../imgPrueba/13.jpg">
 			<img src="../imgPrueba/14.jpg">
 			<img src="../imgPrueba/15.jpg">
-			<img src="../imgPrueba/16.jpg">
-			<img src="../imgPrueba/17.jpg">
 		</main>
 		
 	</body>
@@ -112,7 +111,20 @@
 
 		/*Order Main Images*/
 
-		orderImages("main",150, 20);
+		$( document ).ready(function() {
+			if(window.screen.width > 1000){
+				orderImages("main", 200, 20);
+			}
+
+			else if(window.screen.width > 500){
+				orderImages("main", 150, 15);
+			}
+
+			else{
+				orderImages("main", 100, 10);
+			}
+
+		});
 
 		/*Cambiar opacidad botones raspberry*/
 

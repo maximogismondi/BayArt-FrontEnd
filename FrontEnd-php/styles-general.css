@@ -1,0 +1,374 @@
+/*Type*/
+
+    main{
+        margin: 0px auto;
+        width: 1250px;
+        background-color: #3d3d3d;
+        border-radius: 15px;
+        height: 2000px; /*poner en auto*/
+        left: 0px;
+        right: 0px;
+        margin-top:200px;
+        position:absolute;
+    }
+
+    body{
+        background-color: #242424;  
+        margin: 0px;
+        font-family: Verdana;
+    }
+
+    :focus{
+        outline: none;
+    }
+
+    header{
+        margin: 0px auto;
+        background-color: #242424;
+        position: fixed;
+        width: 1250px;
+        left: 0px;
+        right: 0px;
+        z-index: 1;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    button{
+        cursor:pointer;
+    }
+
+/*ID*/
+
+#green-line{
+ background-color: #00a797;
+ left: 0;
+ width: 7px;
+ z-index: 2;
+}
+
+#div-buttons{
+ margin-top: 15px;
+ width:350px;
+ display: inline-block;
+}
+
+#div-search-bar{
+ width: 40%;
+ height: 30px;
+ display: inline-block;
+}
+
+#input-search-bar{
+    color: white;
+    width: 85%;
+    height: 30px;
+    font-size: 20px;
+    float: right;
+    border: none;
+    background: none;
+    display: block;
+    border-bottom: 1px solid white;
+   }
+
+#button-magnifier{
+ background: none;
+ border:none;
+ float: left;
+ outline: none;
+}
+
+#img-magnifier{
+ width: 55px;
+ height: 35px;
+}
+
+#div-profile{
+ background-color: #3d3d3d;
+ border-radius: 25px;
+ margin-top: 10px;
+ width: 350px;
+ height:50px;
+ transition: width 0.75s cubic-bezier(0.25,0.25,0.25,1);
+ float: right; 
+ margin-left: 38px;
+}
+
+#div-bpoints{
+ margin-left:7px;
+ margin-top: 8px;
+ float: left;
+ height: auto;
+ width: auto;
+}
+
+#img-bpoints{
+ height: 35px;
+ width: 35px;
+ transition: opacity 0.1s;
+}
+
+#label-bpoints{
+ color: #00a797;
+ margin-left: 6px;
+ margin-top: 2px;
+ font-size: 25px;
+ transition: opacity 0.1s;
+ font-weight: bold;    
+ float: right;
+}
+
+#div-name-type{
+ height: 30px;
+ width: 160px;
+ margin-top: 9px;
+ margin-left: 15px;
+ transition: opacity 0.1s;
+ display: inline-block;
+ text-align:center;
+}
+
+#label-name{
+ color: white;
+ font-size: 15px;
+ font-weight: bold;
+}
+
+#label-type{
+ color: #00a797;
+ font-size: 10px;
+ font-weight: bold;
+}
+
+#div-profile-picture{
+ background-color: #674ea7;
+ height: 40px;
+ width: 40px;
+ border-radius: 25px;
+ margin-right: 4px;
+ margin-top: 5px;
+ float:right;
+}
+
+#div-secondary-buttons{
+    margin-top: 25px;
+    margin-left: 73px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    visibility: hidden;
+    position: absolute;
+    display: inline-block;
+}
+
+#img-secondary-button-profile-green{
+    opacity: 0;
+}
+
+#img-secondary-button-library-green{
+    opacity: 0;
+}
+
+#img-secondary-button-settings-green{
+    opacity: 0;
+}
+
+#div-secondary-button-library-text{
+    margin-top: 3px;
+    margin-left: 33px;
+}
+
+#nav-subtitle{
+ background-color: #3d3d3d;
+ border-radius: 15px;
+ margin-top: 20px;
+ transition: margin 1s, opacity 1s;
+ display: inline-block;
+ width: 100%;
+ height: 70px;
+}
+
+#h2-subtitle{
+ color: white;      
+ margin-left: 20px;
+ display: inline-block;
+}
+
+#button-arrow{
+ margin: 10px;
+ background: none;
+ border: none;
+ float: right;
+}
+
+#button-arrow:focus {
+ outline: none;
+}
+
+#img-arrow{
+    height: 20px !important;
+    margin-right: 13px;
+    margin-top: 13px;
+    transition: transform 0.1s;
+}
+
+#h3-filter{
+ color: #7c7c7c;
+ float: right;
+}
+
+#div-filter{
+ color: #7c7c7c;
+ background-color: #242424;
+ border-left: 3px solid #00a797;
+ border-right: 3px solid #674ea7;
+ width: 400px;
+ height: 300px;
+ margin-top: -20px;
+ margin-right: 3%;
+ right: 50px;
+ border-radius: 15px;
+ opacity: 0;
+ transition: opacity 0.1s;
+ position: absolute;
+ visibility: hidden;
+ font-weight: bold;
+}
+
+#div-column1{
+ width: 45%;
+ margin: 20px 10px;
+ display: inline-block;
+}
+
+#div-column2{
+ width: 45%;
+ display: inline-block;
+}
+
+/*Class*/
+
+.line{
+ height: 100%;
+ width: 10px;
+ display: absolute;
+ position: fixed;
+}
+
+.options{
+ background-color: #3d3d3d;
+ height: 40px;
+ width: 100px;
+ border-radius: 5px;
+ margin: 0px 5px;
+ border: none;
+ transition: border 0.2s;
+}
+
+.a-secondary-buttons{ 
+    text-decoration: none;
+    display: inline-block;
+}
+
+.div-img-secondary-buttons{
+    position: relative;
+}
+
+.img-secondary-buttons{
+    width: 30px;
+    transition:  opacity 0.3s, transform 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+}
+
+.div-secondary-buttons-text{
+    color: white;
+    margin-top: 2px;
+    margin-left: 30px;
+    transition: color 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.div-img-profile{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;	
+	border-radius: 35px;
+	height: 35px;
+	width: 35px;
+	background: red 
+}
+
+.h3-img-name{
+	position: absolute;
+	color: white;
+	bottom: 5px;
+	left: 50px
+}
+
+.h6-img-name{
+	position: absolute;
+	color: white;
+	bottom: -12px;
+	left: 50px
+}
+
+.div-gradient-main{
+	display: inline-block;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.2s;
+    position: absolute;
+    background-image:-webkit-linear-gradient(top,rgba(0,0,0,0.1) 0,#242424 90%)
+}
+
+.div-gradient-main:hover{
+	opacity: 1;
+}
+
+.options:hover{
+    border: 2px solid #674ea7;
+}
+
+.img-buttons{
+ height: 25px
+}
+
+.input-checkbox{
+    background-color:  #3d3d3d;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right:0 ;
+    width: 12px;
+    height: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor:pointer;
+}
+
+.input-checkbox:checked{
+ background-color: #674ea7;
+}
+
+.scrollbar::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+.scrollbar::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #674ea7;
+}
+
+/*celu*/
+/*mientras este debajo de 700px de ancho pasa esto // mientras este por encima de 500px de ancho pasa esto*/
+@media (max-width: 700px) and (min-width: 500px) {
+    
+}

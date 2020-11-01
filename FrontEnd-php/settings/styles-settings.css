@@ -18,7 +18,7 @@ main{
       margin-top: 50px;
     }
 
-    #img-bpoints-settings{
+    .img-bpoints-settings{
       width: 20px;
       margin-left: -25px;
       margin-top: -3px;
@@ -452,4 +452,153 @@ h3{
 .scrollbar-description::-webkit-scrollbar-thumb {
   background-color: #00a797;
   border-radius: 20px;
+}
+
+/*__________________________HEADER SECUNDARIO SEARCH______________________________*/
+
+@media (max-width: 1250px){
+  header{
+      width: 100%;
+  }
+  main{
+    width: 100% !important;
+}
+}
+
+@media (max-width: 700px){
+
+  .things-settings{
+    margin-left: -10%;
+    width: 130%;
+  }
+  h3{
+    margin-left: -10%;
+  }
+
+  #div-filter{
+      font-size: 15px;
+      width: 86% !important;
+      height: 330px;
+  }
+
+  #tags{
+      margin-right: 3%;
+      width: 60%;
+  }
+
+  #div-column1{
+      width: 42% !important;
+      margin: 55px 5px !important;
+  }
+     
+  #div-column2{
+      width: 52% !important;
+  }
+
+  #div-type-preferences{
+      width: 32%;
+      height: 90%;
+      margin-right: 3%;
+  }
+
+  .input-checkbox{
+      width: 10px;
+      height: 10px;
+  }
+}
+
+@media (max-width: 600px){
+
+  #div-column1{
+      width: 41% !important;
+      margin: 55px 0px !important;
+  }
+
+  #tags{
+      margin-right: 3%;
+      width: 61%;
+  }
+}
+
+@media (max-width: 591px){
+  #div-filter{
+      font-size: 13px;
+      width: 86% !important;
+      height: 290px !important;
+  }
+
+  #div-type-preferences{
+      width: 31%;
+      height: 90%;
+      margin-right: 3%;
+  }
+
+  #tags{
+      width: 62%;
+  }
+
+  .input-checkbox{
+      width: 8px;
+      height: 8px;
+  }
+}
+
+@media(max-width: 545px){
+  main{
+      margin-top:240px !important;
+  }
+}
+
+@media (max-width: 514px){
+  #div-filter{
+      width: 88.4% !important;
+      margin-right: 0%;
+  }
+}
+
+@media (max-width: 500px){
+
+  .things-settings{
+    margin-left: -30%;
+    width: 160%;
+  }
+  h3{
+    margin-left: -30%;
+  }
+
+  #div-filter{
+      font-size: 10px;
+      width: 88% !important;
+      height: 270px !important;
+      margin-right: -2%;
+  }
+
+  #tags{
+      width: 62%;
+  }
+
+  #div-type-preferences{
+      width: 32%;
+      height: 90%;
+      margin-right: 2%;
+  }
+
+}
+
+@media (max-width: 407px){
+
+  .things-settings{
+    margin-left: -35%;
+    width: 170%;
+  }
+
+  h3{
+    margin-left: -35%;
+  }
+
+  #div-filter{
+      font-size: 9px;
+      width: 98% !important;
+      margin-right: -13%;
+  }
 }

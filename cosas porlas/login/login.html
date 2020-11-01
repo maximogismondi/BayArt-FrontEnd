@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="styles-login.css">
         <link rel="stylesheet" href="../styles-general.css">
         <meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+        <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
 
     <body class="scrollbar">
@@ -31,10 +32,6 @@
                     <input type="password" name="contrasena" placeholder="Password" class="input-login" id="input-password" required>
                     <img id="img-eye" src="../icons/open-eye.png">
                 </div>
-                
-                <div id="div-keep-me">
-                    <input type="checkbox" id="input-checkBox-keep-me"> <label id="label-keep-me">Keep me logged in</label>
-                </div>
 
                 <div id="div-log-in-register">
                     <button id="button-submit" type="submit" onclick = "location.href=' ../homepage/homepage.html'" >LOG IN</button>
@@ -48,19 +45,19 @@
 
         </div>
         <!--Waves Container-->
-            <div id="div-waves">
-                <svg id="svg-waves" 
-                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                    <defs>
-                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                    </defs>
-                    <g class="parallax">
-                        <use xlink:href="#gentle-wave" x="48" y="0" fill="#674ea7" />
-                        <use xlink:href="#gentle-wave" x="48" y="3" fill="#00a797" />
-                    </g>
-                </svg>
-            </div>
-            <!--Waves end-->
+        <div id="div-waves">
+            <svg id="svg-waves" 
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="#674ea7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="#00a797" />
+                </g>
+            </svg>
+        </div>
+        <!--Waves end-->
 
     </body>
 

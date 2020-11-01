@@ -9,11 +9,11 @@ function startCarroucelProfiles(){
     });
 
     $("#button-carousel-right").on('click', function() {
-        $('#carousel-images-profiles').animate( { scrollLeft: '+=450' }, 200);    
+        $('#carousel-images-profiles').animate( { scrollLeft: '+=100' }, 200);    
     });
 
     $("#button-carousel-left").on('click', function() {
-        $('#carousel-images-profiles').animate( { scrollLeft: '-=450' }, 200);
+        $('#carousel-images-profiles').animate( { scrollLeft: '-=100' }, 200);
     });
 
     document.addEventListener('DOMContentLoaded', function () {   

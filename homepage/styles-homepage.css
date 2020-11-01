@@ -202,4 +202,221 @@
     display: block;
 }
   
-  /*--------------------------------------------------------------*/
+/*__________________________HEADER SECUNDARIO HOMEPAGE______________________________*/
+
+@media (max-width: 1250px){
+    header{
+        width: 100%;
+    }
+    main{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1223px){
+
+    #carousel-images-profiles {
+        width: 88%;
+    }
+}
+
+@media (max-width: 1020px){
+
+    #carousel-images-profiles {
+        width: 87%;
+    }
+}
+
+@media (max-width: 942px){
+
+    #carousel-images-profiles {
+        width: 86%;
+    }
+}
+
+@media (max-width: 875px){
+
+    #carousel-images-profiles {
+        width: 85%;
+    }
+}
+
+@media (max-width: 816px){
+
+    #carousel-images-profiles {
+        width: 84%;
+    }
+}
+
+@media (max-width: 765px){
+
+    #carousel-images-profiles {
+        width: 83%;
+    }
+}
+
+@media (max-width: 720px){
+
+    #carousel-images-profiles {
+        width: 82%;
+    }
+}
+
+@media (max-width: 680px){
+
+    #carousel-images-profiles {
+        width: 81%;
+    }
+}
+
+@media (max-width: 645px){
+
+    #carousel-images-profiles {
+        width: 80%;
+    }
+}
+
+@media (max-width: 612px){
+
+    #carousel-images-profiles {
+        width: 79%;
+    }
+}
+
+@media (max-width: 583px){
+
+    #carousel-images-profiles {
+        width: 78%;
+    }
+}
+
+@media (max-width: 557px){
+
+    #carousel-images-profiles {
+        width: 77%;
+    }
+}
+
+@media(max-width: 545px){
+    main{
+        margin-top:240px !important;
+    }
+
+   /* #div-pop-up{
+        width: 92%;
+        margin-left: calc(50vw - 46%);
+    }
+
+    #h3-reward{
+        margin-top: -1%;
+        margin-left: 36%;
+        display: inline-block;
+    }
+    
+    #div-days-bpoints{
+        margin-top: 25%;
+        height: 60px;
+    }
+    
+    .img-bpoints-daily-reward{
+        height: 50px;
+        margin-top: 2%;
+        margin-left: 3%;
+        display: inline-block;
+    }
+    
+    #div-name-days{
+        margin-top: -10px;
+        margin-left: -22px;
+    }
+    
+    .h3-name-days{
+        display: inline-block;
+        margin-left: 50px;
+        
+    } */
+}
+
+@media (max-width: 533px){
+
+    #carousel-images-profiles {
+        width: 76%;
+    }
+}
+
+@media (max-width: 510px){
+
+    #carousel-images-profiles {
+        width: 75%;
+    }
+}
+
+@media (max-width: 490px){
+
+    #carousel-images-profiles {
+        width: 74%;
+    }
+}
+
+@media (max-width: 471px){
+
+    #carousel-images-profiles {
+        width: 73%;
+    }
+}
+
+@media (max-width: 454px){
+
+    #carousel-images-profiles {
+        width: 72%;
+    }
+}
+
+@media (max-width: 438px){
+
+    #carousel-images-profiles {
+        width: 71%;
+    }
+}
+
+@media (max-width: 423px){
+
+    #carousel-images-profiles {
+        width: 70%;
+    }
+}
+
+@media (max-width: 408px){
+
+    #carousel-images-profiles {
+        width: 69%;
+    }
+}
+
+@media (max-width: 395px){
+
+    #carousel-images-profiles {
+        width: 68%;
+    }
+}
+
+@media (max-width: 383px){
+
+    #carousel-images-profiles {
+        width: 67%;
+    }
+}
+
+@media (max-width: 371px){
+
+    #carousel-images-profiles {
+        width: 66%;
+    }
+}
+
+@media (max-width: 360px){
+
+    #carousel-images-profiles {
+        width: 65%;
+    }
+}

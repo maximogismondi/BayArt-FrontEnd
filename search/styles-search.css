@@ -60,3 +60,121 @@ h4{
 #div-type{
     margin-right: 20px;
 }
+
+/*__________________________HEADER SECUNDARIO SEARCH______________________________*/
+
+@media (max-width: 1250px){
+    header{
+        width: 100%;
+    }
+    main{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 700px){
+    #div-filter{
+        font-size: 15px;
+        width: 86% !important;
+        height: 330px;
+    }
+
+    #tags{
+        margin-right: 3%;
+        width: 60%;
+    }
+
+    #div-column1{
+        width: 42% !important;
+        margin: 55px 5px !important;
+    }
+       
+    #div-column2{
+        width: 52% !important;
+    }
+
+    #div-type-preferences{
+        width: 32%;
+        height: 90%;
+        margin-right: 3%;
+    }
+
+    .input-checkbox{
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 608px){
+
+    #div-column1{
+        width: 41% !important;
+        margin: 55px 0px !important;
+    }
+
+    #tags{
+        margin-right: 3%;
+        width: 61%;
+    }
+}
+
+@media (max-width: 598px){
+    #div-filter{
+        font-size: 13px;
+        width: 86% ;
+        height: 290px ;
+    }
+
+    #div-type-preferences{
+        width: 31%;
+        height: 90%;
+        margin-right: 3%;
+    }
+
+    #tags{
+        width: 62%;
+    }
+
+    .input-checkbox{
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media(max-width: 545px){
+    main{
+        margin-top:240px !important;
+    }
+
+    #div-filter{
+        width: 88.4% !important;
+        margin-right: -1% !important;
+    }
+}
+
+@media (max-width: 511px){
+    #div-filter{
+        font-size: 10px;
+        width: 88% !important;
+        margin-right: -3% !important;
+    }
+
+    #tags{
+        width: 62%;
+    }
+
+    #div-type-preferences{
+        width: 32%;
+        height: 90%;
+        margin-right: 2%;
+    }
+
+}
+
+@media (max-width: 421px){
+    #div-filter{
+        font-size: 9px;
+        width: 98% !important;
+        margin-right: -13% !important;
+    }
+}

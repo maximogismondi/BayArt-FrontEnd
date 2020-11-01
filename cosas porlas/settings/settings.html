@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="styles-settings.css">
 		<link rel="stylesheet" href="../styles-general.css">
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>BayArt! - Settings</title>
 	</head>
 
@@ -13,7 +14,7 @@
 		<div id="green-line" class="line"></div>
 
 		<header>
-
+			
 			<!--Header Principal-->
 
 			<div id="div-buttons">
@@ -88,9 +89,9 @@
 				<div id="div-all-profile">
 					<h3>Profile</h3>
 					<div class="things-settings">
-						<div ><h4>Banner</h4><button id="button-change-banner" class="button-change-setting"> <img src="../icons/bpoints.png" id="img-bpoints-settings">change</button></div>
-						<div ><h4>Profile image</h4><button id="button-change-image" class="button-change-setting"> <img src="../icons/bpoints.png" id="img-bpoints-settings">change</button></div>
-						<div ><h4>Username</h4><button id="button-change-username" class="button-change-setting"> <img src="../icons/bpoints.png" id="img-bpoints-settings">change</button></div>
+						<div ><h4>Banner</h4><button id="button-change-banner" class="button-change-setting"> <img src="../icons/bpoints.png" class="img-bpoints-settings">change</button></div>
+						<div ><h4>Profile image</h4><button id="button-change-image" class="button-change-setting"> <img src="../icons/bpoints.png" class="img-bpoints-settings">change</button></div>
+						<div ><h4>Username</h4><button id="button-change-username" class="button-change-setting"> <img src="../icons/bpoints.png" class="img-bpoints-settings">change</button></div>
 						<div ><h4>Email</h4><button id="button-change-email" class="button-change-setting">change</button></div>
 						<div ><h4>Password</h4><button id="button-change-password" class="button-change-setting">change</button></div>
 					</div>
@@ -100,13 +101,12 @@
 					<div class="things-settings">
 						<div ><h4>Delete history</h4><button id="button-delete-history" class="button-change-setting">delete</button></div>
 						<div ><h4>Save history</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-						<div ><h4>Public library</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 					</div>
 				</div>
 				<div>
 					<h3>Appearance</h3>
 					<div class="things-settings">
-						<div ><h4>Theme</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+						<div ><h4>Theme</h4><label class="switch"><input type="checkbox" name="changeTheme" onclick="changeTheme(this)"><div class="slider round"></div></label></div>
 						<div><h4>Language</h4><div id="select-language"><select><option value="0">English</option><option value="value2">Spanish</option></select></div></div>
 					</div>
 				</div>

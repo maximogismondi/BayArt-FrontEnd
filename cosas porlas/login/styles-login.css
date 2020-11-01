@@ -44,33 +44,10 @@
     height: 20px;
 }
 
-#div-keep-me{
-    color: #7c7c7c;
-    margin: 40px 30px;
-}
-
-#input-checkBox-keep-me{
-    color: white;
-    background-color:#7c7c7c;
-    border-radius: 3px;
-    margin-bottom: 0;
-    margin-right:0 ;
-    width: 12px;
-    height: 12px;
-    font-size: 15px;
-    border: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-#input-checkBox-keep-me:checked {
-    background-color: #674ea7;
-}
 
 #div-log-in-register{
     font-size: 15px;
-    margin: 10px 30px;
+    margin: 70px 30px;
 }
 
 #button-submit{
@@ -106,13 +83,13 @@
 
 /**/
 #div-waves { /*Flexbox for containers*/
-position: absolute;
-bottom: 100px;
-width: 100%;
-height: auto;
-position: fixed;
-bottom:0;
-z-index: 0;
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom:0;
+    z-index: 0;
 }
 
 #svg-waves{
@@ -156,8 +133,95 @@ animation-duration: 20s;
 }
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
-.waves {
-  height:40px;
-  min-height:40px;
+    .waves {
+    height:40px;
+    min-height:40px;
+    }
 }
+
+/*celu*/
+/*mientras este debajo de 700px de ancho pasa esto // mientras este por encima de 500px de ancho pasa esto*/
+@media (max-width: 700px){
+    #div-login {
+        width: 350px;
+    }
+    #img-logo{
+        width: 380px;
+    }
+
+    .input-login{
+        width: 84%;
+    }
+
+    #div-username{
+        width: 290px;
+    }
+    
+    #div-password{
+        width: 290px;
+    }
+
+    #button-submit{ 
+        width: 90px;
+    }
 }
+
+@media (max-width: 450px){
+    #div-login {
+        width: 300px;
+    }
+    #img-logo{
+        width: 330px;
+    }
+
+    .input-login{
+        width: 80%;
+    }
+
+    #div-username{
+        width: 230px;
+    }
+    
+    #div-password{
+        width: 230px;
+    }
+
+    #button-submit{ 
+        width: 70px;
+    }
+
+    #a-register{
+        margin: 10px 0px;
+    }
+}
+
+@media (max-width: 400px){
+    #div-login {
+        width: 280px;
+    }
+    #img-logo{
+        width: 300px;
+    }
+
+    .input-login{
+        width: 78%;
+    }
+
+    #div-username{
+        width: 220px;
+    }
+    
+    #div-password{
+        width: 220px;
+    }
+
+    #button-submit{
+        font-size: 13px;
+        width: 60px;
+    }
+
+    #a-register{
+        margin: 10px 0px;
+    }
+}
+

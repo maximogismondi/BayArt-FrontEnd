@@ -20,7 +20,6 @@ $("#button-arrow").click(changeArrow);
 
 /*Header scroll*/
 
-
 var firstUbication = window.pageYOffset;
 window.onscroll = function(){
     if(document.getElementById("nav-subtitle") != null){
@@ -34,7 +33,13 @@ window.onscroll = function(){
     } 
     else {
         document.getElementById("nav-subtitle").style.opacity = "1";
-        document.getElementById("nav-subtitle").style.marginTop = "20px";
+        if(window.screen.width < 546){
+            document.getElementById("nav-subtitle").style.marginTop = "60px";
+        }
+        else{
+            document.getElementById("nav-subtitle").style.marginTop = "20px";
+        }
+        
     }
     firstUbication = actualUbication;}
 }
@@ -43,7 +48,7 @@ window.onscroll = function(){
 
 function displayCheckbox(opacityCheckbox, status){
     var indexLabel = 1;
-    for (let i = 1; i <= 2; i++) {
+    for (let i = 1; i <= 2; i++){
         $("#div-column" + i).find('input').each(function (index){
             if(opacityCheckbox==0.3 && !$(this).prop('checked') || opacityCheckbox==1){
                 $(this).css("opacity",opacityCheckbox);
@@ -59,29 +64,26 @@ function displayCheckbox(opacityCheckbox, status){
 /*Estirar Perfil*/
 var profileState = true;
 var changing = false;
+var widthProfileBar = $("#div-profile").width();
+var displayName = $("#div-name-type").css("display");
 function changeProfileWidth(){
     if(!changing){
         profileState = !profileState;
-    if(profileState) {
+    if(profileState){
         changing = true;
-        console.log(changing);
         $("#div-secondary-buttons").css({opacity: "0"});
-        $('#div-profile').css({width: "350px"});
+        $('#div-profile').css({width: widthProfileBar});
         setTimeout( function(){
             $("#div-secondary-buttons").css({visibility: "hidden"});
         },100);
+    
         setTimeout( function(){
+            console.log(widthProfileBar);
             $('#div-bpoints').css({display: "inline-block"});
-            $('#div-name-type').css({display: "inline-block"});
+            $('#div-name-type').css({display: displayName});
             $('#div-name-type').css({opacity: "1"});
-        },550);
-        setTimeout( function(){
             $('#label-bpoints').css({opacity: "1"});
-        },650);
-        setTimeout( function(){
             $('#img-bpoints').css({opacity: "1"});
-        },750);
-        setTimeout( function(){
             changing=false;
         },850);
         
@@ -89,12 +91,8 @@ function changeProfileWidth(){
     else{
         changing = true;
         $('#img-bpoints').css({opacity: "0"});
-        setTimeout( function(){
-            $('#label-bpoints').css({opacity: "0"});
-        },100);
-        setTimeout( function(){
-            $('#div-name-type').css({opacity: "0"});
-        },200);
+        $('#label-bpoints').css({opacity: "0"});
+        $('#div-name-type').css({opacity: "0"});
         setTimeout( function(){
             $('#div-bpoints').css({display: "none"});
             $('#div-name-type').css({display: "none"});
@@ -380,4 +378,92 @@ function deleteImage(){
     $("#div-description").css("width", "calc(50% - 10px)");
     $("#div-description").css("height", "100%");
     $("#input-image").val(null);
+}
+
+//tema claro y oscuro
+
+function changeTheme(checkbox){
+    if (checkbox.checked){
+        //cambios generales
+        $("body").css( "background" , "#d3d3d3");
+        $("header").css( "background" , "#d3d3d3");
+        $(".options").css( "background" , "#a7a7a7");
+        $("#div-profile").css( "background" , "#a7a7a7");
+        $("#nav-subtitle").css( "background" , "#a7a7a7");
+        $("#div-filter").css( "background" , "#d3d3d3");
+        $(".input-checkbox").css( "background" , "#a7a7a7");
+        $("main").css( "background" , "#a7a7a7");
+        //pops ups
+        $("#div-pop-up").css( "background" , "#d3d3d3");
+        $("#input-price").css( "background" , "#a7a7a7");
+        //individual image
+        $("#div-image").css( "background" , "#d3d3d3");
+        $("#div-title-description").css( "background" , "#d3d3d3");
+        $("#div-artist").css( "background" , "#d3d3d3");
+        $("#div-title-comments").css( "background" , "#d3d3d3");
+        //own-profile
+        $("#div-container-buttons").css( "background" , "#a7a7a7");
+        $("#button-uploaded-images").css( "background" , "#d3d3d3");
+        $("#button-library-images").css( "background" , "#d3d3d3");
+        //search
+        $("#div-filter").css( "background" , "#d3d3d3");
+        //settings
+        $(".things-settings").css( "background" , "#d3d3d3");
+        //store
+        $(".div-image").css( "background" , "#e6e6e6");
+        $(".div-image").css( "background" , "#d2d2d2");
+        $(".div-cancel-image").css( "background" , "#d2d2d2");
+        //upload image
+        $("#div-title").css( "background" , "#d3d3d3");
+        $("#div-image").css( "background" , "#d3d3d3");
+        $(".div-cancel-image").css( "background" , "#d3d3d3");
+        $("#div-description").css( "background" , "#d3d3d3");
+        $("#div-description-text").css( "background" , "#c3c3c3");
+        $("#div-tags").css( "background" , "#d3d3d3");
+        $("#div-price").css( "background" , "#d3d3d3");
+        $("#input-checkBox-price").css( "background" , "#a7a7a7");
+        $("#input-price").css( "background" , "#a7a7a7");
+    }
+
+    else{
+        //cambios generales
+        $("body").css( "background" , "#242424");
+        $("header").css( "background" , "#242424");
+        $(".options").css( "background" , "#3d3d3d");
+        $("#div-profile").css( "background" , "#3d3d3d");
+        $("#nav-subtitle").css( "background" , "#3d3d3d");
+        $("#div-filter").css( "background" , "#242424");
+        $(".input-checkbox").css( "background" , "#3d3d3d");
+        $("main").css( "background" , "#3d3d3d");
+        //pops ups
+        $("#div-pop-up").css( "background" , "#242424");
+        $("#input-price").css( "background" , "#3d3d3d");
+        //individual image
+        $("#div-image").css( "background" , "#242424");
+        $("#div-title-description").css( "background" , "#242424");
+        $("#div-artist").css( "background" , "#242424");
+        $("#div-title-comments").css( "background" , "#242424");
+        //own-profile
+        $("#div-container-buttons").css( "background" , "#3d3d3d");
+        $("#button-uploaded-images").css( "background" , "#242424");
+        $("#button-library-images").css( "background" , "#242424");
+        //search
+        $("#div-filter").css( "background" , "#242424");
+        //settings
+        $(".things-settings").css( "background" , "#242424");
+        //store
+        $(".div-image").css( "background" , "#242424");
+        $(".div-image").css( "background" , "#121212");
+        $(".div-cancel-image").css( "background" , "#2d2d2d");
+        //upload image
+        $("#div-title").css( "background" , "#242424");
+        $("#div-image").css( "background" , "#242424");
+        $(".div-cancel-image").css( "background" , "#242424");
+        $("#div-description").css( "background" , "#242424");
+        $("#div-description-text").css( "background" , "#3c3c3c");
+        $("#div-tags").css( "background" , "#242424");
+        $("#div-price").css( "background" , "#242424");
+        $("#input-checkBox-price").css( "background" , "#3d3d3d");
+        $("#input-price").css( "background" , "#3d3d3d");
+    }
 }

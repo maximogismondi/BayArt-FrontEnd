@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="styles-individual-image.css">
 		<link rel="stylesheet" href="../styles-general.css">
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>BayArt! - Bolivian Yoda</title>
 	</head>
 
@@ -79,10 +80,10 @@
 		
 		</header>
 		<main>
+			<div id="div-url-image">
+				<h4 id="h4-url">Science Fiction - 3D</h4>
+			</div>
 			<section id="section-all">
-				<div id="div-url-image">
-					<h4>All images > Movies > Star wars > Characters > Yoda</h4>
-				</div>
 				<div id= "div-image-description">
 					<div id="div-image">
 						<img src="../icons/xd2.jpg" id="img-image">
@@ -116,67 +117,6 @@
 						<div id="div-price-number-image">1300</div>
 				</button>
 				
-				
-				<div id="div-title-comments">
-					<h4 class="h4-subtitle">Comments</h4>
-					<div id="div-comments" class="scrollbar-description">
-						
-						<div id="div-circle2"></div>
-						<h4 class="h4-username-comments">EL PIBE(MALO)</h4>
-						<p class="comment">jajajaj Bolivian Yoda</p>
-
-						<div id="div-circle"></div>
-						<h4 class="h4-username-comments">DamiVicio</h4>
-						<p class="comment">jajajaj Bolivian Yoda</p>
-
-						<div id="div-circle1"></div>
-						<h4 class="h4-username-comments">Xatu</h4>
-						<p class="comment">jajajaj Bolivian Yoda</p>
-
-						<div id="div-circle2"></div>
-						<h4 class="h4-username-comments">Barto44</h4>
-						<p class="comment">jajajaj Bolivian Yoda</p>
-
-						<div id="div-circle"></div>
-						<h4 class="h4-username-comments">Marco</h4>
-						<p class="comment">jajajaj Bolivian Yoda</p>
-
-
-						<div id="div-circle3"></div>
-						<h4 class="h4-username-comments">Victor</h4>
-						<p class="comment">jajajaj Bolivian Yoda</p>
-
-						<div id="div-circle"></div>
-						<h4 class="h4-username-comments">SIMON</h4>
-						<p class="comment">jajajaj Bolivian Yoda</p>
-
-						<div id="div-circle1"></div>
-						<h4 class="h4-username-comments">BUSTOS</h4>
-						<p class="comment">jajajaj Bolivian Yoda</p>
-
-						<div id="div-circle2"></div>
-						<h4 class="h4-username-comments">LAUCHO</h4>
-						<p class="comment">hahahah in Bolivian Yoda</p>
-
-						<div id="div-circle"></div>
-						<h4 class="h4-username-comments">GianpaDibujos</h4>
-						<p class="comment">donde venden milanesas pa?</p>
-
-						<div id="div-circle1"></div>
-						<h4 class="h4-username-comments">Juan</h4>
-						<p class="comment">Juan</p>
-
-						<div id="div-circle3"></div>
-						<h4 class="h4-username-comments">Capoeira</h4>
-						<p class="comment">Cerra el ortoooo!</p>
-
-						<div id="div-circle1"></div>
-						<h4 class="h4-username-comments">Juan</h4>
-						<p class="comment">Juan</p>
-						
-					</div>
-				</div>
-
 			</section>
 		</main>
 		
@@ -186,13 +126,104 @@
 	<script src="../basic-functions.js"></script>
 		
 	<script>
+			
+
+		/*cambiar boton de lista de deseados*/
+		var shown = true;
+
+		function changeButtonBookmarks(){
+			shown = !shown;
+			if(shown){
+				$("#img-bookmark").attr("src","../icons/bookmarks.png");
+			}
+			else{
+				$("#img-bookmark").attr("src","../icons/bookmark-disable.png");
+			}
+		}
+
+		$("#button-bookmark").click(function(){changeButtonBookmarks()});
+
 		/*Setear alto y ancho de imagen*/
 
-		setWidthHeight("img-image", "div-image", 500, 500);
-		$("#div-image-description").css("height",($("#div-image").height()));
-		$("#div-title-description").css("width",($("#div-image-description").width()-$("#div-image").width()-50));
-		$("#div-artist").css("width",($("#div-image").width()));
-		$("#button-buy-image").css("margin-right",($("#div-title-description").width()/2)-75);
+		$( document ).ready(function() {
+
+			if(window.screen.width > 570){
+				setWidthHeight("img-image", "div-image", 500, 500);
+			}
+			else if(window.screen.width > 551){
+				setWidthHeight("img-image", "div-image", 490, 490);
+			}
+			else if(window.screen.width > 541){
+				setWidthHeight("img-image", "div-image", 480, 480);
+			}
+			else if(window.screen.width > 531){
+				setWidthHeight("img-image", "div-image", 470, 470);
+			}
+			else if(window.screen.width > 521){
+				setWidthHeight("img-image", "div-image", 460, 460);
+			}
+			else if(window.screen.width > 511){
+				setWidthHeight("img-image", "div-image", 450, 450);
+			}
+			else if(window.screen.width > 501){
+				setWidthHeight("img-image", "div-image", 440, 440);
+			}
+			else if(window.screen.width > 491){
+				setWidthHeight("img-image", "div-image", 430, 430);
+			}
+			else if(window.screen.width > 481){
+				setWidthHeight("img-image", "div-image", 420, 420);
+			}
+			else if(window.screen.width > 471){
+				setWidthHeight("img-image", "div-image", 410, 410);
+			}
+			else if(window.screen.width > 461){
+				setWidthHeight("img-image", "div-image", 400, 400);
+			}
+			else if(window.screen.width > 451){
+				setWidthHeight("img-image", "div-image", 390, 390);
+			}
+			else if(window.screen.width > 441){
+				setWidthHeight("img-image", "div-image", 380, 380);
+			}
+			else if(window.screen.width > 431){
+				setWidthHeight("img-image", "div-image", 380, 380);
+			}
+			else if(window.screen.width > 421){
+				setWidthHeight("img-image", "div-image", 370, 370);
+			}
+			else if(window.screen.width > 411){
+				setWidthHeight("img-image", "div-image", 360, 360);
+			}
+			else if(window.screen.width > 401){
+				setWidthHeight("img-image", "div-image", 350, 350);
+			}
+			else if(window.screen.width > 391){
+				setWidthHeight("img-image", "div-image", 340, 340);
+			}
+			else if(window.screen.width > 381){
+				setWidthHeight("img-image", "div-image", 330, 330);
+			}
+			else if(window.screen.width > 371){
+				setWidthHeight("img-image", "div-image", 320, 320);
+			}
+			else if(window.screen.width > 361){
+				setWidthHeight("img-image", "div-image", 310, 310);
+			}
+			else if(window.screen.width > 351){
+				setWidthHeight("img-image", "div-image", 300, 300);
+			}
+			else{
+				setWidthHeight("img-image", "div-image", 290, 290);
+			}
+
+
+			$("#div-image-description").css("height",($("#div-image").height()));
+			$("#div-title-description").css("width",($("#div-image-description").width()-$("#div-image").width()-50));
+			$("#div-artist").css("width",($("#div-image").width()));
+			$("#button-buy-image").css("margin-right",($("#div-title-description").width()/2)-75);
+
+		});
 
 		/*Efecto boton bpoints comprar*/
 

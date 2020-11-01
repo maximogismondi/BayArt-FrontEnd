@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="styles-browse.css">
 		<link rel="stylesheet" href="../styles-general.css">
 		<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>BayArt! - Browse</title>
 	</head>
 
@@ -118,20 +119,18 @@
 				<img src="../imgPrueba/1.jpg">
 				<img src="../imgPrueba/2.jpg">
 				<img src="../imgPrueba/3.jpg">
-				<img src="../imgPrueba/4.jpg">
+				<img src="C:/Users/Franco/Videos/omnitrix.gif">
 				<img src="../imgPrueba/5.jpg">
 				<img src="../imgPrueba/6.jpg">
 				<img src="../imgPrueba/7.jpg">
 				<img src="../imgPrueba/8.jpg">
-				<img src="../imgPrueba/9.jpg">
+				<img src="../icons/xd2.jpg">
 				<img src="../imgPrueba/10.jpg">
 				<img src="../imgPrueba/11.jpg">
 				<img src="../imgPrueba/12.jpg">
 				<img src="../imgPrueba/13.jpg">
 				<img src="../imgPrueba/14.jpg">
 				<img src="../imgPrueba/15.jpg">
-				<img src="../imgPrueba/16.jpg">
-				<img src="../imgPrueba/17.jpg">
 				<img src="../imgPrueba/8.jpg">
 				<img src="../imgPrueba/9.jpg">
 				<img src="../imgPrueba/10.jpg">
@@ -140,12 +139,6 @@
 				<img src="../imgPrueba/13.jpg">
 				
 		</main>
-		
-		<footer id="footer">
-            <div id="div-footer">
-                <label id="label-footer">Todos los derechos reservados © 2020</label>
-            </div>
-        </footer>
 	</body>
 	
 	<script src="../jquery.js"></script>
@@ -153,7 +146,21 @@
 	
 	<script>
 		/*Order Main Images*/
+		
+			$( document ).ready(function() {
+				if(window.screen.width > 1000){
+					orderImages("main-images", 200, 20);
+				}
 
-		orderImages("main-images",200, 20);
+				else if(window.screen.width > 500){
+					orderImages("main-images", 150, 15);
+				}
+
+				else{
+					orderImages("main-images", 100, 10);
+				}
+
+			});
+
 	</script>
 </html>
