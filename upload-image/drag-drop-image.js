@@ -33,11 +33,20 @@ if (window.FileReader) {
           var bin = this.result;
           var img = document.getElementById('img-uploaded');
           img.src = bin;
-         
+          img.style.display = "block";
           document.getElementById("img-uploaded").onload = function(){
-             img.style.display = "block";
-             $("#div-drag-drop").css("display","none");
-            $("#img-uploaded").css("display","inline-block");
+            
+              if(window.screen.width < 545){
+                  setWidthHeight("img-uploaded","div-image",300,300);
+              }
+              else{
+                   setWidthHeight("img-uploaded","div-image",500,500);
+              }
+           
+            $("#div-drag-drop").css("display","none");
+            $("#div-cancel-image").css("display","block");
+            $("#div-image-description").css("height",($("#div-image").height()));
+            $("#div-description").css("width",($("#div-image-description").width()-$("#div-image").width()-20));
           }
           
         }.bindToEventHandler(file));

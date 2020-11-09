@@ -114,14 +114,14 @@
 		</header>
 
 
-		<main>
+		<main id="main-general">
 
 			<div id="div-carousel-bookmarkers">
                 <button id="button-carousel-left" class="button-carousel"> < </button>
                 <button id="button-carousel-right" class="button-carousel"> > </button>
                 <div id="div-carousel-images">
-                    <img src="../icons/2.jpg">
-                    <img src="../icons/1.jpg">
+					<img src="../icons/2.jpg">
+					<img src="../icons/1.jpg">
                     <img src="../icons/3.jpg">
                     <img src="../icons/xd2.jpg">
                     <img src="../icons/2.jpg">
@@ -129,9 +129,13 @@
                     <img src="../icons/3.jpg">
                     <img src="../icons/xd2.jpg">
                     <img src="../icons/2.jpg">
-                    <img src="../icons/1.jpg">
-                </div>
-            </div>
+					<img src="../icons/1.jpg">    
+					<img src="../icons/xd2.jpg">
+                    <img src="../icons/2.jpg">
+                    <img src="../icons/1.jpg">   
+				</div>
+
+			</div>
 
 			<div id="div-button-arrow">
 				<img id="img-button-arrow" src="../icons/arrow.png">
@@ -201,21 +205,71 @@
 		});
 
 		/*Crear carrousel*/
-
-		startCarousel();
+		startCarousel();	
 
 		/*consigue el id del div que contiene la imagen que se desea eliminar */
 
-		/*Abrir popup*/
+		/*Abrir popup y lista q reemplaza el carrousel*/
+		
+		var numberImages = 0;
+		var divBookmarkers;
+		var h2Bookmarkers;
+		var divContainsButtons;
+		var buttonBookmarkersView;
+		var buttonBookmarkers;
+		var divGeneral = document.getElementById("div-carousel-bookmarkers");
+		$("#div-carousel-images").find(".div-image").each(function (){ numberImages++});
 
-		$(".div-cancel-image").click(function(){
-			var idimageToDelete = "div-image-" + ($(this).attr("id")).slice(17);
+		function listBookmarkers (i){
+			divBookmarkers = document.createElement('div');
+			divBookmarkers.className = "div-delete-bookmarkers";
+
+			h2Bookmarkers = document.createElement('h2');
+			h2Bookmarkers.className = "h2-name-image";
+			h2Bookmarkers.textContent = "nombre imagen " + i;
+
+			divContainsButtons = document.createElement('div');
+			divContainsButtons.className = "div-contains-buttons-bookmarkers";
+
+			buttonBookmarkersView = document.createElement('button');
+			buttonBookmarkersView.className = "button-view-bookmarkers";
+			buttonBookmarkersView.id = "div-image-" + i;
+			buttonBookmarkersView.textContent = "VIEW";
+
+			buttonBookmarkers = document.createElement('button');
+			buttonBookmarkers.className = "button-delete-bookmarkers";
+			buttonBookmarkers.textContent = "DELETE";
+
+
+
+			divBookmarkers.appendChild(h2Bookmarkers);
+			divContainsButtons.appendChild(buttonBookmarkersView);
+			divContainsButtons.appendChild(buttonBookmarkers);
+			divBookmarkers.appendChild(divContainsButtons);
+			divGeneral.appendChild(divBookmarkers);
+		}
+
+			if(window.screen.width < 1100){
+				buttonCancel = ".button-delete-bookmarkers";
+				for(var i = 0; i<numberImages; i++){
+					listBookmarkers (i);
+				}
+			}
+			else{
+				rotateCarousel();
+				buttonCancel = ".div-cancel-image";
+			}
+		
+		$(buttonCancel).click(function(){
 			$("#div-pop-up-background").css("display","block");
 			$("#div-pop-up").css("display","block");
 			$(".form-bookmarks").css("display","block");
-			$("#id-image-to-delete").html(idimageToDelete);
+			/*if(window.screen.width >= 1100){
+				var idimageToDelete = "div-image-" + ($(this).attr("id")).slice(17);
+				$("#id-image-to-delete").html(idimageToDelete);
+			}*/
+			
 		});
-		
 
 		/*salir popup*/
 		
@@ -240,7 +294,7 @@
 		/*scroll flecha*/
 
 		$("#img-button-arrow").on('click', function() {
-			$(".scrollbar").animate( { scrollTop: '600' }, 500);
+			$(".scrollbar").animate( { scrollTop: '580' }, 500);
 		});
 
 		/*animar flecha*/
@@ -254,7 +308,7 @@
 
 		function goDown(){
 			setTimeout( function(){
-				$('#img-button-arrow').css({top: "380px"});
+				$('#img-button-arrow').css({top: "400px"});
 				goUp();
 			},400);
 		}

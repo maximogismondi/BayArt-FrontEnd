@@ -129,11 +129,19 @@
 				<!--subs-->
 				<div>
 					<h4>Are you sure you want to subscribe?</h4>
-					<div ><h4>Renew subscription automatically</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-					<div ><h4>Enable notifications</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
+					<h4>You will have a 20% discount on artist purchases and it will appear on the homepage</h4>
 					<button id="button-artist-profile-subscribe" type="submit" class="button-submit">
 							<img src="../icons/bpoints.png" id="button-img-bpoints">
-							<div id="div-price-number">1000</div>
+							<div id="div-price-number">200</div>
+					</button>
+				</div>
+
+				<!--unsubs-->
+				<div style="display: none;">
+					<h4>Are you sure you want to unsubscribe? This action cannot be undone</h4>
+					<h4>To re-subscribe you must pay again</h4>
+					<button id="button-artist-profile-unsubscribe" type="submit" class="button-submit">
+							<div id="div-unsubscribe">UNSUBSCRIBE</div>
 					</button>
 				</div>
 				
@@ -142,8 +150,9 @@
 			<form action="" method="POST" id="form-artist-profile-sponsor" class="form-settings">
 
 				<!--sponsor-->
-				<div>
+				<div >
 					<h4>Are you sure you want to invest in this artist?</h4>
+					<h4>You can cancel the investment whenever you want</h4>
 					<div id="div-price">
 						<h4>To invest</h4>
 						<div>
@@ -152,9 +161,17 @@
 						</div>
 						<h4>0%</h4>
 					</div>
-					<div ><h4>Renew invest automatically</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 					<button id="button-artist-profile-sponsor" type="submit" class="button-submit">
 						<div>SPONSOR</div>
+					</button>
+				</div>
+
+				<!--sponsor-->
+				<div style="display: none;">
+					<h4>Representa x% del artista</h4>
+					<h4>If you cancel the sponsor now you will get x bpoints</h4>
+					<button id="button-artist-profile-unsponsor" type="submit" class="button-submit">
+						<div>UNSPONSOR</div>
 					</button>
 				</div>
 				
@@ -279,7 +296,7 @@
 				$("#div-price-number").css("opacity","0");
 				$("#button-artist-profile-subscribe").css("border", "none")
 				setTimeout( function(){
-					$("#div-price-number").html("1000");
+					$("#div-price-number").html("200");
 					$("#button-img-bpoints").css("opacity","1");
 					$("#button-img-bpoints").css("display","inline-block");
 					$("#div-price-number").css("opacity","1");

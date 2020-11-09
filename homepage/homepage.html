@@ -166,22 +166,35 @@
 						<img src="../icons/bpoints.png" id="img-cancel-image">
 					</div>
 					<div id="div-days-bpoints">
-						<img src="../icons/bpoints.png" class="img-bpoints-daily-reward">
-						<img src="../icons/bpoints-unclaimed.png" class="img-bpoints-daily-reward">
-						<img src="../icons/bpoints.png" class="img-bpoints-daily-reward">
-						<img src="../icons/bpoints.png" class="img-bpoints-daily-reward">
-						<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
-						<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
-						<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
-					</div>
-					<div id="div-name-days">
-						<h3 class="h3-name-days" id="monday">M</h3>
-						<h3 class="h3-name-days" id="tuesday">T</h3>
-						<h3 class="h3-name-days" id="wednesday">W</h3>
-						<h3 class="h3-name-days" id="thursday">T</h3>
-						<h3 class="h3-name-days" id="friday">F</h3>
-						<h3 class="h3-name-days" id="saturday">S</h3>
-						<h3 class="h3-name-days" id="sunday">S</h3>
+						<div id="monday" class="div-days-of-week">
+							<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">	
+							<h3 class="h3-name-days">M</h3>
+						</div>
+						<div id="tuesday" class="div-days-of-week">
+							<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
+							<h3 class="h3-name-days">T</h3>
+						</div>
+						<div id="wednesday" class="div-days-of-week">
+							<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
+							<h3 class="h3-name-days">W</h3>
+						</div>
+						<div id="thursday" class="div-days-of-week">
+							<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
+							<h3 class="h3-name-days">T</h3>
+						</div>
+						<div id="friday" class="div-days-of-week">
+							<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
+							<h3 class="h3-name-days">F</h3>
+						</div>
+						<div id="saturday" class="div-days-of-week">
+							<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
+							<h3 class="h3-name-days">S</h3>
+						</div>
+						<div id="sunday" class="div-days-of-week">
+							<img src="../icons/bpoints-wait.png" class="img-bpoints-daily-reward">
+							<h3 class="h3-name-days">S</h3>
+						</div>
+					
 					</div>
 				</div>
 				
@@ -213,8 +226,6 @@
 
 		/*Pop up*/
 
-		/*Pop up*/
-
 		function changeButtonBpoints(shown){
 			if(shown){
 				$("#img-cancel-image").attr("src","../icons/icon-viewer.png");
@@ -228,15 +239,431 @@
 		$("#img-cancel-image").mouseleave(function(){changeButtonBpoints(false)});
 		
 		function transformDailyReward(){
+
+			var day = "monday";
+			var X = 0;
+			var Y = 0;
+			var heightImg = 0;
 			
-			setTimeout(function(){
-				$("#img-cancel-image").css("height","60px");
-				$("#img-cancel-image").css("transform","translate(81px,105px)");
+			if( day == "monday"){
+				$( document ).ready(function() {
+
+					if(window.screen.width > 533){
+						X = -200;
+						Y = 105;
+						heightImg = 60;
+					}
+					else if(window.screen.width > 510){
+						X = -192;
+						Y = 101;
+						heightImg = 56;
+					}
+					else if(window.screen.width > 490){
+						X = -192;
+						Y = 95;
+						heightImg = 54;
+					}
+					else if(window.screen.width > 471){
+						X = -182;
+						Y = 90;
+						heightImg = 52;
+					}
+					else if(window.screen.width > 438){
+						X = -173;
+						Y = 90;
+						heightImg = 50;
+					}
+					else if(window.screen.width > 423){
+						X = -170;
+						Y = 88;
+						heightImg = 48;
+					}
+					else if(window.screen.width > 395){
+						X = -153;
+						Y = 85;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 371){
+						X = -145;
+						Y = 79;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 349){
+						X = -140;
+						Y = 76;
+						heightImg = 46;
+					}
+
+				});
 				setTimeout(function(){
-					$("#friday").css("color","#00a797");
-					$("#h4-bpoints").css("display","block");
-				},600); 
-			},500);
+					$("#img-cancel-image").css("height",heightImg);
+					$("#img-cancel-image").css("transform","translate("+ X +"px," + Y + "px)");
+					setTimeout(function(){
+						$("#monday").css("color","#00a797");
+						$("#h4-bpoints").css("display","block");
+					},600); 
+				},500);
+			}
+			
+			else if(day == "tuesday"){
+				$( document ).ready(function() {
+
+					if(window.screen.width > 533){
+						X = -130;
+						Y = 105;
+						heightImg = 60;
+					}
+					else if(window.screen.width > 510){
+						X = -124;
+						Y = 101;
+						heightImg = 56;
+					}
+					else if(window.screen.width > 490){
+						X = -127;
+						Y = 95;
+						heightImg = 54;
+					}
+					else if(window.screen.width > 471){
+						X = -119;
+						Y = 90;
+						heightImg = 52;
+					}
+					else if(window.screen.width > 438){
+						X = -113;
+						Y = 90;
+						heightImg = 50;
+					}
+					else if(window.screen.width > 423){
+						X = -113;
+						Y = 88;
+						heightImg = 48;
+					}
+					else if(window.screen.width > 395){
+						X = -99;
+						Y = 85;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 371){
+						X = -95;
+						Y = 79;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 349){
+						X = -92;
+						Y = 76;
+						heightImg = 46;
+					}
+
+				});
+				setTimeout(function(){
+					$("#img-cancel-image").css("height",heightImg);
+					$("#img-cancel-image").css("transform","translate(" + X +"px,"+ Y +"px)");
+					setTimeout(function(){
+						$("#tuesday").css("color","#00a797");
+						$("#h4-bpoints").css("display","block");
+					},600); 
+				},500);
+			}
+			
+			else if(day == "wednesday"){
+				$( document ).ready(function() {
+
+					if(window.screen.width > 533){
+						X = -60;
+						Y = 105;
+						heightImg = 60;
+					}
+					else if(window.screen.width > 510){
+						X = -58;
+						Y = 101;
+						heightImg = 56;
+					}
+					else if(window.screen.width > 490){
+						X = -62;
+						Y = 95;
+						heightImg = 54;
+					}
+					else if(window.screen.width > 471){
+						X = -55;
+						Y = 90;
+						heightImg = 52;
+					}
+					else if(window.screen.width > 438){
+						X = -54;
+						Y = 90;
+						heightImg = 50;
+					}
+					else if(window.screen.width > 423){
+						X = -56;
+						Y = 88;
+						heightImg = 48;
+					}
+					else if(window.screen.width > 395){
+						X = -45;
+						Y = 85;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 371){
+						X = -43;
+						Y = 79;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 349){
+						X = -40;
+						Y = 76;
+						heightImg = 46;
+					}
+
+				});
+				setTimeout(function(){
+					$("#img-cancel-image").css("height",heightImg);
+					$("#img-cancel-image").css("transform","translate("+ X +"px," + Y+ "px)");
+					setTimeout(function(){
+						$("#wednesday").css("color","#00a797");
+						$("#h4-bpoints").css("display","block");
+					},600); 
+				},500);
+			}
+			
+			else if(day == "thursday"){
+				$( document ).ready(function() {
+
+					if(window.screen.width > 533){
+						X = 9;
+						Y = 105;
+						heightImg = 60;
+					}
+					else if(window.screen.width > 510){
+						X = 9;
+						Y = 101;
+						heightImg = 56;
+					}
+					else if(window.screen.width > 490){
+						X = 4;
+						Y = 95;
+						heightImg = 54;
+					}
+					else if(window.screen.width > 471){
+						X = 7;
+						Y = 90;
+						heightImg = 52;
+					}
+					else if(window.screen.width > 438){
+						X = 7;
+						Y = 90;
+						heightImg = 50;
+					}
+					else if(window.screen.width > 423){
+						X = 1;
+						Y = 88;
+						heightImg = 48;
+					}
+					else if(window.screen.width > 395){
+						X = 10;
+						Y = 85;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 371){
+						X = 8;
+						Y = 79;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 349){
+						X = 10;
+						Y = 76;
+						heightImg = 46;
+					}
+
+					});
+				setTimeout(function(){
+					$("#img-cancel-image").css("height",heightImg);
+					$("#img-cancel-image").css("transform","translate(" + X +"px,"+ Y +"px)");
+					setTimeout(function(){
+						$("#thursday").css("color","#00a797");
+						$("#h4-bpoints").css("display","block");
+					},600); 
+				},500);
+			}
+			
+			else if(day == "friday"){
+				$( document ).ready(function() {
+
+					if(window.screen.width > 533){
+						X = 79;
+						Y = 105;
+						heightImg = 60;
+					}
+					else if(window.screen.width > 510){
+						X = 76;
+						Y = 101;
+						heightImg = 56;
+					}
+					else if(window.screen.width > 490){
+						X = 68;
+						Y = 95;
+						heightImg = 54;
+					}
+					else if(window.screen.width > 471){
+						X = 70;
+						Y = 90;
+						heightImg = 52;
+					}
+					else if(window.screen.width > 438){
+						X = 67;
+						Y = 90;
+						heightImg = 50;
+					}
+					else if(window.screen.width > 423){
+						X = 59;
+						Y = 88;
+						heightImg = 48;
+					}
+					else if(window.screen.width > 395){
+						X = 63;
+						Y = 85;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 371){
+						X = 60;
+						Y = 79;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 349){
+						X = 60;
+						Y = 76;
+						heightImg = 46;
+					}
+
+					});
+				setTimeout(function(){
+					$("#img-cancel-image").css("height",heightImg);
+					$("#img-cancel-image").css("transform","translate(" + X + "px,"+ Y + "px)");
+					setTimeout(function(){
+						$("#friday").css("color","#00a797");
+						$("#h4-bpoints").css("display","block");
+					},600); 
+				},500);
+			}
+			
+			else if(day == "saturday"){
+				$( document ).ready(function() {
+
+					if(window.screen.width > 533){
+						X = 149;
+						Y = 105;
+						heightImg = 60;
+					}
+					else if(window.screen.width > 510){
+						X = 143;
+						Y = 101;
+						heightImg = 56;
+					}
+					else if(window.screen.width > 490){
+						X = 133;
+						Y = 95;
+						heightImg = 54;
+					}
+					else if(window.screen.width > 471){
+						X = 133;
+						Y = 90;
+						heightImg = 52;
+					}
+					else if(window.screen.width > 438){
+						X = 127;
+						Y = 90;
+						heightImg = 50;
+					}
+					else if(window.screen.width > 423){
+						X = 116;
+						Y = 88;
+						heightImg = 48;
+					}
+					else if(window.screen.width > 395){
+						X = 118;
+						Y = 85;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 371){
+						X = 111;
+						Y = 79;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 349){
+						X = 110;
+						Y = 76;
+						heightImg = 46;
+					}
+
+					});
+				setTimeout(function(){
+					$("#img-cancel-image").css("height",heightImg);
+					$("#img-cancel-image").css("transform","translate(" + X +"px," + Y + "px)");
+					setTimeout(function(){
+						$("#saturday").css("color","#00a797");
+						$("#h4-bpoints").css("display","block");
+					},600); 
+				},500);
+			}
+			
+			else if(day == "sunday"){
+				$( document ).ready(function() {
+
+					if(window.screen.width > 533){
+						X = 219;
+						Y = 105;
+						heightImg = 60;
+					}
+					else if(window.screen.width > 510){
+						X = 210;
+						Y = 101;
+						heightImg = 56;
+					}
+					else if(window.screen.width > 490){
+						X = 199;
+						Y = 95;
+						heightImg = 54;
+					}
+					else if(window.screen.width > 471){
+						X = 196;
+						Y = 90;
+						heightImg = 52;
+					}
+					else if(window.screen.width > 438){
+						X = 187;
+						Y = 90;
+						heightImg = 50;
+					}
+					else if(window.screen.width > 423){
+						X = 173;
+						Y = 88;
+						heightImg = 48;
+					}
+					else if(window.screen.width > 395){
+						X = 172;
+						Y = 85;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 371){
+						X = 162;
+						Y = 79;
+						heightImg = 46;
+					}
+					else if(window.screen.width > 349){
+						X = 161;
+						Y = 76;
+						heightImg = 46;
+					}
+
+					});
+				setTimeout(function(){
+					$("#img-cancel-image").css("height",heightImg);
+					$("#img-cancel-image").css("transform","translate(" + X +"px," + Y +"px)");
+					setTimeout(function(){
+						$("#sunday").css("color","#00a797");
+						$("#h4-bpoints").css("display","block");
+					},600); 
+				},500);
+			}
 
 			setTimeout(function(){
 				leavePopUp();

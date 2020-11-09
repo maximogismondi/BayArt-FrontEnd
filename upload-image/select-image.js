@@ -7,7 +7,15 @@
         
         document.getElementById("img-uploaded").onload = function(){
             image.style.display = "block";
-            setWidthHeight("img-uploaded","div-image",500,500);
+
+                if(window.screen.width < 545){
+                    setWidthHeight("img-uploaded","div-image",300,300);
+                }
+                else{
+                     setWidthHeight("img-uploaded","div-image",500,500);
+                }
+       
+            
             $("#div-drag-drop").css("display","none");
             $("#div-cancel-image").css("display","block");
             $("#div-image-description").css("height",($("#div-image").height()));

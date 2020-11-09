@@ -61,6 +61,31 @@ h4{
     margin-right: 20px;
 }
 
+#div-background-search-artist{
+    width: 250px;
+    height: 150px;
+    
+}
+
+#img-banner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#a-search-artist{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -165px;
+}
+
+#img-artist-picture{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
 /*__________________________HEADER SECUNDARIO SEARCH______________________________*/
 
 @media (max-width: 1250px){

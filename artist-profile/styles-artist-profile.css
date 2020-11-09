@@ -168,7 +168,7 @@ main{
 }
 
 #button-artist-profile-subscribe{
-    margin-top: 20px;
+    margin-top: 70px;
     margin-right: 20px;
 }
 
@@ -189,8 +189,28 @@ main{
     vertical-align: middle;
 }
 
+#button-artist-profile-unsubscribe{
+    margin-top: 70px;
+    margin-right: 20px;
+}
+
+#div-unsubscribe{
+    color: white;
+    margin-left: 5px;
+    font-size: 15px;
+    transition: opacity 100ms;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 #button-artist-profile-sponsor{
-    margin-top: 25px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+#button-artist-profile-unsponsor{
+    margin-top: 90px;
     margin-right: 20px;
 }
 
@@ -345,6 +365,14 @@ h4{
         height: 90%;
         width: 180px;
     }
+
+    #div-subscribers-number{
+        font-size: 16px;
+    }
+
+    #div-sponsors-number{
+        font-size: 16px;
+    }
 }
 
 @media(max-width: 545px){
@@ -391,18 +419,42 @@ h4{
         width: 20px;
     }
     
-    #div-subscribers-number{
-        font-size: 18px;
-    }
 
     #button-img-sponsors{
         width: 20px;
     }
     
-    #div-sponsors-number{
-        font-size: 18px;
+}
+
+@media (max-width: 533px){
+
+    #div-pop-up{
+        width: 480px;
+        height: 300px;
+        margin-left: calc(50vw - 240px);
+        margin-top: calc(50vh - 150px);
+    }
+
+    #button-artist-profile-sponsor{
+        margin-top: 10px !important;
+    }
+
+    #button-artist-profile-unsponsor{
+        margin-top: 70px;
+        margin-right: 20px;
     }
 }
+
+@media (max-width: 510px){
+
+    #div-pop-up{
+        width: 460px;
+        height: 300px;
+        margin-left: calc(50vw - 230px);
+        margin-top: calc(50vh - 150px);
+    }
+}
+
 
 @media (max-width: 500px){
     #div-buttons-artist-profile{
@@ -423,7 +475,7 @@ h4{
     }
     
     #div-subscribers-number{
-        font-size: 17px;
+        font-size: 14px;
     }
 
     #button-img-sponsors{
@@ -431,7 +483,7 @@ h4{
     }
     
     #div-sponsors-number{
-        font-size: 17px;
+        font-size: 14px;
     }
 
     #img-artist-picture{
@@ -441,6 +493,72 @@ h4{
     }
 }
 
+@media (max-width: 490px){
+
+    #div-pop-up{
+        width: 440px;
+        height: 300px;
+        margin-left: calc(50vw - 220px);
+        margin-top: calc(50vh - 150px);
+    }
+
+    #div-price{
+        width:100%;
+        height:60;
+        display: flex;
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    #img-bpoints-price{
+        height: 30px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 50px;
+        float: right;
+    }
+}
+
+@media (max-width: 471px){
+
+    #div-pop-up{
+        width: 420px;
+        height: 280px;
+        margin-left: calc(50vw - 210px);
+        margin-top: calc(50vh - 140px);
+    }
+    
+    h4{
+       font-size: 13px; 
+    }
+
+    #button-artist-profile-unsponsor{
+        margin-top: 90px;
+        margin-right: 20px;
+    }
+
+    #button-artist-profile-sponsor{
+        margin-top: 30px !important;
+    }
+
+}
+
+@media (max-width: 438px){
+
+    #div-pop-up{
+        width: 400px;
+        height: 280px;
+        margin-left: calc(50vw - 200px);
+        margin-top: calc(50vh - 140px);
+    }
+
+    #button-artist-profile-unsponsor{
+        margin-top: 70px;
+        margin-right: 20px;
+    }
+}
 
 @media (max-width: 430px){
     #div-buttons-artist-profile{
@@ -461,7 +579,7 @@ h4{
     }
     
     #div-subscribers-number{
-        font-size: 16px;
+        font-size: 10px;
     }
 
     #button-img-sponsors{
@@ -469,7 +587,7 @@ h4{
     }
     
     #div-sponsors-number{
-        font-size: 16px;
+        font-size: 10px;
     }
 
     #img-artist-picture{
@@ -479,66 +597,74 @@ h4{
     }
 }
 
-/*
-@media (max-width: 430px){
-    #div-buttons-artist-profile{
-        width: 80%;
-        margin-left: 1%;
-        margin-right: 10%;
+@media (max-width: 423px){
+
+    #div-pop-up{
+        width: 380px;
+        height: 260px;
+        margin-left: calc(50vw - 190px);
+        margin-top: calc(50vh - 130px);
     }
 
-    .buttons-profile-artist{
-        border-radius: 15px;
-        width: 80px;
-        height: 40px;
-        border: none;
+    #button-artist-profile-subscribe{
+        margin-top: 50px !important;
     }
 
-    #button-subscribers{
-        background: #00a797;
-        position: absolute;
-        transition: border 100ms;
+    #button-artist-profile-sponsor{
+        margin-top: 0px !important;
     }
 
-    #button-sponsors{
-        background: #674ea7;
-        right: 1%;
-        position: absolute;
-        transition: border 100ms;
+    #button-artist-profile-unsubscribe{
+        margin-top: 60px;
+        margin-right: 20px;
     }
 
-    #button-img-subscribers{
-        width: 16px;
-        transition: opacity 100ms;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    
-    #div-subscribers-number{
-        color: white;
-        font-size: 16px;
-        transition: opacity 100ms;
-        font-weight: bold;
-        display: inline-block;
-        vertical-align: middle;
+    #button-artist-profile-unsponsor{
+        margin-top: 60px;
+        margin-right: 20px;
     }
 
-    #button-img-sponsors{
-        width: 16px;
-        transition: opacity 100ms;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    
-    #div-sponsors-number{
-        color: white;
-        margin-left: 5px;
-        font-size: 16px;
-        transition: opacity 100ms;
-        font-weight: bold;
-        display: inline-block;
-        vertical-align: middle;
+    #img-bpoints-price{
+        height: 30px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 20px;
+        float: right;
     }
 }
 
-*/
+@media (max-width: 395px){
+
+    #div-pop-up{
+        width: 360px;
+        height: 260px;
+        margin-left: calc(50vw - 180px);
+        margin-top: calc(50vh - 130px);
+    }
+}
+
+@media (max-width: 371px){
+
+    #div-pop-up{
+        width: 350px;
+        height: 260px;
+        margin-left: calc(50vw - 180px);
+        margin-top: calc(50vh - 130px);
+    }
+
+    #img-bpoints-price{
+        height: 30px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 0px;
+        float: right;
+    }
+
+    #button-artist-profile-subscribe{
+        margin-top: 40px !important;
+    }
+
+    #button-artist-profile-sponsor{
+        margin-top: -10px !important;
+    }
+}

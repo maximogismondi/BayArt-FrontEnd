@@ -83,8 +83,6 @@ function startCarousel(){
         }
     });
 
-    rotateCarousel();
-
     $("#button-carousel-right").click(incrementIndex);
     $("#button-carousel-left").click(decreseIndex);
 
