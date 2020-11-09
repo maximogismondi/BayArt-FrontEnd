@@ -97,20 +97,6 @@
 					</div>
 				</div>
 				<div>
-					<h3>Privacy</h3>
-					<div class="things-settings">
-						<div ><h4>Delete history</h4><button id="button-delete-history" class="button-change-setting">delete</button></div>
-						<div ><h4>Save history</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-					</div>
-				</div>
-				<div>
-					<h3>Appearance</h3>
-					<div class="things-settings">
-						<div ><h4>Theme</h4><label class="switch"><input type="checkbox" name="changeTheme" onclick="changeTheme(this)"><div class="slider round"></div></label></div>
-						<div><h4>Language</h4><div id="select-language"><select><option value="0">English</option><option value="value2">Spanish</option></select></div></div>
-					</div>
-				</div>
-				<div>
 					<h3>Notifications</h3>
 					<div class="things-settings">
 						<div ><h4>New subscription</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
@@ -119,14 +105,13 @@
 						<div ><h4>Artist publication</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 						<div ><h4>Purchase notice</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 						<div ><h4>Sponsor report</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
-						<div ><h4>Subscription exhaustion</h4><label class="switch"><input type="checkbox"><div class="slider round"></div></label></div>
 					</div>
 				</div>
 				<div>
 					<h3>Activity</h3>
 					<div class="things-settings">
 						<div ><h4>Subscriptions</h4><button id="button-view-subs" class="button-change-setting">view</button></div>
-						<div ><h4>Monthly purchases</h4><button id="button-view-mounthly-purchases" class="button-change-setting">view</button></div>
+						<div ><h4>Purchases</h4><button id="button-view-mounthly-purchases" class="button-change-setting">view</button></div>
 					</div>
 				</div>
 				<div>
@@ -165,7 +150,7 @@
 				</div>
 				<button id="button-submit-banner" type="submit" class="button-submit">
 					<img src="../icons/bpoints.png" id="button-img-bpoints-banner" class="button-img-bpoints">
-					<div id="div-price-number-banner" class="div-price-number">1500</div>
+					<div id="div-price-number-banner" class="div-price-number">200</div>
 				</button>
 			</form>
 
@@ -189,7 +174,7 @@
 				</div>
 				<button id="button-submit-image" type="submit" class="button-submit">
 					<img src="../icons/bpoints.png" id="button-img-bpoints-image" class="button-img-bpoints">
-					<div id="div-price-number-image" class="div-price-number">2000</div>
+					<div id="div-price-number-image" class="div-price-number">200</div>
 				</button>
 			</form>
 
@@ -209,7 +194,7 @@
 				
 				<button id="button-submit-username" type="submit" class="button-submit">
 					<img src="../icons/bpoints.png" id="button-img-bpoints-username" class="button-img-bpoints">
-					<div id="div-price-number-username" class="div-price-number">3000</div>
+					<div id="div-price-number-username" class="div-price-number">200</div>
 				</button>
 				
 			</form>
@@ -218,18 +203,21 @@
 
 				<!--change email-->
 				<div>
-					<h4>Email:</h4>
-					<h3 id="h3-email">soledadgonzales@gmail.com</h3>
+						<h4>Email:</h4>
+						<h3 id="h3-email">soledadgonzales@gmail.com</h3>
+
 					<div>
 						<h4>Change email:</h4>
 						<div id="div-change-email-input">
 							<input type="text" class="input-write" required>
 						</div>
 					</div>
-					<button id="button-submit-email" type="submit" class="button-submit">
-						<div>CHANGE</div>
-					</button>
+					
 				</div>
+				<button id="button-submit-email" type="submit" class="button-submit">
+					<div>CHANGE</div>
+				</button>
+				
 				
 			</form>
 
@@ -238,34 +226,25 @@
 				<!--change password-->
 				<div>
 					<h4>Actual password:</h4>
-					<div id="div-change-password-input">
+					<div class="div-change-password-input">
 						<input type="password" class="input-write" id="input-actual-password" required>
 					</div>
+
 					<h4>Change password:</h4>
-					<div id="div-change-password-input">
+					<div class="div-change-password-input">
 						<input type="password" class="input-write" id="input-password" required>
 					</div>
 					<img id="img-eye" src="../icons/open-eye.png">
+
 					<h4>Confirm password:</h4>
-					<div id="div-change-password-input">
+					<div class="div-change-password-input">
 						<input type="password" class="input-write" id="input-confirm-password" required>
 					</div>
+
 					<button id="button-submit-password" type="submit" class="button-submit">
 						<div>CHANGE</div>
 					</button>
 				</div>
-			</form>
-			
-			<form action="" method="POST" id="form-settings-delete-history" class="form-settings">
-
-				<!--delete history-->
-				<div>
-					<h4>Are you sure you want to delete your whole </br> history?</h4>
-					<button id="button-submit-delete-history" type="submit" class="button-submit">
-						<div>DELETE</div>
-					</button>
-				</div>
-				
 			</form>
 
 			<form action="" method="POST" id="form-settings-subs" class="form-settings">
@@ -273,20 +252,20 @@
 				<!--view subscriptions-->
 				<h4>Subscriptions</h4>
 				<div id="div-view-subs" class="scrollbar-description">
-					<h3 id="h3-view-subs">Isabela341 - 12 days</h3>
-					<h3 id="h3-view-subs">LoboDelCalla - 9 days</h3>
-					<h3 id="h3-view-subs">Gianpa_dibujos - 19 days</h3>
-					<h3 id="h3-view-subs">JUAN - 22 days</h3>
-					<h3 id="h3-view-subs">Valentin_Tin - 3 days</h3>
-					<h3 id="h3-view-subs">XAIO - 30 days</h3>
-					<h3 id="h3-view-subs">Maradona10 - 9 days</h3>
-					<h3 id="h3-view-subs">BEN10 - 5 days</h3>
-					<h3 id="h3-view-subs">LoboSolitario - 29 days</h3>
-					<h3 id="h3-view-subs">EL_PIBE_10 - 11 days</h3>
-					<h3 id="h3-view-subs">Gianaig_dibujos_xD - 22 days</h3>
-					<h3 id="h3-view-subs">JUAN_JOSE - 1 days</h3>
-					<h3 id="h3-view-subs">XD - 9 days</h3>
-					<h3 id="h3-view-subs">Pintor123 - 10 days</h3>
+					<h3 id="h3-view-subs">Isabela341</h3>
+					<h3 id="h3-view-subs">LoboDelCalla</h3>
+					<h3 id="h3-view-subs">Gianpa_dibujos</h3>
+					<h3 id="h3-view-subs">JUAN</h3>
+					<h3 id="h3-view-subs">Valentin_Tin</h3>
+					<h3 id="h3-view-subs">XAIO</h3>
+					<h3 id="h3-view-subs">Maradona10</h3>
+					<h3 id="h3-view-subs">BEN10</h3>
+					<h3 id="h3-view-subs">LoboSolitario</h3>
+					<h3 id="h3-view-subs">EL_PIBE_10</h3>
+					<h3 id="h3-view-subs">Gianaig_dibujos_xD</h3>
+					<h3 id="h3-view-subs">JUAN_JOSE</h3>
+					<h3 id="h3-view-subs">XD</h3>
+					<h3 id="h3-view-subs">Pintor123</h3>
 				</div>
 				
 			</form>
@@ -367,15 +346,15 @@
 				setTimeout( function(){
 					$("#button-img-bpoints-"+name).css("opacity","1");
 					if(name == "image"){
-						$("#div-price-number-"+name).html("2000");
+						$("#div-price-number-"+name).html("200");
 						$("#button-img-bpoints-"+name).css("display","none");
 					}
 					else if(name == "username"){
-						$("#div-price-number-"+name).html("3000");
+						$("#div-price-number-"+name).html("200");
 						$("#button-img-bpoints-"+name).css("display","none");	
 					}
 					else if(name == "banner"){
-						$("#div-price-number-"+name).html("1500");
+						$("#div-price-number-"+name).html("200");
 						$("#button-img-bpoints-"+name).css("display","none");	
 					}
 					$("#button-img-bpoints-"+name).css("display","inline-block");
@@ -421,10 +400,6 @@
 
 		$("#button-change-password").click(function(){
 			$("#form-settings-password").css("display","block");
-		});
-
-		$("#button-delete-history").click(function(){
-			$("#form-settings-delete-history").css("display","block");
 		});
 
 		$("#button-view-subs").click(function(){

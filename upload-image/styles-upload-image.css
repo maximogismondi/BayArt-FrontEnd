@@ -1,29 +1,3 @@
-.error{
-    font-size: 17;
-    display: none;
-    color: #c02925 !important;
-}
-
-#span-title{
-    margin-top: -40px;
-    margin-left: 80px;
-}
-
-#span-description{
-    margin-top: 15px;
-    position: absolute;
-    right: 45px;
-}
-
-#span-image-uploaded{
-    margin-left: 12px;
-    margin-top: 10px;
-}
-
-.php-variables{
-    display: none;
-}
-
 main{
     height: auto !important;
 }
@@ -133,11 +107,18 @@ main{
             display: inline-block;
         }
 
+        #h3-descrption-title{
+            color: white;
+            margin:  15px 25px;
+            font-size: 25px;
+            font-size: bold;
+        }
+
         #h4-character-counter{
             float: right;
             color: grey;
-            margin-right: 20px;
-            margin-top: 40px;
+            margin-right: 25px;
+            margin-top: 30px;
         }
 
         #div-description-text{
@@ -164,6 +145,10 @@ main{
 
         #textarea-description:focus {
             outline: none;
+        }
+
+        #div-tags-price-button-post{
+            margin-top: 3%;
         }
 
         #div-tags-price{
@@ -327,6 +312,28 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
     main{
         width: 100% !important;
     }
+
+    #h4-character-counter{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1020px){
+
+    #h3-descrption-title{
+        color: white;
+        margin:  15px 25px;
+        font-size: 25px;
+        font-size: bold;
+    }
+
+    #h4-character-counter{
+        float: right;
+        color: grey;
+        margin-left: 0px;
+        margin-top: 30px;
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 1000px){
@@ -342,19 +349,8 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 
 @media (max-width: 960px){
 
-    #h4-character-counter{
-        margin-right: 15px;
-    }
-
     #h3-price{
         padding-right: 50px;
-    }
-}
-
-@media (max-width: 950px){
-
-    #h4-character-counter{
-        margin-right: 10px;
     }
 }
 
@@ -362,16 +358,21 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 
     #div-image{
         height:100%;
-        width: 100%;
+        width: 100% !important;
     }
 
     #h4-character-counter{
-        margin-right: 20px;
+        margin-right: 25px;
+        font-size: 15px;
     }
+
+    #img-uploaded{
+        margin: 20px auto;
+    }   
+
     #div-description{
         margin-top: 3%;
-        width: 100%;
-        height: 50%;
+        width: 100% !important;
         border-radius: 15px;
     }
     #h3-price{
@@ -567,7 +568,6 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
     }
 
     #h4-character-counter{
-        margin-right: 10px;
         font-size: 10px;
     }
 
