@@ -1,3 +1,4 @@
+from pprint import pprint
 from tkinter import *
 from threading import Timer
 from PIL import ImageTk, Image
@@ -15,7 +16,6 @@ rootWidth = root.winfo_width()
 rootHeight = root.winfo_height()
 
 var = open("var.txt","r")
-
 rotateEnable = str(var.readline()[:-1])
 infoEnable = str(var.readline()[:-1])
 timeRotation = int(var.readline()[:-1])
@@ -44,7 +44,7 @@ def resizeFullScreenImage(urlImage):
 
 def rotate():
         global main_image
-        main_image = ImageTk.PhotoImage(resizeFullScreenImage(imageUrl[index]))
+        main_image = ImageTk.PhotoImage(resizeFullScreenImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+imageUrl[index]))
         labelimagemain.configure(image=main_image)
 
         if(rotateEnable == 'True'):
@@ -107,14 +107,14 @@ def change_display_info():
                 hide_show_info['text'] = 'Hide Info'
         info_status  = not info_status 
     
-main_image = ImageTk.PhotoImage(resizeFullScreenImage(imageUrl[index]))
+main_image = ImageTk.PhotoImage(resizeFullScreenImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+imageUrl[index]))
 
 labelimagemain = Label(root, image=main_image, border=0, bg="#242424")
 labelimagemain.place(relx = 0.5, rely = 0.5, relwidth=1, relheight=1, anchor = CENTER)
 
 if rotateEnable == 'False':
         #FlechaIzq
-        left_arrow_no_resized = Image.open("left_arrow.png")
+        left_arrow_no_resized = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/left_arrow.png')
 
         left_arrow_resized = left_arrow_no_resized.resize((int(rootWidth/40),int(rootHeight/15)),Image.ANTIALIAS)
 
@@ -124,7 +124,7 @@ if rotateEnable == 'False':
         label_left_arrow.place(relx = 0.03, rely = 0.5, anchor = CENTER)
         
         #FlechaDer
-        right_arrow_no_resized = Image.open("right_arrow.png")
+        right_arrow_no_resized = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/right_arrow.png')
 
         right_arrow_resized = right_arrow_no_resized.resize((int(rootWidth/40),int(rootHeight/15)),Image.ANTIALIAS)
 
@@ -161,7 +161,7 @@ def openSettings():
     root.destroy()
     os.system('SettingsBayArt.py')
         
-close_no_resized = Image.open("cancel.png")
+close_no_resized = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/cancel.png')
 close_resized = close_no_resized.resize((int(rootWidth/27.2),int(rootHeight/15.36)),Image.ANTIALIAS)
 close_image = ImageTk.PhotoImage(close_resized)
 
@@ -177,4 +177,5 @@ else:
 
   
 root.mainloop()
+
 

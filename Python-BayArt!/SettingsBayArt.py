@@ -1,6 +1,11 @@
+from pprint import pprint
 from tkinter import * 
 from PIL import ImageTk, Image
 import os
+
+images=os.listdir(os.path.dirname(os.path.abspath(__file__))+'/images')
+logos=os.listdir(os.path.dirname(os.path.abspath(__file__))+'/logos')
+
 
 #Ventana
 root = Tk()
@@ -12,7 +17,7 @@ root.configure(bg="#242424")
 root.update()
 rootWidth = root.winfo_width()
 rootHeight = root.winfo_height()
-background_no_resize = Image.open("background.jpg")
+background_no_resize = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/background.jpg')
 background_resize = background_no_resize.resize((rootWidth+1,rootHeight+2),Image.ANTIALIAS)
 background_image = ImageTk.PhotoImage(background_resize)
 background = Label(image=background_image)
@@ -20,7 +25,7 @@ background.place(x=0, y=0, relwidth=1, relheight=1)
 
 
 #Logo
-logoBayArt_no_resized = Image.open("logo.jpg")
+logoBayArt_no_resized = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/logo.jpg')
 
 logoBayArt_resized = logoBayArt_no_resized.resize((int(rootWidth/3.4),int(rootHeight/5.12)),Image.ANTIALIAS)
 
@@ -38,7 +43,8 @@ divPhotos.place(relx = 0.5, rely = 0.4, anchor = CENTER)
 
 
 #Url e index
-urlImages = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","logo.jpg","11.jpg","background.jpg"]
+urlImages = images
+print (urlImages)
 stateImages = []
 for i in range(len(urlImages)):
     stateImages.append(True)
@@ -66,6 +72,7 @@ def index_url(add):
 
 
 def disableEnable1():
+    print(index_url(0))
     if (stateImages[index_url(0)]):
         stateImages[index_url(0)] = False
         buttondisable1.configure(image = hide_image)
@@ -98,16 +105,17 @@ def disableEnable4():
         buttondisable4.configure(image = show_image)
 
 #Mostar ocultar
-hide_no_resized = Image.open("cancel.png")
+hide_no_resized = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/cancel.png')
 hide_resized = hide_no_resized.resize((int(rootWidth/40),int(rootWidth/40)),Image.ANTIALIAS)
 hide_image = ImageTk.PhotoImage(hide_resized)
 
-show_no_resized = Image.open("confirm.png")
+show_no_resized = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/confirm.png')
 show_resized = show_no_resized.resize((int(rootWidth/40),int(rootWidth/40)),Image.ANTIALIAS)
 show_image = ImageTk.PhotoImage(show_resized)
 
 #Imagen 1
-image1 = ImageTk.PhotoImage(resizeImage(urlImages[index_url(0)]))
+
+image1 = ImageTk.PhotoImage(resizeImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+urlImages[index_url(0)]))
 
 labelimage1 = Label(root, image=image1, border=0)
 labelimage1.place(relx = 0.2, rely = 0.38, anchor = CENTER)
@@ -117,7 +125,7 @@ buttondisable1.place(relx = 0.2, rely = 0.505, anchor = CENTER)
 
 
 #Imagen 2
-image2 = ImageTk.PhotoImage(resizeImage(urlImages[index_url(1)]))
+image2 = ImageTk.PhotoImage(resizeImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+urlImages[index_url(1)]))
 
 labelimage2 = Label(root, image=image2, border=0)
 labelimage2.place(relx = 0.4, rely = 0.38, anchor = CENTER)
@@ -127,7 +135,7 @@ buttondisable2.place(relx = 0.4, rely = 0.505, anchor = CENTER)
 
 
 #Imagen 3
-image3 = ImageTk.PhotoImage(resizeImage(urlImages[index_url(2)]))
+image3 = ImageTk.PhotoImage(resizeImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+urlImages[index_url(2)]))
 
 labelimage3 = Label(root, image=image3, border=0)
 labelimage3.place(relx = 0.6, rely = 0.38, anchor = CENTER)
@@ -137,7 +145,7 @@ buttondisable3.place(relx = 0.6, rely = 0.505, anchor = CENTER)
 
 
 #Imagen 4
-image4 = ImageTk.PhotoImage(resizeImage(urlImages[index_url(3)]))
+image4 = ImageTk.PhotoImage(resizeImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+urlImages[index_url(3)]))
 
 labelimage4 = Label(root, image=image4, border=0)
 labelimage4.place(relx = 0.8, rely = 0.38, anchor = CENTER)
@@ -153,28 +161,28 @@ def rotate():
     global image3
     global image4
     
-    image1 = ImageTk.PhotoImage(resizeImage(urlImages[index]))
+    image1 = ImageTk.PhotoImage(resizeImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+urlImages[index]))
     labelimage1.configure(image=image1)
     if (stateImages[index_url(0)]):
         buttondisable1.configure(image = show_image)
     else:
         buttondisable1.configure(image = hide_image)
 
-    image2 = ImageTk.PhotoImage(resizeImage(urlImages[(index_url(1))]))
+    image2 = ImageTk.PhotoImage(resizeImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+urlImages[(index_url(1))]))
     labelimage2.configure(image=image2)
     if (stateImages[index_url(1)]):
         buttondisable2.configure(image = show_image)
     else:
         buttondisable2.configure(image = hide_image)
 
-    image3 = ImageTk.PhotoImage(resizeImage(urlImages[(index_url(2))]))
+    image3 = ImageTk.PhotoImage(resizeImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+urlImages[(index_url(2))]))
     labelimage3.configure(image=image3)
     if (stateImages[index_url(2)]):
         buttondisable3.configure(image = show_image)
     else:
         buttondisable3.configure(image = hide_image)
 
-    image4 = ImageTk.PhotoImage(resizeImage(urlImages[(index_url(3))]))
+    image4 = ImageTk.PhotoImage(resizeImage(os.path.dirname(os.path.abspath(__file__))+'/images/'+urlImages[(index_url(3))]))
     labelimage4.configure(image=image4)
     if (stateImages[index_url(3)]):
         buttondisable4.configure(image = show_image)
@@ -198,7 +206,7 @@ def rotate_right():
     rotate()
 
 #FlechaIzq
-left_arrow_no_resized = Image.open("left_arrow.png")
+left_arrow_no_resized = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/left_arrow.png')
 
 left_arrow_resized = left_arrow_no_resized.resize((int(rootWidth/40),int(rootHeight/15)),Image.ANTIALIAS)
 
@@ -209,7 +217,7 @@ label_left_arrow.place(relx = 0.05, rely = 0.4, anchor = CENTER)
 
 
 #FlechaDer
-right_arrow_no_resized = Image.open("right_arrow.png")
+right_arrow_no_resized = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/right_arrow.png')
 
 right_arrow_resized = right_arrow_no_resized.resize((int(rootWidth/40),int(rootHeight/15)),Image.ANTIALIAS)
 
@@ -254,7 +262,7 @@ playButton.place(relx = 0.84, rely = 0.7, anchor = CENTER)
 
 
 #Boton cerrar
-close_no_resized = Image.open("cancel.png")
+close_no_resized = Image.open(os.path.dirname(os.path.abspath(__file__))+'/logos/cancel.png')
 close_resized = close_no_resized.resize((int(rootWidth/27.2),int(rootHeight/15.36)),Image.ANTIALIAS)
 close_image = ImageTk.PhotoImage(close_resized)
 
@@ -264,3 +272,5 @@ button_close.place(relx=0.98, rely=0.02,anchor=NE)
 
 #Loop
 root.mainloop()
+
+
