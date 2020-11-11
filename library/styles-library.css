@@ -1,16 +1,16 @@
 /*__________________________HEADER SECUNDARIO LIBRARY______________________________*/
 
-@media (max-width: 1250px){
-    header{
-        width: 100%;
-    }
-    main{
-        width: 100% !important;
-    }
+@media (max-width: 1250px) {
+  header {
+    width: 100%;
+  }
+  main {
+    width: 100% !important;
+  }
 }
 
-@media(max-width: 545px){
-    main{
-        margin-top:240px !important;
-    }
+@media (max-width: 545px) {
+  main {
+    margin-top: 240px !important;
+  }
 }

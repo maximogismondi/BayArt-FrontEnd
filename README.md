@@ -1,39 +1,37 @@
 # BayArt! - 2020
-_Ingredientes: Callipo Franco, Gismondi Maximo, Moggia Gian Franco, Palavecino Sofia_
 
-##**Cosas a hacer (maquetado)**
+_ Ingredientes: Callipo Franco, Gismondi Maximo, Moggia Gian Franco, Palavecino Sofia _
 
-####Login
+## **Cosas a hacer (maquetado)**
 
-####Register
+#### Login
 
-####Explorar
+#### Register
 
-####Tienda
+#### Explorar
 
-####Perfil artista
+#### Tienda
 
-####Perfil artista como lo ve un espectador
+#### Perfil artista
 
-####Configuraciones
+#### Perfil artista como lo ve un espectador
 
-####Biblioteca
+#### Configuraciones
 
-####Homepage
+#### Biblioteca
 
-####Busqueda
+#### Homepage
 
-####Subir foto
+#### Busqueda
 
-####Click en foto
+\* Como se muestran los artistas
 
-####Calendario con Recompensas
+#### Subir foto
 
-####Maquetado Celular
+#### Click en foto
 
+#### Calendario con Recompensas
 
-*buscar artista (que se vea como la bandera de japon)
-*store filter (al final)
-*olas login y register
+\* Pop-up
 
-
+####Maquetado Celular \* cry

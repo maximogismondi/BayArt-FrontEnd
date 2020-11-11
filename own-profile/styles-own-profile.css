@@ -1,257 +1,254 @@
-main{
-    margin-top: 85px !important;
+main {
+  margin-top: 85px !important;
 }
 
-#main-top{
-    height: 500px;
+#main-top {
+  height: 500px;
 }
 
-#main-bottom{
-    margin-top: 625px !important;
-    height: auto !important;
+#main-bottom {
+  margin-top: 625px !important;
+  height: auto !important;
 }
 
-#div-banner-picture{
-    height: 300px;
-    width: 100%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    display: flex;
+#div-banner-picture {
+  height: 300px;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
 }
 
-#img-banner{
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#img-banner {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#div-artist-picture{
-    height: 200px;
-    width: 100%;
-    margin-top: 190px;
-    text-align: center;
-    position: absolute;
+#div-artist-picture {
+  height: 200px;
+  width: 100%;
+  margin-top: 190px;
+  text-align: center;
+  position: absolute;
 }
 
-#img-artist-picture{
-    border: 10px solid #3d3d3d;
-    height: 100%;
-    width: 200px;
-    border-radius: 100%;
+#img-artist-picture {
+  border: 10px solid #3d3d3d;
+  height: 100%;
+  width: 200px;
+  border-radius: 100%;
 }
 
-#div-container-buttons{
-    background-color: #3d3d3d;
-    width: 100%;
-    height: 40px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+#div-container-buttons {
+  background-color: #3d3d3d;
+  width: 100%;
+  height: 40px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
-#img-uploaded-images{
-    width: 20px;
-    height: 20px;
+#img-uploaded-images {
+  width: 20px;
+  height: 20px;
 }
 
-#button-uploaded-images{
-    color: white;
-    background: #242424;
-    font-size: 20px;
-    border-top-left-radius: 15px;
-    width: 50%;
-    height: 40px;
-    border: none;
-    font-weight: bold;
-    position: relative;
+#button-uploaded-images {
+  color: white;
+  background: #242424;
+  font-size: 20px;
+  border-top-left-radius: 15px;
+  width: 50%;
+  height: 40px;
+  border: none;
+  font-weight: bold;
+  position: relative;
 }
 
-#img-library-images{
-    width: 20px;
-    height: 20px;
+#img-library-images {
+  width: 20px;
+  height: 20px;
 }
 
-#button-library-images{
-    background-color: #242424;
-    color: white;
-    font-size: 20px;
-    border-top-right-radius: 15px;
-    width: 50%;
-    height: 40px;
-    border: none;
-    font-weight: bold;
-    float: right;
-    position: relative;
+#button-library-images {
+  background-color: #242424;
+  color: white;
+  font-size: 20px;
+  border-top-right-radius: 15px;
+  width: 50%;
+  height: 40px;
+  border: none;
+  font-weight: bold;
+  float: right;
+  position: relative;
 }
 
-#div-background-library{
-    background: #00a797;
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    border-top-right-radius: 15px;
-    transition: all 0.5s ease-in-out;
-    position: absolute;
+#div-background-library {
+  background: #00a797;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  border-top-right-radius: 15px;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
 }
 
-#div-background-uploaded{
-    background: #674ea7;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: 50;
-    border-top-left-radius: 15px;
-    transition: all 0.5s ease-in-out;
-    position: absolute;
+#div-background-uploaded {
+  background: #674ea7;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  border-top-left-radius: 15px;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
 }
 
-.div-img-word{
-    z-index: 100;
-    position: relative;
+.div-img-word {
+  z-index: 100;
+  position: relative;
 }
 
-#div-uploaded-images{
-    width: 100%;
+#div-uploaded-images {
+  width: 100%;
 }
 
-#div-library-images{
-    width: 100%;
-    display: none;
+#div-library-images {
+  width: 100%;
+  display: none;
 }
 
-#button-submit-upload-image{
-    margin-left: 300px;
+#button-submit-upload-image {
+  margin-left: 300px;
 }
 
-#button-submit-edit-profile{
-    margin-right: 300px;
-    float: right;
+#button-submit-edit-profile {
+  margin-right: 300px;
+  float: right;
 }
 
-.div-price-number{
-    color: #00a797;
-    font-weight: bold;
-    font-size: 15px;
+.div-price-number {
+  color: #00a797;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.button-submit{
-    color: white;
-    background: #242424;
-    margin-top: 70px;
-    border-radius: 15px;
-    width: 150px;
-    height: 60px;
-    position: relative;
-    transition: all 0.1s;
-    border:none;
-    outline: none;
+.button-submit {
+  color: white;
+  background: #242424;
+  margin-top: 70px;
+  border-radius: 15px;
+  width: 150px;
+  height: 60px;
+  position: relative;
+  transition: all 0.1s;
+  border: none;
+  outline: none;
 }
 
-.button-img-own-profile{
-    width: 40px;
-    transition: opacity 100ms;
-    display: inline-block;
-    vertical-align: middle;
+.button-img-own-profile {
+  width: 40px;
+  transition: opacity 100ms;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /*__________________________HEADER SECUNDARIO OWN PROFILE______________________________*/
 
-@media (max-width: 1250px){
-    header{
-        width: 100%;
-    }
-    main{
-        width: 100% !important;
-    }
-
+@media (max-width: 1250px) {
+  header {
+    width: 100%;
+  }
+  main {
+    width: 100% !important;
+  }
 }
 
-@media (max-width: 1170px){
-    #button-submit-upload-image{
-        margin-left: 20%;
-    }
-    
-    #button-submit-edit-profile{
-        margin-right: 20%;
-        float: right;
-    }
+@media (max-width: 1170px) {
+  #button-submit-upload-image {
+    margin-left: 20%;
+  }
+
+  #button-submit-edit-profile {
+    margin-right: 20%;
+    float: right;
+  }
 }
 
-@media (max-width: 920px){
-    #button-submit-upload-image{
-        margin-left: 10%;
-    }
-    
-    #button-submit-edit-profile{
-        margin-right: 10%;
-        float: right;
-    }
+@media (max-width: 920px) {
+  #button-submit-upload-image {
+    margin-left: 10%;
+  }
+
+  #button-submit-edit-profile {
+    margin-right: 10%;
+    float: right;
+  }
 }
 
-@media (max-width: 680px){
+@media (max-width: 680px) {
+  #img-artist-picture {
+    margin-top: 30px;
+    height: 90% !important;
+    width: 180px !important;
+  }
 
-    #img-artist-picture{
-        margin-top: 30px;
-        height: 90% !important;
-        width: 180px !important;
-    }
+  .button-submit {
+    width: 100px;
+    height: 60px;
+  }
 
-    .button-submit{
-        width: 100px;
-        height: 60px;
-    }
+  #button-submit-upload-image {
+    margin-left: 5%;
+  }
 
-    #button-submit-upload-image{
-        margin-left: 5%;
-    }
-    
-    #button-submit-edit-profile{
-        margin-right: 5%;
-        float: right;
-    }
+  #button-submit-edit-profile {
+    margin-right: 5%;
+    float: right;
+  }
 }
 
-@media (max-width: 545px){
-    main{
-        margin-top:150px !important;
-    }
+@media (max-width: 545px) {
+  main {
+    margin-top: 150px !important;
+  }
 
-    #main-bottom{
-        margin-top: 700px !important;
-    }
+  #main-bottom {
+    margin-top: 700px !important;
+  }
 }
 
-@media (max-width: 440px){
+@media (max-width: 440px) {
+  #img-artist-picture {
+    margin-top: 60px;
+    height: 70% !important;
+    width: 140px !important;
+  }
 
-    #img-artist-picture{
-        margin-top: 60px;
-        height: 70% !important;
-        width: 140px !important;
-    }
+  .button-submit {
+    color: white;
+    background: #242424;
+    margin-top: 70px;
+    border-radius: 15px;
+    width: 80px;
+    height: 50px;
+    position: relative;
+    transition: all 0.1s;
+    border: none;
+    outline: none;
+  }
 
-    .button-submit{
-        color: white;
-        background: #242424;
-        margin-top: 70px;
-        border-radius: 15px;
-        width: 80px;
-        height: 50px;
-        position: relative;
-        transition: all 0.1s;
-        border:none;
-        outline: none;
-    }
+  #button-submit-upload-image {
+    margin-left: 5%;
+  }
 
-    #button-submit-upload-image{
-        margin-left: 5%;
-    }
-    
-    #button-submit-edit-profile{
-        margin-right: 5%;
-        float: right;
-    }
+  #button-submit-edit-profile {
+    margin-right: 5%;
+    float: right;
+  }
 }
