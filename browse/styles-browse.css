@@ -1,5 +1,55 @@
 /*ID*/
 
-#button-browse{
-	background-color: #674ea7;
+#button-browse {
+  background-color: #674ea7;
+}
+
+/*__________________________HEADER SECUNDARIO BROWSE______________________________*/
+
+@media (max-width: 1250px) {
+  header {
+    width: 100% !important;
+  }
+  main {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 545px) {
+  main {
+    margin-top: 240px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  #div-filter {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 476px) {
+  .input-checkbox {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  #div-filter {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  #div-filter {
+    width: 76% !important;
+    height: 250px !important;
+  }
+
+  .input-checkbox {
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  #div-filter {
+    font-size: 10px !important;
+  }
 }

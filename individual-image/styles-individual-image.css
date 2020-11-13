@@ -1,217 +1,361 @@
 /*ID*/
 
-main{
-    margin-top: 240px !important;
-    height: auto !important;
+main {
+  margin-top: 75px !important;
+  height: auto !important;
 }
 
-#div-url-image{
-    color: white;
-    font-size: 20px;
-    margin-top: -140px;
-    margin-left: -45px;
-    position: absolute;
+#span-buy-error {
+  display: none;
+  width: 420px;
+  margin-left: calc(50% - 210px);
+  margin-top: -40px;
 }
 
-#section-all{
-    margin-top: 5%;
-    margin-left: 5%;
-    width: 90%;
-    height: auto;
+#div-title-image {
+  background-color: #242424;
+  color: white;
+  margin-top: 10px;
+  margin-left: 3%;
+  margin-bottom: 1.5% !important;
+  border-radius: 15px;
+  height: 40px;
+  font-size: 20px;
+  width: 94%;
 }
 
-#div-image-description{
-    width: 100%;
-    height: 400px;
+#h4-title {
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 6px;
 }
 
-#div-image{
-    background: #242424;
-    border-radius: 15px;
-    display: inline-block;
+#div-tags {
+  background-color: #242424;
+  color: white;
+  margin-top: 10px;
+  margin-left: 3%;
+  margin-bottom: 1.5% !important;
+  border-radius: 15px;
+  height: 40px;
+  font-size: 20px;
+  width: 94%;
 }
 
-#img-image{
-    margin-top: 20px;
-    margin-left: 20px;
+#h4-tags {
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 6px;
 }
 
-#div-title-description{
-    background: #242424;
-    border-radius: 15px;
-    height: 100%;
-    float: right;
+#section-all {
+  margin-bottom: 5%;
+  width: 100%;
+  height: auto;
 }
 
-#div-description{
-    border-top: 3px solid white;
-    width: 95%;
-    height: 70%;
-    margin-left: 20px;
-    overflow-y: auto;
+#div-image-description {
+  width: 100%;
+  height: 400px;
 }
 
-#p-description{
-    color: #7c7c7c;
-    width: 95%;
-    font-size: 15px;
+#div-image {
+  background: #242424;
+  border-radius: 15px;
+  width: 50%;
+  margin-left: 3%;
+  display: inline-block;
 }
 
-#div-artist{
-    background: #242424;
-    border-radius: 80px;
-    margin-top: 50px;
-    width: 50%;
-    height: 60px;
-    display: inline-block;
+#img-image {
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
-#div-circle{
-    margin-right: 10px;
-    margin-left: 15px;
-    margin-top: 10px;
-    float:left;
+#div-title-description {
+  background: #242424;
+  border-radius: 15px;
+  height: 100%;
+  margin-right: 3%;
+  float: right;
 }
 
-#img-circle{
-    height: 40px;
-    width: 40px;
-    border-radius: 25px;
+#div-description {
+  border-top: 3px solid white;
+  width: 95%;
+  height: 70%;
+  margin-left: 20px;
+  overflow-y: auto;
 }
 
-#h4-username-artist{
-    display: inline-block;
-    color: white;
+#p-description {
+  color: #7c7c7c;
+  width: 95%;
+  font-size: 15px;
 }
 
-#button-img-bpoints-image{
-    color: white;
-    width: 30px;
-    margin-left: 5px;
-    font-size: 13px;
-    transition: opacity 100ms;
-    font-weight: bold;
-    display: inline-block;
-    vertical-align: middle;
+#div-artist {
+  background: #242424;
+  border-radius: 80px;
+  margin-top: 20px;
+  margin-left: 3%;
+  width: 500px;
+  height: 60px;
+  display: inline-block;
 }
 
-#button-buy-image{
-    color: white;
-    background: #674ea7;
-    border-radius: 50px;
-    width: 150px;
-    height: 60px;
-    margin-top: 50px;
-    transition: border 0.1s;
-    border:none;
-    outline: none;
-    float: right;
+#div-circle {
+  margin-right: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
+  float: left;
 }
 
-#button-bookmark{
-    margin-top: 5px;
-    margin-right: 20px;
-    background: none;
-    border:none;
-    outline: none;
-    float: right;
+#img-circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
 }
 
-#img-bookmark{
-    height: 50px;
+#h4-username-artist {
+  display: inline-block;
+  color: white;
 }
 
-#div-price-number-image{
-    color: white;
-    margin-left: 5px;
-    font-size: 15px;
-    transition: opacity 100ms;
-    font-weight: bold;
-    display: inline-block;
-    vertical-align: middle;
+#button-img-bpoints-image {
+  color: white;
+  width: 30px;
+  margin-left: 5px;
+  font-size: 13px;
+  transition: opacity 100ms;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-#div-title-comments{
-    background: #242424;
-    border-radius: 15px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 1100px;
-    height: auto;
-    float: left;
-    padding: 10px;
+#button-buy-image {
+  color: white;
+  background: #674ea7;
+  border-radius: 50px;
+  width: 150px;
+  height: 60px;
+  margin-top: 20px;
+  transition: border 0.1s;
+  border: none;
+  outline: none;
+  float: right;
 }
 
-#div-comments{
-    border-top: 3px solid #ffffff;
-    width: 95%;
-    height: 300px;
-    margin-left: 20px;
-    overflow-y: auto;
+#button-bookmark {
+  margin-top: 5px;
+  margin-right: 20px;
+  background: none;
+  border: none;
+  outline: none;
+  float: right;
 }
 
-#div-circle1{
-    background-color: rgb(190, 78, 190);
-    height: 40px;
-    width: 40px;
-    border-radius: 25px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
-    float:left;
+#img-bookmark {
+  height: 45px;
 }
 
-#div-circle2{
-    background-color: rgb(158, 19, 19);
-    height: 40px;
-    width: 40px;
-    border-radius: 25px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
-    float:left;
-}
-
-#div-circle3{
-    background-color: rgb(12, 12, 12);
-    height: 40px;
-    width: 40px;
-    border-radius: 25px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
-    float:left;
+#div-price-number-image {
+  color: white;
+  margin-left: 5px;
+  font-size: 15px;
+  transition: opacity 100ms;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /*Class*/
 
-.comment{
-    margin-left: 70px;
-    color: #7c7c7c;
-}
-
-.h4-username-comments{
-    color: white;
-    margin-top: 5px;
-}
-
-.h4-subtitle{
-    color: white;
-    font-size: 30px;
-    margin: 25px;
-    width: 90%;
+#h4-description {
+  color: white;
+  font-size: 30px;
+  margin: 25px;
+  width: 90%;
 }
 
 .scrollbar-description::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 10px;
+  -webkit-appearance: none;
+  width: 10px;
 }
 
-.scrollbar-description::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
-    display: none;
-} 
+.scrollbar-description::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+  display: none;
+}
 
 .scrollbar-description::-webkit-scrollbar-thumb {
-    background-color: #00a797;
-    border-radius: 20px;
+  background-color: #00a797;
+  border-radius: 20px;
+}
+
+/*__________________________HEADER SECUNDARIO INDIVIDUAL IMAGE______________________________*/
+
+@media (max-width: 1250px) {
+  header {
+    width: 100%;
+  }
+  main {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1150px) {
+  #div-image {
+    background: #242424;
+    border-radius: 15px;
+    width: 44%;
+    margin-left: 3%;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1050px) {
+  #div-description {
+    width: 94%;
+  }
+}
+
+@media (max-width: 950px) {
+  #div-description {
+    width: 92%;
+  }
+}
+
+@media (max-width: 920px) {
+  #div-title-description {
+    background: #242424;
+    border-radius: 15px;
+    height: 60%;
+    width: 94% !important;
+    margin-left: 3%;
+    margin-top: 3%;
+    float: left;
+  }
+
+  #div-image {
+    margin-top: 10px;
+    width: 94% !important;
+    text-align: center;
+  }
+
+  #img-image {
+    margin-left: 0;
+  }
+
+  #button-buy-image {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-right: calc(50% - 75px);
+  }
+
+  #span-buy-error {
+    margin-top: -2%;
+  }
+}
+
+@media (max-width: 890px) {
+  #h4-description {
+    font-size: 28px;
+  }
+
+  #div-description {
+    width: 90%;
+  }
+}
+
+@media (max-width: 830px) {
+  #h4-description {
+    font-size: 26px;
+  }
+
+  #div-description {
+    width: 88%;
+  }
+}
+
+@media (max-width: 810px) {
+  #h4-description {
+    font-size: 24px;
+  }
+
+  #div-description {
+    width: 86%;
+  }
+}
+
+@media (max-width: 790px) {
+  #h4-description {
+    color: white;
+    font-size: 22px;
+    margin: 20px;
+    width: 90%;
+  }
+
+  #div-description {
+    width: 84%;
+  }
+}
+
+@media (max-width: 760px) {
+  #h4-description {
+    color: white;
+    font-size: 20px;
+    margin: 15px;
+    width: 90%;
+  }
+
+  #div-description {
+    width: 82%;
+  }
+}
+
+@media (max-width: 740px) {
+  #h4-description {
+    font-size: 25px;
+  }
+
+  #div-description {
+    border-top: 3px solid white;
+    width: 95%;
+    height: 50%;
+    margin-left: 15px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 570px) {
+  #div-artist {
+    width: 94% !important;
+  }
+}
+
+@media (max-width: 545px) {
+  main {
+    margin-top: 120px !important;
+  }
+
+  #button-buy-image {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-right: calc(50% - 75px);
+  }
+
+  #span-buy-error {
+    width: 210px;
+    margin-top: -2%;
+    margin-left: calc(50% - 105px);
+  }
+
+  #div-title-image, #div-tags, #h4-description{
+    font-size: 15px;
+  }
+
+  #h4-title, #h4-tags{
+    padding-top: 10px;
+  }
 }

@@ -1,62 +1,362 @@
-#div-filter{
-    color: #7c7c7c;
-    background-color: #242424 !important;
-    border-left: 3px solid #00a797;
-    border-right: 3px solid #674ea7;
-    width: 600px !important;
-    height: 330px !important;
-    margin-top: -20px;
+h4 {
+  color: white;
+}
+
+#button-carousel-left {
+  float: left;
+}
+
+#button-carousel-left:focus,
+#button-carousel-right:focus {
+  outline: none;
+}
+
+#button-carousel-left:hover {
+  color: #674ea7;
+}
+
+#button-carousel-right {
+  float: right;
+}
+
+#button-carousel-right:hover {
+  color: #00a797;
+}
+
+#h4-tags {
+  margin-top: 30px;
+  position: absolute;
+  margin-left: 30px;
+}
+
+#main-images {
+  margin-top: 260px;
+}
+
+#div-filter {
+  margin-top: -100px !important;
+}
+
+#tags {
+  float: right;
+}
+
+#carousel-images-profiles {
+  position: relative;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+  opacity: 0;
+  transition: opacity 1s;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  display: flex;
+}
+
+#div-type-preferences {
+  border-right: 2px solid #7c7c7c;
+  width: 190px;
+  height: 90%;
+  margin-top: 20px;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+#h4-type {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+#div-type {
+  margin-right: 20px;
+}
+
+#div-background-search-artist {
+  width: 250px;
+  height: 150px;
+}
+
+#img-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#a-search-artist {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: -165px;
+}
+
+#img-artist-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.button-carousel {
+  background: none;
+  color: #7c7c7c;
+  border: none;
+  font-size: 50px;
+  transition: color 0.2s;
+  margin: 7px 10px;
+}
+
+.img-profile-carrousel {
+  white-space: nowrap;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  margin: 5px 8px;
+}
+
+/*__________________________HEADER SECUNDARIO SEARCH______________________________*/
+
+@media (max-width: 1250px) {
+  header {
+    width: 100%;
+  }
+  main {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 700px) {
+  #div-filter {
+    font-size: 15px;
+    width: 86% !important;
+    height: 330px;
+  }
+
+  #tags {
     margin-right: 3%;
-    right: 50px;
-    border-radius: 15px;
-    opacity: 0;
-    transition: opacity 0.1s;
-    position: absolute;
-    visibility: hidden;
-    font-weight: bold;
-}
+    width: 60%;
+  }
 
-h4{
-    color: white;
-}
+  #div-column1 {
+    width: 42% !important;
+  }
 
-#h4-tags{
-    margin-top: 30px;
-    position: absolute;
-    margin-left: 30px;
-}
+  #div-column2 {
+    width: 52% !important;
+  }
 
-#tags{
-    float: right;
-}
-
-#div-column1{
-    width: 180px !important;
-    margin: 55px 10px !important;
-    display: inline-block;
-}
-   
-#div-column2{
-    width: 180px !important;
-    display: inline-block;
-}
-
-#div-type-preferences{
-    border-right: 2px solid #7c7c7c;
-    width: 190px;
+  #div-type-preferences {
+    width: 32%;
     height: 90%;
-    margin-top: 20px;
-    margin-right: 20px;
-    display: inline-block;
-    
+    margin-right: 3%;
+  }
+
+  .input-checkbox {
+    width: 10px;
+    height: 10px;
+  }
 }
 
-#h4-type{
-    margin-top: 10px;
-    margin-bottom: 5px;
-    margin-left: 20px;
+@media (max-width: 608px) {
+  #div-column1 {
+    width: 41% !important;
+  }
+
+  #tags {
+    margin-right: 3%;
+    width: 61%;
+  }
 }
 
-#div-type{
-    margin-right: 20px;
+@media (max-width: 598px) {
+  #div-filter {
+    font-size: 13px;
+    width: 86%;
+    height: 290px;
+  }
+
+  #div-type-preferences {
+    width: 31%;
+    height: 90%;
+    margin-right: 3%;
+  }
+
+  #tags {
+    width: 62%;
+  }
+
+  .input-checkbox {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 545px) {
+  main {
+    margin-top: 240px !important;
+  }
+
+  #div-filter {
+    width: 88.4% !important;
+    margin-right: -1% !important;
+  }
+}
+
+@media (max-width: 511px) {
+  #div-filter {
+    font-size: 10px;
+    width: 88% !important;
+    margin-right: -3% !important;
+  }
+
+  #tags {
+    width: 62%;
+  }
+
+  #div-type-preferences {
+    width: 32%;
+    height: 90%;
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 421px) {
+  #div-filter {
+    font-size: 9px;
+    width: 98% !important;
+    margin-right: -13% !important;
+  }
+}
+
+@media (max-width: 1223px) {
+  #carousel-images-profiles {
+    width: 88%;
+  }
+}
+
+@media (max-width: 1020px) {
+  #carousel-images-profiles {
+    width: 87%;
+  }
+}
+
+@media (max-width: 942px) {
+  #carousel-images-profiles {
+    width: 86%;
+  }
+}
+
+@media (max-width: 875px) {
+  #carousel-images-profiles {
+    width: 85%;
+  }
+}
+
+@media (max-width: 816px) {
+  #carousel-images-profiles {
+    width: 84%;
+  }
+}
+
+@media (max-width: 765px) {
+  #carousel-images-profiles {
+    width: 83%;
+  }
+}
+
+@media (max-width: 720px) {
+  #carousel-images-profiles {
+    width: 82%;
+  }
+}
+
+@media (max-width: 680px) {
+  #carousel-images-profiles {
+    width: 81%;
+  }
+}
+
+@media (max-width: 645px) {
+  #carousel-images-profiles {
+    width: 80%;
+  }
+}
+
+@media (max-width: 612px) {
+  #carousel-images-profiles {
+    width: 75%;
+  }
+}
+
+@media (max-width: 583px) {
+  #carousel-images-profiles {
+    width: 78%;
+  }
+}
+
+@media (max-width: 557px) {
+  #carousel-images-profiles {
+    width: 77%;
+  }
+}
+
+@media (max-width: 533px) {
+  #carousel-images-profiles {
+    width: 76%;
+  }
+}
+
+@media (max-width: 510px) {
+  #carousel-images-profiles {
+    width: 75%;
+  }
+}
+
+@media (max-width: 490px) {
+  #carousel-images-profiles {
+    width: 74%;
+  }
+}
+
+@media (max-width: 471px) {
+  #carousel-images-profiles {
+    width: 73%;
+  }
+}
+
+@media (max-width: 454px) {
+  #carousel-images-profiles {
+    width: 72%;
+  }
+}
+
+@media (max-width: 438px) {
+  #carousel-images-profiles {
+    width: 71%;
+  }
+}
+
+@media (max-width: 423px) {
+  #carousel-images-profiles {
+    width: 70%;
+  }
+}
+
+@media (max-width: 408px) {
+  #carousel-images-profiles {
+    width: 69%;
+  }
+}
+
+@media (max-width: 395px) {
+  #carousel-images-profiles {
+    width: 65%;
+  }
+}
+
+@media (max-width: 360px) {
+  #carousel-images-profiles {
+    width: 63%;
+  }
 }
