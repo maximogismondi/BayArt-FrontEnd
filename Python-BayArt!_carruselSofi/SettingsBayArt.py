@@ -4,19 +4,19 @@ from tkinter import *
 from PIL import ImageTk, Image
 import os
 
+ruta=os.path.dirname(os.path.abspath(__file__))+'/txts/'
+
 imaged=os.listdir(os.path.dirname(os.path.abspath(__file__))+'/images')
 imageSinLetra=[]
 for x in imaged:
     y=int(re.search(r'\d+', x).group())
     imageSinLetra.append(y)
 aux=sorted(imageSinLetra)
-print (aux)
 images=[]
 for x in aux:
     for y in imaged:
         if x==int(re.search(r'\d+', y).group()):
             images.append(y)
-print(images)
 logos=os.listdir(os.path.dirname(os.path.abspath(__file__))+'/logos')
 
 
@@ -57,7 +57,6 @@ divPhotos.place(relx = 0.5, rely = 0.4, anchor = CENTER)
 
 #Url e index
 urlImages = images
-print (urlImages)
 stateImages = []
 for i in range(len(urlImages)):
     stateImages.append(True)
@@ -257,15 +256,22 @@ timeRotationSB.place(relx = 0.69, rely = 0.7, anchor = CENTER)
 
 #Play
 def openCarrousel():
-    var = open("var.txt","w")
+    var = open((ruta+"var.txt"),"w")
+    #var = open("var.txt","w")
     var.write(str(checkBoxRotateVar.get())+"\n")
     var.write(str(checkBoxInfoVar.get())+"\n")
     var.write(str(timeRotationSB.get())+"\n")
- 
+    booleanImages=""
+    for x in range(len(stateImages)):
+        if(stateImages[x]):
+            booleanImages+= "1"
+        else:
+            booleanImages+="0"
+    
+    var.write(str(booleanImages)+"\n")
     for x in range(len(urlImages)):
         if (stateImages[x]):
-            var.write(urlImages[x]+"\n")
-
+            var.write(urlImages[x]+"\n")   
     var.close()
     root.destroy()
     os.system('CarrouselBayArt.py')
