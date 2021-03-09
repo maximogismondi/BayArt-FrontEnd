@@ -4,24 +4,8 @@ from threading import Timer
 from PIL import ImageTk, Image
 import os
 
-text_file = open("usernames.txt", "r")
-user = text_file.readlines()
-print(user)
-usernames=[]
-for x in user:
-        y=x.replace('\n','')
-        usernames.append(y)
-print(usernames)
 
-text_file1 = open("picNames.txt", "r")
-pic = text_file1.readlines()
-print(pic)
-picNames=[]
-for x in pic:
-        y=x.replace('\n','')
-        picNames.append(y)
-print(picNames)
-
+ruta=os.path.dirname(os.path.abspath(__file__))+'/txts/'
 
 #Ventana
 root = Tk()
@@ -34,20 +18,47 @@ root.update()
 rootWidth = root.winfo_width()
 rootHeight = root.winfo_height()
 
-var = open("var.txt","r")
+var=open(ruta+'var.txt')
 rotateEnable = str(var.readline()[:-1])
 infoEnable = str(var.readline()[:-1])
 timeRotation = int(var.readline()[:-1])
+booleans=str(var.readline()[:-1])
+print(booleans)
 
 
+text_file=open(ruta+'usernames.txt')
+user = text_file.readlines()
+print(user)
+usernamess=[]
+for x in user:
+        y=x.replace('\n','')
+        usernamess.append(y)
+print(usernamess)
+
+text_file1=open(ruta+'picNames.txt')
+pic = text_file1.readlines()
+print(pic)
+picNamess=[]
+for x in pic:
+        y=x.replace('\n','')
+        picNamess.append(y)
+print(picNamess)
+print(len(booleans))
+print(len(usernamess))
+usernames=[]
+picNames=[]
+for x in range(len(booleans)):
+        if(booleans[x]=="1"):
+             usernames.append(usernamess[x])
+             picNames.append(picNamess[x])
+        
 imageUrl = []
 index = 0
 actualUrl = var.readline()[:-1]
-
 while(actualUrl!=""):
 	imageUrl.append(actualUrl)
 	actualUrl = var.readline()[:-1]
-
+	
 var.close()
 
 def resizeFullScreenImage(urlImage):
