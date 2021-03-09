@@ -31,9 +31,9 @@
     $_SESSION["notificationsNewPublication"] = null;
     $_SESSION["notificationsBuyAlert"] = null;
     $_SESSION["notificationsInformSponsor"] = null;
-    $_SESSION["idUser"] = null;
-    $_SESSION["notificationsInformSponsor"] = null;
-    $_SESSION["notificationsNewPublication"] = null;
+    $_SESSION["notificationsNewSub"] = null;
+    $_SESSION["notificationsSell"] = null;
+    $_SESSION["notificationsSponsor"] = null;
 
     //--------
 
@@ -49,18 +49,10 @@
             $nameErr = "Name is required";
         } else {
             $name = test_input($_POST["name"]);
-
-            if (strlen($name) < 8) {
-                $nameErr = "Name be over 8 caracters";
-            } else {
-                if (strlen($name) > 20) {
-                    $nameErr = "Name need be under 20 caracters";
-                } else {
-                    if (!preg_match("/^[a-zA-Z0-9' ]*$/", $name)) {
-                        $nameErr = "Only letters and numbers allowed";
-                    }
-                }
+            if (!preg_match("/^[a-zA-Z0-9' ]*$/", $name)) {
+                $nameErr = "Only letters and numbers allowed";
             }
+        
         }
 
         if (empty($_POST["password"])) {
@@ -102,27 +94,17 @@
                 $_SESSION["notificationsInformSponsor"]  = $resultado["user"]["notificationsInformSponsor"];
                 
                 $_SESSION["srcProfilePicture"] = "../images/profileImages/" . $_SESSION["username"] . getExtension($resultado["encodedProfilePicture"][0]);
-<<<<<<< HEAD
                 saveImage("../images/profileImages/", $_SESSION["username"], $resultado["encodedProfilePicture"]);
-=======
-                saveImage("../images/profileImages/", $_SESSION["username"], $_SESSION["encodedProfilePicture"]);
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
                 if (sizeof($resultado) == 2) {
                     $_SESSION["userType"]  = "viewer";
                 } else {
                     $_SESSION["userType"]  = "artist";
-<<<<<<< HEAD
-                    $_SESSION["srcBanner"] = "../images/profileBanner/" . $_SESSION["username"] . getExtension($resultado["encodedBanner"][0]);;                    
-
+                    $_SESSION["srcBanner"] = "../images/profileBanner/" . $_SESSION["username"] . getExtension($resultado["encodedBanner"][0]); 
+                    $_SESSION["notificationsNewSub"]  = $resultado["artist"]["notificationsNewSub"];
+                    $_SESSION["notificationsSell"]    = $resultado["artist"]["notificationsSell"];
+                    $_SESSION["notificationsSponsor"] = $resultado["artist"]["notificationsSponsor"];                 
                     saveImage("../images/profileBanner/", $_SESSION["username"], $resultado["encodedBanner"]);
-=======
-                    $_SESSION["srcBanner"] = "..images/profileImages/" . $_SESSION["username"] . getExtension($resultado["encodedBanner"][0]);;
-                    $_SESSION["notificationsInformSponsor"]  = $resultado["artist"]["notificationsInformSponsor"];
-                    $_SESSION["notificationsNewPublication"] = $resultado["artist"]["notificationsNewPublication"];
-
-                    saveImage("../images/artistsBanners/", $_SESSION["username"], $_SESSION["encodedBanner"]);
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
                 }
 
                 header('Location: ' . "../homepage/homepage.php");
@@ -176,5 +158,9 @@
 </body>
 <script src="../jquery.js"></script>
 <script src="../basic-functions.js"></script>
+
+<script>
+    finishLoad();
+</script>
 
 </html>

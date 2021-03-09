@@ -50,7 +50,6 @@ function startCarousel(infoBookmarks) {
       numberImages++;
     });
 
-<<<<<<< HEAD
   /* set image index */
   imageIndex = parseInt(numberImages / 2);
 
@@ -92,10 +91,6 @@ function startCarousel(infoBookmarks) {
       }
       $(this).addClass("image-carrousel-bookmarks");
     });
-=======
-    $("#button-carousel-right").click(incrementIndex);
-    $("#button-carousel-left").click(decreseIndex);
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
   $("#button-carousel-right").click(incrementIndex);
   $("#button-carousel-left").click(decreseIndex);

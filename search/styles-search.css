@@ -33,10 +33,6 @@ h4 {
   margin-top: 260px;
 }
 
-#div-filter {
-  margin-top: -100px !important;
-}
-
 #tags {
   float: right;
 }
@@ -113,6 +109,7 @@ h4 {
   width: 60px;
   border-radius: 100%;
   margin: 5px 8px;
+  object-fit: cover;
 }
 
 /*__________________________HEADER SECUNDARIO SEARCH______________________________*/
@@ -201,6 +198,10 @@ h4 {
     width: 88.4% !important;
     margin-right: -1% !important;
   }
+
+  #nav-carrousel-artists {
+      margin-top: 20px;
+  }
 }
 
 @media (max-width: 511px) {
@@ -283,7 +284,6 @@ h4 {
   }
 }
 
-<<<<<<< HEAD
 @media (max-width: 612px) {
   #carousel-images-profiles {
     width: 75%;
@@ -361,151 +361,3 @@ h4 {
     width: 63%;
   }
 }
-=======
-#div-type{
-    margin-right: 20px;
-}
-
-#div-background-search-artist{
-    width: 250px;
-    height: 150px;
-    
-}
-
-#img-banner{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#a-search-artist{
-    position: absolute;
-    margin-top: 35px;
-    margin-left: -165px;
-}
-
-#img-artist-picture{
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    object-fit: cover;
-}
-
-/*__________________________HEADER SECUNDARIO SEARCH______________________________*/
-
-@media (max-width: 1250px){
-    header{
-        width: 100%;
-    }
-    main{
-        width: 100% !important;
-    }
-}
-
-@media (max-width: 700px){
-    #div-filter{
-        font-size: 15px;
-        width: 86% !important;
-        height: 330px;
-    }
-
-    #tags{
-        margin-right: 3%;
-        width: 60%;
-    }
-
-    #div-column1{
-        width: 42% !important;
-        margin: 55px 5px !important;
-    }
-       
-    #div-column2{
-        width: 52% !important;
-    }
-
-    #div-type-preferences{
-        width: 32%;
-        height: 90%;
-        margin-right: 3%;
-    }
-
-    .input-checkbox{
-        width: 10px;
-        height: 10px;
-    }
-}
-
-@media (max-width: 608px){
-
-    #div-column1{
-        width: 41% !important;
-        margin: 55px 0px !important;
-    }
-
-    #tags{
-        margin-right: 3%;
-        width: 61%;
-    }
-}
-
-@media (max-width: 598px){
-    #div-filter{
-        font-size: 13px;
-        width: 86% ;
-        height: 290px ;
-    }
-
-    #div-type-preferences{
-        width: 31%;
-        height: 90%;
-        margin-right: 3%;
-    }
-
-    #tags{
-        width: 62%;
-    }
-
-    .input-checkbox{
-        width: 8px;
-        height: 8px;
-    }
-}
-
-@media(max-width: 545px){
-    main{
-        margin-top:240px !important;
-    }
-
-    #div-filter{
-        width: 88.4% !important;
-        margin-right: -1% !important;
-    }
-}
-
-@media (max-width: 511px){
-    #div-filter{
-        font-size: 10px;
-        width: 88% !important;
-        margin-right: -3% !important;
-    }
-
-    #tags{
-        width: 62%;
-    }
-
-    #div-type-preferences{
-        width: 32%;
-        height: 90%;
-        margin-right: 2%;
-    }
-
-}
-
-@media (max-width: 421px){
-    #div-filter{
-        font-size: 9px;
-        width: 98% !important;
-        margin-right: -13% !important;
-    }
-}
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d

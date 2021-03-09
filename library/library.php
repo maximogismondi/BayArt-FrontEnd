@@ -14,6 +14,64 @@ include "../php-functions.php";
 
 session_start();
 
+$download = false;
+
+if(!empty($_GET["download"])){
+
+	$download = true;
+
+	$API_URL = "http://localhost:8888/api/download/" . $_SESSION["idUser"];
+	$res = getUrl($API_URL);
+	$status = $res[0];
+	$infoResponse = $res[1];
+	$resultado = json_decode($infoResponse, true);
+
+	array_map( 'unlink', array_filter((array) glob("../raspberry-files/Raspberry/images/*") ) );  
+	array_map( 'unlink', array_filter((array) glob("../raspberry-files/Raspberry/txts/var.txt") ) );  
+	array_map( 'unlink', array_filter((array) glob("../raspberry-zips/" . $_SESSION["username"] . ".zip") ) );  
+	$usernames = fopen("../raspberry-files/Raspberry/txts/usernames.txt", "w");
+	$picNames = fopen("../raspberry-files/Raspberry/txts/picNames.txt", "w");
+	$var = fopen("../raspberry-files/Raspberry/txts/var.txt", "w");
+	$indexImages = 0;
+
+	if($status == 200){
+		$encodedImages        = $resultado["encodedImages"];
+		$images               = $resultado["images"];
+		$artists              = $resultado["artists"];
+
+		foreach ($images as $image) {
+			$idImage         = $image["idImage"];
+			$idArtist        = $image["idUser"];
+			$encodedImage    = $encodedImages[$idImage];
+			$title    		 = $image["name"];
+			$username 	 	 = getUsername($image["idUser"], $artists);
+
+			saveImage('../images/images/', $title, $encodedImage);
+
+			saveImage('../raspberry-files/Raspberry/images/', $indexImages, $encodedImage);
+
+			fwrite($usernames, $username . "\n");
+
+			fwrite($picNames, $title . "\n");
+
+			$infoImage = array();
+
+			$indexImages++;
+
+		}
+
+		fclose($usernames);
+		fclose($picNames);
+		fclose($var);
+		zip('../raspberry-files', '../raspberry-zips/' . $_SESSION["username"] . '.zip');
+	}
+
+	
+
+}
+
+
+
 $API_URL = "http://localhost:8888/api/bpoints/" . $_SESSION["idUser"];
 $res = getUrl($API_URL);
 $status = $res[0];
@@ -72,8 +130,9 @@ if ($status == 200) { // ok
 		array_push($infoImage, $srcImageProfile);
 		array_push($infoImage, $title);
 		array_push($infoImage, $srcImage);
+		array_push($infoImage, $encodedImage);
 
-		array_push($infoImages, $infoImage);
+		array_push($infoImages, $infoImage); 
 	}
 }
 
@@ -103,7 +162,6 @@ if ($status == 200) { // ok
 
 		</div>
 
-<<<<<<< HEAD
 		<form id="form-search" style="display: inline">
 			<div id="div-search-bar">
 
@@ -114,15 +172,6 @@ if ($status == 200) { // ok
 				</button>
 			</div>
 		</form>
-=======
-		<div id="div-search-bar">
-			<input id="input-search-bar" type="text">
-
-			<button id="button-magnifier" onclick="location.href='../search/search.php'">
-				<img id="img-magnifier" src="../icons/magnifier.png" class="img-buttons">
-			</button>
-		</div>
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 		<div id="div-secondary-buttons">
 			<a href="../own-profile/own-profile.php" class="a-secondary-buttons" id="a-secondary-button-profile">
@@ -168,39 +217,66 @@ if ($status == 200) { // ok
 
 		<nav id="nav-subtitle">
 			<h2 id="h2-subtitle">LIBRARY</h2>
+			<img src="../icons/raspberry.png" id="img-raspberry">
+			
 		</nav>
 
 	</header>
 
-<<<<<<< HEAD
 	<main id="main-images">
 	</main>
 
-=======
-	<main id="main">
-	</main>
+	<div id="div-pop-up-background"></div>
 
-	<div id="div-index">
-		<button id="button-index-left" class="button-index" type="submit">
-			< </button> <label id="label-index"><?php echo $index ?></label>
-				<button id="button-index-right" class="button-index" type="submit"> > </button>
+	<!--POPS UPS-->
+	<div id="div-pop-up">
+		<div id="div-cancel-image">
+			<img src="../icons/cancel.png" id="img-cancel-image">
+		</div>
+
+		<div id="div-raspberry-library" class="form-settings">
+			<div>
+				<h4>Do you want to download the executable + the images for the raspberry?</h4>
+				<button id="button-download">
+				<a id="a-download">
+					<img src="../icons/upload-own-profile.png" id="img-download">
+				</a>
+				</button>
+			</div>
+
+		</div>
 	</div>
 
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 </body>
 
 <script src="../jquery.js"></script>
 <script src="../basic-functions.js"></script>
+<script src="../dist/jszip.min.js"></script>
+<script src="../dist/jszip.js"></script>
+<script src="../dist/FileSaver.js"></script>
 
 <script>
-<<<<<<< HEAD
-	var infoImages = <?php echo json_encode($infoImages) ?>;
+	/*Abrir popup*/
 
-	console.log(infoImages);
+	$("#img-raspberry").click(function() {
+		$("#div-pop-up-background").css("display", "block");
+		$("#div-pop-up").css("display", "block");
+		$("#div-raspberry-library").css("display", "block");
+	})
+
+	/*salir popup*/
+
+	$("#div-cancel-image").click(function() {
+		$("#div-pop-up-background").css("display", "none");
+		$("#div-pop-up").css("display", "none");
+		$(".form-settings").css("display", "none");
+	});
+
+	var infoImages = <?php echo json_encode($infoImages) ?>;
 
 	/*Order Main Images*/
 
-	$(document).ready(function() {
+	window.onload = function() {
 
 		var index = <?php echo $index ?>;
 		var maxIndex = <?php echo $_SESSION["maxIndex"]; ?>;
@@ -213,57 +289,24 @@ if ($status == 200) { // ok
 			orderImages("main-images", 150, 15, infoImages, index, maxIndex);
 		} else {
 			orderImages("main-images", 100, 10, infoImages, index, maxIndex);
-=======
-	/*Order Main Images*/
-
-	$(document).ready(function() {
-		var infoImages = <?php echo json_encode($infoImages); ?>;
-
-		if (window.screen.width > 1000) {
-			orderImages("main", 200, 20, infoImages);
-		} else if (window.screen.width > 500) {
-			orderImages("main", 150, 15, infoImages);
-		} else {
-			orderImages("main", 100, 10, infoImages);
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 		}
 
 		editHeader();
 
-<<<<<<< HEAD
-		document.getElementById("main-images").style.height =
-			document.getElementById("main-images").style.height + document.getElementById("div-index").style.height;
-
-	});
-
-=======
-		var index = <?php echo $index ?>;
-
-		$("#button-index-left").click(function() {
-			index--;
-			window.location.href = "library.php?index=" + index;
-		});
-
-		$("#button-index-right").click(function() {
-			index++;
-			window.location.href = "library.php?index=" + index;
-		});
-
-		var maxIndex = <?php echo $_SESSION["maxIndex"]; ?>;
-
-		if (index == 1) {
-			$("#button-index-left").css("opacity", "0", "pointer-events", "null");
-		}
-		if (index == maxIndex) {
-			$("#button-index-right").css("opacity", "0", "pointer-events", "null");
-		}
-		if (index == 1 && index == maxIndex) {
-			$("#label-index").css("display", "none");
-			$("#div-index").height(20);
+		if (<?php echo json_encode($download)?>){
+			window.open("../raspberry-zips/<?php echo $_SESSION["username"] ?>.zip", "_self");
+			window.history.pushState('library', 'Title', 'library.php');
+			$('#a-download').click(function(){
+				window.open("../raspberry-zips/<?php echo $_SESSION["username"] ?>.zip", "_self");
+			});
+		} else {
+			$('#a-download').click(function(){
+				startLoad();
+				window.location = (window.location+"").split("?")[0] + "?index=1&download=true";
+			});
 		}
 
-	});
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
+	};
 </script>
 
 </html>

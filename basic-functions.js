@@ -105,10 +105,6 @@ function changeProfileWidth() {
       }, 100);
 
       setTimeout(function () {
-<<<<<<< HEAD
-=======
-        console.log(widthProfileBar);
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
         $("#div-bpoints").css({ display: "inline-block" });
         $("#div-name-type").css({ display: displayName });
         $("#div-name-type").css({ opacity: "1" });
@@ -288,11 +284,7 @@ function getWidth(element) {
 }
 
 /*Ordenar fotos menu principal*/
-<<<<<<< HEAD
 function orderImages(id, minHeight, margin, infoImages, index, maxIndex) {
-=======
-function orderImages(id, minHeight, margin, infoImages) {
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
   var main = document.getElementById(id);
 
   for (var i = 0; i < infoImages.length; i++) {
@@ -307,6 +299,11 @@ function orderImages(id, minHeight, margin, infoImages) {
   var actualImage = 0;
   var totalHeight = margin;
   var imagenesCargadas = 0;
+
+  if(numImages == 0){
+    finishLoad();
+    return 0;
+  }
 
   //Espera a que carguen todas las imagenes
   for (var i = 0; i < numImages; i++) {
@@ -387,7 +384,6 @@ function orderImages(id, minHeight, margin, infoImages) {
             //Cambiar de fila
             else {
               changeRow = true;
-<<<<<<< HEAD
             }
           }
 
@@ -458,15 +454,16 @@ function orderImages(id, minHeight, margin, infoImages) {
         document.getElementById(id).appendChild(divIndex);
 
         if (index == 1) {
-          $("#button-index-left").css("opacity", "0", "pointer-events", "null");
+          $("#button-index-left").css({
+            opacity: "0",
+            "pointer-events": "none",
+          });
         }
         if (index == maxIndex) {
-          $("#button-index-right").css(
-            "opacity",
-            "0",
-            "pointer-events",
-            "null"
-          );
+          $("#button-index-right").css({
+            opacity: "0",
+            "pointer-events": "none",
+          });
         }
         if (index == 1 && index == maxIndex) {
           $("#label-index").css("display", "none");
@@ -512,69 +509,8 @@ function orderImages(id, minHeight, margin, infoImages) {
           window.location.href =
             "../individual-image/individual-image.php?title=" + title;
         });
-=======
-            }
-          }
 
-          //Inserta fila al id enviado
-
-          document.getElementById(id).appendChild(newRow);
-
-          //Ajusta el width de las fotos para un encastre perfecto
-
-          var multiplierToGrow = (idWidth - numImagesRow * margin) / rowWidth;
-
-          $("#image-row-" + actualRow)
-            .find(".img-main")
-            .each(function () {
-              if ($(this).height() * multiplierToGrow <= minHeight * 2) {
-                $(this).css("width", $(this).width() * multiplierToGrow);
-                $(this).css("height", $(this).height() * multiplierToGrow);
-              } else {
-                $(this).css("height", minHeight * 2);
-                $(this).css("width", "auto");
-              }
-              var idDivImgMain = $(this).attr("id");
-              idDivImgMain = idDivImgMain.slice(9);
-              document.getElementById(
-                "div-img-main-" + idDivImgMain
-              ).style.height = $(this).height();
-              document.getElementById(
-                "div-img-main-" + idDivImgMain
-              ).style.width = $(this).width();
-              document.getElementById(
-                "div-gradient-main-" + idDivImgMain
-              ).style.height = $(this).height();
-              document.getElementById(
-                "div-gradient-main-" + idDivImgMain
-              ).style.width = $(this).width();
-              document.getElementById(
-                "div-artist-image-" + idDivImgMain
-              ).style.width = $(this).width() - 50;
-              document.getElementById(
-                "div-title-image-" + idDivImgMain
-              ).style.width = $(this).width() - 50;
-            });
-
-          totalHeight += $("#image-row-" + actualRow).height() + margin;
-        }
-        document.getElementById(id).style.height =
-          totalHeight + document.getElementById("div-index").height;
-        document.getElementById("div-index").style.display = "block";
-        document
-          .getElementById(id)
-          .appendChild(document.getElementById("div-index"));
-
-        //pasar a individual image
-
-        $(".div-gradient-main").click(function () {
-          var title = $(
-            "#div-title-image-" + $(this).attr("id").split("-")[3]
-          ).html();
-          window.location.href =
-            "../individual-image/individual-image.php?title=" + title;
-        });
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
+        finishLoad();
       }
     };
   }
@@ -599,10 +535,7 @@ function deleteImage() {
   $("#input-image").val(null);
 }
 
-<<<<<<< HEAD
 //Acomoda cosas del upload image
-=======
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 function uploadImageOrder() {
   if (window.screen.width < 545) {
     setWidthHeight("img-uploaded", "div-image", 300, 300);
@@ -618,19 +551,38 @@ function uploadImageOrder() {
     $("#div-image-description").width() - $("#div-image").width() - 20
   );
 }
-<<<<<<< HEAD
 
 //Search
 
-$("#button-magnifier").click(function() {
+$("#button-magnifier").click(function () {
   var search = $("#input-search-bar").val();
   window.location.href = "../search/search.php?index=&search=" + search;
 });
 
-$("#form-search").on('submit', function(){
+$("#form-search").on("submit", function () {
   var search = $("#input-search-bar").val();
   window.location.href = "../search/search.php?index=&search=" + search;
   return false;
 });
-=======
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
+
+//Load
+function startLoad(){
+  window.scroll(0,0);
+  load = document.createElement("div");
+  load.id = "div-loader";
+  fondo = document.createElement("div");
+  fondo.id = "div-background-loader";
+  $("html").append(load);
+  $("html").append(fondo);
+  $("html").css("overflow", "hidden");
+}
+
+startLoad();
+
+function finishLoad() {
+  document.getElementById("div-loader").style.display = "none";
+  document.getElementById("div-background-loader").style.display = "none";
+  $("html").css("overflow", "auto");
+  $("body").css("opacity",1);
+  $("body").css("pointer-events","auto");
+}

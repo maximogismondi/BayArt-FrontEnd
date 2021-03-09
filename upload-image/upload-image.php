@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="../styles-general.css">
 	<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<title>BayArt! - Upload Image</title>
+	<title>BayArt! - Upload</title>
 </head>
 <?php
 
@@ -27,8 +27,8 @@ $price = 0;
 $titleErr = $descriptionErr = $priceErr = $imageEncodeErr = $uploadErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	if (!preg_match("/^[a-zA-Z0-9]*$/", $_POST["title"])) {
-		$titleErr = "Only letters, numbers and '-' allowed";
+	if (!preg_match("/^[a-zA-Z0-9_]*$/", $_POST["title"])) {
+		$titleErr = "Only letters, numbers and '_' allowed";
 	}
 	if (strlen(test_input($_POST["tags"])) != 0) {
 		$tags = test_input($_POST["tags"]);
@@ -64,11 +64,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ($titleErr == "" && $descriptionErr == "" && $priceErr == "" && $imageEncodeErr == "" && $uploadErr == "") {
 
 		if ($tags == "") {
-			$API_URL = "http://localhost:8888/api/uploadImage/" . $_SESSION["idUser"] . "/" . $title . "/" . "null" . "/" . $price;
+			$requestBody = json_encode(array("encodedImage" => explode(',', $imageEncode)[1], "description" => $description, "title" => $title, "tags" => "null", "price" => $price));
 		} else {
-			$API_URL = "http://localhost:8888/api/uploadImage/" . $_SESSION["idUser"] . "/" . $title . "/" . $tags . "/" . $price;
+			$requestBody = json_encode(array("encodedImage" => explode(',', $imageEncode)[1], "description" => $description, "title" => $title, "tags" => $tags, "price" => $price));
 		}
-		$requestBody = json_encode(array("encodedImage" => explode(',', $imageEncode)[1], "description" => $description));
+		
+		$API_URL = "http://localhost:8888/api/uploadImage/" . $_SESSION["idUser"];
 		$res = postUrlRequestBody($API_URL, $requestBody);
 		$status = $res[0];
 		$infoResponse = $res[1];
@@ -108,7 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			</button>
 		</div>
 
-<<<<<<< HEAD
 		<form id="form-search" style="display: inline">
 			<div id="div-search-bar">
 
@@ -119,15 +119,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</button>
 			</div>
 		</form>
-=======
-		<div id="div-search-bar">
-			<input id="input-search-bar" type="text">
-
-			<button id="button-magnifier" onclick="location.href='../search/search.php'">
-				<img id="img-magnifier" src="../icons/magnifier.png" class="img-buttons">
-			</button>
-		</div>
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 		<div id="div-secondary-buttons">
 			<a href="../own-profile/own-profile.php" class="a-secondary-buttons" id="a-secondary-button-profile">
@@ -171,10 +162,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		</div>
 
 		<!--Header Secundario-->
-
-		<nav id="nav-subtitle">
-			<h2 id="h2-subtitle">UPLOAD IMAGE</h2>
-		</nav>
 	</header>
 	<main>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="form" name="form-upload-image" onsubmit="return checkTitleAndPrice()">
@@ -216,11 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 							<img src="../icons/arrow.png" class="img-buttons" id="img-arrow">
 							<h3 id="h3-number-filter">0</h3>
-<<<<<<< HEAD
 							<h3 id="h3-filter">TAGS</h3>
-=======
-							<h3 id="h3-filter">FILTERS</h3>
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 						</label>
 
@@ -284,7 +267,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (($("#img-uploaded").attr("src")).length > 0) {
 			uploadImageOrder();
 		}
-
+		finishLoad();
 		editHeader();
 	};
 
@@ -312,21 +295,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	/*Limitar a 3 tags*/
 
-	var bpointsUser = <?php echo $_SESSION["bpoints"] ?>;
+	var bpointsUser = <?php echo $_SESSION["bpoints"]?>;
 
 	function checkTitleAndPrice() {
 		if (bpointsUser < 500) {
 			$("#span-button-uploaded").html("You don't have enought bpoints");
 			return false;
 		} else {
-			$("#span-button-uploaded").html("");
-			if (($("#input-title-image").val()).length > 4) {
-				return true;
-			}
+
 			if (($("#input-title-image").val()).length == 0) {
 				$("#span-title").html("Title is required");
 			} else {
-				$("#span-title").html("The title be over 4 characters")
+				return true;
+
 			}
 
 			return false;
@@ -395,20 +376,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		changeButtonBpoints(true)
 	});
 	$("#button-post").mouseleave(function() {
-		changeButtonBpoints(false)
+		changeButtonBpoints(false)	
 	});
 
 	/*Borrar imagen (se cancela con settings asi que lo ponemos aca)*/
 
 	$("#div-cancel-image").click(function() {
 		$("#input-encode-image").val("");
-		$("#img-uploaded").attr("src","");
+		$("#img-uploaded").attr("src", "");
 		deleteImage();
 	});
-<<<<<<< HEAD
-
-=======
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 </script>
 
 </html>

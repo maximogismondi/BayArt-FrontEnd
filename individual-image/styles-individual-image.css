@@ -1,10 +1,7 @@
 /*ID*/
 
 main {
-<<<<<<< HEAD
   margin-top: 75px !important;
-=======
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
   height: auto !important;
 }
 
@@ -156,7 +153,6 @@ main {
   border: none;
   outline: none;
   float: right;
-<<<<<<< HEAD
 }
 
 #img-bookmark {
@@ -192,43 +188,6 @@ main {
   display: none;
 }
 
-=======
-}
-
-#img-bookmark {
-  height: 45px;
-}
-
-#div-price-number-image {
-  color: white;
-  margin-left: 5px;
-  font-size: 15px;
-  transition: opacity 100ms;
-  font-weight: bold;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/*Class*/
-
-.h4-subtitle {
-  color: white;
-  font-size: 30px;
-  margin: 25px;
-  width: 90%;
-}
-
-.scrollbar-description::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 10px;
-}
-
-.scrollbar-description::-webkit-scrollbar-button:increment,
-.contenedor::-webkit-scrollbar-button {
-  display: none;
-}
-
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 .scrollbar-description::-webkit-scrollbar-thumb {
   background-color: #00a797;
   border-radius: 20px;
@@ -300,11 +259,7 @@ main {
 }
 
 @media (max-width: 890px) {
-<<<<<<< HEAD
   #h4-description {
-=======
-  .h4-subtitle {
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
     font-size: 28px;
   }
 
@@ -314,7 +269,6 @@ main {
 }
 
 @media (max-width: 830px) {
-<<<<<<< HEAD
   #h4-description {
     font-size: 26px;
   }
@@ -339,50 +293,10 @@ main {
     color: white;
     font-size: 22px;
     margin: 20px;
-=======
-  .h4-subtitle {
-    font-size: 26px;
-  }
-
-  #div-description {
-    width: 88%;
-  }
-}
-
-@media (max-width: 810px) {
-  .h4-subtitle {
-    font-size: 24px;
-  }
-
-  #div-description {
-    width: 86%;
-  }
-}
-
-@media (max-width: 790px) {
-  .h4-subtitle {
-    color: white;
-    font-size: 22px;
-    margin: 20px;
     width: 90%;
   }
 
   #div-description {
-    width: 84%;
-  }
-}
-
-@media (max-width: 760px) {
-  .h4-subtitle {
-    color: white;
-    font-size: 20px;
-    margin: 15px;
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
-    width: 90%;
-  }
-
-  #div-description {
-<<<<<<< HEAD
     width: 84%;
   }
 }
@@ -411,49 +325,6 @@ main {
     height: 50%;
     margin-left: 15px;
     overflow-y: auto;
-=======
-    width: 82%;
-  }
-}
-
-@media (max-width: 740px) {
-  .h4-subtitle {
-    font-size: 25px;
-  }
-
-  #div-description {
-    border-top: 3px solid white;
-    width: 95%;
-    height: 50%;
-    margin-left: 15px;
-    overflow-y: auto;
-  }
-}
-
-@media (max-width: 570px) {
-  #div-artist {
-    width: 94% !important;
-  }
-}
-
-@media (max-width: 545px) {
-  main {
-    margin-top: 240px !important;
-  }
-}
-
-@media (max-width: 545px) {
-  #button-buy-image {
-    margin-top: 70px;
-    margin-bottom: 20px;
-    margin-right: calc(50% - 75px);
-  }
-
-  #span-buy-error {
-    width: 210px;
-    margin-top: -2%;
-    margin-left: calc(50% - 105px);
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
   }
 }
 

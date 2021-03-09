@@ -50,23 +50,11 @@
                         $nameErr = "Username is required";
                     } else {
                         $name = test_input($_POST["name"]);
-<<<<<<< HEAD
-                        if (strlen($name) < 6) {
-                            $nameErr = "Username must be over 6 caracters";
+                        if (strlen($name) > 20) {
+                            $nameErr = "Username must be under 20 caracters";
                         } else {
-                            if (strlen($name) > 20) {
-                                $nameErr = "Username must be under 20 caracters";
-=======
-                        if (strlen($name) < 8) {
-                            $nameErr = "Name be over 8 caracters";
-                        } else {
-                            if (strlen($name) > 20) {
-                                $nameErr = "Name need be under 20 caracters";
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
-                            } else {
-                                if (!preg_match("/^[a-zA-Z0-9' ]*$/", $name)) {
-                                    $nameErr = "Only letters and numbers allowed";
-                                }
+                            if (!preg_match("/^[a-zA-Z0-9']*$/", $name)) {
+                                $nameErr = "Only letters and numbers allowed";
                             }
                         }
                     }
@@ -97,11 +85,7 @@
                         $password = test_input($_POST["password"]);
 
                         if (strlen($password) < 8) {
-<<<<<<< HEAD
                             $passwordErr = "Password must be over 8 caracters";
-=======
-                            $passwordErr = "Password be over 8 caracters";
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
                         } else {
                             if (strlen($password) > 20) {
                                 $passwordErr = "Password must be under 20 caracters";
@@ -128,13 +112,10 @@
                     $year  = test_input($_POST["year"]);
                     $userType = test_input($_POST["userType"]);
 
-<<<<<<< HEAD
                     if ($userType != "artist" && $userType != "viewer"){
                         $userType = "artist";
                     }
 
-=======
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
                     if (empty($_POST["day"]) || empty($_POST["month"]) || empty($_POST["year"])) {
                         $calenderErr = "Complete your birth date";
                     } else {
@@ -144,8 +125,9 @@
                     }
 
                     if ($nameErr == "" && $passwordErr == "" && $passwordConfErr == "" && $emailErr == "" && $emailConfErr == "" && $calenderErr == "") {
-                        $API_URL = "http://localhost:8888/api/register/" . $name . "/" . $email . "/" . $password . "/" . $day . "/" . $month . "/" . $year . "/" . $userType;
-                        $res = postURL($API_URL);
+                        $API_URL = "http://localhost:8888/api/register";
+                        $requestBody = json_encode(array("username" => $name, "email" => $email, "password" => $password, "day" => $day, "month" => $month, "year" => $year, "userType" => $userType));
+                        $res = putUrlRequestBody($API_URL, $requestBody);
                         $status = $res[0];
                         $infoResponse = $res[1];
                         $resultado = json_decode($infoResponse, true);
@@ -162,33 +144,20 @@
                             $_SESSION["notificationsNewPublication"] = $resultado["user"]["notificationsNewPublication"];
                             $_SESSION["notificationsBuyAlert"]       = $resultado["user"]["notificationsBuyAlert"];
                             $_SESSION["notificationsInformSponsor"]  = $resultado["user"]["notificationsInformSponsor"];
-<<<<<<< HEAD
 
                             $_SESSION["srcProfilePicture"] = "../images/profileImages/" . $_SESSION["username"] . getExtension($resultado["encodedProfilePicture"][0]);
                             saveImage("../images/profileImages/", $_SESSION["username"], $resultado["encodedProfilePicture"]);
-=======
-                            
-                            $_SESSION["srcProfilePicture"] = "../images/profileImages/" . $_SESSION["username"] . getExtension($resultado["encodedProfilePicture"][0]);
-                            saveImage("../images/profileImages/", $_SESSION["username"], $_SESSION["encodedProfilePicture"]);
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
                             if (sizeof($resultado) == 2) {
                                 $_SESSION["userType"]  = "viewer";
                             } else {
                                 $_SESSION["userType"]  = "artist";
-<<<<<<< HEAD
                                 $_SESSION["srcBanner"] = "../images/profileBanner/" . $_SESSION["username"] . getExtension($resultado["encodedBanner"][0]);;
-                                $_SESSION["notificationsInformSponsor"]  = $resultado["artist"]["notificationsInformSponsor"];
-                                $_SESSION["notificationsNewPublication"] = $resultado["artist"]["notificationsNewPublication"];
+                                $_SESSION["notificationsNewSub"]  = $resultado["artist"]["notificationsNewSub"];
+                                $_SESSION["notificationsSell"]    = $resultado["artist"]["notificationsSell"];
+                                $_SESSION["notificationsSponsor"] = $resultado["artist"]["notificationsSponsor"];    
 
                                 saveImage("../images/profileBanner/", $_SESSION["username"], $resultado["encodedBanner"]);
-=======
-                                $_SESSION["srcBanner"] = "..images/profileImages/" . $_SESSION["username"] . getExtension($resultado["encodedBanner"][0]);;
-                                $_SESSION["notificationsInformSponsor"]  = $resultado["artist"]["notificationsInformSponsor"];
-                                $_SESSION["notificationsNewPublication"] = $resultado["artist"]["notificationsNewPublication"];
-
-                                saveImage("../images/artistsBanners/", $_SESSION["username"], $_SESSION["encodedBanner"]);
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
                             }
 
                             header('Location: ' . "../browse/browse.php");
@@ -235,13 +204,7 @@
                     <div>
                         <button class="button-register" type="submit">REGISTER</button>
                     </div>
-<<<<<<< HEAD
                     <input id="userType" type="hidden" name="userType" class="php-variables" value="<?php echo $userType ?>">
-=======
-                    <div style=" display: none;">
-                        <input id="userType" name="userType" class="php-variables" value="artist">
-                    </div>
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
                 </form>
                 </div>
                 <div id="div-waves">
@@ -285,13 +248,12 @@
 
         $("#buttom-artist").click(cambiarFondoArtista);
         $("#buttom-viewer").click(cambiarFondoEspectador);
-<<<<<<< HEAD
 
         if (<?php echo json_encode($userType) ?> == "viewer") {
             cambiarFondoEspectador();
         }
-=======
->>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
+
+        finishLoad();
     </script>
 
 </html>
