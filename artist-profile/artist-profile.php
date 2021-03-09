@@ -116,6 +116,7 @@ if ($status == 200) { // ok
 
 		</div>
 
+<<<<<<< HEAD
 		<form id="form-search" style="display: inline">
 			<div id="div-search-bar">
 
@@ -126,6 +127,15 @@ if ($status == 200) { // ok
 				</button>
 			</div>
 		</form>
+=======
+		<div id="div-search-bar">
+			<input id="input-search-bar" type="text">
+
+			<button id="button-magnifier" onclick="location.href='../search/search.php'">
+				<img id="img-magnifier" src="../icons/magnifier.png" class="img-buttons">
+			</button>
+		</div>
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 		<div id="div-secondary-buttons">
 			<a href="../own-profile/own-profile.php" class="a-secondary-buttons" id="a-secondary-button-profile">
@@ -157,6 +167,7 @@ if ($status == 200) { // ok
 
 			<div id="div-bpoints">
 				<img src="../icons/bpoints.png" id="img-bpoints">
+<<<<<<< HEAD
 				<label id="label-bpoints"><?php echo $_SESSION["bpoints"] ?></label>
 			</div>
 			<div id="div-name-type">
@@ -165,6 +176,16 @@ if ($status == 200) { // ok
 			</div>
 
 			<img src="<?php echo $_SESSION["srcProfilePicture"] ?>" id="profile-picture">
+=======
+				<label id="label-bpoints"><?php echo $_SESSION["bpoints"]?></label>
+			</div>
+			<div id="div-name-type">
+				<label id="label-name"><?php echo $_SESSION["username"]?></label><br>
+				<label id="label-type" style="color: #674ea7 !important;"><?php echo $_SESSION["userType"]; ?></label>
+			</div>
+
+			<img src="<?php echo $_SESSION["srcProfilePicture"]?>" id="profile-picture">
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 		</div>
 
 	</header>
@@ -189,9 +210,21 @@ if ($status == 200) { // ok
 		</div>
 	</main>
 
+<<<<<<< HEAD
 	<main id="main-images">
 	</main>
 
+=======
+	<main id="main-bottom">
+	</main>
+
+	<div id="div-index">
+		<button id="button-index-left" class="button-index" type="submit">
+			< </button> <label id="label-index"><?php echo $index ?></label>
+				<button id="button-index-right" class="button-index" type="submit"> > </button>
+	</div>
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 	<div id="div-pop-up-background"></div>
 
 	<!--POPS UPS-->
@@ -205,7 +238,11 @@ if ($status == 200) { // ok
 			<h4>Are you sure you want to subscribe?</h4>
 			<h4>You will have a 20% discount on artist purchases and it will appear on the homepage</h4>
 			<h4 id="span-sub-error" class="error">You don't have enought bpoint to subscribe to this artists</h4>
+<<<<<<< HEAD
 			<button id="button-artist-profile-subscribe" class="button-submit">
+=======
+			<button id="button-artist-profile-subscribe" type="submit" class="button-submit">
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 				<img src="../icons/bpoints.png" id="button-img-bpoints">
 				<div id="div-price-number">200</div>
 			</button>
@@ -216,7 +253,11 @@ if ($status == 200) { // ok
 			<h4>Are you sure you want to leave?</h4>
 			<h4>This action cannot be undone</h4>
 			<h4>To re-subscribe you must pay again</h4>
+<<<<<<< HEAD
 			<button id="button-artist-profile-leave" class="button-submit">
+=======
+			<button id="button-artist-profile-leave" type="submit" class="button-submit">
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 				<div id="div-leave">LEAVE</div>
 			</button>
 		</div>
@@ -230,7 +271,11 @@ if ($status == 200) { // ok
 				<div id="div-price">
 					<h4>To invest</h4>
 					<div>
+<<<<<<< HEAD
 						<input id="input-price" type="number" min="1" max="<?php echo $_SESSION["bpoints"] ?>" value="0" style="font-size: 15">
+=======
+						<input id="input-price" type="number" min="1" max="<?php echo $_SESSION["bpoints"] ?>" value="1" style="font-size: 15">
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 						<img src="../icons/bpoints.png" id="img-bpoints-price">
 					</div>
 					<h4 id="h4-sponsor" style="margin-left: 0">0%</h4>
@@ -259,7 +304,10 @@ if ($status == 200) { // ok
 	var isSub = <?php echo $isSub ?>;
 	var sponsor = <?php echo $sponsor ?>;
 	var mensageSub, mensageSponsor = "";
+<<<<<<< HEAD
 	var host = window.location["host"];
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 	function changeButtonArtistProfile(shown, name) {
 		if (shown) {
@@ -323,6 +371,7 @@ if ($status == 200) { // ok
 	$(document).ready(function() {
 
 		var infoImages = <?php echo json_encode($infoImages); ?>;
+<<<<<<< HEAD
 		var index = <?php echo $index ?>;
 		var maxIndex = <?php echo $_SESSION["maxIndex"]; ?>;
 
@@ -332,6 +381,15 @@ if ($status == 200) { // ok
 			orderImages("main-images", 150, 15, infoImages, index, maxIndex);
 		} else {
 			orderImages("main-images", 100, 10, infoImages, index, maxIndex);
+=======
+
+		if (window.screen.width > 1000) {
+			orderImages("main-bottom", 200, 20, infoImages);
+		} else if (window.screen.width > 500) {
+			orderImages("main-bottom", 150, 15, infoImages);
+		} else {
+			orderImages("main-bottom", 100, 10, infoImages);
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 		}
 
 		editHeader();
@@ -350,6 +408,34 @@ if ($status == 200) { // ok
 			mensageSponsor = "SPONSOR";
 		}
 
+<<<<<<< HEAD
+=======
+		var index = <?php echo $index ?>;
+
+		$("#button-index-left").click(function() {
+			index--;
+			window.location.href = "artist-profile.php?artist=<?php echo $_GET["artist"] ?>&index=" + index;
+		});
+
+		$("#button-index-right").click(function() {
+			index++;
+			window.location.href = "artist-profile.php?artist=<?php echo $_GET["artist"] ?>&index=" + index;
+		});
+
+		var maxIndex = <?php echo $_SESSION["maxIndex"]; ?>;
+
+		if (index == 1) {
+			$("#button-index-left").css("opacity", "0", "pointer-events", "null");
+		}
+		if (index == maxIndex) {
+			$("#button-index-right").css("opacity", "0", "pointer-events", "null");
+		}
+		if (index == 1 && index == maxIndex) {
+			$("#label-index").css("display", "none");
+			$("#div-index").height(20);
+		}
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 		var bPointsInt = parseInt($("#div-sponsors-number").text());
 
 		if (bPointsInt >= 1000000) {
@@ -387,10 +473,17 @@ if ($status == 200) { // ok
 
 		$("#button-artist-profile-leave").click(function() {
 			$.ajax({
+<<<<<<< HEAD
 				url: "http://"+host+":8888/api/stopSubscription/" + idUser + "/" + idArtist,
 				type: 'POST',
 				success: function(json) {
 					window.location.href = "artist-profile.php?index=&artist=<?php echo $_GET["artist"] ?>";
+=======
+				url: "http://localhost:8888/api/stopSubscription/" + idUser + "/" + idArtist,
+				type: 'POST',
+				success: function(json) {
+					window.location.href = "artist-profile.php?artist=<?php echo $_GET["artist"] ?>";
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 				}
 			});
 		});
@@ -398,10 +491,17 @@ if ($status == 200) { // ok
 		$("#button-artist-profile-subscribe").click(function() {
 			if (bpoints - 200 >= 0) {
 				$.ajax({
+<<<<<<< HEAD
 					url: "http://"+host+":8888/api/subscribe/" + idUser + "/" + idArtist,
 					type: 'POST',
 					success: function(json) {
 						window.location.href = "artist-profile.php?index=&artist=<?php echo $_GET["artist"] ?>";
+=======
+					url: "http://localhost:8888/api/subscribe/" + idUser + "/" + idArtist,
+					type: 'POST',
+					success: function(json) {
+						window.location.href = "artist-profile.php?artist=<?php echo $_GET["artist"] ?>";
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 					}
 				});
 			} else {
@@ -430,10 +530,18 @@ if ($status == 200) { // ok
 		$("#button-artist-profile-sponsor").click(function() {
 			if (sponsor <= bpoints && sponsor > 0) {
 				$.ajax({
+<<<<<<< HEAD
 					url: "http://"+host+":8888/api/sponsor/" + idUser + "/" + idArtist + "/" + $("#input-price").val(),
 					type: 'POST',
 					success: function(json) {
 						window.location.href = "artist-profile.php?index=&artist=<?php echo $_GET["artist"] ?>";
+=======
+					url: "http://localhost:8888/api/sponsor/" + idUser + "/" + idArtist + "/" + $("#input-price").val(),
+					type: 'POST',
+
+					success: function(json) {
+						window.location.href = "artist-profile.php?artist=<?php echo $_GET["artist"] ?>";
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 					}
 				});
 			}
@@ -441,10 +549,18 @@ if ($status == 200) { // ok
 
 		$("#button-artist-profile-withdraw").click(function() {
 			$.ajax({
+<<<<<<< HEAD
 				url: "http://"+host+":8888/api/stopSponsor/" + idUser + "/" + idArtist,
 				type: 'POST',
 				success: function(json) {
 					window.location.href = "artist-profile.php?index=&artist=<?php echo $_GET["artist"] ?>";
+=======
+				url: "http://localhost:8888/api/stopSponsor/" + idUser + "/" + idArtist,
+				type: 'POST',
+
+				success: function(json) {
+					window.location.href = "artist-profile.php?artist=<?php echo $_GET["artist"] ?>";
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 				}
 			});
 		});
@@ -492,7 +608,10 @@ if ($status == 200) { // ok
 	$("#button-artist-profile-subscribe").mouseleave(function() {
 		changeButtonBpoints(false)
 	});
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 </script>
 
 </html>

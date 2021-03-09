@@ -193,7 +193,11 @@ button {
   margin-left: 33px;
 }
 
+<<<<<<< HEAD
 #nav-subtitle,#nav-carrousel-artists {
+=======
+#nav-subtitle {
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
   background-color: #3d3d3d;
   border-radius: 15px;
   transition: margin 1s, opacity 1s;
@@ -264,6 +268,10 @@ button {
   width: 100%;
   height: 100px;
   text-align: center;
+<<<<<<< HEAD
+=======
+  display: none;
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 }
 
 #label-index {
@@ -421,6 +429,7 @@ button {
   background-color: #674ea7;
 }
 
+<<<<<<< HEAD
 .button-submit {
   color: white;
   background: #674ea7;
@@ -438,6 +447,8 @@ button {
   border: 2px solid white;
 }
 
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 .error {
   font-size: 13px;
   position: absolute;
@@ -450,7 +461,11 @@ button {
 /*_________________________________HEADER________________________________________*/
 
 @media (min-width: 545px) {
+<<<<<<< HEAD
   #nav-subtitle,#nav-carrousel-artists {
+=======
+  #nav-subtitle {
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
     margin-top: 20px;
   }
 }

@@ -105,6 +105,10 @@ function changeProfileWidth() {
       }, 100);
 
       setTimeout(function () {
+<<<<<<< HEAD
+=======
+        console.log(widthProfileBar);
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
         $("#div-bpoints").css({ display: "inline-block" });
         $("#div-name-type").css({ display: displayName });
         $("#div-name-type").css({ opacity: "1" });
@@ -284,7 +288,11 @@ function getWidth(element) {
 }
 
 /*Ordenar fotos menu principal*/
+<<<<<<< HEAD
 function orderImages(id, minHeight, margin, infoImages, index, maxIndex) {
+=======
+function orderImages(id, minHeight, margin, infoImages) {
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
   var main = document.getElementById(id);
 
   for (var i = 0; i < infoImages.length; i++) {
@@ -379,6 +387,7 @@ function orderImages(id, minHeight, margin, infoImages, index, maxIndex) {
             //Cambiar de fila
             else {
               changeRow = true;
+<<<<<<< HEAD
             }
           }
 
@@ -503,6 +512,69 @@ function orderImages(id, minHeight, margin, infoImages, index, maxIndex) {
           window.location.href =
             "../individual-image/individual-image.php?title=" + title;
         });
+=======
+            }
+          }
+
+          //Inserta fila al id enviado
+
+          document.getElementById(id).appendChild(newRow);
+
+          //Ajusta el width de las fotos para un encastre perfecto
+
+          var multiplierToGrow = (idWidth - numImagesRow * margin) / rowWidth;
+
+          $("#image-row-" + actualRow)
+            .find(".img-main")
+            .each(function () {
+              if ($(this).height() * multiplierToGrow <= minHeight * 2) {
+                $(this).css("width", $(this).width() * multiplierToGrow);
+                $(this).css("height", $(this).height() * multiplierToGrow);
+              } else {
+                $(this).css("height", minHeight * 2);
+                $(this).css("width", "auto");
+              }
+              var idDivImgMain = $(this).attr("id");
+              idDivImgMain = idDivImgMain.slice(9);
+              document.getElementById(
+                "div-img-main-" + idDivImgMain
+              ).style.height = $(this).height();
+              document.getElementById(
+                "div-img-main-" + idDivImgMain
+              ).style.width = $(this).width();
+              document.getElementById(
+                "div-gradient-main-" + idDivImgMain
+              ).style.height = $(this).height();
+              document.getElementById(
+                "div-gradient-main-" + idDivImgMain
+              ).style.width = $(this).width();
+              document.getElementById(
+                "div-artist-image-" + idDivImgMain
+              ).style.width = $(this).width() - 50;
+              document.getElementById(
+                "div-title-image-" + idDivImgMain
+              ).style.width = $(this).width() - 50;
+            });
+
+          totalHeight += $("#image-row-" + actualRow).height() + margin;
+        }
+        document.getElementById(id).style.height =
+          totalHeight + document.getElementById("div-index").height;
+        document.getElementById("div-index").style.display = "block";
+        document
+          .getElementById(id)
+          .appendChild(document.getElementById("div-index"));
+
+        //pasar a individual image
+
+        $(".div-gradient-main").click(function () {
+          var title = $(
+            "#div-title-image-" + $(this).attr("id").split("-")[3]
+          ).html();
+          window.location.href =
+            "../individual-image/individual-image.php?title=" + title;
+        });
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
       }
     };
   }
@@ -527,7 +599,10 @@ function deleteImage() {
   $("#input-image").val(null);
 }
 
+<<<<<<< HEAD
 //Acomoda cosas del upload image
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 function uploadImageOrder() {
   if (window.screen.width < 545) {
     setWidthHeight("img-uploaded", "div-image", 300, 300);
@@ -543,6 +618,7 @@ function uploadImageOrder() {
     $("#div-image-description").width() - $("#div-image").width() - 20
   );
 }
+<<<<<<< HEAD
 
 //Search
 
@@ -556,3 +632,5 @@ $("#form-search").on('submit', function(){
   window.location.href = "../search/search.php?index=&search=" + search;
   return false;
 });
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d

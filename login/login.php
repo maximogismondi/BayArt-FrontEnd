@@ -102,15 +102,27 @@
                 $_SESSION["notificationsInformSponsor"]  = $resultado["user"]["notificationsInformSponsor"];
                 
                 $_SESSION["srcProfilePicture"] = "../images/profileImages/" . $_SESSION["username"] . getExtension($resultado["encodedProfilePicture"][0]);
+<<<<<<< HEAD
                 saveImage("../images/profileImages/", $_SESSION["username"], $resultado["encodedProfilePicture"]);
+=======
+                saveImage("../images/profileImages/", $_SESSION["username"], $_SESSION["encodedProfilePicture"]);
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
                 if (sizeof($resultado) == 2) {
                     $_SESSION["userType"]  = "viewer";
                 } else {
                     $_SESSION["userType"]  = "artist";
+<<<<<<< HEAD
                     $_SESSION["srcBanner"] = "../images/profileBanner/" . $_SESSION["username"] . getExtension($resultado["encodedBanner"][0]);;                    
 
                     saveImage("../images/profileBanner/", $_SESSION["username"], $resultado["encodedBanner"]);
+=======
+                    $_SESSION["srcBanner"] = "..images/profileImages/" . $_SESSION["username"] . getExtension($resultado["encodedBanner"][0]);;
+                    $_SESSION["notificationsInformSponsor"]  = $resultado["artist"]["notificationsInformSponsor"];
+                    $_SESSION["notificationsNewPublication"] = $resultado["artist"]["notificationsNewPublication"];
+
+                    saveImage("../images/artistsBanners/", $_SESSION["username"], $_SESSION["encodedBanner"]);
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
                 }
 
                 header('Location: ' . "../homepage/homepage.php");

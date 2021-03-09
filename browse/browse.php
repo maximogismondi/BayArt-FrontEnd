@@ -58,6 +58,10 @@ $infoResponse = $res[1];
 $resultado = json_decode($infoResponse, true);
 
 $infoImages = array();
+<<<<<<< HEAD
+=======
+$infoProfileImages = array();
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 if ($status == 200) { // ok
 
@@ -119,6 +123,7 @@ if ($status == 200) { // ok
 
 		</div>
 
+<<<<<<< HEAD
 		<form id="form-search" style="display: inline">
 			<div id="div-search-bar">
 
@@ -129,6 +134,15 @@ if ($status == 200) { // ok
 				</button>
 			</div>
 		</form>
+=======
+		<div id="div-search-bar">
+			<input id="input-search-bar" type="text">
+
+			<button id="button-magnifier" onclick="location.href='../search/search.php'">
+				<img id="img-magnifier" src="../icons/magnifier.png" class="img-buttons">
+			</button>
+		</div>
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 		<div id="div-secondary-buttons">
 			<a href="../own-profile/own-profile.php" class="a-secondary-buttons" id="a-secondary-button-profile">
@@ -157,6 +171,10 @@ if ($status == 200) { // ok
 		</div>
 
 		<div id="div-profile">
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 			<div id="div-bpoints">
 				<img src="../icons/bpoints.png" id="img-bpoints">
 				<label id="label-bpoints"><?php echo $_SESSION["bpoints"] ?></label>
@@ -215,6 +233,15 @@ if ($status == 200) { // ok
 	<main id="main-images">
 	</main>
 
+<<<<<<< HEAD
+=======
+	<div id="div-index">
+		<button id="button-index-left" class="button-index" type="submit">
+			< </button> <label id="label-index"><?php echo $index ?></label>
+				<button id="button-index-right" class="button-index" type="submit"> > </button>
+	</div>
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 </body>
 
 <script src="../jquery.js"></script>
@@ -226,20 +253,57 @@ if ($status == 200) { // ok
 	window.onload = function() {
 
 		var infoImages = <?php echo json_encode($infoImages) ?>;
+<<<<<<< HEAD
 		var maxIndex = <?php echo $_SESSION["maxIndex"]; ?>;
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 		/*Order Main Images*/
 
 		if (window.screen.width > 1000) {
+<<<<<<< HEAD
 			orderImages("main-images", 200, 20, infoImages, index, maxIndex);
 		} else if (window.screen.width > 500) {
 			orderImages("main-images", 150, 15, infoImages, index, maxIndex);
 		} else {
 			orderImages("main-images", 100, 10, infoImages, index, maxIndex);
+=======
+			orderImages("main-images", 200, 20, infoImages);
+		} else if (window.screen.width > 500) {
+			orderImages("main-images", 150, 15, infoImages);
+		} else {
+			orderImages("main-images", 100, 10, infoImages);
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 		}
 
 		editHeader();
 
+<<<<<<< HEAD
+=======
+		$("#button-index-left").click(function() {
+			index--;
+			window.location.href = "browse.php?index=" + index + "&tags=" + $("#input-tags").val();
+		});
+
+		$("#button-index-right").click(function() {
+			index++;
+			window.location.href = "browse.php?index=" + index + "&tags=" + $("#input-tags").val();
+		});
+
+		var maxIndex = <?php echo $_SESSION["maxIndex"]; ?>;
+
+		if (index == 1) {
+			$("#button-index-left").css("opacity", "0", "pointer-events", "null");
+		}
+		if (index == maxIndex) {
+			$("#button-index-right").css("opacity", "0", "pointer-events", "null");
+		}
+		if (index == 1 && index == maxIndex) {
+			$("#label-index").css("display", "none");
+			$("#div-index").height(20);
+		}
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 	};
 
 	var tagList = [];
@@ -260,23 +324,33 @@ if ($status == 200) { // ok
 
 		if (!$(this).prop('checked')) {
 			tagList.splice(tagList.indexOf(idCheckBox.split('-')[0]), 1);
+<<<<<<< HEAD
 			if (tagList.length == 0) {
 				tagList = "null";
 			}
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 		} else {
 			tagList.push(idCheckBox.split('-')[0]);
 		}
 
 		$("#input-tags").val(tagList);
 
+<<<<<<< HEAD
 		window.location.href = "browse.php?index=&tags=" + $("#input-tags").val();
+=======
+		window.location.href = "browse.php?tags=" + $("#input-tags").val();
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 	});
 
 	if (<?php echo json_encode($openFilters) ?>) {
 		changeArrow();
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 </script>
 
 </html>

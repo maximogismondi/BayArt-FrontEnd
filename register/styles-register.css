@@ -1,0 +1,295 @@
+body {
+  overflow-x: hidden;
+}
+
+span {
+  font-size: 13px;
+  position: absolute;
+  margin-top: -25px;
+  color: #c02925;
+  margin-left: 30px;
+}
+
+/*ID*/
+#div-all {
+  background: #00a797;
+  width: 580px;
+  height: 520px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 10;
+  outline: 3px solid #242424;
+}
+#a-back {
+  color: #7c7c7c;
+  font-size: 40px;
+  margin: 0px 20px;
+  transition: 0.4s;
+  text-decoration: none;
+}
+#a-back:hover {
+  color: #674ea7;
+}
+
+#div-buttons-choice {
+  background: #242424;
+}
+
+#buttom-viewer {
+  background: #674ea7;
+  height: 30px;
+}
+
+#buttom-artist {
+  background: #00a797;
+  height: 40px;
+}
+
+#form-register {
+  background: #3d3d3d;
+  border: 2px solid #3d3d3d;
+  height: 420px;
+  margin: 30px;
+}
+
+.div-inputs {
+  border-bottom: 1px solid white;
+  margin: 30px 30px;
+  display: block;
+}
+
+#img-eye {
+  width: 30px;
+  height: 20px;
+  margin-top: -5px;
+  float: right;
+}
+
+#div-date {
+  margin: 0px 30px;
+  display: block;
+}
+
+#input-day {
+  border-bottom: 1px solid white;
+  width: 32%;
+  margin: auto 0px;
+}
+#input-year {
+  border-bottom: 1px solid white;
+  width: 32%;
+  margin: auto 0px;
+}
+#input-month {
+  border-bottom: 1px solid white;
+  width: 32%;
+  margin: auto 2.5px;
+}
+
+/*Class*/
+
+.button-users {
+  color: #242424;
+  margin: 0px;
+  width: 100px;
+  font-size: 15px;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.input-register {
+  color: white;
+  width: 370px;
+  font-size: 15px;
+  border: none;
+  background: none;
+}
+
+.button-register {
+  color: #242424;
+  background: #00a797;
+  margin: 50px 335px;
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  border: none;
+}
+
+/**/
+#div-waves {
+  /*Flexbox for containers*/
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  z-index: 0;
+}
+
+#svg-waves {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 250px;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+/*celu*/
+/*mientras este debajo de 700px de ancho pasa esto // mientras este por encima de 500px de ancho pasa esto*/
+@media (max-width: 750px) {
+  #div-all {
+    width: 450px;
+    height: 520px;
+  }
+
+  #form-register {
+    height: 438px;
+    margin: 20px;
+  }
+
+  .input-register {
+    width: 315px;
+  }
+
+  #input-month {
+    margin: auto 0.5px;
+  }
+
+  .button-register {
+    margin: 60px 250px;
+  }
+}
+
+@media (max-width: 500px) {
+  #div-all {
+    width: 400px;
+    height: 510px;
+  }
+
+  #form-register {
+    height: 435px;
+    margin: 15px;
+  }
+
+  .input-register {
+    width: 305px;
+  }
+
+  #img-eye {
+    margin-top: -22px;
+  }
+
+  #input-month {
+    margin: auto 0.5px;
+  }
+
+  .button-register {
+    margin: 60px 235px;
+  }
+}
+
+@media (max-width: 450px) {
+  #div-all {
+    width: 350px;
+    height: 500px;
+  }
+
+  #form-register {
+    height: 435px;
+    margin: 10px;
+  }
+
+  .input-register {
+    width: 300px;
+  }
+
+  #img-eye {
+    margin-top: -22px;
+  }
+
+  #input-month {
+    margin: auto 0px;
+  }
+
+  #input-day {
+    width: 31.5%;
+  }
+
+  #input-year {
+    width: 31.5%;
+  }
+
+  .button-register {
+    margin: 60px 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  #div-all {
+    width: 330px;
+    height: 500px;
+  }
+
+  #form-register {
+    height: 435px;
+    margin: 10px;
+  }
+
+  .input-register {
+    width: 300px;
+  }
+
+  #img-eye {
+    margin-top: -22px;
+  }
+
+  #input-month {
+    margin: auto 0px;
+  }
+
+  .button-register {
+    margin: 60px 180px;
+  }
+}

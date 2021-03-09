@@ -1,11 +1,19 @@
 <html>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 <head>
 	<link rel="shortcut icon" href="../icons/icon-viewer.png" />
 	<link rel="stylesheet" href="styles-individual-image.css">
 	<link rel="stylesheet" href="../styles-general.css">
 	<meta http-equiv="Content-Type" content=”text/html; charset=UTF-8″ />
 	<meta name="viewport" content="width=device-width, user-scalable=no">
+<<<<<<< HEAD
 	<title>BayArt! - Image</title>
+=======
+	<title>BayArt! - Bolivian Yoda</title>
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 </head>
 
 <?php
@@ -57,10 +65,17 @@ if ($status == 200) { //ok
 		$price = "<s>" . $price . "</s> " . ($price * 0.8);
 	}
 
+<<<<<<< HEAD
 	if ($artist["username"] == $_SESSION["username"]) {
 		$hrefArtist = " ../own-profile/own-profile.php";
 	} else {
 		$hrefArtist = " ../artist-profile/artist-profile.php?index=&artist=" . $artist["username"];
+=======
+	if($artist["username"] == $_SESSION["username"]){
+		$hrefArtist = " ../own-profile/own-profile.php";
+	} else {
+		$hrefArtist = " ../artist-profile/artist-profile.php?artist=" . $artist["username"];
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 	}
 }
 
@@ -89,6 +104,7 @@ if ($status == 200) { //ok
 
 		</div>
 
+<<<<<<< HEAD
 		<form id="form-search" style="display: inline">
 			<div id="div-search-bar">
 
@@ -99,6 +115,15 @@ if ($status == 200) { //ok
 				</button>
 			</div>
 		</form>
+=======
+		<div id="div-search-bar">
+			<input id="input-search-bar" type="text">
+
+			<button id="button-magnifier" onclick="location.href='../search/search.php'">
+				<img id="img-magnifier" src="../icons/magnifier.png" class="img-buttons">
+			</button>
+		</div>
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 		<div id="div-secondary-buttons">
 			<a href="../own-profile/own-profile.php" class="a-secondary-buttons" id="a-secondary-button-profile">
@@ -140,6 +165,15 @@ if ($status == 200) { //ok
 			<img src="<?php echo $_SESSION["srcProfilePicture"] ?>" id="profile-picture">
 		</div>
 
+<<<<<<< HEAD
+=======
+		<!--Header Secundario-->
+
+		<nav id="nav-subtitle">
+			<h2 id="h2-subtitle">Bolivian Yoda</h2>
+		</nav>
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 	</header>
 	<main>
 		<div id="div-title-image">
@@ -155,7 +189,11 @@ if ($status == 200) { //ok
 					<img src="<?php echo $srcImage ?>" id="img-image">
 				</div>
 				<div id="div-title-description">
+<<<<<<< HEAD
 					<h4 id="h4-description">Description</h4>
+=======
+					<h4 class="h4-subtitle">Description</h4>
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 					<div id="div-description" class="scrollbar-description">
 						<p id="p-description">
 							<?php echo $image["description"] ?>
@@ -171,7 +209,11 @@ if ($status == 200) { //ok
 					<h4 id="h4-username-artist"><?php echo $artist["username"] ?></h4>
 				</a>
 				<button id="button-bookmark">
+<<<<<<< HEAD
 					<img src="../icons/bookmark-disable.png" id="img-bookmark">
+=======
+					<img src="../icons/bookmarks.png" id="img-bookmark">
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 				</button>
 			</div>
 			<button id="button-buy-image" type="submit">
@@ -195,7 +237,10 @@ if ($status == 200) { //ok
 	var idImage = <?php echo $image['idImage'] ?>;
 	var price = <?php echo $image["price"] ?>;
 	var bpoints = <?php echo $_SESSION["bpoints"] ?>;
+<<<<<<< HEAD
 	var host = window.location["host"];
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 	if (<?php echo $subscribed ?>) {
 		price = price * 0.8;
@@ -208,6 +253,7 @@ if ($status == 200) { //ok
 	/*cambiar boton de lista de deseados*/
 	var bookmark = <?php echo json_encode($bookmark) ?>;
 	if (bookmark) {
+<<<<<<< HEAD
 		$("#img-bookmark").attr("src", "../icons/bookmark.png");
 	}
 
@@ -230,6 +276,34 @@ if ($status == 200) { //ok
 					$("#img-bookmark").attr("src", "../icons/bookmark-disable.png");
 					bookmark = !bookmark;
 				}
+=======
+		$("#img-bookmark").attr("src", "../icons/bookmark-disable.png");
+	} else {
+		$("#img-bookmark").attr("src", "../icons/bookmarks.png");
+	}
+
+
+	$("#button-bookmark").click(function() {
+		if (!bookmark) {
+			$.ajax({
+				url: "http://localhost:8888/api/action/" + idUser + "/" + idImage + "/addBookmark",
+				type: 'POST',
+				success: function(json) {
+					$("#img-bookmark").attr("src", "../icons/bookmark-disable.png");
+					bookmark = !bookmark;
+				}
+			});
+		} else {
+			$.ajax({
+
+				url: "http://localhost:8888/api/action/" + idUser + "/" + idImage + "/removeBookmark",
+				type: 'POST',
+				success: function(json) {
+					$("#img-bookmark").attr("src", "../icons/bookmarks.png");
+					bookmark = !bookmark;
+				}
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 			});
 		}
 	});
@@ -238,7 +312,11 @@ if ($status == 200) { //ok
 
 		if (bpoints > price) {
 			$.ajax({
+<<<<<<< HEAD
 				url: "http://"+host+":8888/api/action/" + idUser + "/" + idImage + "/buy",
+=======
+				url: "http://localhost:8888/api/action/" + idUser + "/" + idImage + "/buy",
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 				type: 'POST',
 				success: function(json) {
 					window.location.href = "../library/library.php";
@@ -359,7 +437,10 @@ if ($status == 200) { //ok
 	$("#button-buy-image").mouseleave(function() {
 		changeButtonBpoints(false)
 	});
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 </script>
 
 </html>

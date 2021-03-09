@@ -130,6 +130,7 @@ if ($status == 200) {
 			</button>
 
 		</div>
+<<<<<<< HEAD
 		
 		<form id="form-search" style="display: inline">
 			<div id="div-search-bar">
@@ -141,6 +142,16 @@ if ($status == 200) {
 				</button>
 			</div>
 		</form>
+=======
+
+		<div id="div-search-bar">
+			<input id="input-search-bar" type="text">
+
+			<button id="button-magnifier" onclick="location.href='../search/search.php'">
+				<img id="img-magnifier" src="../icons/magnifier.png" class="img-buttons">
+			</button>
+		</div>
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 		<div id="div-secondary-buttons">
 			<a href="../own-profile/own-profile.php" class="a-secondary-buttons" id="a-secondary-button-profile">
@@ -200,6 +211,15 @@ if ($status == 200) {
 	<main id="main-images">
 	</main>
 
+<<<<<<< HEAD
+=======
+	<div id="div-index">
+		<button id="button-index-left" class="button-index" type="submit">
+			< </button> <label id="label-index"><?php echo $index ?></label>
+				<button id="button-index-right" class="button-index" type="submit"> > </button>
+	</div>
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 	<div id="div-pop-up-background">
 	</div>
 
@@ -250,7 +270,11 @@ if ($status == 200) {
 	</div>
 </body>
 <script src="../jquery.js"></script>
+<<<<<<< HEAD
 <script src="../caroucel-profiles.js"></script>
+=======
+<script src="caroucel-profiles.js"></script>
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 <script src="../basic-functions.js"></script>
 
 <script>
@@ -338,7 +362,11 @@ if ($status == 200) {
 				label.id = "label-carrousel-artist-" + artistsCarrousel[i][1];
 				label.innerHTML = artistsCarrousel[i][1];
 				label.style.color = "white";
+<<<<<<< HEAD
 				label.style.fontSize = "12px";
+=======
+				label.style.fontSize = "15px";
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 				label.style.fontWeight = "bold";
 				label.style.display = "none";
 				label.style.display = "none";
@@ -360,7 +388,11 @@ if ($status == 200) {
 			});
 
 			$(".div-profile-image-carrousel").click(function() {
+<<<<<<< HEAD
 				window.location.href = "../artist-profile/artist-profile.php?index=&artist=" + ($(this).attr("id")).split('-')[4];
+=======
+				window.location.href = "../artist-profile/artist-profile.php?artist=" + ($(this).attr("id")).split('-')[4];
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 			});
 
 			$(".div-profile-image-carrousel").hover(function() {
@@ -376,25 +408,69 @@ if ($status == 200) {
 					$("#label-carrousel-artist-" + artist).css("display", "none");
 				}
 			});
+<<<<<<< HEAD
 		} else {
 			$("#nav-subtitle").css("display","none");
 		}
 
 		var index = <?php echo $index ?>;
 		var maxIndex = <?php echo $_SESSION["maxIndex"]; ?>;
+=======
+		}
+
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 		/*Order Main Images*/
 
 		if (window.screen.width > 1000) {
+<<<<<<< HEAD
 			orderImages("main-images", 200, 20, infoImages, index, maxIndex);
 		} else if (window.screen.width > 500) {
 			orderImages("main-images", 150, 15, infoImages, index, maxIndex);
 		} else {
 			orderImages("main-images", 100, 10, infoImages, index, maxIndex);
+=======
+			orderImages("main-images", 200, 20, infoImages);
+		} else if (window.screen.width > 500) {
+			orderImages("main-images", 150, 15, infoImages);
+		} else {
+			orderImages("main-images", 100, 10, infoImages);
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 		}
 
 		editHeader();
 
+<<<<<<< HEAD
+=======
+		var index = <?php echo $index ?>;
+
+		$("#button-index-left").click(function() {
+			index--;
+			window.location.href = "homepage.php?index=" + index;
+		});
+
+		$("#button-index-right").click(function() {
+			index++;
+			window.location.href = "homepage.php?index=" + index;
+		});
+
+		var maxIndex = <?php echo $_SESSION["maxIndex"]; ?>;
+
+		if (index == 1) {
+			$("#button-index-left").css("opacity", "0", "pointer-events", "null");
+		}
+		if (index == maxIndex) {
+			$("#button-index-right").css("opacity", "0", "pointer-events", "null");
+		}
+		if (index == 1 && index == maxIndex) {
+			$("#label-index").css("display", "none");
+			$("#div-index").height(20);
+		}
+
+
+
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 	};
 
 	/*Pop up*/
@@ -767,7 +843,10 @@ if ($status == 200) {
 		$("#div-pop-up").css("display", "none");
 		$(".form-reward").css("display", "none");
 	};
+<<<<<<< HEAD
 	
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 </script>
 
 </html>

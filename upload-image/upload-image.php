@@ -108,6 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			</button>
 		</div>
 
+<<<<<<< HEAD
 		<form id="form-search" style="display: inline">
 			<div id="div-search-bar">
 
@@ -118,6 +119,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</button>
 			</div>
 		</form>
+=======
+		<div id="div-search-bar">
+			<input id="input-search-bar" type="text">
+
+			<button id="button-magnifier" onclick="location.href='../search/search.php'">
+				<img id="img-magnifier" src="../icons/magnifier.png" class="img-buttons">
+			</button>
+		</div>
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 		<div id="div-secondary-buttons">
 			<a href="../own-profile/own-profile.php" class="a-secondary-buttons" id="a-secondary-button-profile">
@@ -206,7 +216,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 							<img src="../icons/arrow.png" class="img-buttons" id="img-arrow">
 							<h3 id="h3-number-filter">0</h3>
+<<<<<<< HEAD
 							<h3 id="h3-filter">TAGS</h3>
+=======
+							<h3 id="h3-filter">FILTERS</h3>
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 
 						</label>
 
@@ -391,7 +405,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$("#img-uploaded").attr("src","");
 		deleteImage();
 	});
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8d30ef8c71a05a3c367f1d0651cf2253999a83d
 </script>
 
 </html>
